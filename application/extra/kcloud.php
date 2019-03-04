@@ -12,7 +12,7 @@ return array (
     'cookieJar' => tempnam('./tmp','CloudSession'), ////定义记录Cloud服务端返回的Session
 //    'accountid' => '59fc3d3469d754',  //正式帐套
     'accountid' => '5a9ceabe7eef57',  //测试帐套
-    'username' => 'demo',
-    'password' => '888888',
+    'username' => '',
+    'password' => '',
     'langtag' => 2052,
 );
