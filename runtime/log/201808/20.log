@@ -1,0 +1,1137 @@
+---------------------------------------------------------------
+[ 2018-08-20T14:10:20+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31} [运行时间：0.482048s][吞吐率：2.07req/s] [内存消耗：2,150.91kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534745420) [ RunTime:0.050005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 31 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 31 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 31  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 33 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 22 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 11 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 0 [ RunTime:0.003001s ]
+---------------------------------------------------------------
+[ 2018-08-20T14:10:20+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.056006s][吞吐率：17.86req/s] [内存消耗：880.97kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=prln48miip2ons7il6mu3omb75',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31}',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-20T14:10:46+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31} [运行时间：0.082008s][吞吐率：12.19req/s] [内存消耗：2,155.80kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryDWROXM2nQ6yrDxNE',
+  'postman-token' => '12ef62f5-0cca-a1c9-103f-2ee712755a8c',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534745446) [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 31 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 31 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 31  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 33 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 22 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 11 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-20T14:11:44+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31} [运行时间：0.375038s][吞吐率：2.67req/s] [内存消耗：2,156.02kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryqY9ebzovRRpKx3ZW',
+  'postman-token' => '8ce0254c-0619-7414-7bb1-d46a1591396e',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534745504) [ RunTime:0.051005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 31 LIMIT 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 31 LIMIT 1 [ RunTime:0.018002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.047005s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 31  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 33 LIMIT 1 [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 22 LIMIT 1 [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 11 LIMIT 1 [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 1 LIMIT 1 [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 0 [ RunTime:0.018001s ]
+---------------------------------------------------------------
+[ 2018-08-20T14:14:50+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31} [运行时间：0.131013s][吞吐率：7.63req/s] [内存消耗：2,153.02kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryXp2qFiiuq1Ivmn7c',
+  'postman-token' => 'eb97f8a1-20cd-4999-916b-80ea70cc7be8',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534745690) [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 31 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 31 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 31  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 33 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 22 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 11 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 0 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-08-20T14:15:01+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:31} [运行时间：0.133014s][吞吐率：7.52req/s] [内存消耗：2,153.02kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryh9UZKN60k8lnpusR',
+  'postman-token' => '9188b61a-8fbd-462f-69c7-96465eb46376',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534745700) [ RunTime:0.025002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 31 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 31 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 31  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 33 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 22 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '31'  AND `relative` = 0 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:18:32+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.302030s][吞吐率：3.31req/s] [内存消耗：2,142.70kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryEVtAbip95halWJKo',
+  'postman-token' => 'a53dbc48-92c5-0539-9c2a-d1848b1a12ec',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534749512) [ RunTime:0.043004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.014002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.018002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.010001s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:20:30+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.107011s][吞吐率：9.34req/s] [内存消耗：2,142.70kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary6zXkOshAsJL7qelF',
+  'postman-token' => '1c133547-412c-28bc-5214-b686f402e204',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534749630) [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:21:50+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.128012s][吞吐率：7.81req/s] [内存消耗：2,142.70kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryIdaQVhSAO2cJzSwH',
+  'postman-token' => '82ebffa2-cc62-9a04-72b6-0538c8da10b8',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534749710) [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:22:14+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.201020s][吞吐率：4.97req/s] [内存消耗：2,143.82kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryo6Az2UBC6TRrTjpr',
+  'postman-token' => '844436dc-1d51-1970-5c3d-a764a9cb7b93',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534749734) [ RunTime:0.097010s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:22:43+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.113011s][吞吐率：8.85req/s] [内存消耗：2,143.83kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarydRqCKC37pfHPPKkt',
+  'postman-token' => '8313b250-bcbf-bd4a-4db4-d136ab241fda',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534749763) [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:25:41+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.164016s][吞吐率：6.10req/s] [内存消耗：2,145.36kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryif8ZZZ0hsTZ4ibH9',
+  'postman-token' => '726657ad-4477-0ee0-6af9-da794a947ac1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534749941) [ RunTime:0.031003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.029003s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:26:46+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.120012s][吞吐率：8.33req/s] [内存消耗：2,145.42kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryYOhsj1TUKJzBZ6d0',
+  'postman-token' => 'f26c6b12-71af-da36-c39f-af089c08fe76',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534750006) [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:27:45+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.113012s][吞吐率：8.85req/s] [内存消耗：2,144.91kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryZLXRoEWgBJDBsbEP',
+  'postman-token' => 'f5ff7d3f-c49e-5c87-9a3f-f6e6f2c35db2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534750065) [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:29:09+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.112011s][吞吐率：8.93req/s] [内存消耗：2,145.57kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryliVvQptYV7tuQNqw',
+  'postman-token' => 'a054beda-e0bd-bbeb-74e5-faec16a0fa2b',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534750149) [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.029003s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:30:06+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.144014s][吞吐率：6.94req/s] [内存消耗：2,145.59kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary5NcoEEtJZ3OlN3fT',
+  'postman-token' => '51f50e00-1b73-963d-fc67-5678462fa0f0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.019002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534750206) [ RunTime:0.033004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:32:47+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.122012s][吞吐率：8.20req/s] [内存消耗：2,146.68kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCbxnpD4NbnGKEGsD',
+  'postman-token' => 'a227dd7e-2c64-a3f5-0f07-029e0396b0e0',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534750367) [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.003001s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:36:27+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.152015s][吞吐率：6.58req/s] [内存消耗：2,146.69kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryA6FUNrqRNGTtpPhB',
+  'postman-token' => '3f5faaa2-a53a-1235-f923-13752c595550',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534750587) [ RunTime:0.028003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:36:53+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.094009s][吞吐率：10.64req/s] [内存消耗：2,146.77kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarykTFjNeaVX4ZkbLvC',
+  'postman-token' => 'c2fc3a8d-cf44-474a-c215-22ecfcc5041f',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534750613) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:39:54+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.117011s][吞吐率：8.55req/s] [内存消耗：2,147.68kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary8WXGbmDFsaPmfKLq',
+  'postman-token' => 'af010a58-9e0d-5636-35a2-7f7c2da6c443',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534750794) [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-20T15:40:48+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62}
+[ info ] www.plm_dev123.net/api/v2/doc/getBomDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22bom_id%22:62} [运行时间：0.141014s][吞吐率：7.09req/s] [内存消耗：2,147.68kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getBomDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=9sbh0psb0p2dkr0r1bj1icbk14',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryGue7ewZpHMPNAD9E',
+  'postman-token' => '8e937abc-95d0-b31c-343e-d609df61fea5',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"bom_id":62}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getBomDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getbomdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"bom_id\\\":62}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534750848) [ RunTime:0.048005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `bom_id` FROM `plm_project_bom` WHERE  `bom_id` = 62 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `b`.`bom_id`,`b`.`tpl_id`,`b`.`creator_id`,b.project_name bom_name,`b`.`tpl_name`,`b`.`project_id`,`b`.`node_id`,`b`.`version`,`b`.`add_time`,`b`.`audit_time` FROM `plm_project_bom` `b` WHERE  `b`.`bom_id` = 62 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 28 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 62  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 11 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_bom_material` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`unit` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `material_sn`,`material_name`,`specification`,`numerator_amount`,`denominator_amount`,`unit`,`remark` FROM `plm_bom_material` WHERE  `bom_id` = '62'  AND `relative` = 0 [ RunTime:0.002000s ]

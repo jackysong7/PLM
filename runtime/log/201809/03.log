@@ -1,0 +1,266 @@
+---------------------------------------------------------------
+[ 2018-09-03T09:28:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/audit?access_token=1b47146b-7e73-421e-a048-c2da59643fe3&data={%22doc_id%22:40,%22tpl_type%22:1,%22audit_status%22:1,%22audit_note%22:%22%E5%93%87%22}
+[ info ] www.plm_dev123.net/api/v2/doc/audit?access_token=1b47146b-7e73-421e-a048-c2da59643fe3&data={%22doc_id%22:40,%22tpl_type%22:1,%22audit_status%22:1,%22audit_note%22:%22%E5%93%87%22} [运行时间：0.241013s][吞吐率：4.15req/s] [内存消耗：1,165.69kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=15&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1b47146b-7e73-421e-a048-c2da59643fe3',
+  'data' => '{"doc_id":40,"tpl_type":1,"audit_status":1,"audit_note":"哇"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T09:28:00+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.065004s][吞吐率：15.38req/s] [内存消耗：883.04kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=15&client_id=)',
+  'cookie' => 'PHPSESSID=8mn8q7mdu5aqpp1prva2fqf2q4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/doc/audit?access_token=1b47146b-7e73-421e-a048-c2da59643fe3&data={%22doc_id%22:40,%22tpl_type%22:1,%22audit_status%22:1,%22audit_note%22:%22%E5%93%87%22}',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-03T13:53:58+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22}
+[ info ] www.plm_dev123.net/api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22} [运行时间：10.233023s][吞吐率：0.10req/s] [内存消耗：2,179.50kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=25&client_id=)',
+  'cookie' => 'PHPSESSID=8mn8q7mdu5aqpp1prva2fqf2q4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba',
+  'data' => '{"doc_id":301,"tpl_type":3,"audit_status":1,"audit_note":"对的"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:1.304131s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:3.428342s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (10 , 'wuyf' , 'doc/audit' , '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba' , '{\"access_token\":\"8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba\",\"data\":\"{\\\"doc_id\\\":301,\\\"tpl_type\\\":3,\\\"audit_status\\\":1,\\\"audit_note\\\":\\\"\\u5bf9\\u7684\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1535954028) [ RunTime:0.939094s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:2.761276s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 301  AND `target_type` = 3  AND `admin_id` = 10 LIMIT 1 [ RunTime:0.239024s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `admin_id` , `target_type` , `role_type` , `audit_status` , `audit_note` , `audit_time`) VALUES (301 , 10 , 3 , 5 , 1 , '对的' , 1535954037) [ RunTime:0.142014s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:1.130113s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_document` WHERE  `pd_id` = 301 LIMIT 1 [ RunTime:0.182018s ]
+---------------------------------------------------------------
+[ 2018-09-03T13:54:28+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22}
+[ info ] www.plm_dev123.net/api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22} [运行时间：0.115012s][吞吐率：8.69req/s] [内存消耗：2,185.52kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=25&client_id=)',
+  'cookie' => 'PHPSESSID=8mn8q7mdu5aqpp1prva2fqf2q4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba',
+  'data' => '{"doc_id":301,"tpl_type":3,"audit_status":1,"audit_note":"对的"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (10 , 'wuyf' , 'doc/audit' , '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba' , '{\"access_token\":\"8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba\",\"data\":\"{\\\"doc_id\\\":301,\\\"tpl_type\\\":3,\\\"audit_status\\\":1,\\\"audit_note\\\":\\\"\\u5bf9\\u7684\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1535954068) [ RunTime:0.036004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 301  AND `target_type` = 3  AND `admin_id` = 10 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_relation`  SET `audit_status`=1,`audit_note`='对的',`audit_time`=1535954068  WHERE  `target_id` = 301  AND `target_type` = 3  AND `admin_id` = 10  AND `role_type` = 5 [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_document` WHERE  `pd_id` = 301 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `audit_status` FROM `plm_relation` WHERE  `target_id` = 700  AND `target_type` = 2 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `audit_status` FROM `plm_relation` WHERE  `target_id` = 301  AND `target_type` = 3 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-03T13:55:34+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22}
+[ info ] www.plm_dev123.net/api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22} [运行时间：0.078008s][吞吐率：12.82req/s] [内存消耗：2,184.55kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=25&client_id=)',
+  'cookie' => 'PHPSESSID=8mn8q7mdu5aqpp1prva2fqf2q4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba',
+  'data' => '{"doc_id":301,"tpl_type":3,"audit_status":1,"audit_note":"对的"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (10 , 'wuyf' , 'doc/audit' , '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba' , '{\"access_token\":\"8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba\",\"data\":\"{\\\"doc_id\\\":301,\\\"tpl_type\\\":3,\\\"audit_status\\\":1,\\\"audit_note\\\":\\\"\\u5bf9\\u7684\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1535954134) [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 301  AND `target_type` = 3  AND `admin_id` = 10 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] UPDATE `plm_relation`  SET `audit_status`=1,`audit_note`='对的',`audit_time`=1535954134  WHERE  `target_id` = 301  AND `target_type` = 3  AND `admin_id` = 10  AND `role_type` = 5 [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_document` WHERE  `pd_id` = 301 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `audit_status` FROM `plm_relation` WHERE  `target_id` = 700  AND `target_type` = 2 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-09-03T13:57:10+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22}
+[ info ] www.plm_dev123.net/api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22} [运行时间：0.127013s][吞吐率：7.87req/s] [内存消耗：2,185.03kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=25&client_id=)',
+  'cookie' => 'PHPSESSID=8mn8q7mdu5aqpp1prva2fqf2q4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba',
+  'data' => '{"doc_id":301,"tpl_type":3,"audit_status":1,"audit_note":"对的"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (10 , 'wuyf' , 'doc/audit' , '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba' , '{\"access_token\":\"8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba\",\"data\":\"{\\\"doc_id\\\":301,\\\"tpl_type\\\":3,\\\"audit_status\\\":1,\\\"audit_note\\\":\\\"\\u5bf9\\u7684\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1535954229) [ RunTime:0.037004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 301  AND `target_type` = 3  AND `admin_id` = 10 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `plm_relation`  SET `audit_status`=1,`audit_note`='对的',`audit_time`=1535954230  WHERE  `target_id` = 301  AND `target_type` = 3  AND `admin_id` = 10  AND `role_type` = 5 [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_document` WHERE  `pd_id` = 301 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `audit_status` FROM `plm_relation` WHERE  `target_id` = 700  AND `target_type` = 2  AND `role_type` = 5 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-03T13:58:39+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22}
+[ info ] www.plm_dev123.net/api/v2/doc/audit?access_token=8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba&data={%22doc_id%22:301,%22tpl_type%22:3,%22audit_status%22:1,%22audit_note%22:%22%E5%AF%B9%E7%9A%84%22} [运行时间：0.109011s][吞吐率：9.17req/s] [内存消耗：2,185.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=25&client_id=)',
+  'cookie' => 'PHPSESSID=8mn8q7mdu5aqpp1prva2fqf2q4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba',
+  'data' => '{"doc_id":301,"tpl_type":3,"audit_status":1,"audit_note":"对的"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (10 , 'wuyf' , 'doc/audit' , '8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba' , '{\"access_token\":\"8b009bdc-d4d9-4c35-bbca-66d1cb87d0ba\",\"data\":\"{\\\"doc_id\\\":301,\\\"tpl_type\\\":3,\\\"audit_status\\\":1,\\\"audit_note\\\":\\\"\\u5bf9\\u7684\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1535954318) [ RunTime:0.025002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 301  AND `target_type` = 3  AND `admin_id` = 10 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `plm_relation`  SET `audit_status`=1,`audit_note`='对的',`audit_time`=1535954319  WHERE  `target_id` = 301  AND `target_type` = 3  AND `admin_id` = 10  AND `role_type` = 5 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_document` WHERE  `pd_id` = 301 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `audit_status` FROM `plm_relation` WHERE  `target_id` = 700  AND `target_type` = 2  AND `role_type` = 5 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `audit_status` FROM `plm_relation` WHERE  `target_id` = 301  AND `target_type` = 3 [ RunTime:0.002000s ]

@@ -1,0 +1,1264 @@
+---------------------------------------------------------------
+[ 2019-01-12T11:01:32+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:2,%22auditor2%22:4,%22is_component%22:0,%22material_name%22:%22231314567u%22,%22material_code%22:%229871212waw%22,%22material_code_old%22:%22%22,%22mg_code%22:%22G05%22,%22material_attribute%22:4,%22is_suite%22:0,%22basic_unit%22:%22m%22,%22specifications%22:%22%22,%22specifications_code%22:%22%22,%22description%22:%22%22,%22control%22:[],%22default_tax_rate%22:%22%22,%22inventory_type%22:%22CHLB01_SYS%22,%22tax_type%22:%22%22,%22batch_num_extra%22:false,%22allow_return%22:false,%22order_interval_unit%22:3,%22start_batch%22:false,%22enable_expiration%22:false,%22MPR_combine%22:false,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22inventory_unit%22:%22m%22,%22convert_unit%22:1,%22sale_unit%22:%22L%22,%22sale_pricing_unit%22:%22ml%22,%22purchase_unit%22:%22ml%22,%22purchase_pricing_unit%22:%22ml%22,%22give_material_way%22:4,%22over_give_control%22:3,%22min_give_material%22:%221%22,%22plan_strategy%22:0,%22order_strategy%22:0,%22fixed_lead_time%22:%221%22,%22vary_lead_time%22:%222%22,%22check_lead_time%22:%222%22,%22check_lead_time_unit%22:1,%22offset_time_unit%22:1,%22reverse_time%22:3,%22min_give_unit%22:%22L%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:2,%22auditor2%22:4,%22is_component%22:0,%22material_name%22:%22231314567u%22,%22material_code%22:%229871212waw%22,%22material_code_old%22:%22%22,%22mg_code%22:%22G05%22,%22material_attribute%22:4,%22is_suite%22:0,%22basic_unit%22:%22m%22,%22specifications%22:%22%22,%22specifications_code%22:%22%22,%22description%22:%22%22,%22control%22:[],%22default_tax_rate%22:%22%22,%22inventory_type%22:%22CHLB01_SYS%22,%22tax_type%22:%22%22,%22batch_num_extra%22:false,%22allow_return%22:false,%22order_interval_unit%22:3,%22start_batch%22:false,%22enable_expiration%22:false,%22MPR_combine%22:false,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22inventory_unit%22:%22m%22,%22convert_unit%22:1,%22sale_unit%22:%22L%22,%22sale_pricing_unit%22:%22ml%22,%22purchase_unit%22:%22ml%22,%22purchase_pricing_unit%22:%22ml%22,%22give_material_way%22:4,%22over_give_control%22:3,%22min_give_material%22:%221%22,%22plan_strategy%22:0,%22order_strategy%22:0,%22fixed_lead_time%22:%221%22,%22vary_lead_time%22:%222%22,%22check_lead_time%22:%222%22,%22check_lead_time_unit%22:1,%22offset_time_unit%22:1,%22reverse_time%22:3,%22min_give_unit%22:%22L%22} [运行时间：0.524367s][吞吐率：1.91req/s] [内存消耗：2,289.65kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"use_org":100,"create_org":100,"auditor1":2,"auditor2":4,"is_component":0,"material_name":"231314567u","material_code":"9871212waw","material_code_old":"","mg_code":"G05","material_attribute":4,"is_suite":0,"basic_unit":"m","specifications":"","specifications_code":"","description":"","control":[],"default_tax_rate":"","inventory_type":"CHLB01_SYS","tax_type":"","batch_num_extra":false,"allow_return":false,"order_interval_unit":3,"start_batch":false,"enable_expiration":false,"MPR_combine":false,"standard_labor_hour":0,"fixed_lead_time_unit":1,"vary_lead_time_unit":1,"inventory_attr":{"warehouse":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"warehouse_space":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"BOM":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false},"batch_num":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false},"trace_num":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false}},"inventory_unit":"m","convert_unit":1,"sale_unit":"L","sale_pricing_unit":"ml","purchase_unit":"ml","purchase_pricing_unit":"ml","give_material_way":4,"over_give_control":3,"min_give_material":"1","plan_strategy":0,"order_strategy":0,"fixed_lead_time":"1","vary_lead_time":"2","check_lead_time":"2","check_lead_time_unit":1,"offset_time_unit":1,"reverse_time":3,"min_give_unit":"L"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004003s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005003s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"use_org\\\":100,\\\"create_org\\\":100,\\\"auditor1\\\":2,\\\"auditor2\\\":4,\\\"is_component\\\":0,\\\"material_name\\\":\\\"231314567u\\\",\\\"material_code\\\":\\\"9871212waw\\\",\\\"material_code_old\\\":\\\"\\\",\\\"mg_code\\\":\\\"G05\\\",\\\"material_attribute\\\":4,\\\"is_suite\\\":0,\\\"basic_unit\\\":\\\"m\\\",\\\"specifications\\\":\\\"\\\",\\\"specifications_code\\\":\\\"\\\",\\\"description\\\":\\\"\\\",\\\"control\\\":[],\\\"default_tax_rate\\\":\\\"\\\",\\\"inventory_type\\\":\\\"CHLB01_SYS\\\",\\\"tax_type\\\":\\\"\\\",\\\"batch_num_extra\\\":false,\\\"allow_return\\\":false,\\\"order_interval_unit\\\":3,\\\"start_batch\\\":false,\\\"enable_expiration\\\":false,\\\"MPR_combine\\\":false,\\\"standard_labor_hour\\\":0,\\\"fixed_lead_time_unit\\\":1,\\\"vary_lead_time_unit\\\":1,\\\"inventory_attr\\\":{\\\"warehouse\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"warehouse_space\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"BOM\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"batch_num\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"trace_num\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false}},\\\"inventory_unit\\\":\\\"m\\\",\\\"convert_unit\\\":1,\\\"sale_unit\\\":\\\"L\\\",\\\"sale_pricing_unit\\\":\\\"ml\\\",\\\"purchase_unit\\\":\\\"ml\\\",\\\"purchase_pricing_unit\\\":\\\"ml\\\",\\\"give_material_way\\\":4,\\\"over_give_control\\\":3,\\\"min_give_material\\\":\\\"1\\\",\\\"plan_strategy\\\":0,\\\"order_strategy\\\":0,\\\"fixed_lead_time\\\":\\\"1\\\",\\\"vary_lead_time\\\":\\\"2\\\",\\\"check_lead_time\\\":\\\"2\\\",\\\"check_lead_time_unit\\\":1,\\\"offset_time_unit\\\":1,\\\"reverse_time\\\":3,\\\"min_give_unit\\\":\\\"L\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547262091) [ RunTime:0.049034s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.006004s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = '9871212waw' LIMIT 1 [ RunTime:0.004003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.005003s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05' LIMIT 1 [ RunTime:0.002002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_slave` (`mg_id` , `mg_code` , `material_code` , `material_code_old` , `material_category` , `material_name` , `specifications` , `specifications_code` , `description` , `material_attribute` , `basic_unit` , `start_batch` , `create_time` , `update_time` , `is_new` , `creator_id` , `is_component` , `create_org` , `use_org` , `is_suite` , `control` , `rate` , `inventory_type` , `tax_type` , `inventory_unit` , `assistant_unit` , `unit_convert` , `is_expiration` , `batch_num_rule` , `batch_num_extra` , `expiration_unit` , `expiration_date` , `expiration_date_online` , `allow_return` , `sale_unit` , `sale_pricing_unit` , `purchase_unit` , `purchase_price_unit` , `is_quota` , `quota_way` , `min_split_amount` , `is_return_material` , `outsource_unit` , `outsource_price_unit` , `fixed_lead_time` , `product_unit` , `product_type` , `standard_labor_hour` , `standard_labor_unit` , `issue_qty` , `over_give_control` , `min_issue_qty` , `min_give_unit` , `plan_strategy` , `manufacture_strategy` , `order_strategy` , `plan_area` , `mrp_combine` , `product_level` , `vary_lead_time_unit` , `vary_lead_time` , `fixed_lead_time_unit` , `check_lead_time` , `check_lead_time_unit` , `offset_time` , `offset_time_unit` , `supply_from` , `inventory_attr`) VALUES (101302 , 'G05' , '9871212waw' , '' , '' , '231314567u' , '' , '' , '' , '4' , 'm' , 0 , 1547262092 , 0 , 0 , 115 , 0 , '100' , '100' , 0 , '' , '' , 'CHLB01_SYS' , '' , 'm' , '' , 1 , 0 , '0' , 0 , '0' , 0 , 0 , 0 , 'L' , 'ml' , 'ml' , 'ml' , 0 , 1 , 0 , 0 , '' , '' , 1 , '' , '' , 0 , '' , 4 , 3 , 1 , 'L' , 0 , '' , '0' , '' , 0 , '' , '1' , 2 , '1' , 2 , 1 , 0 , 1 , 0 , '{\"warehouse\":{\"enable\":true,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"warehouse_space\":{\"enable\":true,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"BOM\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"batch_num\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"trace_num\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false}}') [ RunTime:0.005003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004003s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `admin_id` , `role_type` , `audit_order`) VALUES (7 , 7 , 2 , 5 , 1) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `admin_id` , `role_type` , `audit_order`) VALUES (7 , 7 , 4 , 5 , 2) [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:01:32+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.067047s][吞吐率：14.91req/s] [内存消耗：897.02kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:2,%22auditor2%22:4,%22is_component%22:0,%22material_name%22:%22231314567u%22,%22material_code%22:%229871212waw%22,%22material_code_old%22:%22%22,%22mg_code%22:%22G05%22,%22material_attribute%22:4,%22is_suite%22:0,%22basic_unit%22:%22m%22,%22specifications%22:%22%22,%22specifications_code%22:%22%22,%22description%22:%22%22,%22control%22:[],%22default_tax_rate%22:%22%22,%22inventory_type%22:%22CHLB01_SYS%22,%22tax_type%22:%22%22,%22batch_num_extra%22:false,%22allow_return%22:false,%22order_interval_unit%22:3,%22start_batch%22:false,%22enable_expiration%22:false,%22MPR_combine%22:false,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22inventory_unit%22:%22m%22,%22convert_unit%22:1,%22sale_unit%22:%22L%22,%22sale_pricing_unit%22:%22ml%22,%22purchase_unit%22:%22ml%22,%22purchase_pricing_unit%22:%22ml%22,%22give_material_way%22:4,%22over_give_control%22:3,%22min_give_material%22:%221%22,%22plan_strategy%22:0,%22order_strategy%22:0,%22fixed_lead_time%22:%221%22,%22vary_lead_time%22:%222%22,%22check_lead_time%22:%222%22,%22check_lead_time_unit%22:1,%22offset_time_unit%22:1,%22reverse_time%22:3,%22min_give_unit%22:%22L%22}',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-12T11:02:38+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:2,%22auditor2%22:4,%22is_component%22:0,%22material_name%22:%22231314567u%22,%22material_code%22:%229871212waw%22,%22material_code_old%22:%22%22,%22mg_code%22:%22G05%22,%22material_attribute%22:4,%22is_suite%22:0,%22basic_unit%22:%22m%22,%22specifications%22:%22%22,%22specifications_code%22:%22%22,%22description%22:%22%22,%22control%22:[],%22default_tax_rate%22:%22%22,%22inventory_type%22:%22CHLB01_SYS%22,%22tax_type%22:%22%22,%22batch_num_extra%22:false,%22allow_return%22:false,%22order_interval_unit%22:3,%22start_batch%22:false,%22enable_expiration%22:false,%22MPR_combine%22:false,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22inventory_unit%22:%22m%22,%22convert_unit%22:1,%22sale_unit%22:%22L%22,%22sale_pricing_unit%22:%22ml%22,%22purchase_unit%22:%22ml%22,%22purchase_pricing_unit%22:%22ml%22,%22give_material_way%22:4,%22over_give_control%22:3,%22min_give_material%22:%221%22,%22plan_strategy%22:0,%22order_strategy%22:0,%22fixed_lead_time%22:%221%22,%22vary_lead_time%22:%222%22,%22check_lead_time%22:%222%22,%22check_lead_time_unit%22:1,%22offset_time_unit%22:1,%22reverse_time%22:3,%22min_give_unit%22:%22L%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:2,%22auditor2%22:4,%22is_component%22:0,%22material_name%22:%22231314567u%22,%22material_code%22:%229871212waw%22,%22material_code_old%22:%22%22,%22mg_code%22:%22G05%22,%22material_attribute%22:4,%22is_suite%22:0,%22basic_unit%22:%22m%22,%22specifications%22:%22%22,%22specifications_code%22:%22%22,%22description%22:%22%22,%22control%22:[],%22default_tax_rate%22:%22%22,%22inventory_type%22:%22CHLB01_SYS%22,%22tax_type%22:%22%22,%22batch_num_extra%22:false,%22allow_return%22:false,%22order_interval_unit%22:3,%22start_batch%22:false,%22enable_expiration%22:false,%22MPR_combine%22:false,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22inventory_unit%22:%22m%22,%22convert_unit%22:1,%22sale_unit%22:%22L%22,%22sale_pricing_unit%22:%22ml%22,%22purchase_unit%22:%22ml%22,%22purchase_pricing_unit%22:%22ml%22,%22give_material_way%22:4,%22over_give_control%22:3,%22min_give_material%22:%221%22,%22plan_strategy%22:0,%22order_strategy%22:0,%22fixed_lead_time%22:%221%22,%22vary_lead_time%22:%222%22,%22check_lead_time%22:%222%22,%22check_lead_time_unit%22:1,%22offset_time_unit%22:1,%22reverse_time%22:3,%22min_give_unit%22:%22L%22} [运行时间：0.254178s][吞吐率：3.93req/s] [内存消耗：2,453.98kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"use_org":100,"create_org":100,"auditor1":2,"auditor2":4,"is_component":0,"material_name":"231314567u","material_code":"9871212waw","material_code_old":"","mg_code":"G05","material_attribute":4,"is_suite":0,"basic_unit":"m","specifications":"","specifications_code":"","description":"","control":[],"default_tax_rate":"","inventory_type":"CHLB01_SYS","tax_type":"","batch_num_extra":false,"allow_return":false,"order_interval_unit":3,"start_batch":false,"enable_expiration":false,"MPR_combine":false,"standard_labor_hour":0,"fixed_lead_time_unit":1,"vary_lead_time_unit":1,"inventory_attr":{"warehouse":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"warehouse_space":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"BOM":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false},"batch_num":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false},"trace_num":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false}},"inventory_unit":"m","convert_unit":1,"sale_unit":"L","sale_pricing_unit":"ml","purchase_unit":"ml","purchase_pricing_unit":"ml","give_material_way":4,"over_give_control":3,"min_give_material":"1","plan_strategy":0,"order_strategy":0,"fixed_lead_time":"1","vary_lead_time":"2","check_lead_time":"2","check_lead_time_unit":1,"offset_time_unit":1,"reverse_time":3,"min_give_unit":"L"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012009s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"use_org\\\":100,\\\"create_org\\\":100,\\\"auditor1\\\":2,\\\"auditor2\\\":4,\\\"is_component\\\":0,\\\"material_name\\\":\\\"231314567u\\\",\\\"material_code\\\":\\\"9871212waw\\\",\\\"material_code_old\\\":\\\"\\\",\\\"mg_code\\\":\\\"G05\\\",\\\"material_attribute\\\":4,\\\"is_suite\\\":0,\\\"basic_unit\\\":\\\"m\\\",\\\"specifications\\\":\\\"\\\",\\\"specifications_code\\\":\\\"\\\",\\\"description\\\":\\\"\\\",\\\"control\\\":[],\\\"default_tax_rate\\\":\\\"\\\",\\\"inventory_type\\\":\\\"CHLB01_SYS\\\",\\\"tax_type\\\":\\\"\\\",\\\"batch_num_extra\\\":false,\\\"allow_return\\\":false,\\\"order_interval_unit\\\":3,\\\"start_batch\\\":false,\\\"enable_expiration\\\":false,\\\"MPR_combine\\\":false,\\\"standard_labor_hour\\\":0,\\\"fixed_lead_time_unit\\\":1,\\\"vary_lead_time_unit\\\":1,\\\"inventory_attr\\\":{\\\"warehouse\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"warehouse_space\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"BOM\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"batch_num\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"trace_num\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false}},\\\"inventory_unit\\\":\\\"m\\\",\\\"convert_unit\\\":1,\\\"sale_unit\\\":\\\"L\\\",\\\"sale_pricing_unit\\\":\\\"ml\\\",\\\"purchase_unit\\\":\\\"ml\\\",\\\"purchase_pricing_unit\\\":\\\"ml\\\",\\\"give_material_way\\\":4,\\\"over_give_control\\\":3,\\\"min_give_material\\\":\\\"1\\\",\\\"plan_strategy\\\":0,\\\"order_strategy\\\":0,\\\"fixed_lead_time\\\":\\\"1\\\",\\\"vary_lead_time\\\":\\\"2\\\",\\\"check_lead_time\\\":\\\"2\\\",\\\"check_lead_time_unit\\\":1,\\\"offset_time_unit\\\":1,\\\"reverse_time\\\":3,\\\"min_give_unit\\\":\\\"L\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547262158) [ RunTime:0.044031s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.014010s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = '9871212waw' LIMIT 1 [ RunTime:0.017012s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.007005s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05' LIMIT 1 [ RunTime:0.021015s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_slave` (`mg_id` , `mg_code` , `material_code` , `material_code_old` , `material_category` , `material_name` , `specifications` , `specifications_code` , `description` , `material_attribute` , `basic_unit` , `start_batch` , `create_time` , `update_time` , `is_new` , `creator_id` , `is_component` , `create_org` , `use_org` , `is_suite` , `control` , `rate` , `inventory_type` , `tax_type` , `inventory_unit` , `assistant_unit` , `unit_convert` , `is_expiration` , `batch_num_rule` , `batch_num_extra` , `expiration_unit` , `expiration_date` , `expiration_date_online` , `allow_return` , `sale_unit` , `sale_pricing_unit` , `purchase_unit` , `purchase_price_unit` , `is_quota` , `quota_way` , `min_split_amount` , `is_return_material` , `outsource_unit` , `outsource_price_unit` , `fixed_lead_time` , `product_unit` , `product_type` , `standard_labor_hour` , `standard_labor_unit` , `issue_qty` , `over_give_control` , `min_issue_qty` , `min_give_unit` , `plan_strategy` , `manufacture_strategy` , `order_strategy` , `plan_area` , `mrp_combine` , `product_level` , `vary_lead_time_unit` , `vary_lead_time` , `fixed_lead_time_unit` , `check_lead_time` , `check_lead_time_unit` , `offset_time` , `offset_time_unit` , `supply_from` , `inventory_attr`) VALUES (101302 , 'G05' , '9871212waw' , '' , '' , '231314567u' , '' , '' , '' , '4' , 'm' , 0 , 1547262158 , 0 , 0 , 115 , 0 , '100' , '100' , 0 , '' , '' , 'CHLB01_SYS' , '' , 'm' , '' , 1 , 0 , '0' , 0 , '0' , 0 , 0 , 0 , 'L' , 'ml' , 'ml' , 'ml' , 0 , 1 , 0 , 0 , '' , '' , 1 , '' , '' , 0 , '' , 4 , 3 , 1 , 'L' , 0 , '' , '0' , '' , 0 , '' , '1' , 2 , '1' , 2 , 1 , 0 , 1 , 0 , '{\"warehouse\":{\"enable\":true,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"warehouse_space\":{\"enable\":true,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"BOM\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"batch_num\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"trace_num\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false}}') [ RunTime:0.014010s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005004s ]
+[ error ] [0]数据表字段不存在:[audit_order][E:\phpStudy\WWW\plm_dev\thinkphp\library\think\db\Builder.php:107]
+---------------------------------------------------------------
+[ 2019-01-12T11:04:44+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:2,%22auditor2%22:4,%22is_component%22:0,%22material_name%22:%22231314567u%22,%22material_code%22:%229871212waw%22,%22material_code_old%22:%22%22,%22mg_code%22:%22G05%22,%22material_attribute%22:4,%22is_suite%22:0,%22basic_unit%22:%22m%22,%22specifications%22:%22%22,%22specifications_code%22:%22%22,%22description%22:%22%22,%22control%22:[],%22default_tax_rate%22:%22%22,%22inventory_type%22:%22CHLB01_SYS%22,%22tax_type%22:%22%22,%22batch_num_extra%22:false,%22allow_return%22:false,%22order_interval_unit%22:3,%22start_batch%22:false,%22enable_expiration%22:false,%22MPR_combine%22:false,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22inventory_unit%22:%22m%22,%22convert_unit%22:1,%22sale_unit%22:%22L%22,%22sale_pricing_unit%22:%22ml%22,%22purchase_unit%22:%22ml%22,%22purchase_pricing_unit%22:%22ml%22,%22give_material_way%22:4,%22over_give_control%22:3,%22min_give_material%22:%221%22,%22plan_strategy%22:0,%22order_strategy%22:0,%22fixed_lead_time%22:%221%22,%22vary_lead_time%22:%222%22,%22check_lead_time%22:%222%22,%22check_lead_time_unit%22:1,%22offset_time_unit%22:1,%22reverse_time%22:3,%22min_give_unit%22:%22L%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:2,%22auditor2%22:4,%22is_component%22:0,%22material_name%22:%22231314567u%22,%22material_code%22:%229871212waw%22,%22material_code_old%22:%22%22,%22mg_code%22:%22G05%22,%22material_attribute%22:4,%22is_suite%22:0,%22basic_unit%22:%22m%22,%22specifications%22:%22%22,%22specifications_code%22:%22%22,%22description%22:%22%22,%22control%22:[],%22default_tax_rate%22:%22%22,%22inventory_type%22:%22CHLB01_SYS%22,%22tax_type%22:%22%22,%22batch_num_extra%22:false,%22allow_return%22:false,%22order_interval_unit%22:3,%22start_batch%22:false,%22enable_expiration%22:false,%22MPR_combine%22:false,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22inventory_unit%22:%22m%22,%22convert_unit%22:1,%22sale_unit%22:%22L%22,%22sale_pricing_unit%22:%22ml%22,%22purchase_unit%22:%22ml%22,%22purchase_pricing_unit%22:%22ml%22,%22give_material_way%22:4,%22over_give_control%22:3,%22min_give_material%22:%221%22,%22plan_strategy%22:0,%22order_strategy%22:0,%22fixed_lead_time%22:%221%22,%22vary_lead_time%22:%222%22,%22check_lead_time%22:%222%22,%22check_lead_time_unit%22:1,%22offset_time_unit%22:1,%22reverse_time%22:3,%22min_give_unit%22:%22L%22} [运行时间：0.125038s][吞吐率：8.00req/s] [内存消耗：2,294.88kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"use_org":100,"create_org":100,"auditor1":2,"auditor2":4,"is_component":0,"material_name":"231314567u","material_code":"9871212waw","material_code_old":"","mg_code":"G05","material_attribute":4,"is_suite":0,"basic_unit":"m","specifications":"","specifications_code":"","description":"","control":[],"default_tax_rate":"","inventory_type":"CHLB01_SYS","tax_type":"","batch_num_extra":false,"allow_return":false,"order_interval_unit":3,"start_batch":false,"enable_expiration":false,"MPR_combine":false,"standard_labor_hour":0,"fixed_lead_time_unit":1,"vary_lead_time_unit":1,"inventory_attr":{"warehouse":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"warehouse_space":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"BOM":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false},"batch_num":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false},"trace_num":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false}},"inventory_unit":"m","convert_unit":1,"sale_unit":"L","sale_pricing_unit":"ml","purchase_unit":"ml","purchase_pricing_unit":"ml","give_material_way":4,"over_give_control":3,"min_give_material":"1","plan_strategy":0,"order_strategy":0,"fixed_lead_time":"1","vary_lead_time":"2","check_lead_time":"2","check_lead_time_unit":1,"offset_time_unit":1,"reverse_time":3,"min_give_unit":"L"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011003s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"use_org\\\":100,\\\"create_org\\\":100,\\\"auditor1\\\":2,\\\"auditor2\\\":4,\\\"is_component\\\":0,\\\"material_name\\\":\\\"231314567u\\\",\\\"material_code\\\":\\\"9871212waw\\\",\\\"material_code_old\\\":\\\"\\\",\\\"mg_code\\\":\\\"G05\\\",\\\"material_attribute\\\":4,\\\"is_suite\\\":0,\\\"basic_unit\\\":\\\"m\\\",\\\"specifications\\\":\\\"\\\",\\\"specifications_code\\\":\\\"\\\",\\\"description\\\":\\\"\\\",\\\"control\\\":[],\\\"default_tax_rate\\\":\\\"\\\",\\\"inventory_type\\\":\\\"CHLB01_SYS\\\",\\\"tax_type\\\":\\\"\\\",\\\"batch_num_extra\\\":false,\\\"allow_return\\\":false,\\\"order_interval_unit\\\":3,\\\"start_batch\\\":false,\\\"enable_expiration\\\":false,\\\"MPR_combine\\\":false,\\\"standard_labor_hour\\\":0,\\\"fixed_lead_time_unit\\\":1,\\\"vary_lead_time_unit\\\":1,\\\"inventory_attr\\\":{\\\"warehouse\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"warehouse_space\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"BOM\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"batch_num\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"trace_num\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false}},\\\"inventory_unit\\\":\\\"m\\\",\\\"convert_unit\\\":1,\\\"sale_unit\\\":\\\"L\\\",\\\"sale_pricing_unit\\\":\\\"ml\\\",\\\"purchase_unit\\\":\\\"ml\\\",\\\"purchase_pricing_unit\\\":\\\"ml\\\",\\\"give_material_way\\\":4,\\\"over_give_control\\\":3,\\\"min_give_material\\\":\\\"1\\\",\\\"plan_strategy\\\":0,\\\"order_strategy\\\":0,\\\"fixed_lead_time\\\":\\\"1\\\",\\\"vary_lead_time\\\":\\\"2\\\",\\\"check_lead_time\\\":\\\"2\\\",\\\"check_lead_time_unit\\\":1,\\\"offset_time_unit\\\":1,\\\"reverse_time\\\":3,\\\"min_give_unit\\\":\\\"L\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547262284) [ RunTime:0.012004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.007002s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = '9871212waw' LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05' LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_slave` (`mg_id` , `mg_code` , `material_code` , `material_code_old` , `material_category` , `material_name` , `specifications` , `specifications_code` , `description` , `material_attribute` , `basic_unit` , `start_batch` , `create_time` , `update_time` , `is_new` , `creator_id` , `is_component` , `create_org` , `use_org` , `is_suite` , `control` , `rate` , `inventory_type` , `tax_type` , `inventory_unit` , `assistant_unit` , `unit_convert` , `is_expiration` , `batch_num_rule` , `batch_num_extra` , `expiration_unit` , `expiration_date` , `expiration_date_online` , `allow_return` , `sale_unit` , `sale_pricing_unit` , `purchase_unit` , `purchase_price_unit` , `is_quota` , `quota_way` , `min_split_amount` , `is_return_material` , `outsource_unit` , `outsource_price_unit` , `fixed_lead_time` , `product_unit` , `product_type` , `standard_labor_hour` , `standard_labor_unit` , `issue_qty` , `over_give_control` , `min_issue_qty` , `min_give_unit` , `plan_strategy` , `manufacture_strategy` , `order_strategy` , `plan_area` , `mrp_combine` , `product_level` , `vary_lead_time_unit` , `vary_lead_time` , `fixed_lead_time_unit` , `check_lead_time` , `check_lead_time_unit` , `offset_time` , `offset_time_unit` , `supply_from` , `inventory_attr`) VALUES (101302 , 'G05' , '9871212waw' , '' , '' , '231314567u' , '' , '' , '' , '4' , 'm' , 0 , 1547262284 , 0 , 0 , 115 , 0 , '100' , '100' , 0 , '' , '' , 'CHLB01_SYS' , '' , 'm' , '' , 1 , 0 , '0' , 0 , '0' , 0 , 0 , 0 , 'L' , 'ml' , 'ml' , 'ml' , 0 , 1 , 0 , 0 , '' , '' , 1 , '' , '' , 0 , '' , 4 , 3 , 1 , 'L' , 0 , '' , '0' , '' , 0 , '' , '1' , 2 , '1' , 2 , 1 , 0 , 1 , 0 , '{\"warehouse\":{\"enable\":true,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"warehouse_space\":{\"enable\":true,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"BOM\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"batch_num\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"trace_num\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false}}') [ RunTime:0.004002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `admin_id` , `role_type` , `audit_order`) VALUES (13 , 7 , 2 , 5 , 1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `admin_id` , `role_type` , `audit_order`) VALUES (13 , 7 , 4 , 5 , 2) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:11:22+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:2,%22auditor2%22:3,%22is_component%22:1,%22material_name%22:%22121%22,%22material_code%22:%22121%22,%22material_code_old%22:%22211%22,%22mg_code%22:%22G02%22,%22material_attribute%22:1,%22is_suite%22:0,%22basic_unit%22:%22dong%22,%22specifications%22:%22121%22,%22specifications_code%22:%22121%22,%22description%22:%2221212%22,%22control%22:[%22%E5%85%81%E8%AE%B8%E9%94%80%E5%94%AE%22,%22%E5%85%81%E8%AE%B8%E9%87%87%E8%B4%AD%22],%22default_tax_rate%22:%22SL01_SYS%22,%22inventory_type%22:%22CHLB01_SYS%22,%22tax_type%22:%22WLDSFL01_SYS%22,%22batch_num_extra%22:false,%22allow_return%22:true,%22order_interval_unit%22:3,%22start_batch%22:true,%22enable_expiration%22:false,%22MPR_combine%22:true,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:true,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22inventory_unit%22:%22g%22,%22convert_unit%22:1,%22sale_unit%22:%22g%22,%22sale_pricing_unit%22:%22g%22,%22purchase_unit%22:%22g%22,%22purchase_pricing_unit%22:%22g%22,%22give_material_way%22:2,%22over_give_control%22:1,%22min_give_material%22:%2221%22,%22plan_strategy%22:1,%22order_strategy%22:0,%22fixed_lead_time%22:%22121%22,%22vary_lead_time%22:%22211%22,%22check_lead_time%22:%221%22,%22check_lead_time_unit%22:1,%22offset_time_unit%22:1,%22reverse_time%22:2,%22min_give_unit%22:%22g%22,%22material_category%22:%22G01%22,%22assistant_unit%22:%22g%22,%22batch_num_rule%22:%22PHBM001%22,%22allow_return_material%22:true,%22enable_quota%22:true,%22quota_way%22:1,%22min_split_amount%22:%22121%22,%22outsource_unit%22:%22dong%22,%22outsource_pricing_unit%22:%22g%22,%22product_unit%22:%22g%22,%22product_type%22:%22SCDD01_SYS%22,%22manufacture_strategy%22:%22ZZCL001_SYS%22,%22plan_area%22:%22JHQ001_SYS%22,%22product_level%22:%22121%22,%22offset_time%22:%221212%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:2,%22auditor2%22:3,%22is_component%22:1,%22material_name%22:%22121%22,%22material_code%22:%22121%22,%22material_code_old%22:%22211%22,%22mg_code%22:%22G02%22,%22material_attribute%22:1,%22is_suite%22:0,%22basic_unit%22:%22dong%22,%22specifications%22:%22121%22,%22specifications_code%22:%22121%22,%22description%22:%2221212%22,%22control%22:[%22%E5%85%81%E8%AE%B8%E9%94%80%E5%94%AE%22,%22%E5%85%81%E8%AE%B8%E9%87%87%E8%B4%AD%22],%22default_tax_rate%22:%22SL01_SYS%22,%22inventory_type%22:%22CHLB01_SYS%22,%22tax_type%22:%22WLDSFL01_SYS%22,%22batch_num_extra%22:false,%22allow_return%22:true,%22order_interval_unit%22:3,%22start_batch%22:true,%22enable_expiration%22:false,%22MPR_combine%22:true,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:true,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22inventory_unit%22:%22g%22,%22convert_unit%22:1,%22sale_unit%22:%22g%22,%22sale_pricing_unit%22:%22g%22,%22purchase_unit%22:%22g%22,%22purchase_pricing_unit%22:%22g%22,%22give_material_way%22:2,%22over_give_control%22:1,%22min_give_material%22:%2221%22,%22plan_strategy%22:1,%22order_strategy%22:0,%22fixed_lead_time%22:%22121%22,%22vary_lead_time%22:%22211%22,%22check_lead_time%22:%221%22,%22check_lead_time_unit%22:1,%22offset_time_unit%22:1,%22reverse_time%22:2,%22min_give_unit%22:%22g%22,%22material_category%22:%22G01%22,%22assistant_unit%22:%22g%22,%22batch_num_rule%22:%22PHBM001%22,%22allow_return_material%22:true,%22enable_quota%22:true,%22quota_way%22:1,%22min_split_amount%22:%22121%22,%22outsource_unit%22:%22dong%22,%22outsource_pricing_unit%22:%22g%22,%22product_unit%22:%22g%22,%22product_type%22:%22SCDD01_SYS%22,%22manufacture_strategy%22:%22ZZCL001_SYS%22,%22plan_area%22:%22JHQ001_SYS%22,%22product_level%22:%22121%22,%22offset_time%22:%221212%22} [运行时间：0.150015s][吞吐率：6.67req/s] [内存消耗：2,392.66kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"use_org":100,"create_org":100,"auditor1":2,"auditor2":3,"is_component":1,"material_name":"121","material_code":"121","material_code_old":"211","mg_code":"G02","material_attribute":1,"is_suite":0,"basic_unit":"dong","specifications":"121","specifications_code":"121","description":"21212","control":["允许销售","允许采购"],"default_tax_rate":"SL01_SYS","inventory_type":"CHLB01_SYS","tax_type":"WLDSFL01_SYS","batch_num_extra":false,"allow_return":true,"order_interval_unit":3,"start_batch":true,"enable_expiration":false,"MPR_combine":true,"standard_labor_hour":0,"fixed_lead_time_unit":1,"vary_lead_time_unit":1,"inventory_attr":{"warehouse":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"warehouse_space":{"enable":true,"affect_price":true,"affect_plan":false,"affect_cost":false},"BOM":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"batch_num":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"trace_num":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false}},"inventory_unit":"g","convert_unit":1,"sale_unit":"g","sale_pricing_unit":"g","purchase_unit":"g","purchase_pricing_unit":"g","give_material_way":2,"over_give_control":1,"min_give_material":"21","plan_strategy":1,"order_strategy":0,"fixed_lead_time":"121","vary_lead_time":"211","check_lead_time":"1","check_lead_time_unit":1,"offset_time_unit":1,"reverse_time":2,"min_give_unit":"g","material_category":"G01","assistant_unit":"g","batch_num_rule":"PHBM001","allow_return_material":true,"enable_quota":true,"quota_way":1,"min_split_amount":"121","outsource_unit":"dong","outsource_pricing_unit":"g","product_unit":"g","product_type":"SCDD01_SYS","manufacture_strategy":"ZZCL001_SYS","plan_area":"JHQ001_SYS","product_level":"121","offset_time":"1212"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"use_org\\\":100,\\\"create_org\\\":100,\\\"auditor1\\\":2,\\\"auditor2\\\":3,\\\"is_component\\\":1,\\\"material_name\\\":\\\"121\\\",\\\"material_code\\\":\\\"121\\\",\\\"material_code_old\\\":\\\"211\\\",\\\"mg_code\\\":\\\"G02\\\",\\\"material_attribute\\\":1,\\\"is_suite\\\":0,\\\"basic_unit\\\":\\\"dong\\\",\\\"specifications\\\":\\\"121\\\",\\\"specifications_code\\\":\\\"121\\\",\\\"description\\\":\\\"21212\\\",\\\"control\\\":[\\\"\\u5141\\u8bb8\\u9500\\u552e\\\",\\\"\\u5141\\u8bb8\\u91c7\\u8d2d\\\"],\\\"default_tax_rate\\\":\\\"SL01_SYS\\\",\\\"inventory_type\\\":\\\"CHLB01_SYS\\\",\\\"tax_type\\\":\\\"WLDSFL01_SYS\\\",\\\"batch_num_extra\\\":false,\\\"allow_return\\\":true,\\\"order_interval_unit\\\":3,\\\"start_batch\\\":true,\\\"enable_expiration\\\":false,\\\"MPR_combine\\\":true,\\\"standard_labor_hour\\\":0,\\\"fixed_lead_time_unit\\\":1,\\\"vary_lead_time_unit\\\":1,\\\"inventory_attr\\\":{\\\"warehouse\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"warehouse_space\\\":{\\\"enable\\\":true,\\\"affect_price\\\":true,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"BOM\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"batch_num\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"trace_num\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false}},\\\"inventory_unit\\\":\\\"g\\\",\\\"convert_unit\\\":1,\\\"sale_unit\\\":\\\"g\\\",\\\"sale_pricing_unit\\\":\\\"g\\\",\\\"purchase_unit\\\":\\\"g\\\",\\\"purchase_pricing_unit\\\":\\\"g\\\",\\\"give_material_way\\\":2,\\\"over_give_control\\\":1,\\\"min_give_material\\\":\\\"21\\\",\\\"plan_strategy\\\":1,\\\"order_strategy\\\":0,\\\"fixed_lead_time\\\":\\\"121\\\",\\\"vary_lead_time\\\":\\\"211\\\",\\\"check_lead_time\\\":\\\"1\\\",\\\"check_lead_time_unit\\\":1,\\\"offset_time_unit\\\":1,\\\"reverse_time\\\":2,\\\"min_give_unit\\\":\\\"g\\\",\\\"material_category\\\":\\\"G01\\\",\\\"assistant_unit\\\":\\\"g\\\",\\\"batch_num_rule\\\":\\\"PHBM001\\\",\\\"allow_return_material\\\":true,\\\"enable_quota\\\":true,\\\"quota_way\\\":1,\\\"min_split_amount\\\":\\\"121\\\",\\\"outsource_unit\\\":\\\"dong\\\",\\\"outsource_pricing_unit\\\":\\\"g\\\",\\\"product_unit\\\":\\\"g\\\",\\\"product_type\\\":\\\"SCDD01_SYS\\\",\\\"manufacture_strategy\\\":\\\"ZZCL001_SYS\\\",\\\"plan_area\\\":\\\"JHQ001_SYS\\\",\\\"product_level\\\":\\\"121\\\",\\\"offset_time\\\":\\\"1212\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547262682) [ RunTime:0.032004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = '121' LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02' LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'vary_lead_time' at row 1[E:\phpStudy\WWW\plm_dev\thinkphp\library\think\db\Connection.php:451]
+---------------------------------------------------------------
+[ 2019-01-12T11:48:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2} [运行时间：0.172017s][吞吐率：5.81req/s] [内存消耗：2,191.04kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547264881) [ RunTime:0.039004s ]
+[ error ] [2]Missing argument 1 for app\api\model\Relation::getAuditorList(), called in E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php on line 50 and defined[E:\phpStudy\WWW\plm_dev\application\api\model\Relation.php:570]
+---------------------------------------------------------------
+[ 2019-01-12T11:48:48+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2} [运行时间：0.127013s][吞吐率：7.87req/s] [内存消耗：2,191.14kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547264928) [ RunTime:0.031003s ]
+[ error ] [2]Missing argument 1 for app\api\model\Relation::getAuditorList(), called in E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php on line 50 and defined[E:\phpStudy\WWW\plm_dev\application\api\model\Relation.php:570]
+---------------------------------------------------------------
+[ 2019-01-12T11:49:09+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2} [运行时间：0.156016s][吞吐率：6.41req/s] [内存消耗：2,191.33kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547264948) [ RunTime:0.074007s ]
+[ error ] [2]Missing argument 1 for app\api\model\Relation::getAuditorList(), called in E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php on line 50 and defined[E:\phpStudy\WWW\plm_dev\application\api\model\Relation.php:570]
+---------------------------------------------------------------
+[ 2019-01-12T11:51:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2} [运行时间：0.145015s][吞吐率：6.90req/s] [内存消耗：2,181.17kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265059) [ RunTime:0.036004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auditor_order' in 'where clause'[E:\phpStudy\WWW\plm_dev\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2019-01-12T11:51:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2} [运行时间：0.133013s][吞吐率：7.52req/s] [内存消耗：2,107.53kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265087) [ RunTime:0.034004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.007001s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:51:51+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2} [运行时间：0.121012s][吞吐率：8.26req/s] [内存消耗：2,107.30kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011002s ] mysql:dbname=7000mall_plm;host=192.168.80.245;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265111) [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.006001s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:52:48+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2} [运行时间：0.140014s][吞吐率：7.14req/s] [内存消耗：2,175.94kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265168) [ RunTime:0.029003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 2 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 2 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:54:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2} [运行时间：0.214022s][吞吐率：4.67req/s] [内存消耗：2,012.16kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.027003s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265241) [ RunTime:0.061006s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:55:18+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22auditor_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22auditor_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.096009s][吞吐率：10.42req/s] [内存消耗：2,012.77kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"auditor_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"auditor_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265318) [ RunTime:0.032003s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:55:29+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22auditor_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22auditor_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.112011s][吞吐率：8.93req/s] [内存消耗：2,012.84kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"auditor_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"auditor_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265329) [ RunTime:0.036004s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:55:37+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.157015s][吞吐率：6.37req/s] [内存消耗：2,181.30kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265336) [ RunTime:0.034003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auditor_order' in 'where clause'[E:\phpStudy\WWW\plm_dev\thinkphp\library\think\db\Connection.php:451]
+---------------------------------------------------------------
+[ 2019-01-12T11:56:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.182019s][吞吐率：5.49req/s] [内存消耗：2,190.76kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265376) [ RunTime:0.042004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.003000s ]
+[ error ] [2]Invalid argument supplied for foreach()[E:\phpStudy\WWW\plm_dev\thinkphp\library\think\Model.php:936]
+---------------------------------------------------------------
+[ 2019-01-12T11:57:02+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.090009s][吞吐率：11.11req/s] [内存消耗：2,071.13kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265422) [ RunTime:0.029003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:57:35+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.101010s][吞吐率：9.90req/s] [内存消耗：2,071.13kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265455) [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2019-01-12T11:58:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.118012s][吞吐率：8.47req/s] [内存消耗：2,070.81kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547265507) [ RunTime:0.039004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-01-12T13:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.192019s][吞吐率：5.21req/s] [内存消耗：2,193.67kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547272115) [ RunTime:0.093010s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.002000s ]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1364 Field 'target_id' doesn't have a default value[E:\phpStudy\WWW\plm_dev\thinkphp\library\think\db\Connection.php:451]
+---------------------------------------------------------------
+[ 2019-01-12T13:50:17+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：1.011101s][吞吐率：0.99req/s] [内存消耗：2,080.20kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547272216) [ RunTime:0.897089s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 11) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 22) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 33) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-01-12T13:51:44+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.150015s][吞吐率：6.67req/s] [内存消耗：2,081.43kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547272304) [ RunTime:0.033003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 11) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 22) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 33) [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-01-12T13:54:14+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,.33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,.33]} [运行时间：0.200020s][吞吐率：5.00req/s] [内存消耗：2,012.80kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,.33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,.33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547272454) [ RunTime:0.073007s ]
+---------------------------------------------------------------
+[ 2019-01-12T13:58:35+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.128013s][吞吐率：7.81req/s] [内存消耗：2,078.11kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547272715) [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 11) [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 22) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 33) [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2019-01-12T15:02:50+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]}
+[ info ] www.plm_dev123.net/api/v2/setting/setAuditor?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:2,%22audit_order%22:2,%22auditor_ids%22:[11,22,33]} [运行时间：0.123037s][吞吐率：8.13req/s] [内存消耗：2,078.05kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'setAuditor',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":2,"audit_order":2,"auditor_ids":[11,22,33]}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->setAuditor[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010003s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/setauditor' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":2,\\\"audit_order\\\":2,\\\"auditor_ids\\\":[11,22,33]}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547276570) [ RunTime:0.037011s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004002s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `target_type` = 8  AND `audit_order` = 2 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 11) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 22) [ RunTime:0.001001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `audit_order` , `role_type` , `admin_id`) VALUES (0 , 8 , 2 , 5 , 33) [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-01-12T15:06:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0} [运行时间：0.082008s][吞吐率：12.19req/s] [内存消耗：2,107.88kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=9&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":0}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":0}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547276771) [ RunTime:0.023002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_type` = 8  AND `audit_order` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-01-12T15:06:59+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0} [运行时间：0.115012s][吞吐率：8.69req/s] [内存消耗：2,108.47kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=9&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":0}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":0}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547276819) [ RunTime:0.026003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_type` = 8  AND `audit_order` = 0 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-01-12T15:07:50+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0} [运行时间：0.090009s][吞吐率：11.11req/s] [内存消耗：2,108.96kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=9&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":0}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":0}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547276870) [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_type` = 8  AND `audit_order` = 0 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-01-12T15:08:40+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0} [运行时间：0.101010s][吞吐率：9.90req/s] [内存消耗：2,192.39kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=9&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":0}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":0}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547276920) [ RunTime:0.036003s ]
+[ error ] [8]未定义变量: type[E:\phpStudy\WWW\plm_dev\application\api\model\Relation.php:576]
+---------------------------------------------------------------
+[ 2019-01-12T15:09:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0} [运行时间：0.073007s][吞吐率：13.70req/s] [内存消耗：2,071.11kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=9&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":0}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":0}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547276951) [ RunTime:0.021002s ]
+---------------------------------------------------------------
+[ 2019-01-12T15:09:29+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0} [运行时间：0.097010s][吞吐率：10.31req/s] [内存消耗：2,110.05kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=9&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":0}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":0}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547276969) [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_type` = 8 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-01-12T15:10:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0}
+[ info ] www.plm_dev123.net/api/v2/setting/getAuditorList?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22type%22:0} [运行时间：0.250025s][吞吐率：4.00req/s] [内存消耗：2,177.78kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.setting',
+    2 => 'getAuditorList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=9&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=espgbtf2ml3iq7ral2l8d0rdm5',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"type":0}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Setting->getAuditorList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Setting.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'setting/getauditorlist' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"type\\\":0}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547277010) [ RunTime:0.045004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_type` = 8 [ RunTime:0.023002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013002s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 11 LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 22 LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 33 LIMIT 1 [ RunTime:0.013001s ]

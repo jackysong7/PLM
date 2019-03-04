@@ -1,0 +1,45 @@
+<?php
+// +----------------------------------------------------------------------
+// | ThinkPHP [ WE CAN DO IT JUST THINK ]
+// +----------------------------------------------------------------------
+// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
+// +----------------------------------------------------------------------
+// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// +----------------------------------------------------------------------
+// | Author: 流年 <liu21st@gmail.com>
+// +----------------------------------------------------------------------
+
+// 应用公共文件
+
+/**
+ * 在给定的时间上加上除去周6和周7的天数，返回时间戳
+ * @param type $time 给定的时间
+ * @param type $days 天数
+ * @return boolean
+ */
+function getWorkTime($time, $days)
+{
+    $time = intval($time);
+    $days = intval($days);
+    if ($days == 0)
+    {
+        return $time;
+    }
+    for($i=0; $i<abs($days); $i++)
+    {
+        if ($days > 0)
+        {
+            $time += 24*3600;
+        } else {
+            $time -= 24*3600;
+        }
+        $w = date('w', $time);
+        // 星期天和星期六不算
+        if ($w == 0 || $w == 6)
+        {
+            $i--;
+        }
+    }
+
+    return $time;
+}

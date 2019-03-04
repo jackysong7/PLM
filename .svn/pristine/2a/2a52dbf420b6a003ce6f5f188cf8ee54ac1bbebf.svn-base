@@ -1,0 +1,461 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2018/7/9 15:02
+// +----------------------------------------------------------------------
+// | TITLE: 项目BOM表的数据操作
+// +----------------------------------------------------------------------
+
+namespace app\api\model;
+
+use app\common\library\KCloud;
+use think\Db;
+use think\Model;
+use think\Session;
+
+class ProjectBom extends Model
+{
+    //未同步
+    const CHANGE_STATUS_DEFAULT = 0;
+    //同步成功
+    const CHANGE_STATUS_SUCCESS = 1;
+    //同步失败
+    const CHANGE_STATUS_FAILURE = 2;
+
+    protected $table = 'plm_project_bom';
+    /*
+     * 通过node_id、project_id、node_key查找Bom信息
+     * 【node_id】【project_id,node_key】二选一
+     * @param int submitStatus 1已提交，0未提交
+     */
+    public static function getBomInfoById($nodeId='',$submitStatus=0)
+    {
+        $list=[];
+        if($nodeId && !$submitStatus)//待提交
+        {
+            //项目BOM
+            $bomList = Db::name('project_bom')
+                ->field('bom_id doc_id,project_name doc_name,tpl_id,tpl_name,tpl_type,add_time,version,creator_id')
+                ->where('node_id',$nodeId)
+                ->where('submit_status',0)
+                ->order('bom_id desc')
+                ->select();
+            if(!empty($bomList))
+            {
+                foreach($bomList as $k=>$v)
+                {
+                    $creatorBom = Relation::getNickName($v['creator_id']);//查找BOM创建人员
+                    $bomList[$k]['creator'] = !empty($creatorBom)?['admin_id'=>$v['creator_id'],'nickname'=>$creatorBom] : [];
+                    unset($bomList[$k]['creator_id']);
+                }
+            }
+            //开发立项
+            $udList = Db::name('uitableview_default')
+                ->alias('u')
+                ->field('u.ud_id doc_id,u.tpl_id,t.tpl_name,t.tpl_type,u.create_at add_time,u.creator_id,u.version')
+                ->join('doc_template t','u.tpl_id=t.tpl_id','LEFT')
+                ->where('u.node_id',$nodeId)
+                ->where('u.submit_status',0)
+                ->order('u.ud_id desc')
+                ->select();
+            if(!empty($udList))
+            {
+                foreach($udList as $key=>$value)
+                {
+                    $creatorUd = Relation::getNickName($value['creator_id']);//查找BOM创建人员
+                    $udList[$key]['creator'] = !empty($creatorUd)?['admin_id'=>$value['admin_id'],'nickname'=>$creatorUd] : [];
+                    unset($udList[$key]['creator_id']);
+                }
+            }
+            //自定义文档
+            $docList = Db::name('document')
+                ->alias('d')
+                ->field('d.pd_id doc_id,d.file_name doc_name,d.tpl_id,d.admin_id,t.tpl_name,t.tpl_type,d.createtime add_time,d.version')
+                ->join('doc_template t','d.tpl_id=t.tpl_id','LEFT')
+                ->where('d.node_id',$nodeId)
+                ->where('d.submit_status',0)
+                ->where('d.tpl_id','>',0)
+                ->order('d.pd_id desc')
+                ->select();
+            if($docList)
+            {
+                foreach($docList as $index=>$item)
+                {
+                    $creatorDoc = Relation::getNickName($item['admin_id']);//查找BOM创建人员
+                    $docList[$index]['creator'] = !empty($creatorDoc)?['admin_id'=>$item['admin_id'],'nickname'=>$creatorDoc] : [];
+                    unset($docList[$index]['admin_id']);
+                }
+            }
+            $list = array_merge($bomList,$udList,$docList);
+            return $list;
+        }
+        elseif ($nodeId && $submitStatus)//已提交
+        {
+            $bomList = Db::name('project_bom')
+                ->field('bom_id doc_id,project_name doc_name,tpl_id,tpl_name,tpl_id,tpl_type,add_time,submit_time,audit_status,version,creator_id')
+                ->where('node_id',$nodeId)
+                ->where('submit_status',1)
+                ->order('bom_id desc')
+                ->select();
+            if(!empty($bomList)) {
+                // 节点审核人员
+                $where['target_id'] = $nodeId;
+                $where['target_type'] = 2;//
+                $where['role_type'] = 5;//审核人员
+                $nodeInfo = Relation::auditInfo($where);
+                foreach($bomList as $k=>$v) {
+                    // 文档审核信息
+                    $map['target_id'] = $v['doc_id'];
+                    $map['target_type'] = 4;//BOM表类型
+                    $map['role_type'] = 5;//审核人员
+                    $auditorBom = Relation::auditInfo($map);
+                    if ($nodeInfo != false && $auditorBom != false) {
+                        foreach ($nodeInfo['auditor'] as &$item) {
+                            foreach ($auditorBom['auditor'] as &$bom_item) {
+                                if ($item['admin_id'] == $bom_item['admin_id']) {
+                                    $item = $bom_item;
+                                }
+                            }
+                        }
+                    }
+                    $creatorInfo = Relation::getNickName($v['creator_id']);//查找BOM创建人员
+                    $bomList[$k]['creator'] = isset($creatorInfo) ? ['admin_id' => $v['creator_id'], 'nickname' => $creatorInfo] : [];
+                    $bomList[$k]['auditor'] = $nodeInfo != false ? $nodeInfo['auditor'] : [];
+                    unset($bomList[$k]['creator_id']);
+                    //array_push($list, $bomList);
+                }
+            }
+
+            $udList = Db::name('uitableview_default')
+                ->alias('u')
+                ->field('u.ud_id doc_id,u.tpl_id,t.tpl_name,t.tpl_type,u.create_at add_time,u.submit_time,u.audit_status,u.version,u.creator_id')
+                ->join('doc_template t','u.tpl_id=t.tpl_id','LEFT')
+                ->where('u.node_id',$nodeId)
+                ->where('u.submit_status',1)
+                ->order('u.ud_id desc')
+                ->select();
+            if(!empty($udList))
+            {
+                // 节点审核人员
+                $where['target_id'] = $nodeId;
+                $where['target_type'] = 2;//
+                $where['role_type'] = 5;//审核人员
+                $nodeInfo = Relation::auditInfo($where);
+                foreach($udList as $key=>$value) {
+                    // 文档审核信息
+                    $map['target_id'] = $value['doc_id'];
+                    $map['target_type'] = 6;//BOM表类型
+                    $map['role_type'] = 5;//审核人员
+                    $auditorUd = Relation::auditInfo($map);
+                    if ($nodeInfo != false && $auditorUd != false) {
+                        foreach ($nodeInfo['auditor'] as &$item) {
+                            foreach ($auditorUd['auditor'] as &$ud_item) {
+                                if ($item['admin_id'] == $ud_item['admin_id']) {
+                                    $item = $ud_item;
+                                }
+                            }
+                        }
+                    }
+
+                    $UdData['doc_name'] = '';
+                    $creatorUd = Relation::getNickName($value['creator_id']);//查找开发立项创建人员
+                    $udList[$key]['creator'] = isset($creatorUd) ? ['admin_id' => $value['creator_id'], 'nickname' => $creatorUd] : [];
+                    $bomList[$key]['auditor'] = $nodeInfo != false ? $nodeInfo['auditor'] : [];
+                    unset($udList[$key]['creator_id']);
+                    //array_push($list, $udList);
+                }
+
+            }
+
+            $docList = Db::name('document')
+                ->alias('d')
+                ->field('d.pd_id doc_id,d.file_name doc_name,d.admin_id,d.tpl_id,t.tpl_name,t.tpl_type,d.createtime add_time,d.submit_time,d.audit_status,d.version')
+                ->join('doc_template t','d.tpl_id=t.tpl_id','LEFT')
+                ->where('d.node_id',$nodeId)
+                ->where('d.submit_status',1)
+                ->where('d.tpl_id','>',0)
+                ->order('pd_id desc')
+                ->select();
+            if($docList)
+            {
+                // 节点审核人员
+                $where['target_id'] = $nodeId;
+                $where['target_type'] = 2;//
+                $where['role_type'] = 5;//审核人员
+                $nodeInfo = Relation::auditInfo($where);
+                foreach($docList as $kk=>$vv) {
+                    // 文档审核信息
+                    $map['target_id'] = $vv['doc_id'];
+                    $map['target_type'] = 3;//BOM表类型
+                    $map['role_type'] = 5;//审核人员
+                    $auditorDoc = Relation::auditInfo($map);
+                    if ($nodeInfo != false && $auditorDoc != false) {
+                        foreach ($nodeInfo['auditor'] as &$item) {
+                            foreach ($auditorDoc['auditor'] as &$doc_item) {
+                                if ($item['admin_id'] == $doc_item['admin_id']) {
+                                    $item = $doc_item;
+                                }
+                            }
+                        }
+                    }
+
+                    $creatorDoc = Relation::getNickName($vv['admin_id']);//查找创建人员
+                    $docList[$kk]['creator'] = isset($creatorDoc) ? ['admin_id' => $vv['admin_id'], 'nickname' => $creatorDoc] : [];
+                    $docList[$kk]['auditor'] = $nodeInfo != false ? $nodeInfo['auditor'] : [];
+                    unset($docList[$kk]['admin_id']);
+                    //array_push($list, $docList);
+                }
+            }
+            $list = array_merge($bomList,$udList,$docList);
+            return $list;
+        }
+        return false;
+    }
+
+    /*
+     * 提交文档审核修改状态为已提交
+     */
+    public static function edit($params)
+    {
+        $editResult = self::get(['bom_id'=>$params['doc_id'],'tpl_type'=>$params['tpl_type']]);
+
+        if($editResult)
+        {
+            $where = [
+                'bom_id'=>$params['doc_id'],
+                'tpl_type'=>$params['tpl_type']
+            ];
+            $data = [
+                'submit_status' => 1,
+                'submit_time' => time()
+            ];
+            $result = Db::name('project_bom')->where($where)->update($data);
+            return $result;
+        }
+        return false;
+    }
+
+    /*
+     * 审核文档
+     */
+    public static function audit($params)
+    {
+        $auditResult = self::get(['bom_id'=>$params['doc_id'],'tpl_type'=>$params['tpl_type']]);
+        if($auditResult)
+        {
+            $where = [
+                'bom_id'=>$params['doc_id'],
+                'tpl_type'=>$params['tpl_type']
+            ];
+            $data = [
+                'audit_status' => $params['audit_status'],
+                'audit_note' => !empty($params['audit_note'])?($params['audit_note']):'',
+                'audit_time' => time()
+            ];
+            $result = Db::name('project_bom')->where($where)->update($data);
+
+            self::saveErpBom($params);
+
+            return $result;
+        }
+        return false;
+    }
+    
+    /*
+     * 新增项目BOM表
+     */
+    public static function add($params)
+    {
+        if(is_array($params))
+        {
+            if($params['project_name']) $data['project_name'] = $params['project_name'];
+            if($params['tpl_id'])   $data['tpl_id'] = $params['tpl_id'];
+            if($params['project_id'])   $data['project_id'] = $params['project_id'];
+            if($params['node_id'])  $data['node_id'] = $params['node_id'];
+            if($params['tpl_name']) $data['tpl_name'] = $params['tpl_name'];
+            if($params['tpl_type']) $data['tpl_type'] = $params['tpl_type'];
+            if($params['creator_id']) $data['creator_id'] = $params['creator_id'];
+            if(isset($params['version'])) $data['version'] = $params['version'];
+
+            $data['add_time'] = time();
+
+            $result = Db::name('project_bom')->insertGetId($data);
+            return $result;
+        }
+        return false;
+    }
+
+    /*
+     * 通过bom_id查询版本信息
+     */
+    public static function getVersion($bomId)
+    {
+      return Db::name('project_bom')->where('bom_id',$bomId)->max('version');
+    }
+
+    /*
+     * 通过bom_id获取Bom表详情
+     */
+    public static function getDetail($bomId)
+    {
+        $list = Db::name('project_bom')
+            ->alias('b')
+            ->field('b.bom_id,b.tpl_id,b.creator_id,b.project_name bom_name,b.tpl_name,b.project_id,b.node_id,b.version,b.add_time,b.audit_time')
+            ->where('b.bom_id',intval($bomId))
+            ->find();
+
+        //获取创建人
+        $list['creator'] = [
+            'admin_id' => $list['creator_id'],
+            'nickname' => \app\api\model\Relation::getNickName($list['creator_id'])
+        ];
+        //获取审核人信息
+        $where['target_id'] = $bomId;
+        $where['target_type'] = 4;
+        $auditorInfo = \app\api\model\Relation::auditInfo($where);
+        $list['auditor'] = isset($auditorInfo['auditor']) ? $auditorInfo['auditor'] : [];
+        unset($list['creator_id']);
+
+        return $list;
+    }
+
+    /*
+     * 通过bom_id查询一条记录
+     */
+    public static function getInstanceByBomId($bomId)
+    {
+        return Db::name('project_bom')->where('bom_id',$bomId)->value('bom_id');
+    }
+
+    /*
+     * 通过文档模板id、文档类型删除一条记录
+     */
+    public static function del($bomId,$tplType)
+    {
+        return  Db::name('project_bom')
+            ->where('bom_id',$bomId)
+            ->where('tpl_type',$tplType)
+            ->setField('status',-1);
+    }
+
+    /*
+     * 通过project_id查询所有记录
+     */
+    public static function getInfoByNodeId($where,$field='*')
+    {
+        return Db::name('project_bom')->where($where)->field($field)->select();
+    }
+
+    /**
+     * @param $params
+     */
+    public static function saveErpBom($params)
+    {
+        //如果不是BOM表
+        if ($params['tpl_type'] != 1) return;
+
+        $count = Relation::where([
+            'target_id' => $params['doc_id'],
+            'target_type' => Relation::TARGET_TYPE_BOM,
+            'audit_status' => ['<>', 1]
+        ])->count();
+
+        //如果有未审核的数据
+        if ($count) return;
+
+        //BOM表，全部审核人都审核通过，同步到ERP
+        $projectBom = self::find($params['doc_id']);
+
+        $res = Session::get('k3CloudLoginResult') === true ? 1 : KCloud::check_login();
+        if ($res != 1) {
+            \think\Log::record("bom_id:{$projectBom->bom_id}. 同步失败 ERP登录失败");
+            ProjectBom::update(['change_status' => ProjectBom::CHANGE_STATUS_FAILURE], ['bom_id' => $projectBom->bom_id]);
+            return;
+        }
+
+        $FCreateOrgId = '100';//组织id
+        $FBILLTYPE = 'WLQD01_SYS';//单据类型
+        $FBOMCATEGORY = '1';//BOM分类
+        $FBOMUSE = '99';//BOM用途
+        $FMATERIALTYPE = '1';//子项类型
+        $FDOSAGETYPE = '2';//用量类型
+        $FOverControlMode = '1';//超发控制方式
+        $FEXPIREDATE = '9999-12-31 00:00:00';//失效日期
+        $FISSUETYPE = '1';//发料方式
+        $FTIMEUNIT = '1';//时间单位
+        $FOWNERTYPEID = 'BD_OwnerOrg';//货主类型
+
+        $fBomMaterial = BomMaterial::where(['bom_id' => $projectBom->bom_id, 'relative' => 1])->find();
+        $sBomMaterialList = BomMaterial::where(['bom_id' => $projectBom->bom_id, 'relative' => 0])->select();
+
+        $Model['FID'] = '0';
+        $Model['FCreateOrgId']['FNumber'] = $FCreateOrgId;//创建组织
+        $Model['FUseOrgId']['FNumber'] = $FCreateOrgId;//使用组织
+        $Model['FBILLTYPE']['FNumber'] = $FBILLTYPE;//单据类型
+        $Model['FBOMCATEGORY'] = $FBOMCATEGORY;//BOM分类
+        $Model['FBOMUSE'] = $FBOMUSE;//BOM用途
+        $Model['FGroup']['FNumber'] = $projectBom->mg_code;//BOM分组
+        $Model['FMATERIALID']['FNumber'] = $fBomMaterial['material_sn'];//父项物料编码
+        $Model['FUNITID']['FNumber'] = $fBomMaterial['unit'];//父项物料单位
+
+        foreach ($sBomMaterialList as $sBomMaterial) {
+            $FTreeEntity = [];
+            $FTreeEntity['FMATERIALIDCHILD']['FNumber'] = $sBomMaterial['material_sn'];//子项物料编码
+            $FTreeEntity['FMATERIALTYPE'] = $FMATERIALTYPE;//子项类型
+            $FTreeEntity['FCHILDUNITID']['FNumber'] = $sBomMaterial['unit'];//子项单位
+            $FTreeEntity['FDOSAGETYPE'] = $FDOSAGETYPE;//用量类型
+            $FTreeEntity['FOverControlMode'] = $FOverControlMode;//超发控制方式
+            $FTreeEntity['FEFFECTDATE'] = date('Y-m-d H:i:s');//生效日期
+            $FTreeEntity['FEXPIREDATE'] = $FEXPIREDATE;//失效日期
+            $FTreeEntity['FISSUETYPE'] = $FISSUETYPE;//发料方式
+            $FTreeEntity['FTIMEUNIT'] = $FTIMEUNIT;//时间单位
+            $FTreeEntity['FOWNERTYPEID'] = $FOWNERTYPEID;//货主类型
+            $FTreeEntity['FNUMERATOR'] = $sBomMaterial['numerator_amount'];//用量:分子
+            $FTreeEntity['FDENOMINATOR'] = $sBomMaterial['denominator_amount'];//用量:分母
+            $FTreeEntity['FMEMO'] = $sBomMaterial['remark'];//备注
+            $Model['FTreeEntity'][] = $FTreeEntity;
+        }
+
+        $data['Model'] = $Model;
+        $data = ['ENG_BOM', json_encode($data)];
+        $post_content = KCloud::create_postdata($data);
+
+        $cloudUrl = Session::get('cloudUrl');
+        $cookie_jar = Session::get('cookieJar');
+        $result = KCloud::invoke_save($cloudUrl, $post_content, $cookie_jar);
+
+        $result_arr = json_decode($result, true);
+
+        //更新同步状态
+        if (!empty($result_arr['Result']['ResponseStatus']['IsSuccess'])) {
+            $change_status = ProjectBom::CHANGE_STATUS_SUCCESS;
+        } else {
+            $change_status = ProjectBom::CHANGE_STATUS_FAILURE;
+            //记录失败日志
+            if (!empty($result_arr['Result']['ResponseStatus']['Errors'])) {
+                \think\Log::record("bom_id:{$projectBom->bom_id}. 同步失败"
+                    . json_encode($result_arr['Result']['ResponseStatus']['Errors']));
+            }
+        }
+        ProjectBom::update(['change_status' => $change_status], ['bom_id' => $projectBom->bom_id]);
+    }
+
+    public static function updateInfo($where,$data)
+    {
+        return Db::name('project_bom')->where($where)->update($data);
+    }
+
+    /*
+     * 删除所有文档（已审核的除外）audit_status=1为已审核
+     */
+    public static function delAll($where)
+    {
+        return  Db::name('project_bom')->where($where)->setField('status',-1);
+    }
+
+    public static function tplInfo($where,$field)
+    {
+        return Db::name('project_bom')->where($where)->field($field)->find();
+    }
+}

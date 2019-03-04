@@ -1,0 +1,1149 @@
+---------------------------------------------------------------
+[ 2018-09-14T09:30:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/del?access_token=b72898b6-f7e7-48e1-af0e-61e0dfb1f757&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/del?access_token=b72898b6-f7e7-48e1-af0e-61e0dfb1f757&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1} [运行时间：0.339000s][吞吐率：2.95req/s] [内存消耗：1,187.85kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'b72898b6-f7e7-48e1-af0e-61e0dfb1f757',
+  'data' => '{"doc_id":6,"tpl_type":2,"del_all_version":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T09:30:05+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：888.47kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/doc/del?access_token=b72898b6-f7e7-48e1-af0e-61e0dfb1f757&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1}',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T09:30:53+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/del?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/del?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1} [运行时间：0.251000s][吞吐率：3.98req/s] [内存消耗：2,176.58kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":6,"tpl_type":2,"del_all_version":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->del[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.027000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/del' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":6,\\\"tpl_type\\\":2,\\\"del_all_version\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536888653) [ RunTime:0.045000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT MAX(version) AS tp_max FROM `plm_uitableview_default` WHERE  `ud_id` = 6 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `tpl_id`,`node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 6  AND `version` IS NULL LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T09:31:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/del?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/del?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1} [运行时间：0.111000s][吞吐率：9.01req/s] [内存消耗：2,176.64kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":6,"tpl_type":2,"del_all_version":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->del[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/del' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":6,\\\"tpl_type\\\":2,\\\"del_all_version\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536888661) [ RunTime:0.027000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT MAX(version) AS tp_max FROM `plm_uitableview_default` WHERE  `ud_id` = 6 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `tpl_id`,`node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 6  AND `version` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T09:55:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1} [运行时间：0.152016s][吞吐率：6.58req/s] [内存消耗：2,272.03kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":6,"tpl_type":2,"del_all_version":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":6,\\\"tpl_type\\\":2,\\\"del_all_version\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536890157) [ RunTime:0.042004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 6 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 6 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` IS NULL LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T09:56:08+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:6,%22tpl_type%22:2,%22del_all_version%22:1} [运行时间：0.096010s][吞吐率：10.42req/s] [内存消耗：2,272.09kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":6,"tpl_type":2,"del_all_version":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":6,\\\"tpl_type\\\":2,\\\"del_all_version\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536890168) [ RunTime:0.028003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 6 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 6 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` IS NULL LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T09:56:18+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:44,%22tpl_type%22:2,%22del_all_version%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:44,%22tpl_type%22:2,%22del_all_version%22:1} [运行时间：0.106011s][吞吐率：9.43req/s] [内存消耗：2,272.03kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":44,"tpl_type":2,"del_all_version":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":44,\\\"tpl_type\\\":2,\\\"del_all_version\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536890178) [ RunTime:0.031003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 44 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 44 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` IS NULL LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T09:59:09+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:44,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:44,%22tpl_type%22:2} [运行时间：0.147015s][吞吐率：6.80req/s] [内存消耗：2,271.84kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":44,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.018002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":44,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536890348) [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 44 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 44 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` IS NULL LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T09:59:14+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:44,%22tpl_type%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:44,%22tpl_type%22:1} [运行时间：0.221022s][吞吐率：4.52req/s] [内存消耗：2,457.77kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":44,"tpl_type":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":44,\\\"tpl_type\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536890354) [ RunTime:0.023002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_project_bom` WHERE  `bom_id` = 44  AND `tpl_type` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] UPDATE `plm_project_bom`  SET `submit_status`=1,`submit_time`=1536890354  WHERE  `bom_id` = 44  AND `tpl_type` = 1 [ RunTime:0.034003s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_project_bom` WHERE  `bom_id` = 44 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 31 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_project_bom` WHERE  `bom_id` = 44 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 44  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012002s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T10:01:19+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:2,%22tpl_type%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:2,%22tpl_type%22:1} [运行时间：0.181018s][吞吐率：5.52req/s] [内存消耗：2,456.72kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":2,"tpl_type":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":2,\\\"tpl_type\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536890479) [ RunTime:0.029003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_project_bom` WHERE  `bom_id` = 2  AND `tpl_type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_project_bom`  SET `submit_status`=1,`submit_time`=1536890479  WHERE  `bom_id` = 2  AND `tpl_type` = 1 [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_project_bom` WHERE  `bom_id` = 2 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 5 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_project_bom` WHERE  `bom_id` = 2 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 27  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T10:01:44+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:2,%22tpl_type%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:2,%22tpl_type%22:1} [运行时间：0.168017s][吞吐率：5.95req/s] [内存消耗：2,459.73kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":2,"tpl_type":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":2,\\\"tpl_type\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536890503) [ RunTime:0.045005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_project_bom` WHERE  `bom_id` = 2  AND `tpl_type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_project_bom`  SET `submit_status`=1,`submit_time`=1536890504  WHERE  `bom_id` = 2  AND `tpl_type` = 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_project_bom` WHERE  `bom_id` = 2 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 5 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_project_bom` WHERE  `bom_id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 27  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T10:02:09+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:2,%22tpl_type%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:2,%22tpl_type%22:1} [运行时间：0.190019s][吞吐率：5.26req/s] [内存消耗：2,459.73kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":2,"tpl_type":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , '1feddc0f-a3d7-4b88-acaa-414984f5d854' , '{\"access_token\":\"1feddc0f-a3d7-4b88-acaa-414984f5d854\",\"data\":\"{\\\"doc_id\\\":2,\\\"tpl_type\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536890529) [ RunTime:0.052005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_project_bom` WHERE  `bom_id` = 2  AND `tpl_type` = 1 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `plm_project_bom`  SET `submit_status`=1,`submit_time`=1536890529  WHERE  `bom_id` = 2  AND `tpl_type` = 1 [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_project_bom` WHERE  `bom_id` = 2 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 5 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_project_bom` WHERE  `bom_id` = 2 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 27  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T14:58:52+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=1feddc0f-a3d7-4b88-acaa-414984f5d854&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.037004s][吞吐率：27.02req/s] [内存消耗：1,190.00kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '1feddc0f-a3d7-4b88-acaa-414984f5d854',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-14T14:59:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.188019s][吞吐率：5.32req/s] [内存消耗：2,422.16kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536908351) [ RunTime:0.025002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536908351  WHERE  `ud_id` = 21 [ RunTime:0.033003s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 239  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:00:08+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.154015s][吞吐率：6.49req/s] [内存消耗：2,299.41kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536908407) [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536908407  WHERE  `ud_id` = 21 [ RunTime:0.032003s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:01:22+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.143014s][吞吐率：6.99req/s] [内存消耗：2,423.31kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536908482) [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536908482  WHERE  `ud_id` = 21 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 239  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:02:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.131013s][吞吐率：7.63req/s] [内存消耗：2,428.64kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536908521) [ RunTime:0.025003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536908521  WHERE  `ud_id` = 21 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 239  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:03:20+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.154015s][吞吐率：6.49req/s] [内存消耗：2,424.26kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536908600) [ RunTime:0.030003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536908600  WHERE  `ud_id` = 21 [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 239  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:04:12+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.153016s][吞吐率：6.54req/s] [内存消耗：2,425.98kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536908652) [ RunTime:0.026003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536908652  WHERE  `ud_id` = 21 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 239  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:05:38+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.136014s][吞吐率：7.35req/s] [内存消耗：2,425.98kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536908738) [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536908738  WHERE  `ud_id` = 21 [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 239  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012002s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:26:55+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.175018s][吞吐率：5.71req/s] [内存消耗：2,546.57kb] [文件加载：65]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536910015) [ RunTime:0.028003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536910015  WHERE  `ud_id` = 21 [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 239  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001001s ]
+[ error ] [0]致命错误: Class 'GearmanClient' not found[E:\phpStudy\WWW\plm_dev\application\common\library\GearmanAsync.php:20]
+---------------------------------------------------------------
+[ 2018-09-14T15:27:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.189019s][吞吐率：5.29req/s] [内存消耗：2,428.68kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536910024) [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536910024  WHERE  `ud_id` = 21 [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 239  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:27:46+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:21,%22tpl_type%22:2} [运行时间：0.395039s][吞吐率：2.53req/s] [内存消耗：2,428.95kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":21,"tpl_type":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":21,\\\"tpl_type\\\":2}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536910066) [ RunTime:0.129012s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_uitableview_default`  SET `submit_status`=1,`submit_time`=1536910066  WHERE  `ud_id` = 21 [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.055005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.010001s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 37 LIMIT 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_uitableview_default` WHERE  `ud_id` = 21 LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 239  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.003001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:35:18+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:46,%22tpl_type%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:46,%22tpl_type%22:1} [运行时间：0.147015s][吞吐率：6.80req/s] [内存消耗：2,464.72kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":46,"tpl_type":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":46,\\\"tpl_type\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536910518) [ RunTime:0.032003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_project_bom` WHERE  `bom_id` = 46  AND `tpl_type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_project_bom`  SET `submit_status`=1,`submit_time`=1536910518  WHERE  `bom_id` = 46  AND `tpl_type` = 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_project_bom` WHERE  `bom_id` = 46 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 38 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_project_bom` WHERE  `bom_id` = 46 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 244  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-14T15:37:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:46,%22tpl_type%22:1}
+[ info ] www.plm_dev123.net/api/v2/doc/submit?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22doc_id%22:46,%22tpl_type%22:1} [运行时间：0.171017s][吞吐率：5.85req/s] [内存消耗：2,464.78kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'submit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=pic2gvr7i24rh5ndmurviont35',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"doc_id":46,"tpl_type":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->submit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/submit' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"doc_id\\\":46,\\\"tpl_type\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536910677) [ RunTime:0.030003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_project_bom` WHERE  `bom_id` = 46  AND `tpl_type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_project_bom`  SET `submit_status`=1,`submit_time`=1536910677  WHERE  `bom_id` = 46  AND `tpl_type` = 1 [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `project_id` FROM `plm_project_bom` WHERE  `bom_id` = 46 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `project_name` FROM `plm_project` WHERE  `project_id` = 38 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `node_id` FROM `plm_project_bom` WHERE  `bom_id` = 46 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_status`,`audit_time`,`audit_note` FROM `plm_relation` WHERE  `target_id` = 244  AND `target_type` = 2  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname`,`telephone`,`email` FROM `c_admin` WHERE  `admin_id` = 6 LIMIT 1 [ RunTime:0.001001s ]

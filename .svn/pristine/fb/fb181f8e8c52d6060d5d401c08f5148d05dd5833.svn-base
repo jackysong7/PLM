@@ -1,0 +1,90 @@
+<?php
+
+namespace app\api\model;
+
+use app\common\library\KCloud;
+use think\Exception;
+use think\Session;
+
+class KCloudApi
+{
+    const FCreateOrgId = '100';//组织id
+    const FBILLTYPE = 'WLQD01_SYS';//组织id
+    const FBOMCATEGORY = '1';//BOM分类
+    const FBOMUSE = '99';//BOM用途
+    const FMATERIALTYPE = '1';//子项类型
+    const FDOSAGETYPE = '2';//用量类型
+    const FOverControlMode = '1';//超发控制方式
+    const FEXPIREDATE = '9999-12-31 00:00:00';//失效日期
+    const FISSUETYPE = '1';//发料方式
+    const FTIMEUNIT = '1';//时间单位
+    const FOWNERTYPEID = 'BD_OwnerOrg';//货主类型
+
+    /**
+     * 同步BOM内容到金蝶云
+     * @throws Exception
+     */
+    public static function saveErpBom()
+    {
+        $res = Session::get('k3CloudLoginResult') === true ? 1 : KCloud::check_login();
+        if ($res != 1) throw new Exception('登录失败');
+
+        (new ProjectBom)->chunk(1000, function ($projectBomList) {
+            foreach ($projectBomList as $projectBom) {
+                $fBomMaterial = BomMaterial::where(['bom_id' => $projectBom['bom_id'], 'relative' => 1])->find();
+                $sBomMaterialList = BomMaterial::where(['bom_id' => $projectBom['bom_id']])->select();
+
+                $Model['FID'] = '0';
+                $Model['FCreateOrgId']['FNumber'] = self::FCreateOrgId;//创建组织
+                $Model['FUseOrgId']['FNumber'] = self::FCreateOrgId;//使用组织
+                $Model['FBILLTYPE']['FNumber'] = self::FBILLTYPE;//单据类型
+                $Model['FBOMCATEGORY'] = self::FBOMCATEGORY;//BOM分类
+                $Model['FBOMUSE'] = self::FBOMUSE;//BOM用途
+                $Model['FGroup']['FNumber'] = $projectBom['mg_code'];//BOM分组
+                $Model['FMATERIALID']['FNumber'] = $fBomMaterial['material_sn'];//父项物料编码
+                $Model['FUNITID']['FNumber'] = $fBomMaterial['unit'];//父项物料单位
+
+                foreach ($sBomMaterialList as $sBomMaterial) {
+                    $FTreeEntity = [];
+                    $FTreeEntity['FMATERIALIDCHILD']['FNumber'] = $sBomMaterial['material_sn'];//子项物料编码
+                    $FTreeEntity['FMATERIALTYPE'] = self::FMATERIALTYPE;//子项类型
+                    $FTreeEntity['FCHILDUNITID']['FNumber'] = $sBomMaterial['unit'];//子项单位
+                    $FTreeEntity['FDOSAGETYPE'] = self::FDOSAGETYPE;//用量类型
+                    $FTreeEntity['FOverControlMode'] = self::FOverControlMode;//超发控制方式
+                    $FTreeEntity['FEFFECTDATE'] = date('Y-m-d H:i:s');//生效日期
+                    $FTreeEntity['FEXPIREDATE'] = self::FEXPIREDATE;//失效日期
+                    $FTreeEntity['FISSUETYPE'] = self::FISSUETYPE;//发料方式
+                    $FTreeEntity['FTIMEUNIT'] = self::FTIMEUNIT;//时间单位
+                    $FTreeEntity['FOWNERTYPEID'] = self::FOWNERTYPEID;//货主类型
+                    $FTreeEntity['FNUMERATOR'] = $sBomMaterial['numerator_amount'];//用量:分子
+                    $FTreeEntity['FDENOMINATOR'] = $sBomMaterial['denominator_amount'];//用量:分母
+                    $FTreeEntity['FMEMO'] = $sBomMaterial['remark'];//备注
+                    $Model['FTreeEntity'][] = $FTreeEntity;
+                }
+
+                $data['Model'] = $Model;
+                $data = ['ENG_BOM', json_encode($data)];
+                $post_content = KCloud::create_postdata($data);
+
+                $cloudUrl = Session::get('cloudUrl');
+                $cookie_jar = Session::get('cookieJar');
+                $result = KCloud::invoke_save($cloudUrl, $post_content, $cookie_jar);
+
+                $result_arr = json_decode($result, true);
+
+                //更新同步状态
+                if (!empty($result_arr['Result']['ResponseStatus']['IsSuccess'])) {
+                    $change_status = ProjectBom::CHANGE_STATUS_SUCCESS;
+                } else {
+                    $change_status = ProjectBom::CHANGE_STATUS_FAILURE;
+                    //记录失败日志
+                    if (!empty($result_arr['Result']['ResponseStatus']['Errors'])) {
+                        \think\Log::record("bom_id:{$projectBom->bom_id}. 同步失败"
+                            . json_encode($result_arr['Result']['ResponseStatus']['Errors']));
+                    }
+                }
+                ProjectBom::update(['change_status' => $change_status], ['bom_id' => $projectBom->bom_id]);
+            }
+        });
+    }
+}

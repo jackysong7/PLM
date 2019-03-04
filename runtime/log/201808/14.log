@@ -1,0 +1,60 @@
+---------------------------------------------------------------
+[ 2018-08-14T11:18:20+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/doc/getProjectSetUpDoc?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22project_id%22:31,%22node_id%22:2,%22tpl_id%22:93}
+[ info ] www.plm_dev123.net/api/v2/doc/getProjectSetUpDoc?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22project_id%22:31,%22node_id%22:2,%22tpl_id%22:93} [运行时间：0.460000s][吞吐率：2.17req/s] [内存消耗：2,261.64kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getProjectSetUpDoc',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary9SstBrHpPw5gKAJV',
+  'postman-token' => '5e8bcd64-7433-b95c-21f7-a3a34d63d113',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"project_id":31,"node_id":2,"tpl_id":93}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Doc->getProjectSetUpDoc[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Doc.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'doc/getprojectsetupdoc' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"project_id\\\":31,\\\"node_id\\\":2,\\\"tpl_id\\\":93}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1534216699) [ RunTime:0.011000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_uitableview_default` WHERE  `tpl_id` = 93  AND `project_id` = 31  AND `node_id` = 2 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type`,`audit_time` FROM `plm_relation` WHERE  `target_id` = 6  AND `target_type` = 6  AND `role_type` = 5 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 55 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 44 LIMIT 1 [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT `view_id`,`attr_name`,`type`,`parent_id` FROM `plm_uitableview` WHERE  `tpl_id` = 93 [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_value` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `view_id` FROM `plm_uitableview_value` WHERE  `view_id` = 225 LIMIT 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `view_id` FROM `plm_uitableview_value` WHERE  `view_id` = 226 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `view_id` FROM `plm_uitableview_value` WHERE  `view_id` = 230 LIMIT 1 [ RunTime:0.024000s ]
+[ sql ] [ SQL ] SELECT `view_id` FROM `plm_uitableview_value` WHERE  `view_id` = 231 LIMIT 1 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `view_id` FROM `plm_uitableview_value` WHERE  `view_id` = 232 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `view_id` FROM `plm_uitableview_value` WHERE  `view_id` = 233 LIMIT 1 [ RunTime:0.004000s ]

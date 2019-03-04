@@ -1,0 +1,105 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2018/7/11 13:45
+// +----------------------------------------------------------------------
+// | TITLE: 
+// +----------------------------------------------------------------------
+
+namespace app\api\model;
+
+use think\Model;
+use think\Db;
+
+class Material extends Model
+{
+    protected $table = 'plm_material';
+
+    /**
+     * 通过物料编码获取物料名称等数据
+     */
+    public static function getMaterialInfo($materialCode)
+    {
+        $list = Db::name('material')
+            ->field('material_name,specifications,basic_unit')
+            ->where('material_code',$materialCode)
+            ->find();
+
+        return $list;
+    }
+
+    /**
+     * 批量添加
+     * @param  array $params 二维数组
+     */
+    public static function addInfo($params)
+    {
+        Db::startTrans();
+        try{
+            $count = count($params);
+            $result = Db::name('material')->insertAll($params);
+            if($result == $count);
+            {
+                Db::commit();
+                return true;
+            }
+        } catch (\Exception $e) {
+            // 回滚事务
+            Db::rollback();
+            return false;
+        }
+    }
+
+    /**
+     * 批量修改或添加
+     * @param  array $params 二维数组
+     */
+    public static function updateInfo($params)
+    {
+        $list = [];$addList=[];
+        foreach($params as $k=>$v)
+        {
+            $materialId = Db::name('material')->where('material_code',$v['FNumber'])->value('material_id');
+            if($materialId)
+            {
+                $list[$k]['material_id'] = $materialId;
+                $list[$k]['material_code'] = $v['FNumber'];
+                $list[$k]['material_name'] = $v['FName'];
+                $list[$k]['mg_id'] = $v['FMaterialGroup'];//物料分组ID
+                $list[$k]['mg_code'] = $v['FMaterialGroup.FNumber'];//物料分组编码
+                $list[$k]['specifications'] = $v['FSPECIFICATION'];//规格型号
+                $list[$k]['description'] = $v['FDESCRIPTION'];//描述
+                $list[$k]['specifications_code'] = $v['F_PAEZ_TEXT'];//型号编码
+                $list[$k]['material_attribute'] = $v['FERPCLSID'];//物料属性
+                $list[$k]['basic_unit'] = $v['FBASEUNITID.FNumber'];//基本单位
+                $list[$k]['updatetime'] = time();
+            }else{
+               $addList[$k]['material_code'] = $v['FNumber'];
+                $addList[$k]['material_name'] = $v['FName'];
+                $addList[$k]['mg_id'] = $v['FMaterialGroup'];//物料分组ID
+                $addList[$k]['mg_code'] = $v['FMaterialGroup.FNumber'];//物料分组编码
+                $addList[$k]['specifications'] = $v['FSPECIFICATION'];//规格型号
+                $addList[$k]['description'] = $v['FDESCRIPTION'];//描述
+                $addList[$k]['specifications_code'] = $v['F_PAEZ_TEXT'];//型号编码
+                $addList[$k]['material_attribute'] = $v['FERPCLSID'];//物料属性
+                $addList[$k]['basic_unit'] = $v['FBASEUNITID.FNumber'];//基本单位
+                $addList[$k]['createtime'] = time();
+            }
+        }
+        if($list)
+        {
+            $material = new Material;
+            $result = $material->saveAll($list);
+            unset($list);
+            return $result;
+        }
+        elseif($addList)
+        {
+            $result = self::addInfo($addList);
+            unset($addList);
+            return $result;
+        }
+        return false;
+    }
+}

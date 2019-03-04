@@ -1,0 +1,169 @@
+<?php
+/**
+ * Gearman 异步处理
+ * Created by PhpStorm.
+ * User: weibx
+ * Date: 2018/7/24
+ * Time: 11:46
+ */
+
+namespace app\common\library;
+
+use think\Config;
+
+class GearmanAsync
+{
+    protected $client;
+
+    public function __construct()
+    {
+        $this->client= new \GearmanClient();
+        $this->client->addServer(Config::get('gearman.host'), Config::get('gearman.port'));
+    }
+
+    /**
+     * Gearman 异步处理邮件发送
+     * $job 邮件通知的内容
+     * 
+     * 参数示例：
+     * $job = [
+     *  'email' => 'yicn@romoss.com',
+     *  'title' => '测试邮件标题',
+     *  'content' => '测试邮件内容',
+     * ]
+     * 
+     * 批量发送示例：
+     * $job = [
+     *  'email' => ['yicn@romoss.com', 'xxxx@romoss.com'],
+     *  'title' => '测试邮件标题',
+     *  'content' => '测试邮件内容',
+     * ]
+     */
+    public function sendEmail($job = array()){
+
+        $job = json_encode($job);
+        //不等待返回结果，就会结束
+        $this->client->doBackground("sendEmail", $job);
+    }
+
+    /**
+     * Gearman 异步处理短信发送
+     * $job 短信通知的内容
+     * 
+     * 参数示例：
+     * $job = [
+     *  'batch_sms' => 0,
+     *  'mobile' => '18600000000',
+     *  'tpl_code' => 'SMS_142015323',
+     *  'tpl_param' => ['someone' => '马云', 'project' => 'sense 8 plus'],
+     * ]
+     * 
+     * 批量发送示例：
+     * $job = [
+     *  'batch_sms' => 1,
+     *  'mobile' => ['18600000000', '18600000001'],
+     *  'tpl_code' => 'SMS_142015323',
+     *  'tpl_param' => [
+     *      ['someone' => '马云', 'project' => 'sense 8 plus'],
+     *      ['someone' => '马化腾', 'project' => 'sense 8 plus'],
+     *  ],
+     * ]
+     */
+    public function sendSms($job = array()){
+        $job = json_encode($job);
+        //不等待返回结果，就会结束
+        $this->client->doBackground("sendSms", $job);
+    }
+    
+    /**
+     * Gearman 异步计算项目节点完成时间
+     * @param type $job 项目ID等参数
+     * 
+     * 参数示例：
+     * $job = [
+     *  'project_id' => 1001,
+     *  'update_front_data' => true
+     * ]
+     */
+    public function recomputeFinishDate($job = array())
+    {
+        $job = json_encode($job);
+        //不等待返回结果，就会结束
+        $this->client->doBackground("plmRecomputeFinishDate", $job);
+    }
+
+    /**
+     * 发短信和邮件示例
+     * $messages = [];
+    $first_node_message = [];
+    $next_node_message = [];
+    $other_node_message = [];
+
+    $first_node_message['users'] = $first_node_users;
+    $first_node_message['tpl_code'] = 'SMS_142010259';
+    $first_node_message['tpl_content'] = '${someone}于${time}，启动了项目${project}，请${operate}你在项目中的工作';
+    $first_node_message['tpl_param']['someone'] = $start_user;
+    $first_node_message['tpl_param']['time'] = $current_time_text;
+    $first_node_message['tpl_param']['project'] = $project_name;
+    $first_node_message['tpl_param']['operate'] = '处理';
+
+    $next_node_message['users'] = $next_node_users;
+    $next_node_message['tpl_code'] = 'SMS_142020291';
+    $next_node_message['tpl_content'] = '${someone}于${time}，启动了项目${project}，请你做好相关准备，相关工作即将开启';
+    $next_node_message['tpl_param']['someone'] = $start_user;
+    $next_node_message['tpl_param']['time'] = $current_time_text;
+    $next_node_message['tpl_param']['project'] = $project_name;
+
+    $other_node_message['users'] = $other_node_users;
+    $other_node_message['tpl_code'] = 'SMS_142010259';
+    $other_node_message['tpl_content'] = '${someone}于${time}，启动了项目${project}，请${operate}你在项目中的工作';
+    $other_node_message['tpl_param']['someone'] = $start_user;
+    $other_node_message['tpl_param']['time'] = $current_time_text;
+    $other_node_message['tpl_param']['project'] = $project_name;
+    $other_node_message['tpl_param']['operate'] = '关注';
+
+    $messages[] = $first_node_message;
+    $messages[] = $next_node_message;
+    $messages[] = $other_node_message;
+     * @param $messages
+     */
+    public function sendMessage($messages)
+    {
+        $all_email = [];
+        $all_mobile = [];
+        foreach ($messages as $message) {
+            $email = [];
+            $mobile = [];
+            $tpl_param = [];
+            foreach ($message['users'] as $user) {
+                $email[] = $user['email'];
+                $mobile[] = $user['telephone'];
+                $tpl_param[] = $message['tpl_param'];
+            }
+            $email = array_diff($email, $all_email);
+            $mobile = array_diff($mobile, $all_mobile);
+            if ($email) {
+                $search_param = [];
+                foreach (array_keys($message['tpl_param']) as $param) {
+                    $search_param[] = '${' . $param . '}';
+                }
+                $content = str_replace($search_param, $message['tpl_param'], $message['tpl_content']);
+                $this->sendEmail($job = [
+                    'email' => $email,
+                    'title' => $content,
+                    'content' => $content,
+                ]);
+                $all_email = array_merge($all_email, $email);
+            }
+            if ($mobile) {
+                $this->sendSms([
+                    'batch_sms' => 1,
+                    'mobile' => $mobile,
+                    'tpl_code' => $message['tpl_code'],
+                    'tpl_param' => $tpl_param,
+                ]);
+                $all_mobile = array_merge($all_mobile, $mobile);
+            }
+        }
+    }
+}

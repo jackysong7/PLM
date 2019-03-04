@@ -1,0 +1,442 @@
+---------------------------------------------------------------
+[ 2019-01-09T16:14:38+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit
+[ info ] www.plm_dev123.net/api/v2/material/edit [运行时间：0.400040s][吞吐率：2.50req/s] [内存消耗：1,113.36kb] [文件加载：44]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T16:14:38+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.055005s][吞吐率：18.18req/s] [内存消耗：888.95kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/material/edit',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T16:15:08+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/doc/getProjectSetUpDoc?access_token=f8e8381b-1380-46b4-938e-f24229db3c49&data={%22project_id%22:57,%22node_id%22:359,%22tpl_id%22:2}
+[ info ] www.plm_dev123.net/api/v2/doc/getProjectSetUpDoc?access_token=f8e8381b-1380-46b4-938e-f24229db3c49&data={%22project_id%22:57,%22node_id%22:359,%22tpl_id%22:2} [运行时间：0.074007s][吞吐率：13.51req/s] [内存消耗：1,195.51kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => 'getProjectSetUpDoc',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=7&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'f8e8381b-1380-46b4-938e-f24229db3c49',
+  'data' => '{"project_id":57,"node_id":359,"tpl_id":2}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-09T16:16:25+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22} [运行时间：0.218022s][吞吐率：4.59req/s] [内存消耗：2,020.39kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029003s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547021785) [ RunTime:0.034004s ]
+---------------------------------------------------------------
+[ 2019-01-09T16:16:37+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22} [运行时间：0.104010s][吞吐率：9.61req/s] [内存消耗：2,020.45kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547021797) [ RunTime:0.034003s ]
+---------------------------------------------------------------
+[ 2019-01-09T16:17:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22} [运行时间：0.086008s][吞吐率：11.63req/s] [内存消耗：2,021.09kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547021847) [ RunTime:0.017002s ]
+---------------------------------------------------------------
+[ 2019-01-09T16:17:55+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.096010s][吞吐率：10.42req/s] [内存消耗：2,021.10kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547021875) [ RunTime:0.034003s ]
+---------------------------------------------------------------
+[ 2019-01-09T16:18:14+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.102011s][吞吐率：9.80req/s] [内存消耗：2,020.94kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547021894) [ RunTime:0.033003s ]
+---------------------------------------------------------------
+[ 2019-01-09T16:18:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.102010s][吞吐率：9.80req/s] [内存消耗：2,020.96kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547021937) [ RunTime:0.034004s ]
+---------------------------------------------------------------
+[ 2019-01-09T16:22:10+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.104010s][吞吐率：9.61req/s] [内存消耗：2,020.93kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547022130) [ RunTime:0.060006s ]
+---------------------------------------------------------------
+[ 2019-01-09T16:24:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.262027s][吞吐率：3.82req/s] [内存消耗：2,020.93kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.080008s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547022267) [ RunTime:0.128013s ]
+---------------------------------------------------------------
+[ 2019-01-09T16:25:02+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.105010s][吞吐率：9.52req/s] [内存消耗：2,020.94kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547022302) [ RunTime:0.039004s ]
+---------------------------------------------------------------
+[ 2019-01-09T16:25:48+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.109011s][吞吐率：9.17req/s] [内存消耗：2,021.16kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=fv8cbctvesg02kvf1c1gho8la2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547022348) [ RunTime:0.034004s ]

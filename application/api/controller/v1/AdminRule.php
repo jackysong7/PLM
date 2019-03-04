@@ -1,0 +1,64 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chenhailiang
+ * Date: 2018/4/2
+ * Time: 14:53
+ */
+namespace app\api\controller\v1;
+
+use app\api\controller\Api;
+
+class AdminRule extends Api
+{
+    /*
+     * 获取列表
+     */
+    public function getList()
+    {
+        $adminRule = \app\api\model\AdminRule::getList();
+        $result = $this->build_tree($adminRule,0);
+        $this->returnmsg(200,'操作完成', $result);
+    }
+
+    //寻找子类
+    private function findChild($arr,$id){
+        $childs=array();
+        foreach ($arr as $k => $v){
+            if($v['parent_id']== $id){
+                $childs[]=$v;
+            }
+        }
+        return $childs;
+    }
+
+    //建立树形结构
+    private function build_tree($rows,$root_id){
+        $childs=$this->findChild($rows,$root_id);
+        if(empty($childs)){
+            return null;
+        }
+        foreach ($childs as $k => $v){
+            $rescurTree=$this->build_tree($rows,$v['rule_id']);
+            if( null != $rescurTree){
+                $childs[$k]['childs']=$rescurTree;
+            }
+        }
+        return $childs;
+    }
+
+    /*
+     * 获取岗位权限列表
+     */
+    public function getJobList()
+    {
+        $data = $this->request->param();
+        $params = json_decode($data['data'],true);
+        $jobRule = \app\api\model\AdminRule::getJobRules($params);
+        if ($jobRule)
+        {
+            $jobRule = $this->build_tree($jobRule,0);
+        }
+        $this->returnmsg(200,'操作完成', $jobRule);
+    }
+}

@@ -1,0 +1,128 @@
+<?php
+/**
+ * 年度战略计划
+ * Created by PhpStorm.
+ * User: liujun
+ * Date: 2018/7/6
+ * Time: 14:00
+ */
+namespace app\api\controller\v2;
+
+use app\api\controller\Api;
+use think\Controller;
+use think\Validate;
+class Strategy extends Api
+{
+    public function _initialize()
+    {
+        parent::_initialize();
+        $this->userInfo = $this->auth->getUser();
+    }
+    //添加年度战略计划
+    public function add()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'year'  => 'require',
+        ];
+        $msg = [
+            'year.require' => '年份不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        
+        $row = \app\api\model\Strategy::add($data);
+
+        return $this->returnmsg(200,'success！',$row);
+    }
+    //年度战略规划列表
+    public function getList()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'year'  => 'require',
+        ];
+        $msg = [
+            'year.require' => '年份不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        
+        $data['page_no'] = empty($data['page_no']) ? 1 : $data['page_no'];
+        $data['page_size'] = empty($data['page_size']) ? 10 : $data['page_size'];
+
+        $result = \app\api\model\Strategy::getList($data);
+        return $this->returnmsg(200,'success！',$result);
+    }
+    
+    //修改年度战略规划
+    public function update()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+
+        //验证数据
+        $rule = [
+            'pp_id' => 'require|integer'
+        ];
+
+        $msg = [
+            'pp_id.require' => 'ID不能为空且必须是数字'
+        ];
+
+        $this->validate = new Validate($rule, $msg);
+        $res = $this->validate->check($data);
+
+        if(!$res){
+            return $this->returnmsg(401,$this->validate->getError());
+        }
+        $result = \app\api\model\Strategy::editProjectPlan($data);
+        if($result)
+        {
+            return $this->returnmsg(200,'success！');
+        }else{
+            return $this->returnmsg(400,'修改失败！');
+        }
+    }
+
+    //删除年度战略规划
+    
+    public function delete()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        
+        //验证当前年度战略规划有无数据
+        $projectWhere['pp_id'] = $data['pp_id'];
+        $result = \app\api\model\Strategy::getProject($projectWhere);
+        if(!empty($result)){
+            return $this->returnmsg(403,'其类别下有数据，不可删除！');
+        }
+
+        $row = \app\api\model\Strategy::getProjectPlan($projectWhere);
+        if($row){
+            return $this->returnmsg(403,'该数据已被使用，不可删除！');
+        }else{
+            $objectDel = \app\api\model\Strategy::deleteProjectPlan($data);
+            if($objectDel){
+                return $this->returnmsg(200,'删除数据成功');
+            }else{
+                return $this->returnmsg(400,'删除数据失败');
+            }
+        }
+    }
+}
+
+

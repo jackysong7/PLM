@@ -1,0 +1,156 @@
+<?php
+
+namespace app\api\model;
+
+use app\common\library\Auth;
+use think\Model;
+
+class ProjectMsg extends Model
+{
+    /**
+     * 节点开始后，文档待上传
+     * @param $node_ids
+     * @throws \think\exception\DbException
+     */
+    public static function documentUpload($node_ids)
+    {
+        $nodes = ProjectNode::select($node_ids);
+        $finish_prev_node = false;
+        foreach ($nodes as $node) {
+            $doc_tpls = DocTemplate::select(explode(',', $node['doc_tpl_ids']));
+            if (!$finish_prev_node) {
+                self::update(['finish_time' => time(), 'status' => 2], ['project_id' => $node['project_id']]);
+                $finish_prev_node = true;
+            }
+            foreach ($doc_tpls as $doc_tpl) {
+                //文档被驳回消息，标记完成
+                self::update(['finish_time' => time(), 'status' => 2],
+                    ['node_id' => $node['node_id'], 'tpl_id' => $doc_tpl['tpl_id'], 'action_type' => 3]);
+
+                //新增文档待上传消息
+                $msg = new ProjectMsg();
+                $msg->project_id = $node['project_id'];
+                $msg->project_name = Project::where('project_id', $node['project_id'])->value('project_name');
+                $msg->process_id = $node['process_id'];
+                $msg->node_id = $node['node_id'];
+                $msg->admin_id = Auth::instance()->getUser()['admin_id'];
+                $msg->action_type = 1;
+                $msg->add_time = time();
+                $msg->doc_id = 0;
+                $msg->tpl_id = $doc_tpl['tpl_id'];
+                $msg->tpl_type = $doc_tpl['tpl_type'];
+                $msg->save();
+            }
+        }
+    }
+
+    /**
+     * 文档上传后，文档待提交
+     * @throws \think\exception\DbException
+     */
+    public static function documentSubmit($node_id, $doc_id, $tpl_id)
+    {
+        //文档待上传消息，标记完成
+        self::update(['finish_time' => time(), 'status' => 2],
+            ['node_id' => $node_id, 'tpl_id' => $tpl_id, 'action_type' => 1]);
+
+        $node = ProjectNode::find($node_id);
+        $doc_tpl = DocTemplate::find($tpl_id);
+
+        $msg = self::where(['node_id' => $node_id, 'tpl_id' => $tpl_id, 'action_type' => 4])->find();
+
+        if (!$msg) {
+            //新增文档待提交消息
+            $msg = new ProjectMsg();
+            $msg->project_id = $node['project_id'];
+            $msg->project_name = Project::where('project_id', $node['project_id'])->value('project_name');
+            $msg->process_id = $node['process_id'];
+            $msg->node_id = $node['node_id'];
+            $msg->admin_id = Auth::instance()->getUser()['admin_id'];
+            $msg->action_type = 4;
+            $msg->add_time = time();
+            $msg->doc_id = $doc_id;
+            $msg->tpl_id = $doc_tpl['tpl_id'];
+            $msg->tpl_type = $doc_tpl['tpl_type'];
+        }
+
+        $msg->doc_id = $doc_id;
+        $msg->status = 1;
+        $msg->save();
+    }
+
+    /**
+     * 文档提交后，文档待审核
+     * @param $doc_id
+     * @throws \think\exception\DbException
+     */
+    public static function documentAudit($doc_id)
+    {
+        //文档待提交消息，标记完成
+        $where = ['doc_id' => $doc_id, 'action_type' => 4];
+        self::update(['finish_time' => time(), 'status' => 2], $where);
+
+        $project_msg = self::where($where)->find();
+
+        $msg = self::where(['node_id' => $project_msg['node_id'], 'tpl_id' => $project_msg['tpl_id'], 'action_type' => 3])->find();
+
+        if (!$msg) {
+            //新增文档待审核消息
+            $msg = new ProjectMsg();
+            $msg->project_id = $project_msg['project_id'];
+            $msg->project_name = $project_msg['project_name'];
+            $msg->process_id = $project_msg['process_id'];
+            $msg->node_id = $project_msg['node_id'];
+            $msg->admin_id = $project_msg['admin_id'];
+            $msg->action_type = 2;
+            $msg->add_time = time();
+            $msg->tpl_id = $project_msg['tpl_id'];
+            $msg->tpl_type = $project_msg['tpl_type'];
+            $msg->doc_id = $doc_id;
+            $msg->save();
+        }
+    }
+
+    /**
+     * 文档审核驳回
+     */
+    public static function documentAuditReject($doc_id)
+    {
+        //文档待审核消息，标记完成
+        $where = ['doc_id' => $doc_id, 'action_type' => 2];
+        self::update(['finish_time' => time(), 'status' => 2], $where);
+
+        $project_msg = self::where($where)->find();
+
+        $msg = self::where(['node_id' => $project_msg['node_id'], 'tpl_id' => $project_msg['tpl_id'], 'action_type' => 3])->find();
+
+        if (!$msg) {
+            //新增文档被驳回消息
+            $msg = new ProjectMsg();
+            $msg->project_id = $project_msg['project_id'];
+            $msg->project_name = $project_msg['project_name'];
+            $msg->process_id = $project_msg['process_id'];
+            $msg->node_id = $project_msg['node_id'];
+            $msg->admin_id = $project_msg['admin_id'];
+            $msg->action_type = 3;
+            $msg->add_time = time();
+            $msg->doc_id = $doc_id;
+            $msg->tpl_id = $project_msg['tpl_id'];
+            $msg->tpl_type = $project_msg['tpl_type'];
+        }
+
+        $msg->doc_id = $doc_id;
+        $msg->status = 1;
+        $msg->save();
+    }
+
+    /**
+     * 文档审核通过
+     */
+    public static function documentAuditPass($doc_id)
+    {
+        //文档待审核消息，标记完成
+        $where = ['doc_id' => $doc_id, 'action_type' => 2];
+        self::update(['finish_time' => time(), 'status' => 2], $where);
+    }
+}

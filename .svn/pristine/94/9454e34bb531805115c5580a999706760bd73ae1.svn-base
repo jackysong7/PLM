@@ -1,0 +1,848 @@
+<?php
+
+namespace app\api\model;
+
+use think\exception\DbException;
+use think\Model;
+use think\Db;
+use app\common\library\GearmanAsync;
+use app\common\library\Auth;
+
+class ProjectNode extends Model
+{
+    //未开始
+    const STATUS_NOT_STARTED = 0;
+    //进行中
+    const STATUS_STARTED = 1;
+    //已结束
+    const STATUS_END = 2;
+    //流程返回进行中
+    const STATUS_RETURN = 3;
+
+    /*
+     *通过project_id查找项目节点名称
+     */
+    public static function getNodeList($project_id)
+    {
+        $info = Db::name('project_node')
+            ->alias('n')
+            ->field('n.node_id,n.node_type,d.plm_dir_name process_name,n.`status`')
+            ->join('dir d', 'n.process_id = d.plm_dir_id', 'LEFT')
+            ->where('n.project_id',$project_id)
+            ->order('n.node_id asc')
+            ->select();
+        foreach($info as $k=>$v)
+        {
+            if($v['node_type'] == 'start')
+            {
+                $info[$k]['process_name'] = '开始';
+            }elseif($v['node_type'] == 'end') {
+                $info[$k]['process_name'] = '结束';
+            }
+            unset($info[$k]['node_type']);
+        }
+        return $info;
+    }
+
+
+    /*
+     * 通过project_id查找项目节点页面的节点详情
+     * @param int project_id 项目id
+     * @note 时间戳转化datetime格式 FROM_UNIXTIME(n.start_time,'%Y-%m-%d') start_time
+     */
+    public static function getNodeDetail($projectId)
+    {
+
+        $info = Db::name('project_node')
+            ->alias('n')
+            ->field('`n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name')
+            ->join('dir d','n.process_id=d.plm_dir_id','LEFT')
+            ->where('n.project_id',$projectId)
+            ->order('n.node_id asc')
+            ->select();
+        $data = '';
+        foreach($info as $k=>$v)
+        {
+            if(!strcasecmp($v['node_type'],'start')){
+                $data[$k]['process_name'] = '开始';
+            }elseif(!strcasecmp($v['node_type'],'end')){
+                $data[$k]['process_name'] = '结束';
+            }else{
+                $data[$k]['process_name'] = $v['process_name'];
+            }
+
+            $data[$k]['node_id'] = $v['node_id'];
+            $data[$k]['start_time'] = $v['start_time'];
+            $data[$k]['end_time'] = $v['end_time'];
+            $data[$k]['actual_start_time'] = $v['actual_start_time'];
+            $data[$k]['actual_end_time'] = $v['actual_end_time'];
+
+            //获取审核信息
+            $where['target_id'] = $v['node_id'];
+            $where['target_type'] = 2;
+            $auditorInfo = Relation::getAuditInfo($where);
+            $data[$k]['doc_list'] = [];
+            //bom表创建者
+            $bomInfo = Db::name('project_bom')
+                ->field('creator_id,audit_status')
+                ->where(['node_id'=>$v['node_id'],'project_id'=>$projectId])
+                ->order('bom_id desc')
+                ->find();
+            if(!empty($bomInfo)){
+                $bomUploader = Relation::getNickName($bomInfo['creator_id']);
+                $data[$k]['doc_list'][] = [
+                    'doc_name' => 'BOM文档',
+                    'status' => $bomInfo['audit_status'],
+                    'uploader' =>isset($bomUploader)?['admin_id'=>$bomInfo['creator_id'],'nickname'=>$bomUploader]: '',
+                    'auditor' => isset($auditorInfo['auditor'])?$auditorInfo['auditor'] : ''
+                ];
+            }
+            //开发立项创建者
+            $udInfo = Db::name('uitableview_default')
+                ->field('creator_id,audit_status')
+                ->where(['node_id'=>$v['node_id'],'project_id'=>$projectId])
+                ->order('ud_id desc')
+                ->find();
+            if(!empty($udInfo)){
+                $udUploader = Relation::getNickName($udInfo['creator_id']);
+                $data[$k]['doc_list'][] = [
+                    'doc_name' => '开发立项表',
+                    'status' => $udInfo['audit_status'],
+                    'uploader' =>isset($udUploader)?['admin_id'=>$udInfo['creator_id'],'nickname'=>$udUploader]: '',
+                    'auditor' => isset($auditorInfo['auditor'])?$auditorInfo['auditor'] : ''
+                ];
+            }
+            //自定义文档信息
+            $docInfo = Db::name('document')
+                ->field('file_name doc_name,admin_id,audit_status')
+                ->where(['node_id'=>$v['node_id'],'project_id'=>$projectId])
+                ->order('pd_id desc')
+                ->find();
+            if(!empty($docInfo)){
+                $docUploader = Relation::getNickName($docInfo['admin_id']);
+                $data[$k]['doc_list'][] = [
+                    'doc_name' => $docInfo['doc_name'],
+                    'status' => $docInfo['audit_status'],
+                    'uploader' =>isset($docUploader)?['admin_id'=>$docInfo['admin_id'],'nickname'=>$docUploader]: '',
+                    'auditor' => isset($auditorInfo['auditor'])?$auditorInfo['auditor'] : ''
+                ];
+            }
+
+        }
+
+        return $data;
+        /*$info = Db::name('project_node')
+            ->alias('n')
+            ->field('`n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,`p`.`creator_id`,t.file_name doc_name,d.plm_dir_name process_name,t.pd_id')
+            ->join('document t','n.process_id=t.plm_dir_id AND n.project_id=t.project_id','LEFT')
+            ->join('dir d','n.process_id=d.plm_dir_id','LEFT')
+            ->join('project p','n.project_id=p.project_id','LEFT')
+            ->where('n.project_id',intval($projectId))
+            ->group('n.node_id')
+            ->select();*/
+        //echo DB::table('project_node')->getLastsql();die;
+        /*$info = Db::query("SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,`p`.`creator_id`,t.file_name doc_name,d.plm_dir_name process_name,t.pd_id FROM `plm_project_node` `n` LEFT JOIN `plm_project` `p` ON `n`.`project_id`=`p`.`project_id` LEFT JOIN `plm_document` `t` ON `n`.`process_id`=`t`.`plm_dir_id` AND t.pd_id IN (SELECT MAX(pd_id) FROM plm_document WHERE project_id = ".intval($projectId)." GROUP BY node_id,tpl_id) LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE `n`.`project_id` = ".intval($projectId)." ORDER BY n.project_id DESC");*/
+
+    }
+
+
+    /*
+     * 通过project_id、node_key获取节点项目名称
+     *
+     * @param int project_id 项目id
+     * @param string node_key 节点key
+     *
+     * @return array
+     */
+    public static function getDirName($project_id,$node_key)
+    {
+        $where['n.project_id'] = $project_id;
+        $where['n.node_key'] = $node_key;
+
+        $list = Db::name('project_node')
+            ->alias('n')
+            ->field('d.plm_dir_name')
+            ->join('dir d','n.process_id=d.plm_dir_id','LEFT')
+            ->where($where)
+            ->find();
+
+        return $list['plm_dir_name'];
+    }
+
+
+    /**
+     * 通过node_id获取节点属性信息
+     * @param int node_id 项目节点id
+     * @return array
+     *
+     */
+    public static function NodeDetailByNodeId($nodeId='')
+    {
+        if(!empty($nodeId))
+        {
+            $list = Db::name('project_node')
+                ->alias('n')
+                ->field('n.version,p.status project_status,n.status,n.start_time,n.end_time,n.actual_start_time,n.actual_end_time,n.version')
+                ->join('project p','p.project_id=n.project_id','LEFT')
+               // ->join('resource_name r','n.process_id=r.process_id','LEFT')
+                ->where('n.node_id',$nodeId)
+                ->find();
+
+            return $list;
+        }
+        return false;
+    }
+
+
+    /*
+     * 通过节点Id查找模板的数据
+     *
+     */
+    public static function getTplInfo($nodeId)
+    {
+        if(!empty($nodeId))
+        {
+            $tplResult = Db::name('project_node')->field('doc_tpl_ids')->where('node_id',$nodeId)->find();
+            if($tplResult)
+            {
+                $tplIds = $tplResult['doc_tpl_ids'];
+                $tplInfo = Db::name('doc_template')
+                    ->field('tpl_id,tpl_name,tpl_type')
+                    ->where('tpl_id','in',$tplIds)
+                    ->select();
+                foreach($tplInfo as $k=>$v)
+                {
+                    //模板类型:1 BOM表;2 开发立项表;3 自定义文档;查询最新版本的主键值<删除状态的文档除外
+                    if($v['tpl_type'] == 1)
+                    {
+                        $bomId = Db::name('project_bom')
+                            ->where(['node_id'=>$nodeId, 'tpl_id'=>$v['tpl_id'],'status'=>1])->order('bom_id desc')->value('bom_id');
+                        if($bomId)
+                        {
+                            $tplInfo[$k]['doc_id'] = $bomId;
+                        }else{
+                            $tplInfo[$k]['doc_id'] = 0;
+                        }
+                    }elseif($v['tpl_type'] == 2){
+                        $udId = Db::name('uitableview_default')
+                            ->where(['node_id'=>$nodeId, 'tpl_id'=>$v['tpl_id'],'status'=>1])->order('ud_id desc')->value('ud_id');
+                        if($udId)
+                        {
+                            $tplInfo[$k]['doc_id'] = $udId;
+                        }else{
+                            $tplInfo[$k]['doc_id'] = 0;
+                        }
+                    }elseif($v['tpl_type'] == 3){
+                        $pdId = Db::name('document')->where(['node_id'=>$nodeId, 'tpl_id'=>$v['tpl_id'],'status'=>1])->order('pd_id desc')->value('pd_id');
+                        if($pdId)
+                        {
+                            $tplInfo[$k]['doc_id'] = $pdId;
+                        }else{
+                            $tplInfo[$k]['doc_id'] = 0;
+                        }
+                    }
+                }
+
+                return $tplInfo;
+            }
+        }
+        return false;
+    }
+
+
+    /*
+     * 获取上下层节点信息
+     */
+    public static function getUpDownNode($nodeId='',$projectId='')
+    {
+        if($nodeId)
+        {
+            $list = Db::name('project_node')
+                ->alias('n')
+                ->field('n.audit_time,n.status,n.start_time,n.actual_start_time,n.actual_end_time,n.end_time,n.version,p.status project_status,p.add_time,d.plm_dir_name node_name,d.admin_id')
+                ->join('project p','n.project_id=p.project_id','LEFT')
+                ->join('dir d','d.plm_dir_id=n.process_id','LEFT')
+                ->where('n.node_id',$nodeId)
+                ->find();
+
+            //获取审核人
+            //$where['admin_id'] = $list['admin_id'];
+            $where['target_id'] = $nodeId;
+            $where['target_type'] = 2;
+            $auditorInfo = \app\api\model\Relation::getAuditInfo($where);
+
+            //获取创建人
+            $proCreator = Db::name('project')->where('project_id',$projectId)->value('creator_id');
+            $list['creator'] = \app\api\model\Relation::getNickName($proCreator);
+            $list['auditor'] = isset($auditorInfo['auditor']) ? $auditorInfo['auditor'] : [];
+
+            $NodeAttrInfo = self::NodeDetailByNodeId($nodeId);
+            //计算完成进度
+            if($NodeAttrInfo['actual_end_time'] <= $NodeAttrInfo['end_time'])
+            {
+                if(empty($NodeAttrInfo['actual_end_time'])){
+                    $list['progress'] = '未开始';
+                }else{
+                    $list['progress'] = '100%';
+                }
+            }
+            else
+            {
+                $day = intval(($NodeAttrInfo['actual_end_time'] - $NodeAttrInfo['end_time'])/(3600*24));
+                $list['progress'] = '超时'.$day.'天';
+            }
+            //节点负责人（即项目负责人）
+            $map['target_id'] = $projectId;
+            $map['target_type'] = 1;
+            $managerInfo = \app\api\model\Relation::getAuditInfo($map);
+
+            $list['manager']['product_manager'] = isset($managerInfo['product_manager'])?$managerInfo['product_manager']:[];
+            $list['manager']['project_manager'] = isset($managerInfo['project_manager'])?$managerInfo['project_manager']:[];
+            unset($list['admin_id']);
+            return $list;
+        }
+
+        return false;
+    }
+
+
+    /*
+     * 通过node_id查询对应的node_key、project_id
+     */
+    public static function getNodeKey($nodeId)
+    {
+        $list = Db::name('project_node')->field('node_key,project_id')->where('node_id',$nodeId)->find();
+        return $list;
+    }
+
+    /*
+     * 通过条件查询一条记录
+     */
+    public static function getProjectNodeInfo($where,$field)
+    {
+        $list = Db::name('project_node')->field($field)->where($where)->find();
+        return $list;
+    }
+
+    /*
+     * 通过node_key、project_id查询node_id
+     */
+    public static function getNodeId($projectId,$nodeKey)
+    {
+        //return Db::name('project_node')->where('node_key',$nodeKey)->where('project_id',$projectId)->value('node_id');
+        $list = Db::name('project_node')->field('node_id')->where('node_key',$nodeKey)->where('project_id',$projectId)->find();
+
+        return $list;
+    }
+
+
+    /*
+     * 通过node_id获取process_id
+     */
+    public static function getProcessId($nodeId)
+    {
+        return  Db::name('project_node')->where('node_id',$nodeId)->value('process_id');
+
+    }
+
+    /*
+     * 通过project_id获取当前节点信息
+     */
+    public static function getCurrentNode($where,$field='*')
+    {
+       return Db::name('project_node')
+                 ->alias('n')
+                 ->field($field)
+                 ->join('dir d','n.process_id=d.plm_dir_id','LEFT')
+                 ->where($where)
+                 ->select();
+    }
+
+    /**
+     * 根据流程统计项目
+     * @throws DbException
+     */
+    public static function countByNode()
+    {
+        $list = [];
+        /** @var \app\api\model\ProjectNode[] $projectNodes */
+        $projectNodes = self::alias('a')
+            ->field('a.process_id,c.plm_dir_name,count(DISTINCT a.project_id) amount')
+            ->join('project b', 'a.project_id = b.project_id', 'left')
+            ->join('plm_dir c', 'a.process_id = c.plm_dir_id', 'left')
+            ->where(['b.status' => Project::DEV])
+            ->group('a.process_id')->select();
+        foreach ($projectNodes as $projectNode) {
+            $list[] = [
+                'process_id' => $projectNode->process_id,
+                'process_name' => $projectNode->plm_dir_name,
+                'project_amount' => $projectNode->amount,
+            ];
+        }
+        return $list;
+    }
+
+    /**
+     * 统计项目节点完成进度
+     * @param $data
+     * @return array
+     * @throws DbException
+     */
+    public static function getNodeFinishStatus($data)
+    {
+        $list = [];
+        $projectNodes = self::alias('a')
+            ->join('plm_dir b', 'a.process_id = b.plm_dir_id', 'left')
+            ->field('a.node_id,b.plm_dir_name,a.end_time,a.actual_end_time')
+            ->where('a.project_id', $data['project_id'])
+            ->where('a.node_type', 'not in', 'start,end')
+            ->select();
+        foreach ($projectNodes as $projectNode) {
+            $delayDays = 0;
+            if ($projectNode->actual_end_time != 0) {
+                $delayDays = ceil(($projectNode->actual_end_time - $projectNode->end_time) / 86400);
+            }
+            $list[] = [
+                'node_id' => $projectNode->node_id,
+                'process_name' => $projectNode->plm_dir_name,
+                'delay_days' => $delayDays,
+            ];
+        }
+        return $list;
+    }
+
+    /*
+     * 设置节点的某个字段的信息
+     */
+    public static function setData($where,$setData)
+    {
+        return Db::name('project_node')->where($where)->update($setData);
+    }
+    
+    /**
+     * 获取一个项目所有的节点
+     * @param type $project_id
+     */
+    public static function getProjectNodes($project_id)
+    {
+        $project_id = intval($project_id);
+        return Db::name('project_node')->where(['project_id' => $project_id])->select();
+    }
+    
+    /**
+     * 在项目的所有节点中寻找第一个节点或最后一个节点
+     * @param type $proj_nodes 一个项目的所有节点，例如：函数getProjectNodes的返回
+     * @param type $start_node 如果为true，则是寻找“开始”节点，不然是寻找“结束”节点
+     */
+    public static function findTheSideNode($proj_nodes, $start_node = true)
+    {
+        if (empty($proj_nodes) || !is_array($proj_nodes))
+        {
+            return [];
+        }
+        foreach($proj_nodes as $node)
+        {
+            if ($start_node && $node['node_type'] == 'start')
+            {
+                return $node;
+            }
+            if (!$start_node && $node['node_type'] == 'end')
+            {
+                return $node;
+            }
+        }
+        
+        return [];
+    }
+    
+    /**
+     * 在项目的所有节点中查找指定node_key的节点
+     * @param type $node_key 要查找的node_key
+     * @param type $proj_nodes 一个项目的所有节点，例如：函数getProjectNodes的返回
+     */
+    public static function getNodeByKey($node_key, $proj_nodes)
+    {
+        if (!isset($node_key) || empty($proj_nodes) || !is_array($proj_nodes))
+        {
+            return [];
+        }
+        foreach($proj_nodes as $node)
+        {
+            if ($node['node_key'] == $node_key)
+            {
+                return $node;
+            }
+        }
+        
+        return [];
+    }
+
+    /**
+     * 获取节点上传人员
+     * @param $node_ids
+     * @return array
+     */
+    public static function getUploader($node_ids)
+    {
+        return Relation::where(['target_id' => ['in', (array)$node_ids], 'target_type' => 2, 'role_type' => 4])->column('admin_id');
+    }
+
+    /**
+     * 获取节点审核人员
+     * @param $node_ids
+     * @return array
+     */
+    public static function getAuditor($node_ids)
+    {
+        return Relation::where(['target_id' => ['in', (array)$node_ids], 'target_type' => 2, 'role_type' => 5])->column('admin_id');
+    }
+
+    /**
+     * 获取上一个节点id
+     * @param $node_id
+     * @throws DbException
+     * return array
+     */
+    public static function getPrevNodeIds($node_id)
+    {
+        $node = self::get($node_id);
+        $from = (new ProjectLine)->where(['project_id' => $node['project_id'], 'to' => $node['node_key']])->column('from');
+        return (new ProjectNode)->where(['project_id' => $node['project_id'], 'node_key' => ['in', $from]])->column('node_id');
+    }
+
+    /**
+     * 获取某一节点的下一个节点id
+     * @param $node_id
+     * @return array
+     * @throws DbException
+     * return array
+     */
+    public static function getNextNodeIds($node_id)
+    {
+        $node = self::get($node_id);
+        $to = (new ProjectLine)->where(['project_id' => $node['project_id'], 'from' => $node['node_key']])->column('to');
+        return (new ProjectNode)->where(['project_id' => $node['project_id'], 'node_key' => ['in', $to]])->column('node_id');
+    }
+
+    /**
+     * 获取这些节点的下一节点id
+     * @param $node_ids
+     * @throws DbException
+     */
+    public static function getNextNodeAllIds($node_ids)
+    {
+        $next_node_ids = [];
+        foreach ($node_ids as $node_id) {
+            $next_node_ids = array_merge($next_node_ids, ProjectNode::getNextNodeIds($node_id));
+        }
+        return $next_node_ids;
+    }
+
+    /**
+     * 获取开始节点
+     * @param $project_id
+     * @return array|false|\PDOStatement|string|Model
+     * @throws DbException
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     */
+    public static function getStartNode($project_id)
+    {
+        return (new ProjectNode)->where(['node_type' => 'start', 'project_id' => $project_id])->find();
+    }
+
+    /**
+     * 获取节点所有相关人员
+     * @param $node_ids
+     * return array
+     */
+    public static function getNodeUsers($node_ids)
+    {
+        return userData(ProjectNode::getNodeUserIds($node_ids));
+    }
+
+    /**
+     * 获取节点所有相关人员id
+     * @param $node_ids
+     * return array
+     */
+    public static function getNodeUserIds($node_ids)
+    {
+        $admin[] = self::getUploader($node_ids);
+        $admin[] = self::getAuditor($node_ids);
+        return array_unique(array_merge(...$admin));
+    }
+
+    /**
+     * 获取项目所有节点id
+     * @param $project_id
+     * @return array
+     */
+    public static function getProjectNodeIds($project_id)
+    {
+        return (new ProjectNode)->where(['project_id' => $project_id])->column('node_id');
+    }
+
+    /**
+     * 获取进行中节点id
+     * @param $project_id
+     * @return array
+     */
+    public static function getStartedNodeIds($project_id)
+    {
+        return ProjectNode::where(['status' => ProjectNode::STATUS_STARTED, 'project_id' => $project_id])->column('node_id');
+    }
+
+    //当前节点短信邮件通知
+    public static function sendCurrentNodeMes($current_node_id)
+    {
+        //短信通知当前节点审核人员审核
+        $auditInfo = nodeAudit($current_node_id);
+        $nodeInfo = Db::name('project_node')->where(['node_id'=>$current_node_id])->find();
+        $projectInfo = Project::getInfoByProjectId($nodeInfo['project_id'],'project_name');
+        $sendModel = new GearmanAsync();
+        $creatorId = Auth::instance()->getUser()['admin_id'];
+        $nickname = Relation::getNickName($creatorId);
+        $tpl_param = '';$users='';
+        //当前节点名称
+        $dirName = ProjectNode::getDirName($nodeInfo['project_id'],$nodeInfo['node_key']);
+        $date = date('Y-m-d H:i');
+        foreach($auditInfo['auditor'] as $v)
+        {
+            $users[] = userData($v['admin_id']);
+            $tpl_param[] = [
+                'someone'=>$nickname,
+                'time' => $date,
+                'project' =>$projectInfo['project_name'],
+                'process' => $dirName
+            ];
+
+        }
+
+        $user = array_column($users,'telephone');
+        $job = [
+            'batch_sms' => 1,
+            'mobile' => $user,
+            'tpl_code' => 'SMS_142020278',//节点审核
+            'tpl_param' => $tpl_param,
+        ];
+        $sendModel->sendSms($job);
+
+        //邮件发送
+        $email = array_column($users,'email');
+        $emailJob = [
+            'email' => $email,
+            'title' => 'PLM项目转至下一节点通知',
+            'content' => $nickname.'于'.$date.'编辑了项目'.$projectInfo['project_name'].'的节点，请关注你在项目中的工作，'.$dirName.'已被转移至下一节点',
+        ];
+        $sendModel->sendEmail($emailJob);
+
+    }
+
+
+    //下一节点短信通知、邮件通知
+    public static function sendNextNodeMes($node_key,$project_id)
+    {
+        //短信通知下一节点审核人员审核
+        $toWhere['node_key'] = $node_key;
+        $toWhere['project_id'] = $project_id;
+        $nodeInfo = Db::name('project_node')->where($toWhere)->find();
+        //项目名称信息
+        $projectInfo = Project::getInfoByProjectId($nodeInfo['project_id'],'project_name');
+        $sendModel = new GearmanAsync();
+        $creatorId = Auth::instance()->getUser()['admin_id'];
+        $nickname = Relation::getNickName($creatorId);
+        //当前节点名称
+        $dirName = ProjectNode::getDirName($nodeInfo['project_id'],$nodeInfo['node_key']);
+        $date = date('Y-m-d H:i');
+        //下一节点上传人员
+        $where['target_id'] = $nodeInfo['node_id'];
+        $where['target_type'] = 2;
+        $where['role_type'] = 4;
+        $uploadInfo = Db::name('relation')->where($where)->select();
+        //下一节点审核人员
+        $nextAuditInfo = nodeAudit($nodeInfo['node_id']);
+        $nextAuditor = '';
+        $nextUploader='';
+        $next_tpl_param = '';
+        foreach($nextAuditInfo['auditor'] as $v)
+        {
+            $nextAuditor[] = userData($v['admin_id']);
+
+        }
+        $nextAudit = array_column($nextAuditor,'telephone');
+        //下一个节点审核人员email
+        $AuditorEmailName = array_column($nextAuditor,'email');
+        foreach ($uploadInfo as $upload)
+        {
+            $nextUploader[] = userData($upload['admin_id']);
+
+        }
+        //下一节点上传人员
+        $nextUpload = array_column($nextUploader,'telephone');
+        //下一节点上传人员email
+        $UploadEmailName = array_column($nextUpload,'email');
+        $next_user_tel = array_unique(array_merge($nextAudit,$nextUpload));
+        $emails = array_unique(array_merge($AuditorEmailName,$UploadEmailName));
+        foreach ($next_user_tel as $user=>$value)
+        {
+            $next_tpl_param[$user] = [
+                'someone'=>$nickname,
+                'time' => $date,
+                'project' =>$projectInfo['project_name'],
+                'process' => $dirName
+            ];
+        }
+        $job2 = [
+            'batch_sms' => 1,
+            'mobile' => $next_user_tel,
+            'tpl_code' => 'SMS_142010253',//节点审核
+            'tpl_param' => $next_tpl_param,
+        ];
+        $sendModel->sendSms($job2);
+
+        //邮件发送
+        $email = $emails;
+        $emailJob2 = [
+            'email' => $email,
+            'title' => 'PLM项目转至下一节点通知',
+            'content' => "在项目{$projectInfo['project_name']}.'的工作相关工作即将开启，请你做好相关准备（内容：请 于任务节点开始后的{$nodeInfo['days']}个工作日内 上传/审核 相关节点文档，当前节点状态（待进行）"
+        ];
+        $sendModel->sendEmail($emailJob2);
+    }
+
+    //编辑节点短信通知
+    public static function sendEditNodeMes($node_id)
+    {
+        //短信通知当前节点审核人员审核
+        $auditInfo = nodeAudit($node_id);
+        $nodeInfo = Db::name('project_node')->where(['node_id'=>$node_id])->find();
+        //项目节点名称信息
+        $projectInfo = Project::getInfoByProjectId($nodeInfo['project_id'],'project_name');
+        $sendModel = new GearmanAsync();
+        $creatorId = Auth::instance()->getUser()['admin_id'];
+        $nickname = Relation::getNickName($creatorId);
+        $tpl_param = '';$users='';$uploader='';
+        //当前节点名称
+        $dirName = ProjectNode::getDirName($nodeInfo['project_id'],$nodeInfo['node_key']);
+        $date = date('Y-m-d H:i');
+        foreach($auditInfo['auditor'] as $v)
+        {
+            $users[] = userData($v['admin_id']);
+
+        }
+        //当前节点上传人员
+        $where['target_id'] = $node_id;
+        $where['target_type'] = 2;
+        $where['role_type'] = 4;
+        $uploadInfo = Db::name('relation')->where($where)->select();
+        foreach ($uploadInfo as $upload)
+        {
+            $uploader[] = userData($upload['admin_id']);
+
+        }
+        $user_tel = array_unique(array_merge(array_column($users,'telephone'), array_column($uploader,'telephone')));
+        $user_emails = array_unique(array_merge(array_column($users,'email'), array_column($uploader,'email')));
+        foreach ($user_tel as $k=>$v)
+        {
+            $tpl_param[$k] = [
+                'someone'=>$nickname,
+                'time' => $date,
+                'project' =>$projectInfo['project_name'],
+            ];
+        }
+        $job = [
+            'batch_sms' => 1,
+            'mobile' => $user_tel,
+            'tpl_code' => 'SMS_142015260',//节点审核
+            'tpl_param' => $tpl_param,
+        ];
+        echo '<pre>';print_r($job);die;
+        $sendModel->sendSms($job);
+
+        //邮件发送
+        $emailJob = [
+            'email' => $user_emails,
+            'title' => 'PLM编辑项目节点通知',
+            'content' => "编辑人{$nickname}于{$date}编辑了项目{$projectInfo['project_name']}的节点，请关注你在项目{$projectInfo['project_name']}中的工作，（内容：请于{$dirName}开始后的{$nodeInfo['days']}个工作日内 ，上传/审核 相关节点文档 ，当前节点状态（进行中））",
+        ];
+        $sendModel->sendEmail($emailJob);
+    }
+
+    /**
+     * 审核文档短信、邮件发送
+     * @param $doc_id 文档id
+     * @param $doc_type 文档类型
+     * @param $audit    审核通过或驳回
+     */
+    public static function sendDocMes($doc_id,$doc_type,$audit = true)
+    {
+        if ($doc_type == 1) {
+            $nodeId = Db::name('project_bom')->where(['bom_id' => $doc_id])->value('node_id');
+        } elseif ($doc_type == 2) {
+            $nodeId = Db::name('uitableview_default')->where(['ud_id' => $doc_id])->value('node_id');
+        } elseif ($doc_type == 3) {
+            $nodeId = Db::name('document')->where(['pd_id' => $doc_id])->value('node_id');
+        }
+
+        $nodeInfo = Db::name('project_node')->where(['node_id'=>$nodeId])->find();
+        //项目节点名称信息
+        $projectInfo = Project::getInfoByProjectId($nodeInfo['project_id'],'project_name');
+        $sendModel = new GearmanAsync();
+        $creatorId = Auth::instance()->getUser()['admin_id'];
+        $nickname = Relation::getNickName($creatorId);
+        $tpl_param = '';$uploader='';
+        //当前节点名称
+        $dirName = ProjectNode::getDirName($nodeInfo['project_id'],$nodeInfo['node_key']);
+        $date = date('Y-m-d H:i');
+        //当前节点上传人员
+        $where['target_id'] = $nodeId;
+        $where['target_type'] = 2;
+        $where['role_type'] = 4;
+        $uploadInfo = Db::name('relation')->where($where)->select();
+        foreach ($uploadInfo as $upload)
+        {
+            $uploader[] = userData($upload['admin_id']);
+            $tpl_param[] = [
+                'someone'=>$nickname,
+                'time' => $date,
+                'project' =>$projectInfo['project_name'],
+                'process' => $dirName
+            ];
+
+        }
+
+        $user_tel = array_unique(array_column($uploader,'telephone'));
+        $user_emails = array_unique(array_column($uploader,'email'));
+
+        if ($audit) {
+            //邮件发送
+            $emailJob = [
+                'email' => $user_emails,
+                'title' => 'PLM审核项目节点通知',
+                'content' => "{$nickname}于{$date}处理了在项目{$projectInfo['project_name']}的工作，相关内容审核通过（内容：{$dirName}相关节点文档，当前节点状态（{$nickname}审核通过））",
+            ];
+            $job = [
+                'batch_sms' => 1,
+                'mobile' => $user_tel,
+                'tpl_code' => 'SMS_142000360',//节点审核通过/驳回
+                'tpl_param' => $tpl_param,
+            ];
+        } else {
+            //驳回
+            $emailJob = [
+                'email' => $user_emails,
+                'title' => 'PLM审核项目节点通知',
+                'content' => "{$nickname}于{$date}处理了在项目{$projectInfo['project_name']}的工作，相关内容审核被驳回，请你修改需上传的相关内容（内容：{$dirName}相关节点文档，当前节点状态（进行中））",
+            ];
+            $job = [
+                'batch_sms' => 1,
+                'mobile' => $user_tel,
+                'tpl_code' => 'SMS_142020298',//节点审核通过/驳回
+                'tpl_param' => $tpl_param,
+            ];
+        }
+        $sendModel->sendSms($job);
+        $sendModel->sendEmail($emailJob);
+    }
+}

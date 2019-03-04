@@ -1,0 +1,300 @@
+<?php
+namespace app\api\model;
+
+use think\Db;
+use think\Model;
+use app\common\library\KCloud;
+use think\Session;
+class Grouping extends Model
+{
+    protected $table = 'plm_material_grouping';
+    
+    public static function getList($condition = '',$field = '*',$order = 'sort')
+    {
+        return Db::table('plm_material_grouping')->where($condition)->field($field)->order($order)->select();
+    }
+    public static function change($params)
+    {
+        $data['status'] = $params['status'];       
+        
+        /*if($params['type'] == 1){   //修改plm_project_bom表
+            $where['bom_id'] = $params['id'];
+
+            $result = Db::name('project_bom')->where($where)->find();
+            if(!empty($result)){
+                return Db::table('plm_project_bom')->where($where)->setField($data);
+            }
+        }else{  //plm_material表
+            $where1['material_id'] = $params['id'];
+            $result = Db::name('material')->where($where1)->find();
+            if(!empty($result)){
+                return Db::table('plm_material')->where($where1)->setField($data);
+            }
+        }*/
+
+        $res = Session::get('k3CloudLoginResult') === true ? 1 : KCloud::check_login();
+        if($params['type'] == 1 ) {
+            $where['bom_id'] = $params['id'];
+            $result = Db::name('project_bom')->where($where)->find();
+            if (!empty($result)) {
+                //查找版本号
+                $version = Db::name('project_bom')->where($where)->value('version');
+                //查找对应父项代码
+                $material = Db::name('bom_material')->where(['bom_id'=>$params['id'],'relative'=>1])->value('material_sn');
+                //拼成ERP BOM需要的格式
+                $materialData = $material.'_V'.$version;
+                $dataModel = ['CreateOrgId' => 0, 'Numbers' => [$materialData], 'Ids' => ''];
+                //同步到ERP
+                if ($data['status'] == 1) {
+                    //启用
+                    $erpData = ['ENG_BOM','Enable',$dataModel];
+                    }else{
+                    //禁用
+                    $erpData = ['ENG_BOM','Forbid',$dataModel];
+                    }
+
+                    if($res == 1){
+                        $post_content = KCloud::create_postdata($erpData);
+                        $cloudUrl = Session::get('cloudUrl');
+                        $cookie_jar = Session::get('cookieJar');
+                        $erpRes = KCloud::invoke_set_status($cloudUrl, $post_content, $cookie_jar);
+                        $result_arr = json_decode($erpRes, true);
+                        if (empty($result_arr['Result']['ResponseStatus']['IsSuccess'])){
+                            //记录失败日志
+                            if (!empty($result_arr['Result']['ResponseStatus']['Errors'])) {
+                                \think\Log::record("BOM自增ID:{$params['id']}. BOM同步失败"
+                                    . json_encode($result_arr['Result']['ResponseStatus']['Errors']));
+                            }
+                        }
+                    }
+                return Db::name('project_bom')->where($where)->setField($data);
+                }
+        }else{
+            //plm_material表
+            $where1['material_id'] = $params['id'];
+            $result = Db::name('material')->where($where1)->find();
+            $dataModel = ['CreateOrgId' => 0, 'Numbers' => [$result['material_code']], 'Ids' => ''];
+            if(!empty($result)){
+                if($data['status'] == 1){
+                    //启用
+                    $erpData = ['BD_MATERIAL','Enable',$dataModel];
+                }else{
+                    $erpData = ['BD_MATERIAL','Forbid',$dataModel];
+                }
+                //启用/禁用物料同步到ERP
+                if($res == 1){
+                    $post_content = KCloud::create_postdata($erpData);
+                    $cloudUrl = Session::get('cloudUrl');
+                    $cookie_jar = Session::get('cookieJar');
+                    $erpRes = KCloud::invoke_set_status($cloudUrl, $post_content, $cookie_jar);
+                    $result_arr = json_decode($erpRes, true);
+                    if (empty($result_arr['Result']['ResponseStatus']['IsSuccess'])){
+                        //记录失败日志
+                        if (!empty($result_arr['Result']['ResponseStatus']['Errors'])) {
+                            \think\Log::record("物料编码:{$result['material_code']}. 物料同步失败"
+                                . json_encode($result_arr['Result']['ResponseStatus']['Errors']));
+                        }
+                    }
+                }
+                return Db::name('material')->where($where1)->setField($data);
+            }
+        }
+
+    }
+
+    public static function getBom($params)
+    {
+        $where = 'pb.mg_id = '.$params['mg_id'].'';
+        if($params['source'] == 1)
+        {
+            $where.=' AND bm.relative = 1';
+        }
+        if($params['source'] == 2 && !empty($params['year']))//选择标准资源库时，为必填项
+        {
+            $where.=' AND pr.year = '.$params['year'].' AND pr.resource_type = 2';
+        }
+        //关键词搜索
+        if(isset($params['keyword']) && !empty($params['keyword']))
+        {
+            $where .= ' AND (pb.project_name like "%'.$params['keyword'].'%" or bm.material_sn like "%'.$params['keyword'].'%" or pb.tpl_name like "%'.$params['keyword'].'%")';
+        }
+
+        if($params['source'] == 1)//查询所有BOM  plm_project_bom、plm_bom_material
+        {
+            $count = Db::name('project_bom')
+                ->alias('pb')
+                ->join('bom_material bm','pb.bom_id = bm.bom_id','LEFT')
+                ->where($where)
+                ->count();
+
+            $list = Db::name('project_bom')
+                ->alias('pb')
+                ->field('pb.bom_id,pb.project_name,concat(pb.project_name,pb.tpl_name) as bom_name,pb.version,bm.material_name,bm.material_sn,pb.add_time,pb.audit_time,pb.audit_status,pb.status')
+                ->join('bom_material bm','pb.bom_id = bm.bom_id','LEFT')
+                ->where($where)
+                ->order('pb.add_time desc')
+                ->page($params['page_no'],$params['page_size'])
+                ->select();
+        }else{//查询标准资源库BOM plm_project_bom、plm_bom_material、plm_resource
+
+            $count = Db::name('resource')
+                ->alias('pr')
+                ->join('bom_material bm','pr.resource_id = bm.id','LEFT')
+                ->join('project_bom pb','pb.bom_id = bm.bom_id','LEFT')
+                ->where($where)
+                ->count();
+
+            $list = Db::name('resource')
+                ->alias('pr')
+                ->field('pb.bom_id,pb.project_name,concat(pb.project_name,pb.tpl_name) as bom_name,pb.version,bm.material_name,bm.material_sn,pb.add_time,pb.audit_time,pb.audit_status,pb.status')
+                ->join('bom_material bm','pr.resource_id = bm.id','LEFT')
+                ->join('project_bom pb','pb.bom_id = bm.bom_id','LEFT')
+                ->where($where)
+                ->order('pb.add_time desc')
+                ->page($params['page_no'],$params['page_size'])
+                ->select();
+        }
+        return array("totalNumber"=>$count,"list"=>$list);
+    }
+
+    public static function getMaterial($params)
+    {
+        //$where = 'pm.mg_id = '.$params['mg_id'].' AND pm.status = 1';
+        $where = 'pm.mg_id = '.$params['mg_id'];
+
+
+        if($params['source'] == 2 && !empty($params['year']))//选择标准资源库时，为必填项
+        {
+            $where.=' AND pr.year = '.$params['year'].' AND pr.resource_type = 1';
+        }
+
+        //关键词搜索
+        if(isset($params['keyword']) && !empty($params['keyword']))
+        {
+            $where .= ' AND (pm.material_code like "%'.$params['keyword'].'%" or pm.material_name like "%'.$params['keyword'].'%" or pm.specifications like "%'.$params['keyword'].'%" or pm.specifications_code like "%'.$params['keyword'].'%")';
+        }
+
+        if($params['source'] == 1)//1为所有  plm_material
+        {
+            $count = Db::name('material')
+                ->alias('pm')
+                ->where($where)
+                ->count();
+
+            $list = Db::name('material')
+                ->alias('pm')
+                ->field('pm.material_id,pm.material_code,pm.material_name,pm.specifications,pm.specifications_code,pm.description,pm.material_attribute,pm.basic_unit,pm.start_batch,pm.img_path,pm.status')
+                ->where($where)
+                ->order('pm.createtime desc')
+                ->page($params['page_no'],$params['page_size'])
+                ->select();
+
+        }else{
+            $count = Db::name('resource')
+                ->alias('pr')
+                ->join('material pm','pr.resource_id = pm.material_id','LEFT')
+                ->where($where)
+                ->count();
+
+            $list = Db::name('resource')
+                ->alias('pr')
+                ->field('pm.material_id,pm.material_code,pm.material_name,pm.specifications,pm.specifications_code,pm.description,pm.material_attribute,pm.basic_unit,pm.start_batch,pm.img_path,pm.status')
+                ->join('material pm','pr.resource_id = pm.material_id','LEFT')
+                ->where($where)
+                ->order('pm.createtime desc')
+                ->page($params['page_no'],$params['page_size'])
+                ->select();
+        }
+        return array("totalNumber"=>$count,"list"=>$list);
+    }
+
+    /**
+     * 添加数据
+     * @param $params
+     * @param $type 1为BOM分组，2为物料分组
+     * @return bool
+     */
+    public static function addInfo($params,$type)
+    {
+        Db::startTrans();
+        try{
+            $list = [];$result = false;
+            //Bom分组
+            if($type == 1)
+            {
+                foreach($params as $key=>$value)
+                {
+                    $res = Db::name('material_grouping')->where(['mg_code' => $value['FNUMBER'], 'type' => $type])->value('mg_id');
+                    //有数据修改，没有则新增
+                    if (!empty($res))
+                    {
+                        $list[$key]['mg_id'] = $value['FID'];
+                        $list[$key]['mg_code'] = $value['FNUMBER'];//物料分组编码
+                        $list[$key]['mg_name'] = $value['FNAME'];//物料分组名称
+                        $list[$key]['parent_id'] = $value['FPARENTID'];
+                        $list[$key]['type'] = $type;//物料分组
+                        $list[$key]['status'] = 1;//开启
+                        $list[$key]['updatetime'] = time();
+                    } else {
+                        $data['mg_id'] = $value['FID'];
+                        $data['mg_code'] = $value['FNUMBER'];
+                        $data['mg_name'] = $value['FNAME'];
+                        $data['parent_id'] = $value['FPARENTID'];
+                        $data['type'] = $type;
+                        $data['status'] = 1;
+                        $data['createtime'] = time();
+                        $result = Db::name('material_grouping')->insert($data);
+                        if (!$result) {
+                            $result = false;
+                            continue;
+                        }
+                    }
+                }
+            }
+            //物料分组
+            elseif($type == 2)
+            {
+                foreach($params as $k=>$v)
+                {
+                    $mgId = Db::name('material_grouping')->where(['mg_code'=>$v['FNumber'],'type'=>$type])->value('mg_id');
+                    //有数据修改，没有则新增
+                    if($mgId)
+                    {
+                        $list[$k]['mg_id'] = $v['FID'];
+                        $list[$k]['mg_code'] = $v['FNumber'];
+                        $list[$k]['mg_name'] = $v['FName'];
+                        $list[$k]['parent_id'] = $v['FParentId'];
+                        $list[$k]['type'] = $type;//物料分组
+                        $list[$k]['status'] = 1;//开启
+                        $list[$k]['updatetime'] = time();
+                    }
+                    else
+                    {
+                        $result = Db::name('material_grouping')->insert(['mg_id'=>$v['FID'],'mg_code'=>$v['FNumber'],'mg_name'=>$v['FName'],'parent_id'=>$v['FParentId'],'type'=>$type,'status'=>1,'createtime'=>time()]);
+                        if(!$result)
+                        {
+                            continue;
+                        }
+                    }
+                }
+            }
+            if(!empty($list))
+            {
+                $model = new Grouping;
+                $result = $model->saveAll($list);
+            }
+            if($result)
+            {
+                Db::commit();
+                return true;
+            }
+        }
+        catch (\Exception $e)
+        {
+            // 回滚事务
+            Db::rollback();
+        }
+        return false;
+    }
+}
+

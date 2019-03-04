@@ -1,0 +1,33 @@
+<?php
+
+namespace app\api\model;
+
+use think\Model;
+use think\Db;
+class DocTemplate extends Model
+{
+	 /*
+     * 通过文档模板id获取文档名称、文档类型
+     */
+    public static function getTplName($tplId)
+    {
+        $list = Db::name('doc_template')->field('tpl_name,tpl_type')->where('tpl_id',$tplId)->find();
+        return $list;
+    }
+
+    /*
+     *设置文档模板为删除状态
+     */
+    public static function setStatus($tplId,$tplType)
+    {
+        return Db::name('doc_template')->where('tpl_id',$tplId)->where('tpl_type',$tplType)->setField('status',3);
+    }
+
+    /*
+     * 删除文档模板
+     */
+    public static function delInfo($where)
+    {
+        return Db::name('doc_template')->where($where)->delete();
+    }
+}

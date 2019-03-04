@@ -1,0 +1,47 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2018/7/6 16:34
+// +----------------------------------------------------------------------
+// | TITLE: 项目节点连线的数据操作
+// +----------------------------------------------------------------------
+
+namespace app\api\model;
+
+use think\Db;
+use think\Model;
+class ProjectLine extends Model
+{
+    /*
+     * 通过项目id、节点from查询到达节点的key
+     */
+    public static function getNodeTo($project_id,$from)
+    {
+        $where['from'] = $from;
+        $where['project_id'] = $project_id;
+        $info = DB::name('project_line')
+            ->field('to')
+            ->where($where)
+            ->find();
+
+        return $info;
+    }
+
+
+    /*
+     * 通过项目id、节点to查询出发点key
+     *
+     */
+    public static function getNodeFrom($project_id,$to)
+    {
+        $where['to'] = $to;
+        $where['project_id'] = $project_id;
+        $info = DB::name('project_line')
+            ->field('from')
+            ->where($where)
+            ->find();
+
+        return $info;
+    }
+}

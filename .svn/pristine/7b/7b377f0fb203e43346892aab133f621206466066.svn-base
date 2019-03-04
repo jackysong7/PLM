@@ -1,0 +1,90 @@
+<?php
+
+namespace app\api\controller\v2;
+
+use app\api\controller\Api;
+use app\api\model\Dir;
+use app\common\library\Auth;
+use think\exception\DbException;
+
+class ProjectMsg extends Api
+{
+    /**
+     * 待处理任务列表
+     * @link http://192.168.80.240:4999/web/#/5?page_id=167
+     */
+    public function getList($data)
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'get_my' => 'in:0,1',
+            'page_no' => 'number|>:0',
+            'page_size' => 'number|>:0',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        if (!isset($data['page_no'])) $data['page_no'] = 1;
+        if (!isset($data['page_size'])) $data['page_size'] = 10;
+
+        $where = [];
+        if (!empty($data['get_my'])) {
+            $where['admin_id'] = Auth::instance()->getUser()['admin_id'];
+        }
+        if (!empty($data['process_id'])) {
+            $where['process_id'] = $data['process_id'];
+        }
+
+        $projectMsg = new \app\api\model\ProjectMsg();
+        $totalNumber = $projectMsg->where($where)->count();
+        try {
+            $list = $projectMsg->where($where)->page($data['page_no'], $data['page_size'])->select();
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+
+        $this->returnmsg(200, 'success!', [
+            'totalNumber' => $totalNumber,
+            'list' => $list,
+        ]);
+    }
+
+    /**
+     * “我的”任务统计
+     * @link http://192.168.80.240:4999/web/#/5?page_id=168
+     */
+    public function count()
+    {
+        $where = [];
+        $where['admin_id'] = Auth::instance()->getUser()['admin_id'];
+
+        $projectMsg = new \app\api\model\ProjectMsg();
+        $dir = new Dir();
+        $totalNumber = $projectMsg->where($where)->group('process_id')->count();
+        $list = [];
+        try {
+            /** @var \app\api\model\ProjectMsg[] $projectMsgs */
+            $projectMsgs = $projectMsg->field('process_id, count(msg_id) amount')->where($where)->group('process_id')->select();
+            foreach ($projectMsgs as $projectMsg) {
+                $plmDirName = $dir->where('plm_dir_id', $projectMsg->process_id)->value('plm_dir_name');
+
+                $list[] = [
+                    'process_id' => $projectMsg->process_id,
+                    'process_name' => $plmDirName,
+                    'amount' => $projectMsg->amount,
+                ];
+            }
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+
+        $this->returnmsg(200, 'success!', [
+            'totalNumber' => $totalNumber,
+            'list' => $list,
+        ]);
+    }
+}

@@ -1,0 +1,123 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: liujun
+ * Date: 2018/4/10
+ * Time: 17:16
+ */
+namespace app\api\model;
+
+use think\Db;
+use think\Model;
+use app\api\model\Brand;
+use app\api\model\Sample;
+use app\api\model\Category;
+use app\api\model\SalesChannels;
+use app\api\model\SalesStatus;
+class Search extends Model
+{
+    public static function getCondition()
+    {
+        //查询品牌的信息
+        $brandWhere['status'] = array('NEQ',3);
+        $brandField = 'brand_id,brand_name';
+
+        $brand_list = Brand::getDataList($brandWhere,$brandField);
+        $brand_list = json_decode(json_encode($brand_list),true);
+
+        //查询模型的信息(及分类)
+
+        $model_where['status'] = 1;
+        $field_model = 'pm_id,pm_name';
+        $model_list = Sample::getDataList($model_where,$field_model);
+        $model_list = json_decode(json_encode($model_list),true);
+
+        //查询//型号/系列列表信息（1级分类的信息）
+        $condition['parent_id'] = 0;
+        $condition['status'] = 1;
+        $field = 'gc_id,gc_name';
+        $condition_list = Category::getDataList($condition,$field);
+        $condition_list = json_decode(json_encode($condition_list),true);
+
+        //查询销售渠道
+
+        $channel_where['status'] = array('NEQ',3);
+        $field_channel = 'sc_id,sc_name';
+        $saleschannels_list = SalesChannels::getDataList($channel_where,$field_channel);
+        $saleschannels_list = json_decode(json_encode($saleschannels_list),true);
+
+        //查询销售状态
+
+        $salesStatusWhere['status'] = array('NEQ',3);
+        $salesStatusField = 'ss_id,ss_name';
+        $salesStatus_list = SalesStatus::getDataList($salesStatusWhere,$salesStatusField);
+        $salesStatus_list = json_decode(json_encode($salesStatus_list),true);
+
+        return array("brand_list"=>$brand_list,"model_list"=>$model_list,"category_one_list"=>$condition_list,"sales_channels_list"=>$saleschannels_list,"sales_status_list"=>$salesStatus_list);
+
+    }
+
+    public static function conditionSearch($params)
+    {
+        $where = "1 = 1";
+        //品牌
+        if(isset($params['condition']['brand_list']) && !empty($params['condition']['brand_list'])){
+            $where .= ' AND pa.brand_id in ('.$params['condition']['brand_list'].')';
+        }
+        //模型（分类）ID组，传字符串 逗号分割，默认为全部
+        if(isset($params['condition']['model_list']) && !empty($params['condition']['model_list'])){
+            $where .= ' AND pa.model_id in ('.$params['condition']['model_list'].')';
+        }
+        //型号/系列ID组
+        if(isset($params['condition']['category_one_list']) && !empty($params['condition']['category_one_list'])){
+            $where .= ' AND pa.category_one_id in ('.$params['condition']['category_one_list'].')';
+        }
+        //销售状态(上市阶段)ID组
+        if(isset($params['condition']['sales_status_list']) && !empty($params['condition']['sales_status_list'])){
+            $where .= ' AND pa.sales_status_id in ('.$params['condition']['sales_status_list'].')';
+        }
+        //销售渠道状态
+        if(isset($params['condition']['sales_channels_list']) && !empty($params['condition']['sales_channels_list'])){
+            $whereArray = array();
+            foreach (explode(",",$params['condition']['sales_channels_list']) as $k=>$v){
+                $str = "FIND_IN_SET($v,pa.sales_channels_id)";
+                array_push($whereArray,$str);
+            }
+            $whereStr = implode(" OR ",$whereArray);
+            $where .= " AND ($whereStr)";
+        }
+        //上市时间
+        if(isset($params['condition']['plm_ttm']) && !empty($params['condition']['plm_ttm'])){
+            $where .= ' AND pb.plm_ttm in ('.$params['condition']['plm_ttm'].')';
+        }
+        //关键词搜索
+        if(isset($params['condition']['keyword']) && !empty($params['condition']['keyword'])){
+            $where .= ' AND (pb.plm_no like "%'.$params['condition']['keyword'].'%" or pa.goods_name like "%'.$params['condition']['keyword'].'%" or pe.erp_no like "%'.$params['condition']['keyword'].'%")';
+        }
+
+        $count = Db::name('basedata')
+            ->alias('pb')
+            ->join('product_attribute pa','pb.plm_no = pa.plm_no','LEFT')
+            ->join('erp_attribute pe','pb.plm_no = pe.plm_no','LEFT')
+//            ->join('folder_img pf','pb.plm_no = pf.plm_no AND pf.parent_id = 0','LEFT')
+            ->join('img pi','pb.plm_no = pi.plm_no AND pi.is_main_figure = 2 AND pi.status = 1 AND pi.fi_id = 0','LEFT')
+            ->where($where)
+            ->count();
+
+         $list = Db::name('basedata')
+            ->alias('pb')
+            ->field('pb.plm_no,pb.plm_ttm,pa.goods_name,pi.img_path')
+            ->join('product_attribute pa','pb.plm_no = pa.plm_no','LEFT')
+            ->join('erp_attribute pe','pb.plm_no = pe.plm_no','LEFT')
+//             ->join('folder_img pf','pb.plm_no = pf.plm_no AND pf.parent_id = 0','LEFT')
+            ->join('img pi','pb.plm_no = pi.plm_no AND pi.is_main_figure = 2 AND pi.status = 1 AND pi.fi_id = 0','LEFT')
+            ->where($where)
+            ->order('pb.createtime desc')
+            ->page($params['page_no'],$params['page_size'])
+            ->select();
+
+        //return Db::name('basedata')->getLastSql();
+
+        return array("totalNumber"=>$count,"list"=>$list);
+    }
+}

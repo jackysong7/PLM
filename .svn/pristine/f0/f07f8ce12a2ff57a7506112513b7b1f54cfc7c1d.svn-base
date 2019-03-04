@@ -1,0 +1,358 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chenhailiang
+ * Date: 2018/4/2
+ * Time: 14:59
+ */
+namespace app\api\model;
+
+use app\common\library\Token;
+use think\Db;
+use think\Model;
+use think\Config;
+use plm\Random;
+
+class Admin extends Model
+{
+    protected $connection = 'database.center';
+
+    public static function initConnect(){
+        return Db::connect(Config::get('database.center'));
+    }
+    public static function getList($params){
+
+        //获取用户列表
+        $where = 'status in (1,2)';
+
+        if(isset($params['keywords']) && !empty($params['keywords'])){
+            $where .= ' AND username LIKE "%'.$params['keywords'].'%"';
+            $where .= ' OR nickname LIKE "%'.$params['keywords'].'%"';
+        }
+        if(isset($params['page'])&&isset($params['limit'])) {
+            $count = self::initConnect()
+                ->name('admin')
+                ->where($where)
+                ->count();
+
+            $result = self::initConnect()
+                ->name('admin')
+                ->field('admin_id,username,nickname,status')
+                ->where($where)
+                ->page($params['page'], $params['limit'])
+                ->select();
+
+            //处理用户关联信息
+            foreach ($result as $key => $value) {
+                $init = array("department_name"=>"", "job_name"=>"");
+                $admin_info = Db::name('admin_info')
+                    ->alias('ai')
+                    ->field('d.department_name,j.job_name')
+                    ->join('department d', 'ai.department_id = d.pd_id', 'LEFT')
+                    ->join('job j', 'ai.job_id = j.pj_id', 'LEFT')
+                    ->where('ai.admin_id', $value['admin_id'])->find();
+                $result[$key] = empty($admin_info)?array_merge($value, $init):array_merge($value, $admin_info);
+            }
+
+            $data = array(
+                'list' => $result,
+                'page' => ['total_count' => $count,
+                    'current_page' => $params['page'],
+                    'page_size' => $params['limit'],
+                    'total_page' => ceil($count / $params['limit'])],
+            );
+        }else{
+            $result = self::initConnect()
+                ->name('admin')
+                ->field('admin_id,username,nickname,status')
+                ->where($where)
+                ->page($params['page'], $params['limit'])
+                ->select();
+
+            //处理用户关联信息
+            foreach ($result as $key => $value) {
+                $init = array("department_name"=>"", "job_name"=>"");
+                $admin_info = Db::name('admin_info')
+                    ->alias('ai')
+                    ->field('d.department_name,j.job_name')
+                    ->join('department d', 'ai.department_id = d.pd_id', 'LEFT')
+                    ->join('job j', 'ai.job_id = j.pj_id', 'LEFT')
+                    ->where('ai.admin_id', $value['admin_id'])->find();
+                $result[$key] = empty($admin_info)?array_merge($value, $init):array_merge($value, $admin_info);
+            }
+            $data = array(
+                'list' => $result
+            );
+        }
+
+        return $data;
+    }
+
+    public static function getInfo($params){
+
+        //获取用户信息
+        $where = 'status in (1,2)';
+
+        if(isset($params['admin_id'])){
+            $where .= ' AND admin_id ='.$params['admin_id'];
+        }
+        $result = self::initConnect()
+            ->name('admin')
+            ->field('admin_id,username,nickname,email,telephone')
+            ->where($where)
+            ->find();
+        $admin = Db::name('admin_info')
+            ->alias('ai')
+            ->field('ai.rules,d.pd_id,d.department_name,j.pj_id,j.job_name,j.rules as job_rules')
+            ->join('department d','ai.department_id = d.pd_id','LEFT')
+            ->join('job j','ai.job_id = j.pj_id','LEFT')
+            ->where('ai.admin_id',$result['admin_id'])->find();
+
+
+        if(!empty($admin)){
+            $result = array_merge($result,$admin);
+            //获取部门
+            $getDepartment = Db::name('department')
+                ->field('pd_id,department_name')
+                ->where('status = 1')
+                ->order('pd_id desc')
+                ->select();
+
+            if(!empty($getDepartment)){
+                foreach($getDepartment as $key=>$value){
+                    if($value['pd_id'] == $admin['pd_id']){
+                        $department[] = array_merge($getDepartment[$key],["checked"=>true]);
+                    }else{
+                        $department[] = array_merge($getDepartment[$key],["checked"=>false]);
+                    }
+                }
+            }
+
+            //获取岗位
+            $getJob = Db::name('job')
+                ->field('pj_id,job_name')
+                ->where('status = 1')
+                ->order('pj_id desc')
+                ->select();
+
+            if(!empty($getJob)){
+                foreach($getJob as $key=>$value){
+                    if($value['pj_id'] == $admin['pj_id']){
+                        $job[] = array_merge($getJob[$key],["checked"=>true]);
+                    }else{
+                        $job[] = array_merge($getJob[$key],["checked"=>false]);
+                    }
+                }
+            }
+            //获取权限节点
+            $adminRule = Db::name('admin_rule')
+                ->field('rule_id,parent_id,rule_name')
+                ->where('status = 1')
+                ->order('rule_id desc')
+                ->select();
+
+            foreach($adminRule as $k=>$v){
+//                $rules = explode(',',$admin['job_rules']);
+                $rules = explode(',',$admin['rules']);
+                if(in_array($v['rule_id'],$rules)){
+                    $data[] = $adminRule[$k];
+                }
+            }
+
+            $resultdata = [
+                'department'=>$department,
+                'job'=>$job,
+                'adminInfo'=>$result,
+                'adminRules'=>empty($data)?array():$data
+            ];
+        } else {
+            $resultdata = [
+                'department'=>[],
+                'job'=>[],
+                'adminInfo'=>$result,
+                'adminRules'=>[]
+            ];
+        }
+        
+        return $resultdata;
+    }
+
+    public static function getByUsername($username)
+    {
+        $admin = self::initConnect()->name('admin')->where(['username'=>$username])->find();
+        return $admin;
+    }
+
+    public static function add($params){
+        $data = [
+            'username'=>$params['username'],
+            'nickname'=>$params['nickname'],
+            'creator'=>empty($params['admin_id']) ? 0:$params['admin_id'],
+            'password'=>$params['setpassword'],
+            'email'=>empty($params['email']) ? '':$params['email'],
+            'telephone'=>empty($params['telephone']) ? '':$params['telephone'],
+            'salt'=>$params['salt'],
+            'createtime'=>$params['createtime'],
+            'updatetime'=>$params['updatetime'],
+            'status'=>$params['status'],
+        ];
+        $result = self::initConnect()->name('admin')->insertGetId($data);
+
+        if($result){
+            $admin_info = [
+                'admin_id'=>$result,
+                'department_id'=>$params['department_id'],
+                'job_id'=>$params['job_id'],
+                'rules'=>empty($params['rules'])?'':$params['rules']
+            ];
+            $admin = Db::name('admin_info')->insert($admin_info);
+            return $admin;
+        }
+        return array();
+    }
+
+    public static function edit($params){
+        $admin = self::initConnect()->name('admin')->select(['admin_id'=>$params['admin_id']]);
+        $params['updatetime'] = time();
+        if($admin){
+            if(!empty($params['setpassword'])){
+                $admin_info=[
+                    'username'=>$params['username'],
+                    'nickname'=>$params['nickname'],
+                    'email'=>empty($params['email'])?'':$params['email'],
+                    'telephone'=>empty($params['telephone'])?'':$params['telephone'],
+                    'updatetime'=>$params['updatetime'],
+                    'password'=>$params['setpassword'],
+                    'salt'=>$params['salt']
+                ];
+            }else{
+                $admin_info=[
+                    'username'=>$params['username'],
+                    'nickname'=>$params['nickname'],
+                    'email'=>empty($params['email']) ? '':$params['email'],
+                    'telephone'=>empty($params['telephone']) ? '':$params['telephone'],
+                    'updatetime'=>$params['updatetime']
+                ];
+            }
+
+            $result = self::initConnect()->name('admin')->where('admin_id',$params['admin_id'])->update($admin_info);
+            if (empty(Db::name('admin_info')->where('admin_id',$params['admin_id'])->find()))
+            {
+                Db::name('admin_info')->insert([
+                    'admin_id' => $params['admin_id']
+                ]);
+            }
+            //修改关联表
+            if($result){
+                $result_data = [
+                    'department_id'=>$params['department_id'],
+                    'job_id'=>$params['job_id'],
+                    'rules'=>$params['rules'],
+                ];
+                $data = Db::name('admin_info')->where('admin_id',$params['admin_id'])->update($result_data);
+                if($params['current_admin_id'] == $params["admin_id"]){
+
+                    if($data){
+                        //重新设置缓存
+                        $adminInfo = self::initConnect()->name('admin')->where('admin_id',$params['admin_id'])->find();
+                        Token::set($params['token'],$adminInfo);
+                    }
+                }
+                return $data;
+            }
+        }
+    }
+
+    /**
+     * 修改用户权限
+     * 当岗位权限发生改变时，该岗位下所属的全部用户的权限都一并更新
+     * 当岗位部门发生改变时，该岗位下所属的全部用户的部门都一并更新
+     * $params array
+     */
+    public static function updateRules($where,$params){
+//        return Db::name('admin_info')->where('job_id',$params['job_id'])->update(array("rules"=>$params["rules"]));
+        return Db::name('admin_info')->where('job_id',$where)->update($params);
+    }
+
+    public static function editStatus($params){
+        $admin = self::initConnect()->name('admin')->select(['admin_id'=>$params['admin_id']]);
+        $params['updatetime'] = time();
+        if($admin){
+            $admin_info = [
+                'status'=>$params['status'],
+                'updatetime'=>$params['updatetime'],
+            ];
+            $result = self::initConnect()->name('admin')->where('admin_id',$params['admin_id'])->update($admin_info);
+            return $result;
+        }
+    }
+
+    public static function del($params){
+        $admin = self::initConnect()->name('admin')->select(['admin_id'=>$params['admin_id']]);
+        if($admin){
+            $result = self::initConnect()->name('admin')->where('admin_id',$params['admin_id'])->update(['status'=>3, 'updatetime'=>time()]);
+            return $result;
+        }
+    }
+
+    public static function settingPassword($params){
+        $admin = self::initConnect()->name('admin')->find(['admin_id'=>$params['admin_id']]);
+        if(!empty($admin)){
+            if (md5(md5($params['old_password']).$admin['salt']) == $admin['password'] && $params['new_password'] == $params['password']){
+                if (!empty($params['password']))
+                {
+                    $params['salt'] = Random::alnum();
+                    $params['password'] = md5(md5($params['password']) . $params['salt']);
+                }
+                $data = [
+                    'password' => $params['password'],
+                    'salt' => $params['salt'],
+                ];
+                $result = self::initConnect()->name('admin')->where('admin_id', $params['admin_id'])->update($data);
+                return $result;
+            }
+        }
+        return array();
+    }
+
+    public static function settingAvatar($params){
+        $admin = self::initConnect()->name('admin')->select(['admin_id'=>$params['admin_id']]);
+        if($admin){
+            $data = [
+                'avatar'=>$params['avatar'],
+            ];
+            $result = self::initConnect()->name('admin')->where('admin_id',$params['admin_id'])->update($data);
+            if($result){
+                //重新设置缓存
+                $adminInfo = self::initConnect()->name('admin')->where('admin_id',$params['admin_id'])->find();
+                Token::set($params['token'],$adminInfo);
+            }
+
+            return $result;
+        }
+    }
+
+    public static function getUserRules($admin_id){
+        $rules = Db::name('admin_info')
+            ->field('rules')
+            ->where('admin_id', '=', $admin_id)
+            ->value('rules');
+        return $rules;
+    }
+
+    /**
+     * @param $admin_id
+     * 获取部门、岗位及权限信息
+     */
+    public static function getUserInfo($admin_id)
+    {
+
+        $admin = Db::name('admin_info')
+            ->alias('ai')
+            ->field('ai.rules,d.department_name,j.job_name')
+            ->join('department d','ai.department_id = d.pd_id','LEFT')
+            ->join('job j','ai.job_id = j.pj_id','LEFT')
+            ->where('ai.admin_id', '=', $admin_id)->find();
+        return $admin;
+    }
+}

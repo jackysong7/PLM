@@ -1,0 +1,201 @@
+---------------------------------------------------------------
+[ 2018-12-19T13:27:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudErp/db_test
+[ info ] www.plm_dev123.net/api/v2/KcloudErp/db_test [运行时间：0.465000s][吞吐率：2.15req/s] [内存消耗：1,512.84kb] [文件加载：48]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudErp',
+    2 => 'db_test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\v2\KcloudErp->db_test[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudErp.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_tpl` [ RunTime:0.005000s ]
+[ error ] [0]致命错误: Call to undefined method app\api\controller\v2\KcloudErp::returnmsg()[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudErp.php:430]
+---------------------------------------------------------------
+[ 2018-12-19T13:27:01+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.026000s][吞吐率：38.46req/s] [内存消耗：888.95kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'PHPSESSID=fe67fhi430pr4som90a0le29p4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/KcloudErp/db_test',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-19T13:28:02+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudErp/db_test
+[ info ] www.plm_dev123.net/api/v2/KcloudErp/db_test [运行时间：0.105000s][吞吐率：9.52req/s] [内存消耗：1,493.48kb] [文件加载：45]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudErp',
+    2 => 'db_test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=fe67fhi430pr4som90a0le29p4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\v2\KcloudErp->db_test[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudErp.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_tpl` [ RunTime:0.011000s ]
+---------------------------------------------------------------
+[ 2018-12-19T13:29:33+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudErp/db_test
+[ info ] www.plm_dev123.net/api/v2/KcloudErp/db_test [运行时间：0.180000s][吞吐率：5.56req/s] [内存消耗：1,543.32kb] [文件加载：47]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudErp',
+    2 => 'db_test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=fe67fhi430pr4som90a0le29p4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\v2\KcloudErp->db_test[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudErp.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_sales_status` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_sales_status` (`ss_name`) VALUES ('2222') [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `relation_id` = 1 [ RunTime:0.002000s ]
+[ error ] [0]致命错误: Call to undefined method app\api\controller\v2\KcloudErp::returnmsg()[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudErp.php:427]
+---------------------------------------------------------------
+[ 2018-12-19T13:29:59+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudErp/db_test
+[ info ] www.plm_dev123.net/api/v2/KcloudErp/db_test [运行时间：0.144000s][吞吐率：6.94req/s] [内存消耗：1,543.34kb] [文件加载：47]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudErp',
+    2 => 'db_test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=fe67fhi430pr4som90a0le29p4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\v2\KcloudErp->db_test[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudErp.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_sales_status` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_sales_status` (`ss_name`) VALUES ('') [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `relation_id` = 1 [ RunTime:0.001000s ]
+[ error ] [0]致命错误: Call to undefined method app\api\controller\v2\KcloudErp::returnmsg()[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudErp.php:427]
+---------------------------------------------------------------
+[ 2018-12-19T13:30:02+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudErp/db_test
+[ info ] www.plm_dev123.net/api/v2/KcloudErp/db_test [运行时间：0.355000s][吞吐率：2.82req/s] [内存消耗：1,543.34kb] [文件加载：47]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudErp',
+    2 => 'db_test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=fe67fhi430pr4som90a0le29p4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\v2\KcloudErp->db_test[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudErp.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_sales_status` [ RunTime:0.022000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_sales_status` (`ss_name`) VALUES ('') [ RunTime:0.022000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.025000s ]
+[ sql ] [ SQL ] DELETE FROM `plm_relation`    WHERE  `relation_id` = 1 [ RunTime:0.018000s ]
+[ error ] [0]致命错误: Call to undefined method app\api\controller\v2\KcloudErp::returnmsg()[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudErp.php:427]

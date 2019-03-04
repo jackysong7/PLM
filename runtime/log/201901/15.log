@@ -1,0 +1,1163 @@
+---------------------------------------------------------------
+[ 2019-01-15T10:37:26+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111}
+[ info ] www.plm_dev123.net/api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111} [运行时间：0.446000s][吞吐率：2.24req/s] [内存消耗：2,425.36kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":11111}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/getdetail' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":11111}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547519846) [ RunTime:0.031500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT MAX(is_new) AS tp_max FROM `plm_material_slave` WHERE  `material_code` = '11111' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_id`,`is_component`,`material_name`,`material_code`,`material_code_old`,`specifications`,`specifications_code`,`description`,`material_attribute`,`basic_unit`,`start_batch`,`create_org`,`use_org`,unit_convert as convert_unit,`is_suite`,`control`,rate as default_tax_rate,`inventory_type`,`tax_type`,`inventory_unit`,`assistant_unit`,`is_expiration`,`expiration_date`,`expiration_date_online`,`expiration_unit`,`batch_num_rule`,`batch_num_extra`,`sale_unit`,`sale_pricing_unit`,`allow_return`,`purchase_unit`,purchase_price_unit as purchase_pricing_unit,is_quota as enable_quota,`quota_way`,`min_split_amount`,`allow_return_material`,`outsource_unit`,`fixed_lead_time`,outsource_price_unit as outsource_pricing_unit,`product_unit`,`product_type`,`standard_labor_unit`,`standard_labor_hour`,issue_qty as give_material_way,`over_give_control`,min_issue_qty as min_give_material,`min_give_unit`,`plan_strategy`,`manufacture_strategy`,`order_strategy`,`plan_area`,mrp_combine as MPR_combine,`product_level`,`vary_lead_time_unit`,`fixed_lead_time_unit`,`vary_lead_time`,`check_lead_time`,`check_lead_time_unit`,`offset_time`,`offset_time_unit`,`inventory_attr`,`submit_time`,`audit_time`,`audit_status`,`order_interval_time`,`order_interval_unit`,`material_category`,`mg_code`,`creator_id` FROM `plm_material_slave` WHERE  `material_code` = '11111'  AND `is_new` = 0 LIMIT 1 [ RunTime:0.003000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004500s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003500s ]
+[ sql ] [ SQL ] SELECT `mg_name` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02' LIMIT 1 [ RunTime:0.001500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003500s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 9  AND `target_type` = 7  AND `role_type` = 5 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001500s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.001500s ]
+---------------------------------------------------------------
+[ 2019-01-15T10:37:26+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.050500s][吞吐率：19.80req/s] [内存消耗：889.30kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111}',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-15T10:38:24+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111}
+[ info ] www.plm_dev123.net/api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111} [运行时间：0.174000s][吞吐率：5.75req/s] [内存消耗：2,425.82kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":11111}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011500s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/getdetail' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":11111}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547519904) [ RunTime:0.042000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.005500s ]
+[ sql ] [ SQL ] SELECT MAX(is_new) AS tp_max FROM `plm_material_slave` WHERE  `material_code` = '11111' LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `material_id`,`is_component`,`material_name`,`material_code`,`material_code_old`,`specifications`,`specifications_code`,`description`,`material_attribute`,`basic_unit`,`start_batch`,`create_org`,`use_org`,unit_convert as convert_unit,`is_suite`,`control`,rate as default_tax_rate,`inventory_type`,`tax_type`,`inventory_unit`,`assistant_unit`,`is_expiration`,`expiration_date`,`expiration_date_online`,`expiration_unit`,`batch_num_rule`,`batch_num_extra`,`sale_unit`,`sale_pricing_unit`,`allow_return`,`purchase_unit`,purchase_price_unit as purchase_pricing_unit,is_quota as enable_quota,`quota_way`,`min_split_amount`,`allow_return_material`,`outsource_unit`,`fixed_lead_time`,outsource_price_unit as outsource_pricing_unit,`product_unit`,`product_type`,`standard_labor_unit`,`standard_labor_hour`,issue_qty as give_material_way,`over_give_control`,min_issue_qty as min_give_material,`min_give_unit`,`plan_strategy`,`manufacture_strategy`,`order_strategy`,`plan_area`,mrp_combine as MPR_combine,`product_level`,`vary_lead_time_unit`,`fixed_lead_time_unit`,`vary_lead_time`,`check_lead_time`,`check_lead_time_unit`,`offset_time`,`offset_time_unit`,`inventory_attr`,`submit_time`,`audit_time`,`audit_status`,`order_interval_time`,`order_interval_unit`,`material_category`,`mg_code`,`creator_id` FROM `plm_material_slave` WHERE  `material_code` = '11111'  AND `is_new` = 0 LIMIT 1 [ RunTime:0.002500s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003500s ]
+[ sql ] [ SQL ] SELECT `mg_name` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02' LIMIT 1 [ RunTime:0.001500s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.003500s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 9  AND `target_type` = 7  AND `role_type` = 5 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.001500s ]
+---------------------------------------------------------------
+[ 2019-01-15T10:50:26+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111}
+[ info ] www.plm_dev123.net/api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111} [运行时间：0.132579s][吞吐率：7.54req/s] [内存消耗：2,425.85kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":11111}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/getdetail' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":11111}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547520626) [ RunTime:0.029018s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.005504s ]
+[ sql ] [ SQL ] SELECT MAX(is_new) AS tp_max FROM `plm_material_slave` WHERE  `material_code` = '11111' LIMIT 1 [ RunTime:0.001501s ]
+[ sql ] [ SQL ] SELECT `material_id`,`is_component`,`material_name`,`material_code`,`material_code_old`,`specifications`,`specifications_code`,`description`,`material_attribute`,`basic_unit`,`start_batch`,`create_org`,`use_org`,unit_convert as convert_unit,`is_suite`,`control`,rate as default_tax_rate,`inventory_type`,`tax_type`,`inventory_unit`,`assistant_unit`,`is_expiration`,`expiration_date`,`expiration_date_online`,`expiration_unit`,`batch_num_rule`,`batch_num_extra`,`sale_unit`,`sale_pricing_unit`,`allow_return`,`purchase_unit`,purchase_price_unit as purchase_pricing_unit,is_quota as enable_quota,`quota_way`,`min_split_amount`,`allow_return_material`,`outsource_unit`,`fixed_lead_time`,outsource_price_unit as outsource_pricing_unit,`product_unit`,`product_type`,`standard_labor_unit`,`standard_labor_hour`,issue_qty as give_material_way,`reverse_time`,`over_give_control`,min_issue_qty as min_give_material,`min_give_unit`,`plan_strategy`,`manufacture_strategy`,`order_strategy`,`plan_area`,mrp_combine as MPR_combine,`product_level`,`vary_lead_time_unit`,`fixed_lead_time_unit`,`vary_lead_time`,`check_lead_time`,`check_lead_time_unit`,`offset_time`,`offset_time_unit`,`inventory_attr`,`submit_time`,`audit_time`,`audit_status`,`order_interval_time`,`order_interval_unit`,`material_category`,`mg_code`,`creator_id` FROM `plm_material_slave` WHERE  `material_code` = '11111'  AND `is_new` = 0 LIMIT 1 [ RunTime:0.003002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011507s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.004002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003502s ]
+[ sql ] [ SQL ] SELECT `mg_name` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02' LIMIT 1 [ RunTime:0.001501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004003s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 9  AND `target_type` = 7  AND `role_type` = 5 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.001501s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.001501s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:17:08+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:1,%22auditor2%22:10,%22is_component%22:1,%22material_name%22:%2212%22,%22material_code%22:%22343%22,%22material_code_old%22:%2212%22,%22mg_code%22:%22G03%22,%22material_attribute%22:2,%22is_suite%22:1,%22basic_unit%22:%22g%22,%22specifications%22:%2212%22,%22specifications_code%22:%2243%22,%22description%22:%221212%22,%22control%22:[%22%E5%85%81%E8%AE%B8%E9%94%80%E5%94%AE%22,%22%E5%85%81%E8%AE%B8%E7%94%9F%E4%BA%A7%22,%22%E5%85%81%E8%AE%B8%E8%B5%84%E4%BA%A7%22],%22default_tax_rate%22:%22SL03_SYS%22,%22inventory_type%22:%22CHLB05-02%22,%22tax_type%22:%22WLDSFL02_SYS%22,%22inventory_unit%22:%22ml%22,%22assistant_unit%22:%22ml%22,%22convert_unit%22:1,%22start_batch%22:true,%22batch_num_rule%22:%22PHBM001%22,%22batch_num_extra%22:true,%22allow_return%22:true,%22order_interval_unit%22:3,%22enable_expiration%22:true,%22expiration_unit%22:%22M%22,%22expiration_date%22:%221%22,%22expiration_date_online%22:%221%22,%22sale_unit%22:%22mm%22,%22sale_pricing_unit%22:%22tong%22,%22purchase_unit%22:%22zhi%22,%22purchase_pricing_unit%22:%22tai%22,%22quota_way%22:3,%22min_split_amount%22:%2289%22,%22outsource_unit%22:%22kg%22,%22product_unit%22:%22tai%22,%22product_type%22:%22SCDD08_SYS%22,%22standard_labor_unit%22:60,%22give_material_way%22:4,%22reverse_time%22:2,%22over_give_control%22:2,%22min_give_material%22:%226%22,%22min_give_unit%22:%22ml%22,%22plan_strategy%22:1,%22manufacture_strategy%22:%22ZZCL002_SYS%22,%22order_strategy%22:1,%22plan_area%22:%22JHQ002_SYS%22,%22product_level%22:%229%22,%22fixed_lead_time%22:%229%22,%22vary_lead_time%22:%221%22,%22check_lead_time%22:%2234%22,%22check_lead_time_unit%22:3,%22offset_time%22:%226%22,%22offset_time_unit%22:1440,%22supply_from%22:%22%22,%22MPR_combine%22:true,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22enable_quota%22:true,%22allow_return_material%22:true,%22outsource_pricing_unit%22:%22tao%22,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:true,%22affect_cost%22:true},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22material_category%22:%22G03%22,%22order_interval_time%22:%22156%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:1,%22auditor2%22:10,%22is_component%22:1,%22material_name%22:%2212%22,%22material_code%22:%22343%22,%22material_code_old%22:%2212%22,%22mg_code%22:%22G03%22,%22material_attribute%22:2,%22is_suite%22:1,%22basic_unit%22:%22g%22,%22specifications%22:%2212%22,%22specifications_code%22:%2243%22,%22description%22:%221212%22,%22control%22:[%22%E5%85%81%E8%AE%B8%E9%94%80%E5%94%AE%22,%22%E5%85%81%E8%AE%B8%E7%94%9F%E4%BA%A7%22,%22%E5%85%81%E8%AE%B8%E8%B5%84%E4%BA%A7%22],%22default_tax_rate%22:%22SL03_SYS%22,%22inventory_type%22:%22CHLB05-02%22,%22tax_type%22:%22WLDSFL02_SYS%22,%22inventory_unit%22:%22ml%22,%22assistant_unit%22:%22ml%22,%22convert_unit%22:1,%22start_batch%22:true,%22batch_num_rule%22:%22PHBM001%22,%22batch_num_extra%22:true,%22allow_return%22:true,%22order_interval_unit%22:3,%22enable_expiration%22:true,%22expiration_unit%22:%22M%22,%22expiration_date%22:%221%22,%22expiration_date_online%22:%221%22,%22sale_unit%22:%22mm%22,%22sale_pricing_unit%22:%22tong%22,%22purchase_unit%22:%22zhi%22,%22purchase_pricing_unit%22:%22tai%22,%22quota_way%22:3,%22min_split_amount%22:%2289%22,%22outsource_unit%22:%22kg%22,%22product_unit%22:%22tai%22,%22product_type%22:%22SCDD08_SYS%22,%22standard_labor_unit%22:60,%22give_material_way%22:4,%22reverse_time%22:2,%22over_give_control%22:2,%22min_give_material%22:%226%22,%22min_give_unit%22:%22ml%22,%22plan_strategy%22:1,%22manufacture_strategy%22:%22ZZCL002_SYS%22,%22order_strategy%22:1,%22plan_area%22:%22JHQ002_SYS%22,%22product_level%22:%229%22,%22fixed_lead_time%22:%229%22,%22vary_lead_time%22:%221%22,%22check_lead_time%22:%2234%22,%22check_lead_time_unit%22:3,%22offset_time%22:%226%22,%22offset_time_unit%22:1440,%22supply_from%22:%22%22,%22MPR_combine%22:true,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22enable_quota%22:true,%22allow_return_material%22:true,%22outsource_pricing_unit%22:%22tao%22,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:true,%22affect_cost%22:true},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22material_category%22:%22G03%22,%22order_interval_time%22:%22156%22} [运行时间：0.283057s][吞吐率：3.53req/s] [内存消耗：2,419.75kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"use_org":100,"create_org":100,"auditor1":1,"auditor2":10,"is_component":1,"material_name":"12","material_code":"343","material_code_old":"12","mg_code":"G03","material_attribute":2,"is_suite":1,"basic_unit":"g","specifications":"12","specifications_code":"43","description":"1212","control":["允许销售","允许生产","允许资产"],"default_tax_rate":"SL03_SYS","inventory_type":"CHLB05-02","tax_type":"WLDSFL02_SYS","inventory_unit":"ml","assistant_unit":"ml","convert_unit":1,"start_batch":true,"batch_num_rule":"PHBM001","batch_num_extra":true,"allow_return":true,"order_interval_unit":3,"enable_expiration":true,"expiration_unit":"M","expiration_date":"1","expiration_date_online":"1","sale_unit":"mm","sale_pricing_unit":"tong","purchase_unit":"zhi","purchase_pricing_unit":"tai","quota_way":3,"min_split_amount":"89","outsource_unit":"kg","product_unit":"tai","product_type":"SCDD08_SYS","standard_labor_unit":60,"give_material_way":4,"reverse_time":2,"over_give_control":2,"min_give_material":"6","min_give_unit":"ml","plan_strategy":1,"manufacture_strategy":"ZZCL002_SYS","order_strategy":1,"plan_area":"JHQ002_SYS","product_level":"9","fixed_lead_time":"9","vary_lead_time":"1","check_lead_time":"34","check_lead_time_unit":3,"offset_time":"6","offset_time_unit":1440,"supply_from":"","MPR_combine":true,"standard_labor_hour":0,"fixed_lead_time_unit":1,"vary_lead_time_unit":1,"enable_quota":true,"allow_return_material":true,"outsource_pricing_unit":"tao","inventory_attr":{"warehouse":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"warehouse_space":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"BOM":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false},"batch_num":{"enable":true,"affect_price":false,"affect_plan":true,"affect_cost":true},"trace_num":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false}},"material_category":"G03","order_interval_time":"156"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014503s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.013503s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"use_org\\\":100,\\\"create_org\\\":100,\\\"auditor1\\\":1,\\\"auditor2\\\":10,\\\"is_component\\\":1,\\\"material_name\\\":\\\"12\\\",\\\"material_code\\\":\\\"343\\\",\\\"material_code_old\\\":\\\"12\\\",\\\"mg_code\\\":\\\"G03\\\",\\\"material_attribute\\\":2,\\\"is_suite\\\":1,\\\"basic_unit\\\":\\\"g\\\",\\\"specifications\\\":\\\"12\\\",\\\"specifications_code\\\":\\\"43\\\",\\\"description\\\":\\\"1212\\\",\\\"control\\\":[\\\"\\u5141\\u8bb8\\u9500\\u552e\\\",\\\"\\u5141\\u8bb8\\u751f\\u4ea7\\\",\\\"\\u5141\\u8bb8\\u8d44\\u4ea7\\\"],\\\"default_tax_rate\\\":\\\"SL03_SYS\\\",\\\"inventory_type\\\":\\\"CHLB05-02\\\",\\\"tax_type\\\":\\\"WLDSFL02_SYS\\\",\\\"inventory_unit\\\":\\\"ml\\\",\\\"assistant_unit\\\":\\\"ml\\\",\\\"convert_unit\\\":1,\\\"start_batch\\\":true,\\\"batch_num_rule\\\":\\\"PHBM001\\\",\\\"batch_num_extra\\\":true,\\\"allow_return\\\":true,\\\"order_interval_unit\\\":3,\\\"enable_expiration\\\":true,\\\"expiration_unit\\\":\\\"M\\\",\\\"expiration_date\\\":\\\"1\\\",\\\"expiration_date_online\\\":\\\"1\\\",\\\"sale_unit\\\":\\\"mm\\\",\\\"sale_pricing_unit\\\":\\\"tong\\\",\\\"purchase_unit\\\":\\\"zhi\\\",\\\"purchase_pricing_unit\\\":\\\"tai\\\",\\\"quota_way\\\":3,\\\"min_split_amount\\\":\\\"89\\\",\\\"outsource_unit\\\":\\\"kg\\\",\\\"product_unit\\\":\\\"tai\\\",\\\"product_type\\\":\\\"SCDD08_SYS\\\",\\\"standard_labor_unit\\\":60,\\\"give_material_way\\\":4,\\\"reverse_time\\\":2,\\\"over_give_control\\\":2,\\\"min_give_material\\\":\\\"6\\\",\\\"min_give_unit\\\":\\\"ml\\\",\\\"plan_strategy\\\":1,\\\"manufacture_strategy\\\":\\\"ZZCL002_SYS\\\",\\\"order_strategy\\\":1,\\\"plan_area\\\":\\\"JHQ002_SYS\\\",\\\"product_level\\\":\\\"9\\\",\\\"fixed_lead_time\\\":\\\"9\\\",\\\"vary_lead_time\\\":\\\"1\\\",\\\"check_lead_time\\\":\\\"34\\\",\\\"check_lead_time_unit\\\":3,\\\"offset_time\\\":\\\"6\\\",\\\"offset_time_unit\\\":1440,\\\"supply_from\\\":\\\"\\\",\\\"MPR_combine\\\":true,\\\"standard_labor_hour\\\":0,\\\"fixed_lead_time_unit\\\":1,\\\"vary_lead_time_unit\\\":1,\\\"enable_quota\\\":true,\\\"allow_return_material\\\":true,\\\"outsource_pricing_unit\\\":\\\"tao\\\",\\\"inventory_attr\\\":{\\\"warehouse\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"warehouse_space\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"BOM\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"batch_num\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":true,\\\"affect_cost\\\":true},\\\"trace_num\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false}},\\\"material_category\\\":\\\"G03\\\",\\\"order_interval_time\\\":\\\"156\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547540228) [ RunTime:0.049510s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.027005s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = '343' LIMIT 1 [ RunTime:0.031506s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.025005s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03' LIMIT 1 [ RunTime:0.013003s ]
+[ error ] [0]数据表字段不存在:[is_return_material][E:\phpStudy\WWW\plm_dev\thinkphp\library\think\db\Builder.php:107]
+---------------------------------------------------------------
+[ 2019-01-15T16:19:23+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343} [运行时间：0.076515s][吞吐率：13.07req/s] [内存消耗：2,123.47kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":343}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":343}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547540363) [ RunTime:0.020505s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:19:29+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343} [运行时间：0.077515s][吞吐率：12.90req/s] [内存消耗：2,123.53kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":343}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":343}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547540369) [ RunTime:0.025505s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:19:45+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111} [运行时间：0.198540s][吞吐率：5.04req/s] [内存消耗：2,123.47kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":11111}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023504s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.025505s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":11111}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547540384) [ RunTime:0.059012s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:20:23+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:11111} [运行时间：0.087017s][吞吐率：11.49req/s] [内存消耗：2,123.53kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":11111}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012503s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":11111}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547540423) [ RunTime:0.017504s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:20:34+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22343%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22343%22} [运行时间：0.105021s][吞吐率：9.52req/s] [内存消耗：2,123.49kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"343"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012003s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"343\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547540434) [ RunTime:0.039508s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:20:51+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/getDtail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343}
+[ info ] www.plm_dev123.net/api/v2/material/getDtail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343} [运行时间：0.100520s][吞吐率：9.95req/s] [内存消耗：2,118.73kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'getDtail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":343}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/getdtail' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":343}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547540451) [ RunTime:0.037007s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:21:07+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343}
+[ info ] www.plm_dev123.net/api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343} [运行时间：0.235547s][吞吐率：4.25req/s] [内存消耗：2,349.87kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":343}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012502s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/getdetail' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":343}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547540467) [ RunTime:0.039008s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.023005s ]
+[ sql ] [ SQL ] SELECT MAX(is_new) AS tp_max FROM `plm_material_slave` WHERE  `material_code` = '343' LIMIT 1 [ RunTime:0.062012s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'allow_return_material' in 'field list'[E:\phpStudy\WWW\plm_dev\thinkphp\library\think\db\Connection.php:388]
+---------------------------------------------------------------
+[ 2019-01-15T16:21:55+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343}
+[ info ] www.plm_dev123.net/api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:343} [运行时间：0.484597s][吞吐率：2.06req/s] [内存消耗：2,425.87kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":343}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017504s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.018504s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/getdetail' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":343}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547540515) [ RunTime:0.074515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.030507s ]
+[ sql ] [ SQL ] SELECT MAX(is_new) AS tp_max FROM `plm_material_slave` WHERE  `material_code` = '343' LIMIT 1 [ RunTime:0.020004s ]
+[ sql ] [ SQL ] SELECT `material_id`,`is_component`,`material_name`,`material_code`,`material_code_old`,`specifications`,`specifications_code`,`description`,`material_attribute`,`basic_unit`,`start_batch`,`create_org`,`use_org`,unit_convert as convert_unit,`is_suite`,`control`,rate as default_tax_rate,`inventory_type`,`tax_type`,`inventory_unit`,`assistant_unit`,`is_expiration`,`expiration_date`,`expiration_date_online`,`expiration_unit`,`batch_num_rule`,`batch_num_extra`,`sale_unit`,`sale_pricing_unit`,`allow_return`,`purchase_unit`,purchase_price_unit as purchase_pricing_unit,is_quota as enable_quota,`quota_way`,`min_split_amount`,is_return_material as allow_return_material,`outsource_unit`,`fixed_lead_time`,outsource_price_unit as outsource_pricing_unit,`product_unit`,`product_type`,`standard_labor_unit`,`standard_labor_hour`,issue_qty as give_material_way,`reverse_time`,`over_give_control`,min_issue_qty as min_give_material,`min_give_unit`,`plan_strategy`,`manufacture_strategy`,`order_strategy`,`plan_area`,mrp_combine as MPR_combine,`product_level`,`vary_lead_time_unit`,`fixed_lead_time_unit`,`vary_lead_time`,`check_lead_time`,`check_lead_time_unit`,`offset_time`,`offset_time_unit`,`inventory_attr`,`submit_time`,`audit_time`,`audit_status`,`order_interval_time`,`order_interval_unit`,`material_category`,`mg_code`,`creator_id` FROM `plm_material_slave` WHERE  `material_code` = '343'  AND `is_new` = 0 LIMIT 1 [ RunTime:0.031006s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014003s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.028005s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.023004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.029006s ]
+[ sql ] [ SQL ] SELECT `mg_name` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03' LIMIT 1 [ RunTime:0.024505s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.025505s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 10  AND `target_type` = 7  AND `role_type` = 5 [ RunTime:0.022005s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 1 LIMIT 1 [ RunTime:0.021504s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 10 LIMIT 1 [ RunTime:0.022505s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:45:52+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:1,%22auditor2%22:10,%22is_component%22:1,%22material_name%22:%2212%22,%22material_code%22:%2234343%22,%22material_code_old%22:%2212%22,%22mg_code%22:%22G03%22,%22material_attribute%22:2,%22is_suite%22:1,%22basic_unit%22:%22g%22,%22specifications%22:%2212%22,%22specifications_code%22:%2243%22,%22description%22:%221212%22,%22control%22:[%22%E5%85%81%E8%AE%B8%E9%94%80%E5%94%AE%22,%22%E5%85%81%E8%AE%B8%E7%94%9F%E4%BA%A7%22,%22%E5%85%81%E8%AE%B8%E8%B5%84%E4%BA%A7%22],%22default_tax_rate%22:%22SL03_SYS%22,%22inventory_type%22:%22CHLB05-02%22,%22tax_type%22:%22WLDSFL02_SYS%22,%22inventory_unit%22:%22ml%22,%22assistant_unit%22:%22ml%22,%22convert_unit%22:1,%22start_batch%22:true,%22batch_num_rule%22:%22PHBM001%22,%22batch_num_extra%22:true,%22allow_return%22:true,%22order_interval_unit%22:3,%22enable_expiration%22:true,%22expiration_unit%22:%22M%22,%22expiration_date%22:%221%22,%22expiration_date_online%22:%221%22,%22sale_unit%22:%22mm%22,%22sale_pricing_unit%22:%22tong%22,%22purchase_unit%22:%22zhi%22,%22purchase_pricing_unit%22:%22tai%22,%22quota_way%22:3,%22min_split_amount%22:%2289%22,%22outsource_unit%22:%22kg%22,%22product_unit%22:%22tai%22,%22product_type%22:%22SCDD08_SYS%22,%22standard_labor_unit%22:60,%22give_material_way%22:4,%22reverse_time%22:2,%22over_give_control%22:2,%22min_give_material%22:%226%22,%22min_give_unit%22:%22ml%22,%22plan_strategy%22:1,%22manufacture_strategy%22:%22ZZCL002_SYS%22,%22order_strategy%22:1,%22plan_area%22:%22JHQ002_SYS%22,%22product_level%22:%229%22,%22fixed_lead_time%22:%229%22,%22vary_lead_time%22:%221%22,%22check_lead_time%22:%2234%22,%22check_lead_time_unit%22:3,%22offset_time%22:%226%22,%22offset_time_unit%22:1440,%22supply_from%22:%22%22,%22MPR_combine%22:true,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22enable_quota%22:true,%22allow_return_material%22:true,%22outsource_pricing_unit%22:%22tao%22,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:true,%22affect_cost%22:true},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22material_category%22:%22G03%22,%22order_interval_time%22:%22156%22}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22use_org%22:100,%22create_org%22:100,%22auditor1%22:1,%22auditor2%22:10,%22is_component%22:1,%22material_name%22:%2212%22,%22material_code%22:%2234343%22,%22material_code_old%22:%2212%22,%22mg_code%22:%22G03%22,%22material_attribute%22:2,%22is_suite%22:1,%22basic_unit%22:%22g%22,%22specifications%22:%2212%22,%22specifications_code%22:%2243%22,%22description%22:%221212%22,%22control%22:[%22%E5%85%81%E8%AE%B8%E9%94%80%E5%94%AE%22,%22%E5%85%81%E8%AE%B8%E7%94%9F%E4%BA%A7%22,%22%E5%85%81%E8%AE%B8%E8%B5%84%E4%BA%A7%22],%22default_tax_rate%22:%22SL03_SYS%22,%22inventory_type%22:%22CHLB05-02%22,%22tax_type%22:%22WLDSFL02_SYS%22,%22inventory_unit%22:%22ml%22,%22assistant_unit%22:%22ml%22,%22convert_unit%22:1,%22start_batch%22:true,%22batch_num_rule%22:%22PHBM001%22,%22batch_num_extra%22:true,%22allow_return%22:true,%22order_interval_unit%22:3,%22enable_expiration%22:true,%22expiration_unit%22:%22M%22,%22expiration_date%22:%221%22,%22expiration_date_online%22:%221%22,%22sale_unit%22:%22mm%22,%22sale_pricing_unit%22:%22tong%22,%22purchase_unit%22:%22zhi%22,%22purchase_pricing_unit%22:%22tai%22,%22quota_way%22:3,%22min_split_amount%22:%2289%22,%22outsource_unit%22:%22kg%22,%22product_unit%22:%22tai%22,%22product_type%22:%22SCDD08_SYS%22,%22standard_labor_unit%22:60,%22give_material_way%22:4,%22reverse_time%22:2,%22over_give_control%22:2,%22min_give_material%22:%226%22,%22min_give_unit%22:%22ml%22,%22plan_strategy%22:1,%22manufacture_strategy%22:%22ZZCL002_SYS%22,%22order_strategy%22:1,%22plan_area%22:%22JHQ002_SYS%22,%22product_level%22:%229%22,%22fixed_lead_time%22:%229%22,%22vary_lead_time%22:%221%22,%22check_lead_time%22:%2234%22,%22check_lead_time_unit%22:3,%22offset_time%22:%226%22,%22offset_time_unit%22:1440,%22supply_from%22:%22%22,%22MPR_combine%22:true,%22standard_labor_hour%22:0,%22fixed_lead_time_unit%22:1,%22vary_lead_time_unit%22:1,%22enable_quota%22:true,%22allow_return_material%22:true,%22outsource_pricing_unit%22:%22tao%22,%22inventory_attr%22:{%22warehouse%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22warehouse_space%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22BOM%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false},%22batch_num%22:{%22enable%22:true,%22affect_price%22:false,%22affect_plan%22:true,%22affect_cost%22:true},%22trace_num%22:{%22enable%22:false,%22affect_price%22:false,%22affect_plan%22:false,%22affect_cost%22:false}},%22material_category%22:%22G03%22,%22order_interval_time%22:%22156%22} [运行时间：0.197540s][吞吐率：5.06req/s] [内存消耗：2,344.57kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"use_org":100,"create_org":100,"auditor1":1,"auditor2":10,"is_component":1,"material_name":"12","material_code":"34343","material_code_old":"12","mg_code":"G03","material_attribute":2,"is_suite":1,"basic_unit":"g","specifications":"12","specifications_code":"43","description":"1212","control":["允许销售","允许生产","允许资产"],"default_tax_rate":"SL03_SYS","inventory_type":"CHLB05-02","tax_type":"WLDSFL02_SYS","inventory_unit":"ml","assistant_unit":"ml","convert_unit":1,"start_batch":true,"batch_num_rule":"PHBM001","batch_num_extra":true,"allow_return":true,"order_interval_unit":3,"enable_expiration":true,"expiration_unit":"M","expiration_date":"1","expiration_date_online":"1","sale_unit":"mm","sale_pricing_unit":"tong","purchase_unit":"zhi","purchase_pricing_unit":"tai","quota_way":3,"min_split_amount":"89","outsource_unit":"kg","product_unit":"tai","product_type":"SCDD08_SYS","standard_labor_unit":60,"give_material_way":4,"reverse_time":2,"over_give_control":2,"min_give_material":"6","min_give_unit":"ml","plan_strategy":1,"manufacture_strategy":"ZZCL002_SYS","order_strategy":1,"plan_area":"JHQ002_SYS","product_level":"9","fixed_lead_time":"9","vary_lead_time":"1","check_lead_time":"34","check_lead_time_unit":3,"offset_time":"6","offset_time_unit":1440,"supply_from":"","MPR_combine":true,"standard_labor_hour":0,"fixed_lead_time_unit":1,"vary_lead_time_unit":1,"enable_quota":true,"allow_return_material":true,"outsource_pricing_unit":"tao","inventory_attr":{"warehouse":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"warehouse_space":{"enable":true,"affect_price":false,"affect_plan":false,"affect_cost":false},"BOM":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false},"batch_num":{"enable":true,"affect_price":false,"affect_plan":true,"affect_cost":true},"trace_num":{"enable":false,"affect_price":false,"affect_plan":false,"affect_cost":false}},"material_category":"G03","order_interval_time":"156"}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012502s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"use_org\\\":100,\\\"create_org\\\":100,\\\"auditor1\\\":1,\\\"auditor2\\\":10,\\\"is_component\\\":1,\\\"material_name\\\":\\\"12\\\",\\\"material_code\\\":\\\"34343\\\",\\\"material_code_old\\\":\\\"12\\\",\\\"mg_code\\\":\\\"G03\\\",\\\"material_attribute\\\":2,\\\"is_suite\\\":1,\\\"basic_unit\\\":\\\"g\\\",\\\"specifications\\\":\\\"12\\\",\\\"specifications_code\\\":\\\"43\\\",\\\"description\\\":\\\"1212\\\",\\\"control\\\":[\\\"\\u5141\\u8bb8\\u9500\\u552e\\\",\\\"\\u5141\\u8bb8\\u751f\\u4ea7\\\",\\\"\\u5141\\u8bb8\\u8d44\\u4ea7\\\"],\\\"default_tax_rate\\\":\\\"SL03_SYS\\\",\\\"inventory_type\\\":\\\"CHLB05-02\\\",\\\"tax_type\\\":\\\"WLDSFL02_SYS\\\",\\\"inventory_unit\\\":\\\"ml\\\",\\\"assistant_unit\\\":\\\"ml\\\",\\\"convert_unit\\\":1,\\\"start_batch\\\":true,\\\"batch_num_rule\\\":\\\"PHBM001\\\",\\\"batch_num_extra\\\":true,\\\"allow_return\\\":true,\\\"order_interval_unit\\\":3,\\\"enable_expiration\\\":true,\\\"expiration_unit\\\":\\\"M\\\",\\\"expiration_date\\\":\\\"1\\\",\\\"expiration_date_online\\\":\\\"1\\\",\\\"sale_unit\\\":\\\"mm\\\",\\\"sale_pricing_unit\\\":\\\"tong\\\",\\\"purchase_unit\\\":\\\"zhi\\\",\\\"purchase_pricing_unit\\\":\\\"tai\\\",\\\"quota_way\\\":3,\\\"min_split_amount\\\":\\\"89\\\",\\\"outsource_unit\\\":\\\"kg\\\",\\\"product_unit\\\":\\\"tai\\\",\\\"product_type\\\":\\\"SCDD08_SYS\\\",\\\"standard_labor_unit\\\":60,\\\"give_material_way\\\":4,\\\"reverse_time\\\":2,\\\"over_give_control\\\":2,\\\"min_give_material\\\":\\\"6\\\",\\\"min_give_unit\\\":\\\"ml\\\",\\\"plan_strategy\\\":1,\\\"manufacture_strategy\\\":\\\"ZZCL002_SYS\\\",\\\"order_strategy\\\":1,\\\"plan_area\\\":\\\"JHQ002_SYS\\\",\\\"product_level\\\":\\\"9\\\",\\\"fixed_lead_time\\\":\\\"9\\\",\\\"vary_lead_time\\\":\\\"1\\\",\\\"check_lead_time\\\":\\\"34\\\",\\\"check_lead_time_unit\\\":3,\\\"offset_time\\\":\\\"6\\\",\\\"offset_time_unit\\\":1440,\\\"supply_from\\\":\\\"\\\",\\\"MPR_combine\\\":true,\\\"standard_labor_hour\\\":0,\\\"fixed_lead_time_unit\\\":1,\\\"vary_lead_time_unit\\\":1,\\\"enable_quota\\\":true,\\\"allow_return_material\\\":true,\\\"outsource_pricing_unit\\\":\\\"tao\\\",\\\"inventory_attr\\\":{\\\"warehouse\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"warehouse_space\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"BOM\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false},\\\"batch_num\\\":{\\\"enable\\\":true,\\\"affect_price\\\":false,\\\"affect_plan\\\":true,\\\"affect_cost\\\":true},\\\"trace_num\\\":{\\\"enable\\\":false,\\\"affect_price\\\":false,\\\"affect_plan\\\":false,\\\"affect_cost\\\":false}},\\\"material_category\\\":\\\"G03\\\",\\\"order_interval_time\\\":\\\"156\\\"}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547541952) [ RunTime:0.039007s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.011002s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = '34343' LIMIT 1 [ RunTime:0.019004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03' LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_slave` (`mg_id` , `mg_code` , `material_code` , `material_code_old` , `material_category` , `material_name` , `specifications` , `specifications_code` , `description` , `material_attribute` , `basic_unit` , `start_batch` , `create_time` , `submit_time` , `submit_status` , `update_time` , `is_new` , `creator_id` , `is_component` , `create_org` , `use_org` , `is_suite` , `control` , `rate` , `inventory_type` , `tax_type` , `inventory_unit` , `assistant_unit` , `unit_convert` , `reverse_time` , `is_expiration` , `batch_num_rule` , `batch_num_extra` , `expiration_unit` , `expiration_date` , `expiration_date_online` , `allow_return` , `sale_unit` , `sale_pricing_unit` , `purchase_unit` , `purchase_price_unit` , `is_quota` , `quota_way` , `min_split_amount` , `is_return_material` , `outsource_unit` , `outsource_price_unit` , `fixed_lead_time` , `product_unit` , `product_type` , `standard_labor_hour` , `standard_labor_unit` , `issue_qty` , `over_give_control` , `min_issue_qty` , `min_give_unit` , `plan_strategy` , `manufacture_strategy` , `order_strategy` , `plan_area` , `mrp_combine` , `product_level` , `vary_lead_time_unit` , `vary_lead_time` , `fixed_lead_time_unit` , `check_lead_time` , `check_lead_time_unit` , `offset_time` , `offset_time_unit` , `supply_from` , `inventory_attr`) VALUES (101300 , 'G03' , '34343' , '12' , 'G03' , '12' , '12' , '43' , '1212' , '2' , 'g' , 1 , 1547541952 , 1547541952 , 1 , 0 , 0 , 115 , 1 , '100' , '100' , 1 , '允许销售|允许生产|允许资产' , 'SL03_SYS' , 'CHLB05-02' , 'WLDSFL02_SYS' , 'ml' , 'ml' , 1 , 2 , 1 , 'PHBM001' , 1 , 'M' , 1 , 1 , 1 , 'mm' , 'tong' , 'zhi' , 'tai' , 1 , 3 , 1 , 1 , 'kg' , 'tao' , 9 , 'tai' , 'SCDD08_SYS' , 0 , '60' , 4 , 2 , 6 , 'ml' , 1 , 'ZZCL002_SYS' , '1' , 'JHQ002_SYS' , 1 , '9' , '1' , 1 , '1' , 34 , 3 , 6 , 1440 , 0 , '{\"warehouse\":{\"enable\":true,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"warehouse_space\":{\"enable\":true,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"BOM\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false},\"batch_num\":{\"enable\":true,\"affect_price\":false,\"affect_plan\":true,\"affect_cost\":true},\"trace_num\":{\"enable\":false,\"affect_price\":false,\"affect_plan\":false,\"affect_cost\":false}}') [ RunTime:0.022505s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.008501s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `admin_id` , `role_type` , `audit_order`) VALUES (11 , 7 , 1 , 5 , 1) [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_relation` (`target_id` , `target_type` , `admin_id` , `role_type` , `audit_order`) VALUES (11 , 7 , 10 , 5 , 2) [ RunTime:0.001501s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:59:37+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.100020s][吞吐率：10.00req/s] [内存消耗：2,119.48kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012502s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547542777) [ RunTime:0.034007s ]
+---------------------------------------------------------------
+[ 2019-01-15T16:59:43+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.076515s][吞吐率：13.07req/s] [内存消耗：2,119.54kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547542782) [ RunTime:0.029506s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:00:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.198539s][吞吐率：5.04req/s] [内存消耗：2,123.57kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024005s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.027005s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547542804) [ RunTime:0.075515s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:00:39+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_name%22:%22abc%22,%22is_component%22:3} [运行时间：0.083017s][吞吐率：12.05req/s] [内存消耗：2,119.48kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_name":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012003s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_name\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547542839) [ RunTime:0.031507s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:01:03+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22is_component%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22is_component%22:3} [运行时间：0.096520s][吞吐率：10.36req/s] [内存消耗：2,119.48kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","is_component":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"is_component\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547542863) [ RunTime:0.029505s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:01:12+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:3}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:3} [运行时间：0.219044s][吞吐率：4.57req/s] [内存消耗：2,455.49kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","audit_status":3}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012503s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"audit_status\\\":3}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547542871) [ RunTime:0.036507s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.011002s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = 'abc' LIMIT 1 [ RunTime:0.019003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 1 LIMIT 1 [ RunTime:0.005501s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 2 LIMIT 1 [ RunTime:0.005501s ]
+[ error ] [0]致命错误: Call to a member function save() on array[E:\phpStudy\WWW\plm_dev\application\api\model\MaterialSlave.php:252]
+---------------------------------------------------------------
+[ 2019-01-15T17:01:44+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1} [运行时间：0.156031s][吞吐率：6.41req/s] [内存消耗：2,455.49kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012003s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547542904) [ RunTime:0.030506s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.011002s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = 'abc' LIMIT 1 [ RunTime:0.019004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 1 LIMIT 1 [ RunTime:0.005501s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 2 LIMIT 1 [ RunTime:0.006001s ]
+[ error ] [0]致命错误: Call to a member function save() on array[E:\phpStudy\WWW\plm_dev\application\api\model\MaterialSlave.php:252]
+---------------------------------------------------------------
+[ 2019-01-15T17:02:44+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1} [运行时间：0.108521s][吞吐率：9.21req/s] [内存消耗：2,369.93kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547542964) [ RunTime:0.031006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.010502s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = 'abc' LIMIT 1 [ RunTime:0.019004s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:05:50+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/edit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1} [运行时间：0.082516s][吞吐率：12.12req/s] [内存消耗：2,123.57kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->edit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/edit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547543149) [ RunTime:0.030506s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:05:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/getDtail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/getDtail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1} [运行时间：0.091018s][吞吐率：10.99req/s] [内存消耗：2,118.78kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'getDtail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/getdtail' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547543157) [ RunTime:0.038508s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:06:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/getDetail?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1} [运行时间：0.242048s][吞吐率：4.13req/s] [内存消耗：2,318.36kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017003s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.035507s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/getdetail' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547543161) [ RunTime:0.040008s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.023004s ]
+[ sql ] [ SQL ] SELECT MAX(is_new) AS tp_max FROM `plm_material_slave` WHERE  `material_code` = 'abc' LIMIT 1 [ RunTime:0.027006s ]
+[ sql ] [ SQL ] SELECT `material_id`,`is_component`,`material_name`,`material_code`,`material_code_old`,`specifications`,`specifications_code`,`description`,`material_attribute`,`basic_unit`,`start_batch`,`create_org`,`use_org`,unit_convert as convert_unit,`is_suite`,`control`,rate as default_tax_rate,`inventory_type`,`tax_type`,`inventory_unit`,`assistant_unit`,is_expiration as enable_expiration,`expiration_date`,`expiration_date_online`,`expiration_unit`,`batch_num_rule`,`batch_num_extra`,`sale_unit`,`sale_pricing_unit`,`allow_return`,`purchase_unit`,purchase_price_unit as purchase_pricing_unit,is_quota as enable_quota,`quota_way`,`min_split_amount`,is_return_material as allow_return_material,`outsource_unit`,`fixed_lead_time`,outsource_price_unit as outsource_pricing_unit,`product_unit`,`product_type`,`standard_labor_unit`,`standard_labor_hour`,issue_qty as give_material_way,`reverse_time`,`over_give_control`,min_issue_qty as min_give_material,`min_give_unit`,`plan_strategy`,`manufacture_strategy`,`order_strategy`,`plan_area`,mrp_combine as MPR_combine,`product_level`,`vary_lead_time_unit`,`fixed_lead_time_unit`,`vary_lead_time`,`check_lead_time`,`check_lead_time_unit`,`offset_time`,`offset_time_unit`,`inventory_attr`,`submit_time`,`audit_time`,`audit_status`,`order_interval_time`,`order_interval_unit`,`material_category`,`mg_code`,`creator_id` FROM `plm_material_slave` WHERE  `material_code` = 'abc'  AND `is_new` = null LIMIT 1 [ RunTime:0.036507s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:06:19+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1} [运行时间：0.155031s][吞吐率：6.45req/s] [内存消耗：2,455.49kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547543179) [ RunTime:0.033007s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.011002s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = 'abc' LIMIT 1 [ RunTime:0.019003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.007002s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 1 LIMIT 1 [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 2 LIMIT 1 [ RunTime:0.005501s ]
+[ error ] [0]致命错误: Call to a member function save() on array[E:\phpStudy\WWW\plm_dev\application\api\model\MaterialSlave.php:252]
+---------------------------------------------------------------
+[ 2019-01-15T17:07:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1} [运行时间：0.118524s][吞吐率：8.44req/s] [内存消耗：2,336.73kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.007002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547543220) [ RunTime:0.029505s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.010502s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = 'abc' LIMIT 1 [ RunTime:0.019004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 1 LIMIT 1 [ RunTime:0.005501s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:08:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%22abc%22,%22audit_status%22:1} [运行时间：0.351070s][吞吐率：2.85req/s] [内存消耗：2,455.55kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"abc","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031507s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.027005s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"abc\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547543281) [ RunTime:0.048510s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.028005s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = 'abc' LIMIT 1 [ RunTime:0.043509s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.027005s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 1 LIMIT 1 [ RunTime:0.031006s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 2 LIMIT 1 [ RunTime:0.017504s ]
+[ error ] [0]致命错误: Call to a member function save() on array[E:\phpStudy\WWW\plm_dev\application\api\model\MaterialSlave.php:252]
+---------------------------------------------------------------
+[ 2019-01-15T17:10:42+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%2234234234234%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%2234234234234%22,%22audit_status%22:1} [运行时间：0.181036s][吞吐率：5.52req/s] [内存消耗：2,321.79kb] [文件加载：56]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"34234234234","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012503s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006501s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"34234234234\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547543441) [ RunTime:0.048010s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.010502s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = '34234234234' LIMIT 1 [ RunTime:0.019504s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.007002s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 3  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 1 LIMIT 1 [ RunTime:0.005501s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = 3  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 2 LIMIT 1 [ RunTime:0.005501s ]
+[ sql ] [ SQL ] UPDATE `plm_relation`  SET `audit_status`=1  WHERE  `relation_id` = 9 [ RunTime:0.005001s ]
+[ sql ] [ SQL ] UPDATE `plm_material_slave`  SET `audit_time`=1547543442  WHERE  `material_id` = 3 [ RunTime:0.008501s ]
+---------------------------------------------------------------
+[ 2019-01-15T17:12:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%223423423423439%22,%22audit_status%22:1}
+[ info ] www.plm_dev123.net/api/v2/material/audit?access_token=3c0ac643-475d-48e8-aafa-c03fce0b6e65&data={%22material_code%22:%223423423423439%22,%22audit_status%22:1} [运行时间：0.371075s][吞吐率：2.69req/s] [内存消耗：2,455.55kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.material',
+    2 => 'audit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=5&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=alk2kht9n37kqnjokgvp06k6b4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '3c0ac643-475d-48e8-aafa-c03fce0b6e65',
+  'data' => '{"material_code":"3423423423439","audit_status":1}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Material->audit[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Material.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017504s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.039508s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (115 , '哪里都是你' , 'material/audit' , '3c0ac643-475d-48e8-aafa-c03fce0b6e65' , '{\"access_token\":\"3c0ac643-475d-48e8-aafa-c03fce0b6e65\",\"data\":\"{\\\"material_code\\\":\\\"3423423423439\\\",\\\"audit_status\\\":1}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1547543524) [ RunTime:0.094519s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_slave` [ RunTime:0.031006s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_material_slave` WHERE  `material_code` = '3423423423439' LIMIT 1 [ RunTime:0.025505s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.026505s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 1 LIMIT 1 [ RunTime:0.020504s ]
+[ sql ] [ SQL ] SELECT * FROM `plm_relation` WHERE  `target_id` = null  AND `target_type` = 7  AND `role_type` = 5  AND `audit_order` = 2 LIMIT 1 [ RunTime:0.013003s ]
+[ error ] [0]致命错误: Call to a member function save() on array[E:\phpStudy\WWW\plm_dev\application\api\model\MaterialSlave.php:252]

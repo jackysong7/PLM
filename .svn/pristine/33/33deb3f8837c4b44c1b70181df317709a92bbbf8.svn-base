@@ -1,0 +1,211 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2018/7/9 15:02
+// +----------------------------------------------------------------------
+// | TITLE: 项目BOM表的数据操作
+// +----------------------------------------------------------------------
+
+namespace app\api\model;
+
+use think\Db;
+use think\Model;
+
+class ProjectBom extends Model
+{
+    //未同步
+    const CHANGE_STATUS_DEFAULT = 0;
+    //同步成功
+    const CHANGE_STATUS_SUCCESS = 1;
+    //同步失败
+    const CHANGE_STATUS_FAILURE = 2;
+
+    protected $table = 'plm_project_bom';
+    /*
+     * 通过node_id、project_id、node_key查找Bom信息
+     * 【node_id】【project_id,node_key】二选一
+     * @param int submitStatus 1已提交，0未提交
+     */
+    public static function getBomInfoById($nodeId='',$submitStatus=0)
+    {
+        if($nodeId && !$submitStatus)//待提交
+        {
+            $list = Db::name('project_bom')
+                ->field('bom_id doc_id,project_name doc_name,tpl_id,tpl_name,tpl_id,tpl_type,add_time,version')
+                ->where('node_id',$nodeId)
+                ->where('submit_status',0)
+                ->select();
+
+            return $list;
+        }
+        elseif ($nodeId && $submitStatus)//已提交
+        {
+            $list = Db::name('project_bom')
+                ->field('bom_id doc_id,project_name doc_name,tpl_id,tpl_name,tpl_id,tpl_type,add_time,submit_time,audit_status,version')
+                ->where('node_id',$nodeId)
+                ->where('submit_status',1)
+                ->select();
+
+            return $list;
+        }
+/*
+        if($projectId && $nodeKey && !$submitStatus)//待提交
+        {
+            $list = Db::name('project_node')
+                ->alias('n')
+                ->field('b.bom_id,b.tpl_id,b.tpl_name,b.tpl_id,b.tpl_type,add_time,b.version')
+                ->join('project_bom b','n.node_id=b.node_id','LEFT')
+                ->where('n.project_id',$projectId)
+                ->where('n.node_key',$nodeKey)
+                ->where('b.submit_status',0)
+                ->select();
+
+            return $list;
+        }
+        elseif($projectId && $nodeKey && $submitStatus)//已提交
+        {
+            $list = Db::name('project_node')
+                ->alias('n')
+                ->field('b.bom_id,b.tpl_id,b.tpl_name,b.tpl_id,b.tpl_type,add_time,b.version,b.submit_time,b.audit_status')
+                ->join('project_bom b','n.node_id=b.node_id','LEFT')
+                ->where('n.project_id',$projectId)
+                ->where('n.node_key',$nodeKey)
+                ->where('b.submit_status',1)
+                ->select();
+
+            return $list;
+        }*/
+        return false;
+    }
+
+    /*
+     * 提交文档审核修改状态为已提交
+     */
+    public static function edit($params)
+    {
+        $editResult = self::get(['bom_id'=>$params['doc_id'],'tpl_type'=>$params['tpl_type']]);
+
+        if($editResult)
+        {
+            $where = [
+                'bom_id'=>$params['doc_id'],
+                'tpl_type'=>$params['tpl_type']
+            ];
+            $data = [
+                'submit_status' => 1
+            ];
+            $result = Db::name('project_bom')->where($where)->update($data);
+            return $result;
+        }
+        return false;
+    }
+
+    /*
+     * 审核文档
+     */
+    public static function audit($params)
+    {
+        $auditResult = self::get(['bom_id'=>$params['doc_id'],'tpl_type'=>$params['tpl_type']]);
+        if($auditResult)
+        {
+            $where = [
+                'bom_id'=>$params['doc_id'],
+                'tpl_type'=>$params['tpl_type']
+            ];
+            $data = [
+                'audit_status' => $params['audit_status'],
+                'audit_note' => !empty($params['audit_note'])?($params['audit_note']):'',
+                'audit_time' => time()
+            ];
+            $result = Db::name('project_bom')->where($where)->update($data);
+            return $result;
+        }
+        return false;
+    }
+    
+    /*
+     * 新增项目BOM表
+     */
+    public static function add($params)
+    {
+        if(is_array($params))
+        {
+            if($params['project_name']) $data['project_name'] = $params['project_name'];
+            if($params['tpl_id'])   $data['tpl_id'] = $params['tpl_id'];
+            if($params['project_id'])   $data['project_id'] = $params['project_id'];
+            if($params['node_id'])  $data['node_id'] = $params['node_id'];
+            if($params['tpl_name']) $data['tpl_name'] = $params['tpl_name'];
+            if($params['tpl_type']) $data['tpl_type'] = $params['tpl_type'];
+            if($params['creator_id']) $data['creator_id'] = $params['creator_id'];
+            if(isset($params['version'])) $data['version'] = $params['version'];
+
+            $data['add_time'] = time();
+
+            $result = Db::name('project_bom')->insertGetId($data);
+            return $result;
+        }
+        return false;
+    }
+
+    /*
+     * 通过bom_id查询版本信息
+     */
+    public static function getVersion($bomId)
+    {
+      return Db::name('project_bom')->where('bom_id',$bomId)->max('version');
+    }
+
+    /*
+     * 通过bom_id获取Bom表详情
+     */
+    public static function getDetail($bomId)
+    {
+        $list = Db::name('project_bom')
+            ->alias('b')
+            ->field('b.bom_id,b.tpl_id,b.creator_id,b.project_name bom_name,b.tpl_name,b.project_id,b.node_id,b.version,b.add_time,b.audit_time')
+            ->where('b.bom_id',intval($bomId))
+            ->find();
+
+        //获取创建人
+        $list['creator'] = [
+            'admin_id' => $list['creator_id'],
+            'nickname' => \app\api\model\Relation::getNickName($list['creator_id'])
+        ];
+        //获取审核人信息
+        $where['target_id'] = $bomId;
+        $where['target_type'] = 2;
+        $auditorInfo = \app\api\model\Relation::getAuditInfo($where);
+        $list['auditor'] = isset($auditorInfo['auditor']) ? $auditorInfo['auditor'] : [];
+        unset($list['creator_id']);
+
+        return $list;
+    }
+
+    /*
+     * 通过bom_id查询一条记录
+     */
+    public static function getInstanceByBomId($bomId)
+    {
+        return Db::name('project_bom')->where('bom_id',$bomId)->value('bom_id');
+    }
+
+    /*
+     * 通过文档模板id、文档类型删除一条记录
+     */
+    public static function del($tplId,$tplType)
+    {
+        return  Db::name('project_bom')
+            ->where('tpl_id',$tplId)
+            ->where('tpl_type',$tplType)
+            ->setField('status',-1);
+    }
+
+    /*
+     * 通过project_id查询所有记录
+     */
+    public static function getInfoByNodeId($where,$field='*')
+    {
+        return Db::name('project_bom')->where($where)->field($field)->select();
+    }
+}

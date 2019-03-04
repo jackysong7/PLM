@@ -1,0 +1,247 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chenhailiang
+ * Date: 2018/4/2
+ * Time: 14:53
+ */
+namespace app\api\controller\v1;
+
+use app\api\controller\Api;
+use plm\Random;
+use think\Controller;
+use think\Validate;
+
+class Admin extends Api
+{
+    //需要权限验证的接口
+    protected $needRight = array('getList','add','edit','del','editStatus','settingAvatar','settingPassword');
+
+    /**
+     * 控制器初始化操作
+     */
+    public function _initialize()
+    {
+
+        parent::_initialize();
+
+        $this->rule = [
+            'page'  => 'require|integer',
+            'limit'  => 'require|integer',
+        ];
+        $this ->msg = [
+            'page.require' => '页码为必填项',
+            'limit.require'  => '条数为必填项',
+        ];
+        $this->validate = new Validate($this->rule, $this->msg);
+    }
+
+    /*
+     * 获取列表
+     */
+    public function getList()
+    {
+        $data = $this->request->param();
+        $params = json_decode($data['data'],true);
+
+        $result = $this->validate->check($params);
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        $admin = \app\api\model\Admin::getList($params);
+        $this->returnmsg(200,'操作完成', $admin);
+    }
+
+    /*
+    * 获取
+    */
+    public function getInfo()
+    {
+        $data = $this->request->param();
+        $params = json_decode($data['data'],true);
+        $admin = \app\api\model\Admin::getInfo($params);
+        $admin['adminRules'] = $this->build_tree($admin['adminRules'],0);
+        $this->returnmsg(200,'操作完成', $admin);
+    }
+
+    //寻找子类
+    private function findChild($arr,$id){
+        $childs=array();
+        foreach ($arr as $k => $v){
+            if($v['parent_id']== $id){
+                $childs[]=$v;
+            }
+        }
+        return $childs;
+    }
+
+    //建立树形结构
+    private function build_tree($rows,$root_id){
+        $childs=$this->findChild($rows,$root_id);
+        if(empty($childs)){
+            return null;
+        }
+        foreach ($childs as $k => $v){
+            $rescurTree=$this->build_tree($rows,$v['rule_id']);
+            if( null != $rescurTree){
+                $childs[$k]['childs']=$rescurTree;
+            }
+        }
+        return $childs;
+    }
+    /*
+    * 检查数据唯一
+    */
+    public function check($params){
+        if (!empty(\app\api\model\Admin::getByUsername($params['username'])))
+        {
+            return $this->returnmsg(402,"用户名已存在","");
+        }
+    }
+    /*
+     * 新增
+     */
+    public function add()
+    {
+        $data = $this->request->param();
+        $params = json_decode($data['data'],true);
+        $admin = $this->auth->getUser();
+        if(!empty($admin)){
+            $params['admin_id'] = $admin['admin_id'];
+        }
+        $rule = [
+            'department_id'  => 'require|integer',
+            'job_id'  => 'require|integer',
+            'username'  => 'require',
+        ];
+        $msg = [
+            'department_id.require' => '部门为必选项',
+            'job_id.require'  => '岗位为必选项',
+            'username.require' => '用户名为必填项',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($params);
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        $params['password'] = '000000';
+        $params['salt'] = Random::alnum();
+        $params['password'] = md5(md5($params['password']) . $params['salt']);
+        $params['createtime'] = time();
+        $params['updatetime'] = time();
+        $params['status'] = 1;
+
+        $this->check($params);
+
+        $admin = \app\api\model\Admin::add($params);
+        $this->returnmsg(200,'操作完成', $admin);
+    }
+
+    /*
+     * 修改
+     */
+    public function edit()
+    {
+        $data = $this->request->param();
+        $params = json_decode($data['data'],true);
+        $params['token'] = $this->request->request('access_token');
+        $params['current_admin_id'] = $this->auth->getUser()["admin_id"];
+        if (!empty($params['password']))
+        {
+            $params['salt'] = Random::alnum();
+            $params['password'] = md5(md5($params['password']) . $params['salt']);
+        }
+        /*if (!empty(\app\api\model\Admin::getByUsername($params['username'])))
+        {
+            return $this->returnmsg(402,"用户名已存在","");
+        }*/
+        $admin =\app\api\model\Admin::edit($params);
+        $this->returnmsg(200,'操作完成', $admin);
+    }
+
+    /*
+     * 修改状态
+     */
+    public function editStatus()
+    {
+        $data = $this->request->param();
+        $params = json_decode($data['data'],true);
+        $params['status'] === 1 ? 1 : 2 ;
+        $admin =\app\api\model\Admin::editStatus($params);
+        $this->returnmsg(200,'操作完成', $admin);
+    }
+
+    /*
+     * 删除
+     */
+    public function del()
+    {
+        $data = $this->request->param();
+        $params = json_decode($data['data'],true);
+        $admin = \app\api\model\Admin::del($params);
+        $this->returnmsg(200,'操作完成', $admin);
+    }
+
+    public function settingPassword()
+    {
+        $data = $this->request->param();
+        $params = json_decode($data['data'],true);
+
+        $admin = $this->auth->getUser();
+        if(!empty($admin)){
+            $params['admin_id'] = $admin['admin_id'];
+        }
+        $admin = \app\api\model\Admin::settingPassword($params);
+        if(empty($admin)){
+            $this->returnmsg(402,'原密码操作失败', $admin);
+        }
+        $this->returnmsg(200,'操作完成', $admin);
+    }
+
+    public function settingAvatar()
+    {
+        $data = $this->request->param();
+        $params = json_decode($data['data'],true);
+        $params['token'] = $this->request->request('access_token');
+        $admin = $this->auth->getUser();
+        if(!empty($admin)){
+            $params['admin_id'] = $admin['admin_id'];
+        }
+        $admin = \app\api\model\Admin::settingAvatar($params);
+        $this->returnmsg(200,'操作完成', $admin);
+    }
+
+    /**
+     * 根据Token获取用户资料
+     */
+    public function getUserInfo()
+    {
+        //获取用户基本信息
+        $admin = $this->auth->getUser();
+        $info['username'] = $admin['username'];
+        $info['nickname'] = $admin['nickname'];
+        $info['avatar'] = $admin['avatar'];
+
+        //获取部门、岗位及权限信息
+        $userInfo = \app\api\model\Admin::getUserInfo($admin['admin_id']);
+
+        $info['department_name'] = $userInfo['department_name'];
+        $info['job_name'] = $userInfo['job_name'];
+
+        if(!empty($userInfo['rules'])){
+            $ruleList = \app\api\model\AdminRule::getRuleCodeList($userInfo['rules']);
+            if(!empty($ruleList)){
+                $str = '';
+                foreach($ruleList as $val){
+                    $str .= $val['rule_code'].',';
+                }
+                $info['rules'] = rtrim($str,',');
+            }else{
+                $info['rules'] = '';
+            }
+        }
+        $this->returnmsg(200,'获取数据成功', $info);
+    }
+}

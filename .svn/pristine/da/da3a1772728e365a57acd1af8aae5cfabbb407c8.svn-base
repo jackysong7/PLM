@@ -1,0 +1,251 @@
+<?php
+
+namespace app\api\model;
+
+use think\Model;
+
+class Relation extends Model
+{
+    //目标类型 - 项目
+    const TARGET_TYPE_PROJECT = 1;
+    //目标类型 - 项目节点
+    const TARGET_TYPE_PROJECT_NODE = 2;
+    //目标类型 - 文档
+    const TARGET_TYPE_DOCUMENT = 3;
+    //目标类型 - BOM表
+    const TARGET_TYPE_BOM = 4;
+    //目标类型 - 工程变更
+    const TARGET_TYPE_ECN = 5;
+
+    //角色类型 - 产品经理
+    const ROLE_TYPE_PRODUCT_MANAGER = 1;
+    //角色类型 - 项目经理
+    const ROLE_TYPE_PROJECT_MANAGER = 2;
+    //角色类型 - 产品委员会成员
+    const ROLE_TYPE_PRODUCT_COMMITTEE = 3;
+    //角色类型 - 上传人员
+    const ROLE_TYPE_UPLOADER = 4;
+    //角色类型 - 审核人员
+    const ROLE_TYPE_AUDITOR = 5;
+
+    
+    public static function initConnect()
+    {
+        return Db::connect(Config::get('database.center'));
+    }
+
+
+    /*
+     * 获取项目人员的名称
+     * @param int pid 项目id
+     * @param int node_id 节点自增长Id
+     */
+    public static function getRoleName0($pid='')
+    {
+        if($pid)
+        {
+            $info = Db::name('relation')->field('admin_id,role_type')->where('target_id',$pid)->select();
+        }
+
+
+        $arr = [];$listName = [];
+        foreach($info as $k=>$v)
+        {
+            $result = self::initConnect()
+                ->name('admin')
+                ->field('nickname')
+                ->where('admin_id',$v['admin_id'])
+                ->find();
+
+            if($v['role_type'] == 1)//产品经理
+            {
+                $arr[]['product_manager'] = $result['nickname'];
+            }
+            elseif($v['role_type'] == 2)//项目经理
+            {
+                $arr[]['project_manager'] = $result['nickname'];
+            }
+            elseif($v['role_type'] == 3)//产品委员会
+            {
+                $arr[]['product_committee'] = $result['nickname'];
+            }
+            elseif($v['role_type'] == 4)//上传人员
+            {
+                $arr[]['uploads'] = $result['nickname'];
+            }
+            elseif($v['role_type'] == 5)//审核人员
+            {
+                $arr[]['auditor'] = $result['nickname'];
+            }
+
+        }
+
+      $listName['product_manager']   = implode(',', array_column($arr,'product_manager'));
+      $listName['project_manager']   = implode(',', array_column($arr,'project_manager'));
+      $listName['product_committee'] = implode(',', array_column($arr,'product_committee'));
+      $listName['uploads']           = implode(',', array_column($arr,'uploads'));
+      $listName['auditor']           = implode(',', array_column($arr,'auditor'));
+
+      return $listName;
+    }
+
+
+    /*
+     * 获取项目人员的名称
+     * @param int pid 项目id
+     * @param int node_id 节点自增长Id
+     */
+    public static function getRoleName($pid='',$nodeId='')
+    {
+        if($pid)
+        {
+            $info = Db::name('relation')->field('admin_id,role_type')->where('target_id',$pid)->select();
+        }
+        elseif($nodeId)
+        {
+            $info = Db::name('relation')->field('admin_id,role_type')->where('node_id',$nodeId)->select();
+        }
+        else
+        {
+            return false;
+        }
+
+        $arr = [];
+        foreach($info as $k=>$v)
+        {
+            $result = self::initConnect()
+                ->name('admin')
+                ->field('nickname')
+                ->where('admin_id',$v['admin_id'])
+                ->find();
+
+            if($v['role_type'] == 1)//产品经理
+            {
+                /*-----下面注释的部分转换成json格式后为 {"1":{"name":"zhang","age":22},"2":{"name":"li","age":25}}-----*/
+                //$arr['product_manager'][$k]['admin_id'] = $v['admin_id'];
+                //$arr['product_manager'][$k]['product_manager'] = $result['nickname'];
+                $arr['product_manager'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'product_manager' =>$result['nickname']
+                    ];
+            }
+            elseif($v['role_type'] == 2)//项目经理
+            {
+                $arr['project_manager'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'project_manager' =>$result['nickname']
+                    ];
+            }
+            elseif($v['role_type'] == 3)//产品委员会
+            {
+                $arr['product_committee'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'product_committee' =>$result['nickname']
+                    ];
+            }
+            elseif($v['role_type'] == 4)//上传人员
+            {
+                $arr['uploads'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'uploads' =>$result['nickname']
+                    ];
+            }
+            elseif($v['role_type'] == 5)//审核人员
+            {
+                $arr['auditor'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'auditor' =>$result['nickname']
+                    ];
+            }
+
+        }
+       /* echo'<pre>';
+        print_r($arr);die;*/
+        return $arr;
+    }
+
+
+    /*
+     * 根据项目id获取审核状态信息
+     * @param int project_id 项目id
+     */
+    public static function getAuditStatus($project_id)
+    {
+        $info = Db::name('relation')->field('audit_status')->where('target_id',$project_id)->find();
+
+        return $info;
+    }
+
+
+    /*
+     * 通过admin_id获取上传人员、审核人员信息
+     *
+     * @param int admin_id
+     * @return array
+     */
+    public static function getAuditInfo($admin_id)
+    {
+        $info = Db::name('relation')->field('admin_id,role_type')->where('admin_id', $admin_id)->select();
+        $arr = [];
+        $listName = [];
+        if ($info)
+        {
+            foreach ($info as $k => $v) {
+                $result = self::initConnect()
+                    ->name('admin')
+                    ->field('nickname')
+                    ->where('admin_id', $v['admin_id'])
+                    ->find();
+
+                if ($v['role_type'] == 4)//上传人员
+                {
+
+                    $arr['uploads'][] = ['uploads'=>$result['nickname']];
+                } elseif ($v['auditor'] == 5)//审核人员
+                {
+                    $arr[]['project_manager'] = $result['nickname'];
+                    $arr['project_manager'][] = ['project_manager'=>$result['nickname']];
+                }
+            }
+
+            $listName['uploader'] = implode(',', array_column($arr, 'uploads'));
+            $listName['auditor'] = implode(',', array_column($arr, 'auditor'));
+
+            return $listName;
+        }else{
+            return false;
+        }
+    }
+
+    /*
+     * 获取各角色类型的信息
+     */
+    public static function getNameByNodeId($nodeId,$targetType='')
+    {
+        if($nodeId && $targetType)
+        {
+            $info = Db::name('relation')
+                ->field('admin_id')
+                ->where('target_id',$nodeId)
+                ->where('target_type',$targetType)
+                ->select();
+            foreach($info as $k=>$v)
+            {
+                $result = self::initConnect()
+                    ->name('admin')
+                    ->field('nickname')
+                    ->where('admin_id',$v['admin_id'])
+                    ->find();
+                $info[$k]['nickname'] = $result['nickname'];
+            }
+
+            return $info;
+        }
+
+    }
+}

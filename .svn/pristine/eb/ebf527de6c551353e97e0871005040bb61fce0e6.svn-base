@@ -1,0 +1,322 @@
+<?php
+
+namespace app\api\model;
+
+use think\exception\DbException;
+use think\Model;
+use think\Db;
+
+class ProjectNode extends Model
+{
+    //未开始
+    const STATUS_NOT_STARTED = 0;
+    //进行中
+    const STATUS_STARTED = 1;
+    //已结束
+    const STATUS_END = 2;
+    //流程返回进行中
+    const STATUS_RETURN = 3;
+
+    /*
+     *通过project_id查找项目节点名称
+     */
+    public static function getNodeList($project_id)
+    {
+        $info = Db::name('project_node')
+            ->alias('n')
+            ->field('n.node_id,d.plm_dir_name process_name')
+            ->join('dir d', 'n.process_id = d.plm_dir_id', 'LEFT')
+            ->where('n.project_id',$project_id)
+            ->order('n.project_id desc')
+            ->select();
+
+        return $info;
+    }
+
+
+    /*
+     * 通过project_id查找项目节点页面的节点详情
+     * @param int project_id 项目id
+     * @note 时间戳转化datetime格式 FROM_UNIXTIME(n.start_time,'%Y-%m-%d') start_time
+     */
+    public static function getNodeDetail($projectId)
+    {
+
+        $info = Db::name('project_node')
+            ->alias('n')
+            ->field('n.node_id,n.start_time,n.end_time,n.actual_start_time,n.actual_end_time,n.audit_status status,t.admin_id,t.file_name doc_name,d.plm_dir_name process_name')
+            ->join('document t','n.process_id=t.plm_dir_id','LEFT')
+            ->join('dir d','n.process_id=d.plm_dir_id','LEFT')
+            ->where('n.project_id',intval($projectId))
+            ->order('n.project_id desc')
+            ->select();
+        //echo DB::table('project_node')->getLastsql();die;
+
+        return $info;
+    }
+
+
+    /*
+     * 通过project_id、node_key获取节点项目名称
+     *
+     * @param int project_id 项目id
+     * @param string node_key 节点key
+     *
+     * @return array
+     */
+    public static function getDirName($project_id,$node_key)
+    {
+        $where['n.project_id'] = $project_id;
+        $where['n.node_key'] = $node_key;
+
+        $list = Db::name('project_node')
+            ->alias('n')
+            ->field('d.plm_dir_name')
+            ->join('dir d','n.process_id=d.plm_dir_id','LEFT')
+            ->where($where)
+            ->find();
+
+        return $list['plm_dir_name'];
+    }
+
+
+    /*
+     * 通过node_id、project_id、node_key获取节点属性信息
+     * 【node_id】【project_id,node_key】二选一
+     * @param int node_id 项目节点id
+     * @param int project_id 项目id
+     * @param int node_key 项目id
+     *
+     * @return array
+     *
+     */
+    public static function NodeDetailByNodeId($nodeId='',$projectId='',$nodeKey='')
+    {
+
+        if(!empty($nodeId))
+        {
+            $list = Db::name('project_node')
+                ->alias('n')
+                ->field('n.start_time,n.end_time,n.actual_start_time,n.actual_end_time,n.version,r.resource_file,r.year,p.status')
+                ->join('project p','p.project_id=n.project_id','LEFT')
+                ->join('resource_name r','n.process_id=r.process_id','LEFT')
+                ->where('n.node_id',$nodeId)
+                ->find();
+
+            return $list;
+        }
+
+        if(!empty($projectId && $nodeKey))
+        {
+            $where['n.project_id'] = $projectId;
+            $where['n.node_key'] = $nodeKey;
+            $list = Db::name('project_node')
+                ->alias('n')
+                ->field('n.start_time,n.end_time,n.actual_start_time,n.actual_end_time,n.version,r.resource_file,r.year,p.status')
+                ->join('project p','p.project_id=n.project_id','LEFT')
+                ->join('resource_name r','n.process_id=r.process_id','LEFT')
+                ->where($where)
+                ->find();
+
+            return $list;
+        }
+
+        return false;
+    }
+
+
+    /*
+     * 通过模板Id查找模板的数据
+     * 【node_id】【project_id,node_key】二选一
+     */
+    public static function getTplInfo($nodeId='',$projectId='',$nodeKey='')
+    {
+        if(!empty($nodeId))
+        {
+            $tplResult = Db::name('project_node')->field('doc_tpl_ids')->where('node_id',$nodeId)->find();
+            if($tplResult)
+            {
+                $tplIds = $tplResult['doc_tpl_ids'];
+                $tplInfo = Db::name('doc_template')
+                    ->field('tpl_id,tpl_name,tpl_type')
+                    ->where('tpl_id','in',$tplIds)
+                    ->select();
+
+                return $tplInfo;
+            }
+        }
+
+        if(!empty($projectId && $nodeKey))
+        {
+            $tplResult = Db::name('project_node')
+                ->field('doc_tpl_ids')
+                ->where('n.project_id',$projectId)
+                ->where('node_key',$nodeKey)
+                ->find();
+
+            if($tplResult)
+            {
+                $tplIds = $tplResult['doc_tpl_ids'];
+                $tplInfo = Db::name('doc_template')
+                    ->field('tpl_id,tpl_name,tpl_type')
+                    ->where('tpl_id','in',$tplIds)
+                    ->select();
+
+                return $tplInfo;
+            }
+        }
+        return false;
+    }
+
+
+    /*
+     * 获取上下层节点信息
+     */
+    public static function getUpDownNode($nodeId='',$projectId='',$nodeKey='')
+    {
+        if($nodeId)
+        {
+            $list = Db::name('project_node')
+                ->alias('n')
+                ->field('n.audit_time,n.status,n.start_time,n.actual_start_time,n.actual_end_time,n.end_time,n.version,p.status project_status,p.add_time,d.plm_dir_name node_name,d.admin_id')
+                ->join('project p','n.project_id=p.project_id','LEFT')
+                ->join('dir d','d.plm_dir_id=n.process_id','LEFT')
+                ->where('n.node_id',$nodeId)
+                ->find();
+
+            //获取审核人
+            //$where['admin_id'] = $list['admin_id'];
+            $where['target_id'] = $nodeId;
+            $where['target_type'] = 2;
+            $auditorInfo = \app\api\model\Relation::getAuditInfo($where);
+            //获取创建人
+            $list['creator'] = \app\api\model\Relation::getNickName($list['admin_id']);
+            $list['auditor'] = isset($auditorInfo['auditor']) ? $auditorInfo['auditor'] : '';
+
+            $NodeAttrInfo = self::NodeDetailByNodeId($nodeId);
+            //计算完成进度
+            if($NodeAttrInfo['actual_end_time'] <= $NodeAttrInfo['end_time'])
+            {
+                $list['progress'] = '100%';
+            }
+            else
+            {
+                $day = intval(($NodeAttrInfo['actual_end_time'] - $NodeAttrInfo['end_time'])/(3600*24));
+                $list['progress'] = '超时'.$day.'天';
+            }
+            $list['manager']['product_manager'] = isset($auditorInfo['product_manager'])?$auditorInfo['product_manager']:'';
+            $list['manager']['project_manager'] = isset($auditorInfo['project_manager'])?$auditorInfo['project_manager']:'';
+            unset($list['admin_id']);
+            return $list;
+        }
+
+        if($projectId && $nodeKey)
+        {
+            $list = Db::name('project_node')
+                ->alias('n')
+                ->field('n.audit_time,n.status,n.start_time,n.actual_start_time,n.actual_end_time,n.end_time,n.version,p.status project_status,p.add_time,d.plm_dir_name node_name,d.admin_id')
+                ->join('project p','n.project_id=p.project_id','LEFT')
+                ->join('dir d','d.plm_dir_id=n.process_id','LEFT')
+                ->where('n.project_id',$projectId)
+                ->where('n.node_key',$nodeKey)
+                ->find();
+
+            return $list;
+        }
+
+        return false;
+    }
+
+
+    /*
+     * 通过node_id查询对应的node_key、project_id
+     */
+    public static function getNodeKey($nodeId)
+    {
+        $list = Db::name('project_node')->field('node_key,project_id')->where('node_id',$nodeId)->find();
+        return $list;
+    }
+
+
+    /*
+     * 通过node_key、project_id查询node_id
+     */
+    public static function getNodeId($projectId,$nodeKey)
+    {
+        //return Db::name('project_node')->where('node_key',$nodeKey)->where('project_id',$projectId)->value('node_id');
+        $list = Db::name('project_node')->field('node_id')->where('node_key',$nodeKey)->where('project_id',$projectId)->find();
+
+        return $list;
+    }
+
+
+    /*
+     * 通过node_id获取process_id
+     */
+    public static function getProcessId($nodeId)
+    {
+        return  Db::name('project_node')->where('node_id',$nodeId)->value('process_id');
+
+    }
+
+    /*
+     * 通过project_id获取当前节点信息
+     */
+    public static function getCurrentNode($where,$field='*')
+    {
+       return Db::name('project_node')
+                 ->alias('n')
+                 ->field($field)
+                 ->join('dir d','n.process_id=d.plm_dir_id','LEFT')
+                 ->where($where)
+                 ->select();
+    }
+
+    /**
+     * 根据流程统计项目
+     * @throws DbException
+     */
+    public static function countByNode()
+    {
+        $list = [];
+        /** @var \app\api\model\ProjectNode[] $projectNodes */
+        $projectNodes = self::alias('a')
+            ->field('a.process_id,c.plm_dir_name,count(DISTINCT a.project_id) amount')
+            ->join('project b', 'a.project_id = b.project_id', 'left')
+            ->join('plm_dir c', 'a.process_id = c.plm_dir_id', 'left')
+            ->where(['b.status' => Project::DEV])
+            ->group('a.process_id')->select();
+        foreach ($projectNodes as $projectNode) {
+            $list[] = [
+                'process_id' => $projectNode->process_id,
+                'process_name' => $projectNode->plm_dir_name,
+                'project_amount' => $projectNode->amount,
+            ];
+        }
+        return $list;
+    }
+
+    /**
+     * 统计项目节点完成进度
+     * @param $data
+     * @return array
+     * @throws DbException
+     */
+    public static function getNodeFinishStatus($data)
+    {
+        $list = [];
+        $projectNodes = self::alias('a')
+            ->join('plm_dir b', 'a.process_id = b.plm_dir_id', 'left')
+            ->field('a.node_id,b.plm_dir_name,a.end_time,a.actual_end_time')
+            ->where('a.project_id', $data['project_id'])->select();
+        foreach ($projectNodes as $projectNode) {
+            $delayDays = ceil(($projectNode->actual_end_time - $projectNode->end_time) / 86400);
+            $list[] = [
+                'node_id' => $projectNode->node_id,
+                'process_name' => $projectNode->plm_dir_name,
+                'delay_days' => $delayDays,
+            ];
+        }
+        return $list;
+    }
+}

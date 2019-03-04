@@ -1,0 +1,114 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2019/1/8 10:43
+// +----------------------------------------------------------------------
+// | TITLE: 新增/编辑物料
+// +----------------------------------------------------------------------
+
+namespace app\api\controller\v2;
+
+use app\api\controller\Api;
+use think\Validate;
+class Material extends Api
+{
+    //新增/编辑物料（包括变更）
+    public function edit()
+    {
+        $jsonData = $this->request->param();
+        $params = json_decode($jsonData['data'],true);
+        //数据验证
+        $rule = [
+            'material_name' => 'require',
+            'auditor1' => 'require',
+            'auditor2' => 'require',
+            'is_component' => 'require|in:0,1',
+            'create_org' => 'integer|>:0',
+            'use_org' => 'integer|>:0',
+            'material_attribute' => 'integer|>:0',
+            'is_suite' => 'integer|between:0,1',
+            'basic_unit' => 'require',
+            'inventory_type' => 'require',
+            'inventory_unit' => 'require',
+            'convert_unit' => 'integer|between:1,2',
+            'sale_unit' => 'require',
+            'sale_pricing_unit' => 'require',
+            'purchase_unit' => 'require',
+            'purchase_pricing_unit' => 'require',
+            'give_material_way' => 'require',
+            'over_give_control' => 'require',
+            'min_give_material' => 'require',
+            'min_give_unit' => 'require',
+            'plan_strategy' => 'require',
+            'fixed_lead_time_unit' => 'require',
+            'vary_lead_time' => 'require',
+            'check_lead_time' => 'require',
+            'check_lead_time_unit' => 'require',
+            'offset_time_unit' => 'require',
+        ];
+        $msg = [
+            'material_name.require' => '物料名称不能为空！',
+            'auditor1.require' => '上级审核人不能为空！',
+            'auditor2.require' => '最终审核人不能为空！',
+            'is_component.require' => '是否成品不能为空！',
+            'create_org.require' => '创建组织不能为空！',
+            'use_org.require' => '使用组织不能为空！',
+            'material_attribute.require' => '物料属性不能为空！',
+            'is_suite.require' => '是否套件不能为空！',
+            'basic_unit.require' => '基本单位不能为空！',
+            'inventory_type.require' => '存货类别不能为空！',
+            'inventory_unit.require' => '库存单位不能为空！',
+            'convert_unit.require' => '换算方向不能为空！',
+            'sale_unit.require' => '销售单位不能为空！',
+            'sale_pricing_unit.require' => '销售计价单位不能为空！',
+            'purchase_unit.require' => '采购单位不能为空！',
+            'purchase_pricing_unit.require' => '采购计价单位不能为空！',
+            'give_material_way.require' => '发料方式不能为空！',
+            'over_give_control.require' => '超发控制方式不能为空！',
+            'min_give_material.require' => '最小发料批量不能为空！',
+            'min_give_unit.require' => '最小发料单位不能为空！',
+            'plan_strategy.require' => '计划策略不能为空！',
+            'fixed_lead_time_unit.require' => '固定提前期不能为空！',
+            'vary_lead_time.require' => '变动提前期不能为空！',
+            'check_lead_time.require' => '检查提前期不能为空！',
+            'check_lead_time_unit.require' => '检查提前期单位不能为空！',
+            'offset_time_unit.require' => '计划偏置时间单位不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($params);
+        if (!$result)
+        {
+            return $this->returnmsg(402,$this->validate->getError(),"");
+        }
+
+        try {
+            \app\api\model\MaterialSlave::editMaterial($params);
+            $this->returnmsg(200, 'success!');
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+
+    //获取物料详情
+    public function getDetail()
+    {
+        $jsonData = $this->request->param();
+        $param = json_decode($jsonData['data'],true);
+
+        //数据验证
+        $result = $this->validate($param, [
+            'material_code' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+        try {
+            $this->returnmsg(200, 'success!', \app\api\model\MaterialSlave::materialDetail($param['material_code']));
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+}

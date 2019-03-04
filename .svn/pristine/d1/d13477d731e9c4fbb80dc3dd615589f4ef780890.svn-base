@@ -1,0 +1,35 @@
+<?php
+
+namespace app\api\model;
+
+use think\Model;
+
+class ProjectTpl extends Model
+{
+    /**
+     * 根据模板ID获取流程图
+     * @param $tplId
+     * @return array|mixed|string
+     * @throws \think\exception\DbException
+     */
+    public static function getFlowChartTpl($tplId)
+    {
+        $frontEndData = self::where(['tpl_id' => $tplId])->value('front_end_data');
+        return $frontEndData ? \app\api\model\Project::getFrontEndDataDetail($frontEndData) : [];
+    }
+
+    /**
+     * 将流程图保存为模板
+     * @param $data
+     * @return mixed
+     */
+    public static function saveAsTemplate($data)
+    {
+        $projectTpl = new ProjectTpl();
+        $projectTpl->tpl_name = $data['project_name'];
+        $projectTpl->front_end_data = json_encode($data);
+        $projectTpl->add_time = time();
+        $projectTpl->save();
+        return $projectTpl->tpl_id;
+    }
+}

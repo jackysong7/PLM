@@ -1,0 +1,696 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2019/1/7 16:08
+// +----------------------------------------------------------------------
+// | TITLE: 物料的基本操作
+// +----------------------------------------------------------------------
+
+namespace app\api\model;
+
+use app\common\library\KCloud;
+use think\Model;
+use think\Db;
+use app\common\library\Auth;
+use think\Session;
+
+class MaterialSlave extends Model
+{
+    const NOT_SUBMIT = 0;
+    const SUBMITTED = 1;
+    const AUDIT_REJECTED = -1; //审核驳回
+    const AUDIT_PASS= 1;
+    const USE_ORG = '深圳罗马仕科技有限公司';
+    const MATERIAL_TYPE = 7; //物料表类型
+    const AUDIT_ROLE = 5; //审核人员类型
+    /**
+     * 新增/编辑物料
+     * @param $params
+     */
+    public static function editMaterial($params)
+    {
+        //检查物料编码是否存在，不存在则新增，存在则判断是否可编辑
+        $material_data = Db::name('material_slave')->where("`material_code`={$params['material_code']} and `is_new` IN (SELECT MAX(is_new) FROM `plm_material_slave` WHERE `material_code` ={$params['material_code']})")->find();
+
+        if (is_array($material_data)) {
+            //未提交、已提交但审核驳回、已提交审核通过可编辑（即数据新增，is_new累加）
+            if ( ($material_data['submit_status'] == self::SUBMITTED) || ($material_data['submit_status'] == self::SUBMITTED && $material_data['audit_status'] == self::AUDIT_REJECTED) || ($material_data['submit_status'] == self::SUBMITTED && $material_data['audit_status'] == self::AUDIT_PASS) ) {
+                $params['update_time'] = time();
+                $material_data['is_new']++ ;
+                $params['is_new'] = $material_data['is_new'];
+            }
+        }
+        return self::saveMaterial($params);
+    }
+
+    /**
+     * 保存物料
+     * @param $data
+     */
+    public static function saveMaterial($data)
+    {
+        $target_id = false;
+        $admin_id = Auth::instance()->getUser()['admin_id'];
+        if (is_array($data)) {
+            $mg_id = Db::name('material_grouping')->where(['mg_code'=>$data['mg_code']])->value('mg_id');
+            $material_data = [
+                'mg_id' => $mg_id, //物料分组id
+                'mg_code' => $data['mg_code'],  //物料分组编码
+                'material_code' => !empty($data['material_code']) ? $data['material_code'] : '', //物料编码
+                'material_code_old' => !empty($data['material_code_old']) ? $data['material_code_old'] : '', //旧物料编码
+                'material_category' => !empty($data['material_category']) ? $data['material_category'] : '', //物料分类
+                'material_name' => $data['material_name'], //物料名称*
+                'specifications' => !empty($data['specifications']) ? $data['specifications'] : '', //规格型号
+                'specifications_code' => !empty($data['specifications_code']) ? $data['specifications_code'] : '', //型号编码
+                'description' => !empty($data['description']) ? $data['description'] : '', //描述
+                'material_attribute' => $data['material_attribute'], //物料属性*
+                'basic_unit' => $data['basic_unit'], //基本单位*
+                'start_batch' => !empty($data['start_batch']) ? $data['start_batch'] : '', //启用批次管理
+//                'img_path' => !empty($data['img_path']) ? $data['img_path'] : '', //图片路径
+                'create_time' => time(), //创建时间
+                'submit_time' => time(), //提交时间
+                'submit_status' => 1, //创提交状态
+                'update_time' => isset($data['update_time']) ? $data['update_time'] : 0, //修改时间
+                'is_new' => isset($data['is_new']) ? $data['is_new'] : 0, //修改时间
+                'creator_id' => $admin_id, //创建者
+                'is_component' => !empty($data['is_component']) ? $data['is_component'] : '', //是否组件
+                'create_org' => $data['create_org'], //创建组织
+                'use_org' => $data['use_org'], //使用组织
+                'is_suite' => $data['is_suite'], //是否套件*
+                'control' => !empty($data['control']) && is_array($data['control']) ? implode('|',$data['control']) : '', //控制
+                'rate' => !empty($data['default_tax_rate']) ? $data['default_tax_rate'] : '', //汇率
+                'inventory_type' => $data['inventory_type'], //存货类别*
+                'tax_type' => !empty($data['tax_type']) ? $data['tax_type'] : '', //税分类
+                'inventory_unit' => $data['inventory_unit'], //库存单位 *
+                'assistant_unit' => !empty($data['assistant_unit']) ? $data['assistant_unit'] : '', //辅助单位
+                'unit_convert' => $data['convert_unit'], //换算方向*
+                'reverse_time' => !empty($data['reverse_time']) ? $data['reverse_time'] : '', //倒冲时机
+                'is_expiration' => !empty($data['enable_expiration']) ? $data['enable_expiration'] : 0, //是否启用保质期管理
+                'batch_num_rule' => !empty($data['batch_num_rule']) ? $data['batch_num_rule'] : 0, //批号编码规则
+                'batch_num_extra' => !empty($data['batch_num_extra']) ? $data['batch_num_extra'] : 0, //批号附属信息
+                'expiration_unit' => !empty($data['expiration_unit']) ? $data['expiration_unit'] : 0, //保质期单位
+                'expiration_date' => !empty($data['expiration_date']) ? $data['expiration_date'] : 0, //保质期
+                'expiration_date_online' => !empty($data['expiration_date_online']) ? $data['expiration_date_online'] : 0, //在架寿命期
+                'allow_return' => !empty($data['allow_return']) ? 1 : 0, //是否允许退货
+                'sale_unit' => $data['sale_unit'], //销售单位*
+                'sale_pricing_unit' => $data['sale_pricing_unit'], //销售计价单位*
+                'purchase_unit' => $data['purchase_unit'], //采购单位*
+                'purchase_price_unit' => $data['purchase_pricing_unit'], //采购计价单位*
+                'is_quota' => !empty($data['enable_quota']) ? 1 : 0, //是否启用配额
+                'quota_way' => !empty($data['quota_way']) ? $data['quota_way'] : 1, //配额方式
+                'min_split_amount' => !empty($data['min_split_amount']) ? 1 : 0, //最小拆分量
+                'is_return_material' => !empty($data['allow_return_material']) ? 1 : 0, //是否允许退料
+                'outsource_unit' => !empty($data['outsource_unit']) ? $data['outsource_unit'] : '', //委外单位
+                'outsource_price_unit' => !empty($data['outsource_pricing_unit']) ? $data['outsource_pricing_unit'] : '', //委外计价单位
+                'fixed_lead_time' => !empty($data['fixed_lead_time']) ? $data['fixed_lead_time'] : '', //固定提前期
+                'product_unit' => !empty($data['product_unit']) ? $data['product_unit'] : '', //生产单位
+                'product_type' => !empty($data['product_type']) ? $data['product_type'] : '', //生产类型
+                'standard_labor_hour' => !empty($data['standard_labor_hour']) ? $data['standard_labor_hour'] : '', //标准工时
+                'standard_labor_unit' => !empty($data['standard_labor_unit']) ? $data['standard_labor_unit'] : '', //标准工时单位
+                'issue_qty' => $data['give_material_way'], //发料方式*
+                'over_give_control' => $data['over_give_control'], //超发控制方式*
+                'min_issue_qty' => $data['min_give_material'], //最小发料批量*
+                'min_give_unit' => $data['min_give_unit'], //最小发料单位*
+                'plan_strategy' => $data['plan_strategy'], //计划策略*
+                'manufacture_strategy' => !empty($data['manufacture_strategy']) ? $data['manufacture_strategy'] : '', //制造策略
+                'order_strategy' => $data['order_strategy'], //订货策略*
+                'plan_area' => !empty($data['plan_area']) ? $data['plan_area'] : '', //最小发料批量
+                'mrp_combine' => !empty($data['MPR_combine']) ? $data['MPR_combine'] : '', //最小发料批量
+                'product_level' => !empty($data['product_level']) ? $data['product_level'] : '', //产品变动级别
+                'vary_lead_time_unit' => !empty($data['vary_lead_time_unit']) ? $data['vary_lead_time_unit'] : '', //变动提前单位
+                'vary_lead_time' => $data['vary_lead_time'], //变动提前期*
+                'fixed_lead_time_unit' => $data['fixed_lead_time_unit'], //固定提前期*
+                'check_lead_time' => $data['check_lead_time'], //检查提前期*
+                'check_lead_time_unit' => $data['check_lead_time_unit'], //检查提前期单位*
+                'offset_time' => !empty($data['offset_time']) ? $data['offset_time'] : '', //偏置时间
+                'offset_time_unit' => $data['offset_time_unit'], //计划偏置时间单位*
+                'supply_from' => !empty($data['supply_from']) ? $data['supply_from'] : '', //供应来源
+                'inventory_attr' => !empty($data['inventory_attr']) ? json_encode($data['inventory_attr']) : '', //库存属性控制
+            ];
+
+            $target_id = DB::name('material_slave')->insertGetId($material_data);
+
+            //保存审核人员信息
+            if ($target_id) {
+                $relation_data = [
+                    [
+                        'target_id' => $target_id,
+                        'target_type' => self::MATERIAL_TYPE,
+                        'admin_id' => $data['auditor1'],
+                        'role_type' => self::AUDIT_ROLE,
+                        'audit_order' => 1 //上级审核人
+                    ],
+                    [
+                        'target_id' => $target_id,
+                        'target_type' => self::MATERIAL_TYPE,
+                        'admin_id' => $data['auditor2'],
+                        'role_type' => self::AUDIT_ROLE,
+                        'audit_order' => 2 //最终审核人
+                    ]
+                ];
+                (new Relation)->saveAll($relation_data);
+
+            }
+        }
+        return $target_id;
+    }
+
+    /**
+     * 获取物料详情
+     * @param $material_code 物料编码
+     * @return array|false|null|\PDOStatement|string|Model
+     */
+    public static function materialDetail($material_code)
+    {
+        //查询物料最新版本
+        $version = Db::name('material_slave')->where('material_code',$material_code)->max('is_new');
+        $data = Db::name('material_slave')
+            ->field('material_id,is_component,material_name,material_code,material_code_old,specifications,specifications_code,description,material_attribute,basic_unit,start_batch,is_component,create_org,use_org,unit_convert as convert_unit,is_suite,control,rate as default_tax_rate,inventory_type,tax_type,inventory_unit,assistant_unit,is_expiration as enable_expiration,expiration_date,expiration_date_online,expiration_unit,batch_num_rule,batch_num_extra,sale_unit,sale_pricing_unit,allow_return,purchase_unit,purchase_price_unit as purchase_pricing_unit,is_quota as enable_quota,quota_way,min_split_amount,is_return_material as allow_return_material,outsource_unit,fixed_lead_time,outsource_price_unit as outsource_pricing_unit,product_unit,product_type,standard_labor_unit,standard_labor_hour,issue_qty as give_material_way,reverse_time,over_give_control,min_issue_qty as min_give_material,min_give_unit,plan_strategy,manufacture_strategy,order_strategy,plan_area,mrp_combine as MPR_combine,product_level,vary_lead_time_unit,fixed_lead_time_unit,vary_lead_time,check_lead_time,check_lead_time_unit,offset_time,offset_time_unit,inventory_attr,submit_time,audit_time,audit_status,order_interval_time,order_interval_unit,material_category,mg_code,creator_id')
+            ->where(['material_code'=>$material_code,'is_new'=> $version])->find();
+        //查询审核人员信息
+        if ($data) {
+            $data['start_batch'] = !empty($data['start_batch']) ? true : false;
+            $data['enable_expiration'] = !empty($data['enable_expiration']) ? true : false;
+            $data['batch_num_extra'] = !empty($data['batch_num_extra']) ? true : false;
+            $data['allow_return'] = !empty($data['allow_return']) ? true : false;
+            $data['enable_quota'] = !empty($data['enable_quota']) ? true : false;
+            $data['allow_return_material'] = !empty($data['allow_return_material']) ? true : false;
+            $data['MPR_combine'] = !empty($data['MPR_combine']) ? true : false;
+            $create_nickname = Relation::initConnect()
+                ->name('admin')
+                ->where('admin_id', $data['creator_id'])
+                ->value('nickname');
+            $data['creator'] = ['admin_id' => $data['creator_id'],'nickname' => $create_nickname];
+            $data['mg_name'] = Db::name('material_grouping')->where(['mg_code' => $data['mg_code']])->value('mg_name');
+            $auditInfo = Db::name('relation')
+                ->where(['target_id' => $data['material_id'], 'target_type'=>self::MATERIAL_TYPE, 'role_type' => self::AUDIT_ROLE])
+                ->select();
+            if ($auditInfo != false) {
+                foreach ($auditInfo as $item) {
+                    //查询昵称
+                    $result = Relation::initConnect()
+                        ->name('admin')
+                        ->field('nickname')
+                        ->where('admin_id', $item['admin_id'])
+                        ->find();
+                    if ($item['audit_order'] == 1) {
+                        $data['auditor1'] = [
+                            'admin_id' => $item['admin_id'],
+                            'nickname' => $result['nickname'],
+                            'audit_status' => $item['audit_status'],
+                            'audit_note' => $item['audit_note']
+                        ];
+                    } elseif ($item['audit_order'] == 2) {
+                        $data['auditor2'] = [
+                            'admin_id' => $item['admin_id'],
+                            'nickname' => $result['nickname'],
+                            'audit_status' => $item['audit_status'],
+                            'audit_note' => $item['audit_note']
+                        ];
+                    }
+                }
+            }
+            unset($data['material_id']);
+            unset($data['creator_id']);
+        }
+        return $data;
+    }
+
+    /**
+     * 审核物料
+     * @param $data
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public static function audit($data)
+    {
+        $data += [
+            'material_code' => '',
+            'audit_status' => '',
+            'audit_note' => '',
+            'sync_resource' => '',
+        ];
+        $relation_model = new Relation();
+        $material_slave = (new MaterialSlave)->where(['material_code' =>$data['material_code']])->find();
+
+        $where = [
+            'target_id' => $material_slave['material_id'],
+            'target_type' => self::MATERIAL_TYPE,
+            'role_type' => self::AUDIT_ROLE,
+            'audit_order' => 1
+        ];
+        $auditor1 = $relation_model->where($where)->find();
+
+        $where['audit_order'] = 2;
+        $auditor2 = $relation_model->where($where)->find();
+
+        if ($auditor1['audit_status'] == 0) {
+            //1级审核
+            $auditor1['audit_status'] = $data['audit_status'];
+            $auditor1['audit_note'] = $data['audit_note'];
+            $auditor1->save();
+
+            //1级审核驳回
+            if ($data['audit_status'] == -1) {
+                $material_slave['audit_status'] = $data['audit_status'];
+            }
+
+            $material_slave['audit_time'] = time();
+            $material_slave->save();
+        } elseif ($auditor1['audit_status'] == 1 && $auditor2['audit_status'] == 0) {
+            //2级审核
+            $material_slave['audit_status'] = $data['audit_status'];
+            $material_slave['audit_time'] = time();
+            $material_slave->save();
+
+            $auditor2['audit_status'] = $data['audit_status'];
+            $auditor2['audit_note'] = $data['audit_note'];
+            $auditor2->save();
+
+            if ($data['audit_status'] == 1) {
+                //2级审核通过
+                $material = new Material();
+                $material['mg_id'] = $material_slave['mg_id'];
+                $material['mg_code'] = $material_slave['mg_code'];
+                $material['material_code'] = $material_slave['material_code'];
+                $material['material_name'] = $material_slave['material_name'];
+                $material['specifications'] = $material_slave['specifications'];
+                $material['specifications_code'] = $material_slave['specifications_code'];
+                $material['description'] = $material_slave['description'];
+                $material['material_attribute'] = $material_slave['material_attribute'];
+                $material['basic_unit'] = $material_slave['basic_unit'];
+                $material['start_batch'] = $material_slave['start_batch'];
+                $material['img_path'] = $material_slave['img_path'];
+                $material['status'] = 1;
+                $material['createtime'] = time();
+                $material->save();
+
+                if ($data['sync_resource']) {
+                    $resource = new Resource();
+                    $count = $resource->where(['year' => date('Y'), 'resource_type' => 1, 'material_code' => $material['material_code']])->count();
+                    if (!$count) {
+                        $resource['year'] = date('Y');
+                        $resource['resource_id'] = $material['material_id'];
+                        $resource['resource_type'] = 1;
+                        $resource['material_code'] = $material['material_code'];
+                        $resource['add_time'] = time();
+                        $resource->save();
+                    }
+                }
+            }
+        }
+    }
+
+
+    public static function synchronousMaterial($param)
+    {
+        $control = explode('|', $param['control']);
+        $is_purchase = in_array('允许采购', $control) ? 'true' : false;
+        $is_inventory = in_array('允许库存', $control) ? 'true' : false;
+        $is_subcontract = in_array('允许委外', $control) ? 'true' : false;
+        $is_sale = in_array('允许销售', $control) ? 'true' : false;
+        $is_produce = in_array('允许生产', $control) ? 'true' : false;
+        $is_asset = in_array('允许资产', $control) ? 'true' : false;
+
+        $inventory_attr = json_decode($param['inventory_attr'], true);
+
+        $data = [
+            "IsDeleteEntry" => "True",
+            "IsVerifyBaseDataField" => "false",
+            "IsEntryBatchFill" => "True",
+            "Model" => [
+                "FMATERIALID" => "0",
+                "FCreateOrgId" => ["FNumber" => $param['create_org']], //创建组织，（必填项）*
+                "FUseOrgId" => ["FNumber" => $param['use_org']], //使用组织，（必填项）*
+                "FNumber" => $param['material_code'], //编码
+                "FName" => $param['material_name'], //名称，（必填项）
+                "FSpecification" => $param['specifications'], //规格型号
+                "FMnemonicCode" => "", //助记码
+                "FOldNumber" => $param['material_code_old'], //旧物料编码
+                "FDescription" => $param['description'], //描述
+                "FMaterialGroup" => ["FNumber" => $param['mg_code']], //物料分组，（必填项）*
+                "FImgStorageType" => "B", //图片存储类型
+                "FIsSalseByNet" => false, //是否网销
+                "F_PAEZ_Text" => $param['specifications_code'], //型号编码
+                "F_PAEZ_Text1" => $param['product_level'], //产品级别
+                "F_PAEZ_Assistant1" => ["FNumber" => $param['material_category']], //物料分类
+                "F_PAEZ_Assistant" => ["FNumber" => ""], //产品系列
+                "SubHeadEntity" => [
+                    "FErpClsID" => $param['material_attribute'], //物料属性，（必填项）*
+                    "FCategoryID" => ["FNumber" => $param['inventory_type']], //存货类别，（必填项）*
+                    "FTaxType" => ["FNumber" => $param['tax_type']], //税分类
+                    "FTaxRateId" => ["FNumber" => $param['rate']], //默认税率
+                    "FBaseUnitId" => ["FNumber" => $param['basic_unit']], //基本单位，（必填项）*
+                    "FIsPurchase" => $is_purchase, //允许采购
+                    "FIsInventory" => $is_inventory, //允许库存
+                    "FIsSubContract" => $is_subcontract, //允许委外
+                    "FIsSale" => $is_sale, //允许销售
+                    "FIsProduce" => $is_produce, //允许生产
+                    "FIsAsset" => $is_asset, //允许资产
+                    "FGROSSWEIGHT" => 0, //毛重
+                    "FNETWEIGHT" => 0, //净重
+                    "FWEIGHTUNITID" => ["FNumber" => "kg"], //重量单位
+                    "FLENGTH" => 0, //长
+                    "FWIDTH" => 0, //宽
+                    "FHEIGHT" => 0, //高
+                    "FVOLUME" => 0, //体积
+                    "FVOLUMEUNITID" => ["FNumber" => "m"], //尺寸单位
+                    "FSuite" => $param['is_suite'], //套件，（必填项）*
+                    "FCostPriceRate" => 0, //结算成本价加减价比例(%)
+                ],
+                //库存
+                "SubHeadEntity1" => [
+                    "FStoreUnitID" => ["FNumber" => $param['inventory_unit']], //库存单位，（必填项）*
+                    "FAuxUnitID" => ["FNumber" => $param['assistant_unit']], //辅助单位
+                    "FUnitConvertDir" => $param['unit_convert'], //换算方向,（必填项）*
+                    "FIsLockStock" => true, //可锁库
+                    "FIsCycleCounting" => true, //启用盘点周期
+                    "FCountCycle" => 1, //盘点周期单位
+                    "FCountDay" => 1, //盘点周期
+                    "FIsMustCounting" => false, //必盘
+                    "FIsBatchManage" => $param['start_batch'] ? 'true' : false, //启用批号管理
+                    "FBatchRuleID" => ["FNumber" => $param['batch_num_rule']], //启用批号管理 PHBM001
+                    "FIsKFPeriod" => $param['is_expiration'] ? 'true' : false, //启用保质期管理
+                    "FIsExpParToFlot" => $param['batch_num_extra'] ? 'true' : false, //批号附属信息
+                    "FExpUnit" => $param['expiration_unit'], //保证期单位 D/M/Y
+                    "FExpPeriod" => $param['expiration_date'], //保质期
+                    "FOnlineLife" => $param['expiration_date_online'], //在架寿命期
+                    "FRefCost" => 0, //参考成本
+                    "FCurrencyId" => ["FNumber" => "PRE001"], //币别
+                    "FIsEnableMinStock" => false, //启用最小库存
+                    "FIsEnableMaxStock" => false, //启用最大库存
+                    "FIsEnableSafeStock" => false, //启用安全库存
+                    "FIsEnableReOrder" => false, //启用再订货点
+                    "FMinStock" => 0, //最小库存
+                    "FSafeStock" => 0, //安全库存
+                    "FReOrderGood" => 0, //再订货点
+                    "FEconReOrderQty" => 0, //经济订货批量
+                    "FMaxStock" => 0, //最大库存
+                    "FIsSNManage" => false, //库存管理
+                    "FIsSNPRDTracy" => false, //生产追溯
+                    "FSNManageType" => 1, //业务范围，（必填项）*
+                    "FSNGenerateTime" => 1, //序列号生成时机，（必填项）*
+                    "FBoxStandardQty" => 0 //单箱标准数量
+                ],
+                //销售
+                "SubHeadEntity2" => [
+                    "FSaleUnitId" => ["FNumber" => $param['sale_unit']], //销售单位，（必填项）*
+                    "FSalePriceUnitId" => ["FNumber" => $param['sale_pricing_unit']], //销售计价单位，（必填项）*
+                    "FOrderQty" => 0, //起订量
+                    "FMinQty" => 0, //最小批量
+                    "FMaxQty" => 100000, //最大批量
+                    "FOutStockLmtH" => 0, //超发上限(%)
+                    "FOutStockLmtL" => 0, //超发下限(%)
+                    "FAgentSalReduceRate" => 0, //代理销售减价比例(%)
+                    "FIsATPCheck" => false, //ATP检查
+                    "FIsReturnPart" => false, //部件可退
+                    "FIsInvoice" => false, //可开票
+                    "FIsReturn" => $param['allow_return'] ? 'true' : false, //允许退货
+                    "FAllowPublish" => false, //允许发布到订货平台
+                    "FISAFTERSALE" => true, //启用售后服务
+                    "FISPRODUCTFILES" => true, //生成产品档案
+                    "FISWARRANTED" => false,
+                    "FWARRANTY" => 0,
+                    "FWARRANTYUNITID" => "D",
+                    "FOutLmtUnit" => "SAL", //超发控制单位
+                    "FIsTaxEnjoy" => false, //享受税收优惠政策
+                    "FTaxDiscountsType" => 0, //税收优惠政策类型
+                ],
+                //采购
+                "SubHeadEntity3" => [
+                    "FBaseMinSplitQty" => 0, //基本单位最小拆分数量
+                    "FPurchaseUnitId" => ["FNumber" => $param['purchase_unit']], //采购单位，（必填项）*
+                    "FPurchasePriceUnitId" => ["FNumber" => $param['purchase_price_unit']], //采购计价单位，（必填项）*
+                    "FIsQuota" => $param['is_quota'] ? 'true' : false, //启用配额管理
+                    "FQuotaType" => $param['quota_way'], //配额方式
+                    "FMinSplitQty" => $param['min_split_amount'], //最小拆分数量
+                    "FIsVmiBusiness" => false, //VMI业务
+                    "FEnableSL" => false, //启用商联在线(6.1弃用)
+                    "FIsPR" => false, //需要请购
+                    "FIsReturnMaterial" => $param['is_return_material'] ? 'true' : false, //允许退料
+                    "FIsSourceControl" => false, //货源控制
+                    "FReceiveMaxScale" => 0, //收货上限比例(%)
+                    "FReceiveMinScale" => 0, //收货下限比例(%)
+                    "FReceiveAdvanceDays" => 0, //收货提前天数
+                    "FReceiveDelayDays" => 0, //收货延迟天数
+                    "FAgentPurPlusRate" => 0, //代理采购加成比例
+                    "FPrintCount" => 1, //重复打印数
+                    "FMinPackCount" => 1, //最小包装数
+                ],
+                //计划
+                "SubHeadEntity4" => [
+                    "FPlanMode" => 0,
+                    "FBaseVarLeadTimeLotSize" => 0, //基本变动提前期批量
+                    "FPlanningStrategy" => $param['plan_strategy'], //计划策略，（必填项）*
+                    "FMfgPolicyId" => [
+                        "FNumber" => $param['manufacture_strategy']
+                    ], //制造策略
+                    "FOrderPolicy" => $param['order_strategy'], //订货策略，（必填项）*
+                    "FPlanWorkshop" => $param['plan_area'], //计划区 JHQ001_SYS
+                    "FFixLeadTime" => $param['fixed_lead_time'], //固定提前期
+                    "FFixLeadTimeType" => $param['fixed_lead_time_unit'], //固定提前期单位，（必填项）*
+                    "FVarLeadTime" => $param['vary_lead_time'], //变动提前期
+                    "FVarLeadTimeType" => $param['vary_lead_time_unit'], //变动提前期单位，（必填项）*
+                    "FCheckLeadTime" => $param['check_lead_time'], //检验提前期
+                    "FCheckLeadTimeType" => $param['check_lead_time_unit'], //检验提前期单位，（必填项）*
+                    "FOrderIntervalTimeType" => $param['order_interval_unit'], //订货间隔期单位，（必填项）*
+                    "FOrderIntervalTime" => $param['order_interval_time'], //订货间隔期
+                    "FMaxPOQty" => 100000, //最大订货量
+                    "FMinPOQty" => 0, //最小订货量
+                    "FIncreaseQty" => 0, //最小包装量
+                    "FEOQ" => 1, //固定/经济批量
+                    "FVarLeadTimeLotSize" => 1, //变动提前期批量
+                    "FPlanIntervalsDays" => 0, //批量拆分间隔天数
+                    "FPlanBatchSplitQty" => 0, //拆分批量
+                    "FRequestTimeZone" => 0, //需求时界
+                    "FPlanTimeZone" => 0, //计划时界
+                    "FCanLeadDays" => 0, //允许提前天数
+                    "FIsMrpComReq" => $param['mrp_combine'] ? 'true' : false, //MRP计算是否合并需求
+                    "FLeadExtendDay" => 0, //提前宽限期
+                    "FReserveType" => 1, //预留类型，（必填项）*
+                    "FPlanSafeStockQty" => 1, //安全库存
+                    "FAllowPartAhead" => false, //预计入库允许部分提前
+                    "FCanDelayDays" => 999, //允许延后天数
+                    "FDelayExtendDay" => 0, //延后宽限期
+                    "FAllowPartDelay" => true, //预计入库允许部分延后
+                    "FPlanOffsetTimeType" => $param['offset_time_unit'], //时间单位，（必填项）*
+                    "FPlanOffsetTime" => $param['offset_time'], //偏置时间
+                    "FSupplySourceId" => $param['supply_from'], //供应来源
+                ],
+                //生产
+                "SubHeadEntity5" => [
+                    "FProduceUnitId" => [
+                        "FNumber" => $param['product_unit'],
+                    ], //生产单位
+                    "FFinishReceiptOverRate" => 0, //入库超收比例(%)
+                    "FFinishReceiptShortRate" => 0, //入库欠收比例(%)
+                    "FProduceBillType" => [
+                        "FNumber" => $param['product_type'],
+                    ], //生产类型
+                    "FOrgTrustBillType" => [
+                        "FNumber" => "SCDD06_SYS",
+                    ], //组织间受托类型
+                    "FIsSNCarryToParent" => false, //序列号携带到父项
+                    "FIsProductLine" => false, //生产线生产
+                    "FBOMUnitId" => [
+                        "FNumber" => "Pcs"
+                    ], //子项单位
+                    "FLOSSPERCENT" => 0, //变动损耗率(%)
+                    "FConsumVolatility" => 0, //消耗波动(%)
+                    "FIsMainPrd" => false, //可为主产品
+                    "FIsCoby" => false, //可为联副产品
+                    "FIsECN" => false, //启用ECN
+                    "FIssueType" => $param['issue_qty'], //发料方式，（必填项）*
+                    "FBKFLTime" => $param['reverse_time'], //倒冲时机（调拨倒冲时才有值）；3，入库倒冲；2，汇报倒冲
+                    "FOverControlMode" => $param['over_give_control'], //超发控制方式，（必填项）*
+                    "FMinIssueQty" => $param['min_issue_qty'], //最小发料批量
+                    "FISMinIssueQty" => false, //领料考虑最小发料批量
+                    "FIsKitting" => false, //是否关键件
+                    "FIsCompleteSet" => false, //是否齐套件
+                    "FStdLaborPrePareTime" => 0, //标准人员准备工时
+                    "FStdLaborProcessTime" => 0, //标准人员实作工时
+                    "FStdMachinePrepareTime" => 0, //标准机器准备工时
+                    "FStdMachineProcessTime" => 0, //标准机器实作工时
+                    "FMinIssueUnitId" => ["FNumber" => $param['min_give_unit']], //最小发料批量单位，（必填项）*
+                    "FStandHourUnitId" => $param['standard_labor_unit'], //工时单位，（必填项）*
+                    "FPerUnitStandHour" => $param['standard_labor_hour'], //标准工时
+                ],
+                //委外
+                "SubHeadEntity7" => [
+                    "FSubconUnitId" => ["FNumber" => $param['outsource_unit']], //委外单位
+                    "FSubconPriceUnitId" => ["FNumber" => $param['outsource_price_unit']], //委外计价单位
+                    "FSubBillType" => [
+                        "FNumber" => "WWDD01_SYS"
+                    ] //委外类型
+                ],
+                //质量
+                "SubHeadEntity6" => [
+                    "FCheckIncoming" => false, //来料检验
+                    "FCheckProduct" => false, //产品检验
+                    "FCheckStock" => false, //库存检验
+                    "FCheckReturn" => false, //退货检验
+                    "FCheckDelivery" => false, //发货检验
+                    "FEnableCyclistQCSTK" => false, //启用库存周期复检
+                    "FStockCycle" => 0, //复检周期
+                    "FEnableCyclistQCSTKEW" => false, //启用库存周期复检提醒
+                    "FEWLeadDay" => false, //提醒提前期
+                    "FCheckEntrusted" => false, //受托材料检验
+                    "FCheckOther" => false, //其他检验
+                    //库存属性
+                    "FEntityInvPty" => [
+                        [
+                            "FEntryID" => null,
+                            "FInvPtyId" => [
+                                "FNumber" => "01"
+                            ], //库存属性，（必填项）*
+                            "FIsEnable" => $inventory_attr['warehouse']['enable'] ? 'true' : false, //启用
+                            "FIsAffectPrice" => $inventory_attr['warehouse']['affect_price'] ? 'true' : false, //影响价格
+                            "FIsAffectPlan" => $inventory_attr['warehouse']['affect_plan'] ? 'true' : false, //影响计划
+                            "FIsAffectCost" => $inventory_attr['warehouse']['affect_cost'] ? 'true' : false, //影响成本
+                        ],
+                        [
+                            "FEntryID" => null,
+                            "FInvPtyId" => [
+                                "FNumber" => "02"
+                            ],
+                            "FIsEnable" => $inventory_attr['warehouse_space']['enable'] ? 'true' : false,
+                            "FIsAffectPrice" => $inventory_attr['warehouse_space']['affect_price'] ? 'true' : false,
+                            "FIsAffectPlan" => $inventory_attr['warehouse_space']['affect_plan'] ? 'true' : false,
+                            "FIsAffectCost" => $inventory_attr['warehouse_space']['affect_cost'] ? 'true' : false,
+                        ],
+                        [
+                            "FEntryID" => null,
+                            "FInvPtyId" => [
+                                "FNumber" => "03"
+                            ],
+                            "FIsEnable" => $inventory_attr['BOM']['enable'] ? 'true' : false,
+                            "FIsAffectPrice" => $inventory_attr['BOM']['affect_price'] ? 'true' : false,
+                            "FIsAffectPlan" => $inventory_attr['BOM']['affect_plan'] ? 'true' : false,
+                            "FIsAffectCost" => $inventory_attr['BOM']['affect_cost'] ? 'true' : false,
+                        ],
+                        [
+                            "FEntryID" => null,
+                            "FInvPtyId" => [
+                                "FNumber" => "04"
+                            ],
+                            "FIsEnable" => $inventory_attr['batch_num']['enable'] ? 'true' : false,
+                            "FIsAffectPrice" => $inventory_attr['batch_num']['affect_price'] ? 'true' : false,
+                            "FIsAffectPlan" => $inventory_attr['batch_num']['affect_plan'] ? 'true' : false,
+                            "FIsAffectCost" => $inventory_attr['batch_num']['affect_cost'] ? 'true' : false,
+                        ],
+                        [
+                            "FEntryID" => null,
+                            "FInvPtyId" => [
+                                "FNumber" => "06"
+                            ],
+                            "FIsEnable" => $inventory_attr['trace_num']['enable'] ? 'true' : false,
+                            "FIsAffectPrice" => $inventory_attr['trace_num']['affect_price'] ? 'true' : false,
+                            "FIsAffectPlan" => $inventory_attr['trace_num']['affect_plan'] ? 'true' : false,
+                            "FIsAffectCost" => $inventory_attr['trace_num']['affect_cost'] ? 'true' : false,
+                        ]
+                    ]
+                ]
+            ]
+        ];
+        $res = Session::get('k3CloudLoginResult') === true ? 1 : KCloud::check_login();
+        if ($res == 1) {
+            //登陆成功
+            $dataModel = array(
+                'BD_MATERIAL',//业务对象标识FormId
+                $data   //具体Json字串
+            );
+            $post_content = KCloud::create_postdata($dataModel);
+            $cloudUrl = Session::get('cloudUrl');
+            $cookie_jar = Session::get('cookieJar');
+            $result = KCloud::invoke_save($cloudUrl, $post_content, $cookie_jar);
+        }
+    }
+
+    /**
+     * 获取物料申请列表
+     * @param $data
+     * @return array
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public static function getApplyList($data)
+    {
+        $data += [
+            'get_mine' => 1,
+            'page_no' => 1,
+            'page_size' => 10,
+        ];
+
+        $where = [];
+        $where_or = [];
+        if ($data['get_mine']) {
+            $admin_id = Auth::instance()->getUser()['admin_id'];
+            $where['ms.creator_id'] = $admin_id;
+            $where_or['r.admin_id'] = $admin_id;
+        }
+
+        $material_slave = new MaterialSlave;
+        $relation = new Relation();
+
+        $total = $material_slave
+            ->alias('ms')
+            ->join('plm_relation r', 'ms.material_id = r.target_id AND r.target_type = ' . MaterialSlave::MATERIAL_TYPE)
+            ->where($where)
+            ->whereOr($where_or)
+            ->group('ms.material_id')
+            ->count();
+
+        $result_list = $material_slave
+            ->field('ms.material_id,ms.material_name,ms.material_code,ms.create_org,ms.use_org,ms.mg_code,ms.mg_id,ms.material_attribute,ms.specifications,ms.specifications_code,ms.description,ms.submit_time,ms.audit_time,ms.audit_status,ms.creator_id,ms.material_code_old')
+            ->alias('ms')
+            ->join('plm_relation r', 'ms.material_id = r.target_id AND r.target_type = ' . MaterialSlave::MATERIAL_TYPE)
+            ->where($where)
+            ->whereOr($where_or)
+            ->group('ms.material_id')
+            ->order('ms.material_id desc')
+            ->page($data['page_no'], $data['page_size'])
+            ->select();
+
+        $list = [];
+        /** @var MaterialSlave $item */
+        foreach ($result_list as &$item) {
+            $data = $item->toArray();
+            $where = [
+                'target_id' => $item['material_id'],
+                'target_type' => self::MATERIAL_TYPE,
+                'role_type' => self::AUDIT_ROLE,
+                'audit_order' => 1
+            ];
+
+            $auditor1 = $relation->where($where)->find();
+            $data['auditor1']['admin_id'] = $auditor1['admin_id'];
+            $data['auditor1']['nickname'] = userData($auditor1['admin_id'])['nickname'];
+            $data['auditor1']['audit_status'] = $auditor1['audit_status'];
+            $data['auditor1']['audit_note'] = $auditor1['audit_note'];
+
+            $where['audit_order'] = 2;
+            $auditor2 = $relation->where($where)->find();
+            $data['auditor2']['admin_id'] = $auditor2['admin_id'];
+            $data['auditor2']['nickname'] = userData($auditor2['admin_id'])['nickname'];
+            $data['auditor2']['audit_status'] = $auditor2['audit_status'];
+            $data['auditor2']['audit_note'] = $auditor2['audit_note'];
+
+            $data['mg_name'] = Db::name('material_grouping')->where(['mg_id' => $data['mg_id']])->value('mg_name');
+            $data['audit_note'] = $auditor1['audit_note'] ? $auditor1['audit_note'] : $auditor2['audit_note'];
+
+            $data['creator']['nickname'] = userData($data['creator_id'])['nickname'];
+            $data['creator']['admin_id'] = $data['creator_id'];
+            unset($data['creator_id'], $data['mg_id']);
+
+            $list[] = $data;
+        }
+
+        return [
+            'total' => $total,
+            'list' => $list,
+        ];
+    }
+}

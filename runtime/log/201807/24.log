@@ -1,0 +1,2011 @@
+---------------------------------------------------------------
+[ 2018-07-24T13:20:06+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.216000s][吞吐率：4.63req/s] [内存消耗：1,860.84kb] [文件加载：52]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532409606) [ RunTime:0.031000s ]
+---------------------------------------------------------------
+[ 2018-07-24T13:20:06+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.031000s][吞吐率：32.26req/s] [内存消耗：880.48kb] [文件加载：38]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-24T13:40:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.426000s][吞吐率：2.35req/s] [内存消耗：1,861.27kb] [文件加载：52]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532410799) [ RunTime:0.038000s ]
+---------------------------------------------------------------
+[ 2018-07-24T13:40:29+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.067000s][吞吐率：14.93req/s] [内存消耗：1,861.23kb] [文件加载：52]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532410829) [ RunTime:0.029000s ]
+---------------------------------------------------------------
+[ 2018-07-24T13:40:30+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：1,861.23kb] [文件加载：52]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532410830) [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-07-24T13:52:35+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.114011s][吞吐率：8.77req/s] [内存消耗：2,063.34kb] [文件加载：60]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532411555) [ RunTime:0.031003s ]
+[ error ] [8192]Non-static method app\common\library\KCloudData::getK3BillType() should not be called statically[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php:124]
+---------------------------------------------------------------
+[ 2018-07-24T13:53:19+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.931093s][吞吐率：1.07req/s] [内存消耗：2,003.59kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532411598) [ RunTime:0.039004s ]
+---------------------------------------------------------------
+[ 2018-07-24T13:53:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/node/getDetail?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.122012s][吞吐率：8.20req/s] [内存消耗：2,003.10kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetail[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetail' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532411606) [ RunTime:0.029003s ]
+---------------------------------------------------------------
+[ 2018-07-24T13:59:31+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.128013s][吞吐率：7.81req/s] [内存消耗：2,041.35kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532411971) [ RunTime:0.022002s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:00:03+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.115011s][吞吐率：8.69req/s] [内存消耗：2,062.60kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412003) [ RunTime:0.022002s ]
+[ error ] [2]json_decode() expects parameter 1 to be string, array given[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:21]
+---------------------------------------------------------------
+[ 2018-07-24T14:00:14+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.134013s][吞吐率：7.46req/s] [内存消耗：2,062.63kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412014) [ RunTime:0.027002s ]
+[ error ] [2]json_decode() expects parameter 1 to be string, array given[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:21]
+---------------------------------------------------------------
+[ 2018-07-24T14:00:23+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.116011s][吞吐率：8.62req/s] [内存消耗：2,041.76kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412023) [ RunTime:0.028003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:00:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/getK3BDSaler/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/getK3BDSaler/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.018002s][吞吐率：55.55req/s] [内存消耗：881.88kb] [文件加载：38]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2',
+    2 => 'getK3BDSaler',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-24T14:00:58+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getK3BDSaler?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getK3BDSaler?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.091009s][吞吐率：10.99req/s] [内存消耗：2,000.09kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getK3BDSaler',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getk3bdsaler' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412058) [ RunTime:0.032003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:01:18+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.354035s][吞吐率：2.82req/s] [内存消耗：2,049.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412078) [ RunTime:0.028003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:02:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.350035s][吞吐率：2.86req/s] [内存消耗：2,041.77kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412120) [ RunTime:0.027003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:02:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.103010s][吞吐率：9.71req/s] [内存消耗：2,041.77kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412124) [ RunTime:0.011001s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:02:14+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.112012s][吞吐率：8.93req/s] [内存消耗：2,041.46kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412134) [ RunTime:0.030003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:04:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.150015s][吞吐率：6.67req/s] [内存消耗：2,041.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412241) [ RunTime:0.030003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:04:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.105010s][吞吐率：9.52req/s] [内存消耗：2,041.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412251) [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:04:40+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.495050s][吞吐率：2.02req/s] [内存消耗：2,041.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412279) [ RunTime:0.024002s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:05:19+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.166017s][吞吐率：6.02req/s] [内存消耗：2,041.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412319) [ RunTime:0.030003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:05:36+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.144015s][吞吐率：6.94req/s] [内存消耗：2,041.66kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412336) [ RunTime:0.017001s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:05:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.215021s][吞吐率：4.65req/s] [内存消耗：2,041.97kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412349) [ RunTime:0.057006s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:06:07+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.112011s][吞吐率：8.93req/s] [内存消耗：2,041.98kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412367) [ RunTime:0.013002s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:06:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.216021s][吞吐率：4.63req/s] [内存消耗：2,041.67kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412376) [ RunTime:0.115012s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:06:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.094009s][吞吐率：10.64req/s] [内存消耗：2,041.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412386) [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:06:28+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.105010s][吞吐率：9.52req/s] [内存消耗：2,041.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412388) [ RunTime:0.005001s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:07:08+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.104011s][吞吐率：9.61req/s] [内存消耗：2,041.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412427) [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:07:09+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.102010s][吞吐率：9.80req/s] [内存消耗：2,041.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412429) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:07:17+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.113011s][吞吐率：8.85req/s] [内存消耗：2,041.70kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412437) [ RunTime:0.029003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:08:51+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.327033s][吞吐率：3.06req/s] [内存消耗：2,041.69kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412530) [ RunTime:0.020002s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:09:03+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.148015s][吞吐率：6.76req/s] [内存消耗：2,041.45kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412543) [ RunTime:0.028003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:09:15+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.135014s][吞吐率：7.41req/s] [内存消耗：2,041.76kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532412555) [ RunTime:0.028003s ]
+---------------------------------------------------------------
+[ 2018-07-24T14:21:03+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.077007s][吞吐率：12.99req/s] [内存消耗：2,041.74kb] [文件加载：60]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532413263) [ RunTime:0.033003s ]
+[ error ] [2]Missing argument 1 for app\common\library\KCloudData::commonQuery(), called in E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php on line 20 and defined[E:\phpStudy\WWW\plm_dev\application\common\library\KCloudData.php:298]
+---------------------------------------------------------------
+[ 2018-07-24T14:22:20+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.170017s][吞吐率：5.88req/s] [内存消耗：2,109.76kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532413340) [ RunTime:0.038004s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:17:30+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.223000s][吞吐率：4.48req/s] [内存消耗：2,111.13kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryCL9GAhEYAfuILx3q',
+  'postman-token' => '9f179dd5-dcf4-091e-d50f-ba87faa4a3d2',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532416649) [ RunTime:0.030000s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:23:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15 [运行时间：0.162000s][吞吐率：6.17req/s] [内存消耗：2,042.16kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532416980) [ RunTime:0.031000s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:24:53+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.155000s][吞吐率：6.45req/s] [内存消耗：2,042.20kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532417093) [ RunTime:0.036000s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:26:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.156000s][吞吐率：6.41req/s] [内存消耗：1,940.14kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532417160) [ RunTime:0.026000s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:36:14+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.075000s][吞吐率：13.33req/s] [内存消耗：1,818.83kb] [文件加载：52]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532417774) [ RunTime:0.037000s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:38:09+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.118000s][吞吐率：8.47req/s] [内存消耗：2,042.23kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532417889) [ RunTime:0.032000s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:44:41+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.336100s][吞吐率：2.98req/s] [内存消耗：2,042.23kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012003s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532418281) [ RunTime:0.023006s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:44:55+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.115034s][吞吐率：8.69req/s] [内存消耗：2,041.92kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532418295) [ RunTime:0.028008s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:45:32+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：3.120936s][吞吐率：0.32req/s] [内存消耗：10,201.94kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012004s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532418329) [ RunTime:0.033010s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:45:59+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：1.697509s][吞吐率：0.59req/s] [内存消耗：12,250.24kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011003s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532418358) [ RunTime:0.029009s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:46:02+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：2.363709s][吞吐率：0.42req/s] [内存消耗：12,250.24kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=2&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011004s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532418360) [ RunTime:0.003001s ]
+---------------------------------------------------------------
+[ 2018-07-24T15:54:31+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：1.762176s][吞吐率：0.57req/s] [内存消耗：12,252.26kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=10&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532418869) [ RunTime:0.029003s ]
+---------------------------------------------------------------
+[ 2018-07-24T16:08:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/index?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.070007s][吞吐率：14.28req/s] [内存消耗：1,857.84kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=10&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=3mjtcg6lvjs8n3pgtsuq7r4cd0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->index[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/index' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1532419737) [ RunTime:0.018001s ]

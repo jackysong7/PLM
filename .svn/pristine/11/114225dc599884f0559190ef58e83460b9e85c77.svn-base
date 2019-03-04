@@ -1,0 +1,74 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: chenhailiang
+ * Date: 2018/4/2
+ * Time: 14:59
+ */
+namespace app\api\model;
+
+use think\Db;
+use think\Model;
+
+class AdminRule extends Model
+{
+    public static function getList(){
+        $where = 'status = 1';
+        $list = Db::name('admin_rule')
+            ->field('rule_id,parent_id,rule_name')
+            ->where($where)
+            ->order('rule_id desc')
+            ->select();
+        return $list;
+    }
+
+    public static function edit($params){
+        $adminRule = self::get(['rule_id'=>$params['rule_id']]);
+        $params['updatetime'] = time();
+        if($adminRule){
+            $result = $adminRule->save($params);
+            return $result;
+        }
+    }
+
+    /**
+     * 获取权限规则编码
+     */
+    public static function getRuleCodeList($params)
+    {
+        $where['status'] = '1';
+        $where['rule_id'] = array('IN',$params);
+        $list = Db::name('admin_rule')
+            ->field('rule_code')
+            ->where($where)
+            ->select();
+        return $list;
+    }
+
+    public static function getJobRules($params){
+        if (empty($params))
+        {
+            return [];
+        }
+        //获取岗位
+        $getJob = Db::name('job')
+            ->where('pj_id',$params['pj_id'])
+            ->find();
+
+        //获取权限列表
+        $list = Db::name('admin_rule')
+            ->field('rule_id,parent_id,rule_name')
+            ->where('status = 1')
+            ->order('rule_id desc')
+            ->select();
+
+        foreach($list as $k=>$v){
+            $rules = explode(',',$getJob['rules']);
+            if(in_array($v['rule_id'],$rules)){
+                $data[] = $list[$k];
+            }
+        }
+
+        return $data;
+    }
+}

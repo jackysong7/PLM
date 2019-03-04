@@ -1,0 +1,514 @@
+<?php
+
+namespace app\api\model;
+
+use app\common\library\Auth;
+use think\Exception;
+use think\exception\DbException;
+use think\Model;
+use think\Db;
+
+class Project extends Model
+{
+    //已退市
+    const EXIT_LISTED = -3;
+    //停止
+    const STOPPED = -2;
+    //暂停
+    const PAUSED = -1;
+    //未开始
+    const NOT_STARTED = 0;
+    //开发在途
+    const DEV = 1;
+    //已上市
+    const LISTED = 2;
+
+    /**
+     * 查询frontEndData详情
+     * @param string $frontEndData json数据
+     * @throws DbException
+     */
+    public static function getFrontEndDataDetail($frontEndData)
+    {
+        $frontEndData = json_decode($frontEndData, true);
+
+        $admin = new Admin();
+        $docTemplate = new DocTemplate();
+
+        $adminField = 'admin_id,nickname';
+        $docTemplateField = 'tpl_id,tpl_name';
+
+        $frontEndData['product_manager'] = $admin->field($adminField)
+            ->select($frontEndData['product_manager']);
+
+        $frontEndData['project_manager'] = $admin->field($adminField)
+            ->select($frontEndData['project_manager']);
+
+        $frontEndData['product_committee'] = $admin->field($adminField)
+            ->select($frontEndData['product_committee']);
+
+        foreach ($frontEndData['flow_chart_data']['nodeDataArray'] as &$nodeData) {
+            if (isset($nodeData['uploader'])) {
+                $nodeData['uploader'] = $admin->field($adminField)->select($nodeData['uploader']);
+            }
+
+            if (isset($nodeData['auditor'])) {
+                $nodeData['auditor'] = $admin->field($adminField)->select($nodeData['auditor']);
+            }
+
+            if (isset($nodeData['output_doc'])) {
+                $nodeData['output_doc'] = $docTemplate->field($docTemplateField)->select($nodeData['output_doc']);
+            }
+        }
+
+        return $frontEndData;
+    }
+
+    /**
+     * 获取项目详情
+     * @throws DbException
+     */
+    public function getProjectDetail()
+    {
+        $projectNode = new ProjectNode();
+        $admin = new Admin();
+        $dir = new Dir();
+        $docTemplate = new DocTemplate();
+
+        $adminField = 'admin_id,nickname';
+        $docTemplateField = 'tpl_id,tpl_name';
+
+        $frontEndData = json_decode($this->front_end_data, true);
+
+        $frontEndData['product_manager'] = $admin->field($adminField)
+            ->select($frontEndData['product_manager']);
+
+        $frontEndData['project_manager'] = $admin->field($adminField)
+            ->select($frontEndData['project_manager']);
+
+        /** @var ProjectNode[] $projectNodes */
+        $projectNodes = $projectNode->where([
+            'status' => ProjectNode::STATUS_STARTED,
+            'project_id' => $this->project_id,
+            ])->select();
+
+        $currentNode = [];
+        $nodeDataArray = $frontEndData['flow_chart_data']['nodeDataArray'];
+        foreach ($projectNodes as &$projectNode) {
+            $nodeData = isset($nodeDataArray[$projectNode->node_key]) ? $nodeDataArray[$projectNode->node_key] : null;
+            $plmDirName = $dir->where('plm_dir_id', $projectNode->process_id)->value('plm_dir_name');
+
+            $currentNodeData = [
+                'node_id' => $projectNode->node_id,
+                'node_name' => $plmDirName,
+                'version' => $projectNode->version,
+                'status' => $projectNode->status,
+                'start_time' => $projectNode->start_time,
+                'end_time' => $projectNode->end_time,
+                'actual_start_time' => $projectNode->actual_start_time,
+                'actual_end_time' => $projectNode->actual_end_time,
+            ];
+
+            if (isset($nodeData['uploader'])) {
+                $currentNodeData['uploader'] = $admin->field($adminField)->select($nodeData['uploader']);
+            }
+
+            if (isset($nodeData['auditor'])) {
+                $currentNodeData['auditor'] = $admin->field($adminField)->select($nodeData['auditor']);
+            }
+
+            if (isset($nodeData['output_doc'])) {
+                $currentNodeData['output_doc'] = $docTemplate->field($docTemplateField)->select($nodeData['output_doc']);
+            }
+
+            $currentNode[] = $currentNodeData;
+        }
+
+        return [
+            'project_id' => $this->project_id,
+            'project_name' => $this->project_name,
+            'category_id' => $this->category_id,
+            'status' => $this->status,
+            'start_time' => $this->start_time,
+            'end_time' => $this->end_time,
+            'actual_start_time' => $this->actual_start_time,
+            'actual_end_time' => $this->actual_end_time,
+            'is_plan' => $this->is_plan,
+            'pp_id' => $this->pp_id,
+            'add_time' => $this->add_time,
+            'product_manager' => $frontEndData['product_manager'],
+            'project_manager' => $frontEndData['project_manager'],
+            'current_node' => $currentNode,
+        ];
+    }
+
+    /*
+     * 通过节点id获取项目信息表的数据
+     */
+    public static function getInfo($gc_id)
+    {
+        $projectInfo = Db::name('project')
+            ->alias('p')
+            ->field('p.project_id,p.status,p.start_time,p.end_time,p.actual_start_time,p.actual_end_time,d.gc_name')
+            ->join('goods_category d', 'p.category_id = d.gc_id', 'LEFT')
+           // ->join('relation r','p.project_id = r.target_id','LEFT')
+            ->where('p.category_id',$gc_id)
+            ->find();
+
+
+        return $projectInfo;
+    }
+
+    /*
+     * 通过gc_id查找project表的主键值（project_id)
+     */
+    public static function getProjectId($gc_id)
+    {
+        $projectInfo = Db::name('project')
+            ->field('project_id')
+            ->where('category_id',$gc_id)
+            ->find();
+
+        return $projectInfo;
+    }
+
+    /*
+     * 通过project_id获取流程图
+     */
+    public static function flowchartByPid($project_id)
+    {
+        $flowchartList = Db::name('project')->field('front_end_data')->where('project_id',$project_id)->find();
+
+
+        return $flowchartList;
+    }
+
+    /**
+     * 获取某条数据信息
+     */
+    public static function getProjectInfo($condition,$field = '*')
+    {
+        return Db::table('plm_project')->where($condition)->field($field)->select();
+    }
+
+    /**
+     * 获去项目状态
+     */
+    public static function getProjectStatus($map)
+    {
+        return Db::table('plm_project')->where($map)->value('status');
+    }
+
+
+    /**
+     * 新建项目
+     * @param $data
+     * @return mixed
+     */
+    public static function newProject($data)
+    {
+        $nodeList = self::nodeList($data['flow_chart_data']);
+
+        //获取admin_id
+        $adminId = Auth::instance()->getUser()['admin_id'];
+
+        //保存项目
+        $project = new Project();
+        $project->project_name = $data['project_name'];
+        $project->category_id = $data['category_id'];
+        $project->is_plan = $data['is_plan'];
+        $project->front_end_data = json_encode($data);
+        $project->pp_id = isset($data['pp_id']) ? $data['pp_id'] : '';
+        $project->add_time = time();
+        //开始节点的完成日期，即项目的计划开始时间
+        $project->start_time = $nodeList['start']['finish_date'];
+        $project->creator_id = $adminId;
+        $project->save();
+
+        //保存物料编码
+        $basedata = new Basedata();
+        $basedata->plm_no = $data['material_sn'];
+        $basedata->plm_ttm = date('Y');
+        $basedata->admin_id = $adminId;
+        $basedata->createtime = time();
+        $basedata->project_id = $project->project_id;
+        $basedata->save();
+
+        //保存项目的产品经理
+        foreach ($data['product_manager'] as $productManager) {
+            $relation = new Relation();
+            $relation->target_id = $project->project_id;
+            $relation->target_type = Relation::TARGET_TYPE_PROJECT;
+            $relation->admin_id = $productManager;
+            $relation->role_type = Relation::ROLE_TYPE_PRODUCT_MANAGER;
+            $relation->save();
+        }
+
+        //保存项目的项目经理
+        foreach ($data['project_manager'] as $projectManager) {
+            $relation = new Relation();
+            $relation->target_id = $project->project_id;
+            $relation->target_type = Relation::TARGET_TYPE_PROJECT;
+            $relation->admin_id = $projectManager;
+            $relation->role_type = Relation::ROLE_TYPE_PROJECT_MANAGER;
+            $relation->save();
+        }
+
+        //保存项目的产品委员会
+        foreach ($data['product_committee'] as $productCommittee) {
+            $relation = new Relation();
+            $relation->target_id = $project->project_id;
+            $relation->target_type = Relation::TARGET_TYPE_PROJECT;
+            $relation->admin_id = $productCommittee;
+            $relation->role_type = Relation::ROLE_TYPE_PRODUCT_COMMITTEE;
+            $relation->save();
+        }
+
+        //保存项目节点
+        foreach ($nodeList as $item) {
+            //节点数据
+            $projectNode = new ProjectNode();
+            $projectNode->project_id = $project->project_id;
+            $projectNode->process_id = isset($item['node_name_id']) ? $item['node_name_id'] : '';
+            $projectNode->days = isset($item['days']) ? $item['days'] : '';
+            $projectNode->node_key = isset($item['key']) ? $item['key'] : '';
+            $projectNode->node_type = isset($item['category']) ? $item['category'] : '';
+            $projectNode->end_time = isset($item['finish_date']) ? $item['finish_date'] : '';
+            $projectNode->doc_tpl_ids = isset($item['output_doc']) ? implode(',', $item['output_doc']) : '';
+            $projectNode->save();
+
+            //节点上传人员
+            if (isset($item['uploader'])) {
+                foreach ($item['uploader'] as $uploader) {
+                    $relation = new Relation();
+                    $relation->target_id = $projectNode->node_id;
+                    $relation->target_type = Relation::TARGET_TYPE_PROJECT_NODE;
+                    $relation->admin_id = $uploader;
+                    $relation->role_type = Relation::ROLE_TYPE_UPLOADER;
+                    $relation->save();
+                }
+            }
+
+            //节点审核人员
+            if (isset($item['auditor'])) {
+                foreach ($item['auditor'] as $auditor) {
+                    $relation = new Relation();
+                    $relation->target_id = $projectNode->node_id;
+                    $relation->target_type = Relation::TARGET_TYPE_PROJECT_NODE;
+                    $relation->admin_id = $auditor;
+                    $relation->role_type = Relation::ROLE_TYPE_AUDITOR;
+                    $relation->save();
+                }
+            }
+        }
+
+        //保存节点连线
+        foreach ($data['flow_chart_data']['linkArray'] as $link) {
+            $projectLine = new ProjectLine();
+            $projectLine->project_id = $project->project_id;
+            $projectLine->from = isset($link['from']) ? $link['from'] : '';
+            $projectLine->to = isset($link['to']) ? $link['to'] : '';
+            $projectLine->text = isset($link['text']) ? $link['text'] : '';
+            $projectLine->save();
+        }
+
+        return $project->project_id;
+    }
+
+    /**
+     * 节点数据合并
+     * @param $flowChartData
+     * @return array
+     */
+    public static function nodeList($flowChartData)
+    {
+        $nodeList = [];
+        foreach ($flowChartData['nodeArray'] as $node) {
+            $nodeData = isset($flowChartData['nodeDataArray'][$node['key']]) ?
+                $flowChartData['nodeDataArray'][$node['key']] : [];
+
+            $mergeData = array_merge($node, $nodeData);
+
+            if (in_array($node['category'], ['start', 'end'])) {
+                $nodeList[$node['category']] = $mergeData;
+            } else {
+                $nodeList[] = $mergeData;
+            }
+        }
+        return $nodeList;
+    }
+
+    /**
+     * 项目流程图信息
+     * @param $projectId
+     * @return array|mixed|string
+     * @throws DbException
+     */
+    public static function getFlowChart($projectId)
+    {
+        $frontEndData = self::where(['project_id' => $projectId])->value('front_end_data');
+        $returnData = $frontEndData ? self::getFrontEndDataDetail($frontEndData) : [];
+        $returnData['status'] = self::getProjectStatus(['project_id' => $projectId]);
+        //节点项目的开始时间、结束时间等
+        $timeInfo = self::getInfoByProjectId($projectId,'start_time,end_time,actual_start_time,actual_end_time');
+        $returnData['start_time'] = $timeInfo['start_time'];
+        $returnData['end_time'] = $timeInfo['end_time'];
+        $returnData['actual_start_time'] = $timeInfo['actual_start_time'];
+        $returnData['actual_end_time'] = $timeInfo['actual_end_time'];
+        //统计完成进度
+        $doneStatus = self::getInfoByProjectId($projectId,'status');
+        if($doneStatus['status'] == self::LISTED )//已经上市
+        {
+            //计算完成进度
+            if($timeInfo['actual_end_time'] <= $timeInfo['end_time'])
+            {
+                $returnData['progress'] = '100%';
+            }
+            else
+            {
+                $day = intval(($timeInfo['actual_end_time'] - $timeInfo['end_time'])/(3600*24));
+                $returnData['progress'] = '超时'.$day.'天';
+            }
+        }
+        elseif($doneStatus['status'] == self::DEV)//如果项目在开发中，计算该项目节点的完成进度
+        {
+            $where['project_id'] = $projectId;
+            //统计所有的项目
+            $projectCount = self::countProjects($where);
+            //统计已结束的所有项目
+            $where['status'] = 2;
+            $finishCount = self::countProjects($where);
+            $returnData['progress'] = round($finishCount/$projectCount*100).'%';
+        }
+        elseif($doneStatus['status'] == self::NOT_STARTED)//未开始
+        {
+            $returnData['progress'] = self::NOT_STARTED;
+        }else{
+            $returnData['progress'] = '-';
+        }
+        //当前节点信息
+        $returnData['current_node'] = \app\api\model\ProjectNode::getCurrentNode(['project_id' => $projectId], 'n.node_id,n.process_id node_name_id,d.plm_dir_name node_name,n.node_key,n.version,n.status,n.audit_time,n.start_time,n.actual_start_time,n.actual_end_time,n.end_time');
+        return $returnData;
+    }
+
+    /**
+     * 项目列表
+     * @param $data
+     * @throws DbException
+     */
+    public static function getList($data)
+    {
+        if (!isset($data['page_no'])) $data['page_no'] = 1;
+        if (!isset($data['page_size'])) $data['page_size'] = 10;
+
+        $where = [];
+        if (!empty($data['keyword'])) {
+            $where['project_name'] = ['like', "%{$data['keyword']}%"];
+        }
+
+        $totalNumber = self::where($where)->count();
+        $list = [];
+        /** @var \app\api\model\Project[] $projects */
+        $projects = self::where($where)->page($data['page_no'], $data['page_size'])->select();
+        foreach ($projects as $project) {
+            $list[] = $project->getProjectDetail();
+        }
+
+        return [
+            'totalNumber' => $totalNumber,
+            'list' => $list,
+        ];
+    }
+
+    /**
+     * 根据时间统计项目
+     * @param $data
+     * @return array
+     */
+    public static function countByTime($data)
+    {
+        $project = new Project();
+        $projectPlan = new ProjectPlan();
+        $projectCount = [];
+        $planProjectCount = [];
+        $time = strtotime($data['year'] . '0101');
+        //type：1 按月份统计，2 按季度统计
+        $type = $data['type'] == 1 ? 12 : 4;
+        for ($i = 1; $i <= $type; $i++) {
+            $time2 = strtotime(12 / $type . 'month', $time);
+            $projectCount[] = $project
+                ->where('add_time', '>=', $time)
+                ->where('add_time', '<', $time2)
+                ->where('status', \app\api\model\Project::LISTED)
+                ->count();
+            $planProjectCount[] = $projectPlan
+                ->where('add_time', '>=', $time)
+                ->where('add_time', '<', $time2)
+                ->count();
+            $time = $time2;
+        }
+
+        return [
+            'project' => $projectCount,
+            'plan_project' => $planProjectCount
+        ];
+    }
+
+    /*
+     * 根据project_id获取一条信息
+     */
+    public static function getInfoByProjectId($projectId,$field)
+    {
+        return Db::name('project')->where('project_id',$projectId)->field($field)->find();
+    }
+
+    /*
+     *通过project_id统计节点项目
+     */
+    public static function countProjects($where)
+    {
+        return Db::name('project_node')->where($where)->count();
+    }
+
+    /**
+     * 启动项目
+     * @param $projectId
+     * @throws Exception
+     */
+    public static function start($projectId)
+    {
+        //设置项目的实际开始时间
+        $result = self::update(['actual_start_time' => time()], ['project_id' => $projectId])->getConnection()->getNumRows();
+        if (!$result) {
+            throw new Exception('修改失败');
+        }
+
+        //设置开始节点状态为已结束
+        ProjectNode::update(['status' => ProjectNode::STATUS_END], ['project_id' => $projectId, 'node_type' => 'start']);
+
+        //设置开始节点下一节点的实际开始时间
+        $startNodeKey = ProjectNode::where(['project_id' => $projectId, 'node_type' => 'start'])->value('node_key');
+        $startNodeKeyTo = ProjectLine::where(['project_id' => $projectId, 'from' => $startNodeKey])->column('to');
+        ProjectNode::update([
+            'actual_start_time' => time()
+        ], [
+            'project_id' => $projectId,
+            'node_key' => ['in', $startNodeKeyTo]
+        ]);
+    }
+
+    /**
+     * 修改项目状态
+     * @param $data
+     * @throws Exception
+     */
+    public static function editStatus($data)
+    {
+        $result = self::update(['status' => $data['status']], ['project_id' => $data['project_id']])
+            ->getConnection()->getNumRows();
+
+        if (!$result) {
+            throw new Exception('修改失败');
+        }
+    }
+}

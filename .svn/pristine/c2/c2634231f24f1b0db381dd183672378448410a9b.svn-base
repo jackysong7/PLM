@@ -1,0 +1,169 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2018/7/18 10:05
+// +----------------------------------------------------------------------
+// | TITLE: 自定义表格表数据库操作模型
+// +----------------------------------------------------------------------
+
+namespace app\api\model;
+
+use think\Model;
+use think\Db;
+
+class UitableviewValue extends Model
+{
+    protected $table = 'plm_uitableview_value';
+
+    /*
+     * 添加数据
+     */
+    public static function add($params)
+    {
+        if(!empty($params['view_id'])) $data['view_id'] = $params['view_id'];//属性ID
+        if(!empty($params['project_id'])) $data['project_id'] = $params['project_id'];//项目ID
+        if(!empty($params['tpl_id'])) $data['tpl_id'] = $params['tpl_id'];//文档模板ID
+        if(!empty($params['node_id'])) $data['node_id'] = $params['node_id'];//节点id
+        if(!empty($params['attr_value'])) $data['attr_value'] = $params['attr_value'];//输入框文本内容
+        $data['admin_id'] = $params['admin_id'];
+        $data['createtime']  = time();
+
+        $result = self::insertGetId($data);
+        return $result;
+    }
+
+    /*
+     * 修改数据
+     */
+    public static function updateInfo($params)
+    {
+        $where['view_id'] = $params['view_id'];
+
+        /*if(!empty($params['project_id'])){
+            $data['project_id'] = $params['project_id'];
+        }
+        if(!empty($params['node_id'])){
+            $data['node_id'] = $params['node_id'];
+        }
+        if(!empty($params['tpl_id'])){
+            $data['tpl_id'] = $params['tpl_id'];
+        }*/
+        if(!empty($params['attr_value'])){
+            $data['attr_value'] = $params['attr_value'];
+        }
+        $data['updatetime'] = time();
+        return self::update($data,$where);
+    }
+
+    /*
+     * 获取自定义表格的各分类
+     */
+    public static function getUValueInfo($tplId)
+    {
+
+        $list = Db::name('uitableview')
+            ->field('view_id,attr_name,type,parent_id')
+            ->where('tpl_id',$tplId)
+            ->select();
+        foreach($list as $k=>$v)
+        {
+            //判断type类型是否为单选、多选，再去plm_uitableview_value表判断是否选中（有数据为选中，反之为未选中）
+            if($v['type'] == 2 || $v['type'] == 3)
+            {
+                $list[$k]['checked'] = !empty(self::getUValueByViewId($v['view_id'],'view_id')) ? true : false;
+            }
+            //判断类型是否为输入框，再去plm_uitableview_value表判断输入框是否有内容
+            elseif($v['type'] == 4)
+            {
+                $list[$k]['attr_value']=!empty(self::getUValueByViewId($v['view_id'],'attr_value'))? self::getUValueByViewId($v['view_id'],'attr_value') :'';
+            }
+        }
+        return self::generateTree($list);
+    }
+
+
+    /*
+     * 通过view_id查找属性信息
+     */
+    public static function getUValueByViewId($viewId,$get)
+    {
+        return self::where('view_id',$viewId)->value($get);
+    }
+
+
+    /*
+     * 生成树结构
+     */
+    public static function generateTree($array)
+    {
+        //构造数据
+        $items = [];$tree = [];
+        foreach($array as $value)
+        {
+            $items[$value['view_id']] = $value;
+        }
+        //遍历数据 生成树状结构
+        foreach($items as $key => $value)
+        {
+            unset($items[$key]['parent_id']);
+            if(isset($items[$value['parent_id']]))
+            {
+                $items[$value['parent_id']]['list'][] = &$items[$key];
+            }else{
+                $tree[] = &$items[$key];
+            }
+        }
+       /* echo '<pre>';
+        print_r($tree);die;*/
+        return $tree;
+    }
+
+    //生成树结构<引用算法>暂时不用
+    private static function makeTree($arr)
+    {
+        $refer = [];$tree = [];
+        foreach($arr as $k => $v)
+        {
+            //创建主键的数组引用
+            $refer[$v['view_id']] = &$arr[$k];
+        }
+
+        foreach($arr as $k => $v)
+        {
+            $pid = $v['parent_id'];
+            if($pid == 0)
+            {
+                $tree[] = &$arr[$k];
+            }
+            else
+            {
+                if(isset($refer[$pid]))
+                {
+                    //如果存在父级栏目，则添加进父级栏目的子栏目数组中
+                    $refer[$pid]['list'][] = &$arr[$k];
+                }
+            }
+        }
+      /*  echo '<pre>';
+        print_r($tree);die;*/
+        return $tree;
+    }
+
+    /*
+     * 通过tpl_id修改为删除状态（伪删除）
+     */
+    public static function setState($tplId)
+    {
+        return Db::name('uitableview_value')->where('tpl_id',$tplId)->setField('status',-1);
+
+    }
+
+    /*
+     * 通过tpl_id删除数据
+     */
+    public static function del($tplId)
+    {
+        return Db::name('uitableview_value')->where('tpl_id',$tplId)->delete();
+    }
+}

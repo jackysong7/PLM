@@ -1,0 +1,57 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2019/1/12 10:30
+// +----------------------------------------------------------------------
+// | TITLE: 审核人设置
+// +----------------------------------------------------------------------
+
+namespace app\api\controller\v2;
+
+use app\api\controller\Api;
+
+class Setting extends Api
+{
+    //设置审核人
+    public function setAuditor()
+    {
+        $jsonData = $this->request->param();
+        $params = json_decode($jsonData['data'],true);
+        $result = $this->validate($params, [
+            'type' => 'require|integer|>:0',//>:0
+            'audit_order' => 'require|integer|>:0',
+            'auditor_ids' => 'require|array',
+        ]);
+
+
+        if ($result !== true)
+        {
+            $this->returnmsg(401,$result);
+        }
+        $set_res = \app\api\model\Relation::setMaterialAuditor($params);
+        if ($set_res) {
+            $this->returnmsg(200,'success！',[]);
+        } else {
+            $this->returnmsg(400,'操作失败！', []);
+        }
+
+    }
+
+
+    //获取审核人列表
+    public function getAuditorList()
+    {
+        $jsonData = $this->request->param();
+        $params = json_decode($jsonData['data'],true);
+        $result = $this->validate($params, [
+            'type' => 'require|integer|>:0',//>:0
+        ]);
+
+        if ($result !== true)
+        {
+            $this->returnmsg(401,$result);
+        }
+        $this->returnmsg(200,'success！',\app\api\model\Relation::getAuditorList($params['type']));
+    }
+}

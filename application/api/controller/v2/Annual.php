@@ -1,0 +1,102 @@
+<?php
+
+/* 
+ * 年度列表
+ * 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+namespace app\api\controller\v2;
+
+use app\api\controller\Api;
+use think\Controller;
+use think\Validate;
+class Annual extends Api
+{
+    public function _initialize()
+    {
+        parent::_initialize();
+        $this->userInfo = $this->auth->getUser();
+    }
+    //新增年度
+    public function add()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'year'  => 'require',
+        ];
+        $msg = [
+            'year.require' => '年度名称不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        $row = \app\api\model\Annual::add($data);
+
+        if($row == 2)
+        {
+            return $this->returnmsg(401,'年份重复');
+        }else{
+            return $this->returnmsg(200,'success！',$row);
+        }
+
+    }
+    //修改年度
+    public function update()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'year'  => 'require',
+        ];
+        $msg = [
+            'year.require' => '年度名称不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }        
+        
+        $row = \app\api\model\Annual::editYear($data);
+        if($row){
+            return $this->returnmsg(200,'success！');
+        }else{
+            return $this->returnmsg(400,'修改失败！');
+        }
+    }
+    
+    //获取年度列表
+    
+    public function getList()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'type'  => 'require|integer',
+        ];
+        $msg = [
+            'type.require' => '类型必须填写！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        
+        $row = \app\api\model\Annual::getList();
+        
+        return $this->returnmsg(200,'success!',$row);
+    }
+}
+

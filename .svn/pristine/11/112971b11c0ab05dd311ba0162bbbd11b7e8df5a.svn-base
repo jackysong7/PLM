@@ -1,0 +1,448 @@
+<?php
+
+namespace app\api\controller\v2;
+
+use app\api\controller\Api;
+use app\api\model\ProjectNode;
+use think\Db;
+use think\exception\DbException;
+
+class Project extends Api
+{
+    //需要权限验证的接口
+//    protected $needRight = ['newProject','getFlowChart','getFlowChartTpl'];
+
+    /**
+     * 新建项目
+     * @link http://192.168.80.240:4999/web/#/5?page_id=134
+     */
+    public function newProject($data)
+    {
+        //读取请求数据
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'is_plan' => 'require|in:0,1',
+            'product_manager' => 'require',
+            'project_manager' => 'require',
+            'product_committee' => 'require',
+            'project_name' => 'require',
+            'category_id' => 'require',
+            'material_sn' => 'require',
+            'flow_chart_data' => 'require',
+            'flow_chart_data.nodeDataArray' => 'require',
+            'flow_chart_data.linkDataArray' => 'require',
+            'flow_chart_data.nodeInfoArray' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        Db::startTrans();
+        try {
+            $projectId = \app\api\model\Project::newProject($data);
+            Db::commit();
+        } catch (\Exception $e) {
+            Db::rollback();
+            $this->returnmsg(400, $e->getMessage());
+        }
+
+        $this->returnmsg(200, 'success！', ['project_id' => $projectId]);
+    }
+
+    /**
+     * 项目流程图信息
+     * @link http://192.168.80.240:4999/web/#/5?page_id=146
+     */
+    public function getFlowChart($data)
+    {
+        //读取请求数据
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'project_id' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        try {
+            $this->returnmsg(200, 'success!', \app\api\model\Project::getFlowChart($data['project_id']));
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+
+    }
+
+    /**
+     * 流程图模板列表
+     */
+    public function getTemplateList($data)
+    {
+        //读取请求数据
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'page_no' => 'number|>:0',
+            'page_size' => 'number|>:0',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        try {
+            $this->returnmsg(200, 'success!', \app\api\model\ProjectTpl::getList($data));
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+    /**
+     * 根据模板ID获取流程图
+     */
+    public function getFlowChartTpl($data)
+    {
+        //读取请求数据
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'tpl_id' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        try {
+            $this->returnmsg(200, 'success!', \app\api\model\ProjectTpl::getFlowChartTpl($data['tpl_id']));
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+    /**
+     * 将流程图保存为模板
+     * @link http://192.168.80.240:4999/web/#/5?page_id=162
+     */
+    public function saveAsTemplate($data)
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'is_plan' => 'require|in:0,1',
+            'product_manager' => 'require',
+            'project_manager' => 'require',
+            'product_committee' => 'require',
+            'project_name' => 'require',
+            'category_id' => 'require',
+            'material_sn' => 'require',
+            'flow_chart_data' => 'require',
+            'flow_chart_data.nodeDataArray' => 'require',
+            'flow_chart_data.linkDataArray' => 'require',
+            'flow_chart_data.nodeInfoArray' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        $this->returnmsg(200, 'success！', ['tpl_id' => \app\api\model\ProjectTpl::saveAsTemplate($data)]);
+    }
+
+    /**
+     * 项目列表
+     * @link http://192.168.80.240:4999/web/#/5?page_id=164
+     */
+    public function getList($data)
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'page_no' => 'number|>:0',
+            'page_size' => 'number|>:0',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        try {
+            $this->returnmsg(200, 'success!', \app\api\model\Project::getList($data));
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+    /**
+     * 项目列表搜索
+     * @link http://192.168.80.240:4999/web/#/5?page_id=165
+     */
+    public function search($data)
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'keyword' => 'require',
+            'page_no' => 'number|>:0',
+            'page_size' => 'number|>:0',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        try {
+            $this->returnmsg(200, 'success!', \app\api\model\Project::getList($data));
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+    /**
+     * 获取分类某层级列表信息
+     */
+    public function getClassifyTierList()
+    {
+        $json = $this->request->param();
+        $array = json_decode($json['data'], true);
+
+        $condition['gc_level'] = $array['gc_level'] ? $array['gc_level'] : 0;
+        $condition['status'] = 1;
+        $field = 'gc_id,gc_name,sort';
+
+        $list = \app\api\model\Category::getDataList($condition, $field);
+
+        if ($array['type'] == 1) {
+            $projectField = 'project_id,project_name';
+            foreach ($list as $key => $val) {
+                $row = $val->toArray();
+                $projectWhere['category_id'] = $row['gc_id'];
+                $projectData = \app\api\model\Project::getProjectInfo($projectWhere, $projectField);
+                $list[$key]['project_list'] = $projectData;
+            }
+        }
+
+        if (!empty($list)) {
+            return $this->returnmsg(200, '获取数据成功', $list);
+        } else {
+            return $this->returnmsg(200, '暂无数据');
+        }
+    }
+
+    /**
+     * 根据流程统计项目
+     * @link http://192.168.80.240:4999/web/#/5?page_id=188
+     */
+    public function countByNode()
+    {
+        try {
+            $this->returnmsg(200, 'success!', \app\api\model\ProjectNode::countByNode());
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+    /**
+     * 获取项目列表简要信息
+     * @param string $data
+     * @link http://192.168.80.240:4999/web/#/5?page_id=189
+     */
+    public function getSimpleList($data = '')
+    {
+        //读取请求数据
+        $data = json_decode($data, true);
+
+        $validate = function ($value, $data) {
+            return !empty($data['process_id']) || !empty($data['year']) ? true : 'process_id和year必填一个';
+        };
+
+        //数据验证
+        $result = $this->validate($data, [
+            'process_id' => $validate,
+            'year' => [$validate, 'length:4']
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        $projectNode = new ProjectNode();
+        $project = new \app\api\model\Project();
+        $list = [];
+        try {
+            if (!empty($data['process_id'])) {
+                $projectId = $projectNode->where(['process_id' => $data['process_id']])->column('DISTINCT project_id');
+                $list = $project->field('project_id,project_name,is_plan')->select($projectId);
+            } elseif (!empty($data['year'])) {
+                $time = strtotime($data['year'] . '0101');
+                $list = $project->field('project_id,project_name,is_plan')
+                    ->where(['actual_start_time' => ['>=', $time]])->select();
+            }
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+
+        $this->returnmsg(200, 'success!', $list);
+    }
+
+    /**
+     * 根据时间统计项目
+     * @param string $data
+     * @link http://192.168.80.240:4999/web/#/5?page_id=190
+     */
+    public function countByTime($data = '')
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'year' => 'require|length:4',
+            'type' => 'require|in:1,2'
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        $this->returnmsg(200, 'success!', \app\api\model\Project::countByTime($data));
+    }
+
+    /**
+     * 统计项目节点完成进度
+     * @param string $data
+     * @link http://192.168.80.240:4999/web/#/5?page_id=191
+     */
+    public function getNodeFinishStatus($data = '')
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'project_id' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        try {
+            $this->returnmsg(200, 'success!', \app\api\model\ProjectNode::getNodeFinishStatus($data));
+        } catch (DbException $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+    /**
+     * 启动项目
+     */
+    public function start($data = '')
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'project_id' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        Db::startTrans();
+        try {
+            \app\api\model\Project::start($data['project_id']);
+            Db::commit();
+            $this->returnmsg(200, 'success!');
+        } catch (\Exception $e) {
+            Db::rollback();
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+    /**
+     * 删除流程图模板
+     * @param string $data
+     */
+    public function delFlowChartTpl($data = '')
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'tpl_id' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        try {
+            \app\api\model\ProjectTpl::delFlowChartTpl($data['tpl_id']);
+            $this->returnmsg(200, 'success!');
+        } catch (\Exception $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+    /**
+     * 修改项目状态
+     * @param string $data
+     */
+    public function editStatus($data = '')
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'project_id' => 'require',
+            'status' => 'require|in:-3,-2,-1,1,2',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        try {
+            \app\api\model\Project::editStatus($data);
+            $this->returnmsg(200, 'success!');
+        } catch (\Exception $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+
+    /**
+     * 关联项目与ERP物料
+     * @param string $data
+     */
+    public function bindErpMaterial($data = '')
+    {
+        $data = json_decode($data, true);
+
+        //数据验证
+        $result = $this->validate($data, [
+            'project_id' => 'require',
+            'material_sn' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+
+        try {
+            \app\api\model\Project::bindErpMaterial($data);
+            $this->returnmsg(200, 'success!');
+        } catch (\Exception $e) {
+            $this->returnmsg(400, $e->getMessage());
+        }
+    }
+}

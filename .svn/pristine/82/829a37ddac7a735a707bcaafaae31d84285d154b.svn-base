@@ -1,0 +1,43 @@
+<?php
+
+namespace app\api\model;
+
+use think\Db;
+use think\Model;
+class Annual extends Model
+{
+    protected $table = 'plm_year';
+    
+    public static function add ($params)
+    {
+        $data = array(
+            "year"=>$params['year'],
+            "type"=>$params['type'],
+            "add_time"=>time()
+        );
+        Db::name('year')->insert($data);
+        $id = Db::name('year')->getLastInsID();
+        return array("id"=>(int)$id);
+    }
+    
+    public static function editYear($param)
+    {
+        $where['id'] = $param['id'];
+        $data['year'] = $param['year'];
+        $data['type'] = $param['type'];
+        return self::update($data,$where);
+    }
+    
+    public static function getList()
+    {
+        $where['status'] = 1;
+        $where['type'] = 1;
+        $array = Db::name('year')->field('id,year')->where($where)->select();
+        if($array){
+            return $array;
+        }else{
+            return [];
+        }
+    }
+}
+

@@ -1,0 +1,44 @@
+<?php
+/**
+ * Gearman 异步处理
+ * Created by PhpStorm.
+ * User: weibx
+ * Date: 2018/7/24
+ * Time: 11:46
+ */
+
+namespace app\common\library;
+
+use think\Config;
+
+class GearmanAsync
+{
+    protected $client;
+
+    public function __construct()
+    {
+        $this->client= new GearmanClient();
+        $this->client->addServer(Config::get('gearman.host'), Config::get('gearman.port'));
+    }
+
+    /**
+     * Gearman 异步处理邮件发送
+     * $job 邮件通知的内容
+     */
+    public function sendEmail($job = array()){
+
+        $job = json_encode($job);
+        //不等待返回结果，就会结束
+        $this->client->doBackground("sendEmail", $job);
+    }
+
+    /**
+     * Gearman 异步处理短信发送
+     * $job 短信通知的内容
+     */
+    public function sendSms($job = array()){
+        $job = json_encode($job);
+        //不等待返回结果，就会结束
+        $this->client->doBackground("sendSms", $job);
+    }
+}

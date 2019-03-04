@@ -1,0 +1,1483 @@
+---------------------------------------------------------------
+[ 2018-08-02T10:39:23+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.393000s][吞吐率：2.54req/s] [内存消耗：2,068.81kb] [文件加载：60]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533177563) [ RunTime:0.035000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533177563) [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-08-02T10:39:23+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.029000s][吞吐率：34.48req/s] [内存消耗：883.41kb] [文件加载：40]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-02T11:05:23+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.174017s][吞吐率：5.75req/s] [内存消耗：2,094.87kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179122) [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.003001s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.312031s][吞吐率：3.20req/s] [内存消耗：2,094.83kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.025002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179330) [ RunTime:0.057006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.023003s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:09:26+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.142014s][吞吐率：7.04req/s] [内存消耗：2,095.08kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179366) [ RunTime:0.030003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:09:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.108011s][吞吐率：9.26req/s] [内存消耗：2,095.08kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179367) [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:09:48+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.202021s][吞吐率：4.95req/s] [内存消耗：2,021.43kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179388) [ RunTime:0.081008s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:11:02+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.176017s][吞吐率：5.68req/s] [内存消耗：2,091.59kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179462) [ RunTime:0.028003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:11:12+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.125012s][吞吐率：8.00req/s] [内存消耗：2,091.84kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179472) [ RunTime:0.038004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:12:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.117012s][吞吐率：8.55req/s] [内存消耗：2,092.14kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179536) [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:12:38+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.170017s][吞吐率：5.88req/s] [内存消耗：2,090.91kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179558) [ RunTime:0.061006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:13:02+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.140014s][吞吐率：7.14req/s] [内存消耗：2,055.52kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179582) [ RunTime:0.028003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:13:36+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.129013s][吞吐率：7.75req/s] [内存消耗：2,090.91kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179616) [ RunTime:0.036003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:14:19+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.132013s][吞吐率：7.58req/s] [内存消耗：2,091.59kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179659) [ RunTime:0.014002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:14:22+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.139014s][吞吐率：7.19req/s] [内存消耗：2,091.59kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179662) [ RunTime:0.029003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:16:47+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.204021s][吞吐率：4.90req/s] [内存消耗：2,092.19kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179807) [ RunTime:0.039004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.050005s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:17:30+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.117012s][吞吐率：8.55req/s] [内存消耗：2,090.98kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179850) [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:17:50+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.111011s][吞吐率：9.01req/s] [内存消耗：2,055.23kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179870) [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:18:40+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.113012s][吞吐率：8.85req/s] [内存消耗：2,091.96kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533179920) [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:21:21+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.114011s][吞吐率：8.77req/s] [内存消耗：2,023.19kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180080) [ RunTime:0.016002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101298 , 'G01' , '原材料' , 1) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:22:23+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.152015s][吞吐率：6.58req/s] [内存消耗：2,088.66kb] [文件加载：60]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180142) [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101298 , 'G01' , '原材料' , 1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101299 , 'G02' , '自制半成品' , 1) [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101300 , 'G03' , '线材成品' , 1) [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G04'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101301 , 'G04' , '音频成品' , 1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101302 , 'G05' , '壳膜成品' , 1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G06'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101303 , 'G06' , '车充成品' , 1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G07'  AND `type` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101304 , 'G07' , '适配器成品' , 1) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G08'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101305 , 'G08' , '商业电源成品' , 1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G09'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101306 , 'G09' , '充电背包成品' , 1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G10'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101307 , 'G10' , '碱性电池成品' , 1) [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G11'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101308 , 'G11' , '市场物料成品' , 1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G12'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101309 , 'G12' , '笔电成品' , 1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G13'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101310 , 'G13' , '移动电源成品' , 1) [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G14'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101311 , 'G14' , '服务' , 1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G15'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (101312 , 'G15' , '资产' , 1) [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'hhh'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_material_grouping` (`mg_id` , `mg_code` , `mg_name` , `type`) VALUES (481033 , 'hhh' , '哈哈哈' , 1) [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:26:34+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.141014s][吞吐率：7.09req/s] [内存消耗：2,064.67kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180394) [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:27:17+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.132014s][吞吐率：7.57req/s] [内存消耗：2,065.21kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180437) [ RunTime:0.030003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:27:42+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.121012s][吞吐率：8.26req/s] [内存消耗：2,055.59kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180462) [ RunTime:0.033003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:28:42+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.165016s][吞吐率：6.06req/s] [内存消耗：2,077.77kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180522) [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G04'  AND `type` = 1 LIMIT 1 [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05'  AND `type` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G06'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G07'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G08'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G09'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G10'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G11'  AND `type` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G12'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G13'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G14'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G15'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'hhh'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:29:22+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.142015s][吞吐率：7.04req/s] [内存消耗：2,111.52kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180562) [ RunTime:0.030003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G04'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05'  AND `type` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G06'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G07'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G08'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G09'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G10'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G11'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G12'  AND `type` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G13'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G14'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G15'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'hhh'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:29:43+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.163016s][吞吐率：6.13req/s] [内存消耗：2,112.05kb] [文件加载：62]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180583) [ RunTime:0.036003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G04'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G06'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G07'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G08'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G09'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G10'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G11'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G12'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G13'  AND `type` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G14'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G15'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'hhh'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:30:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.465046s][吞吐率：2.15req/s] [内存消耗：2,077.77kb] [文件加载：57]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180601) [ RunTime:0.052006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02'  AND `type` = 1 LIMIT 1 [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03'  AND `type` = 1 LIMIT 1 [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G04'  AND `type` = 1 LIMIT 1 [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05'  AND `type` = 1 LIMIT 1 [ RunTime:0.026003s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G06'  AND `type` = 1 LIMIT 1 [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G07'  AND `type` = 1 LIMIT 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G08'  AND `type` = 1 LIMIT 1 [ RunTime:0.026003s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G09'  AND `type` = 1 LIMIT 1 [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G10'  AND `type` = 1 LIMIT 1 [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G11'  AND `type` = 1 LIMIT 1 [ RunTime:0.025003s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G12'  AND `type` = 1 LIMIT 1 [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G13'  AND `type` = 1 LIMIT 1 [ RunTime:0.026003s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G14'  AND `type` = 1 LIMIT 1 [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G15'  AND `type` = 1 LIMIT 1 [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'hhh'  AND `type` = 1 LIMIT 1 [ RunTime:0.022002s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:32:31+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.230023s][吞吐率：4.35req/s] [内存消耗：2,154.54kb] [文件加载：58]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180751) [ RunTime:0.027003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G04'  AND `type` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G06'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G07'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G08'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G09'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G10'  AND `type` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G11'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G12'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G13'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G14'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G15'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'hhh'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G01',`mg_name`='原材料',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101298 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G02',`mg_name`='自制半成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101299 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G03',`mg_name`='线材成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101300 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G04',`mg_name`='音频成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101301 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G05',`mg_name`='壳膜成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101302 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G06',`mg_name`='车充成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101303 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G07',`mg_name`='适配器成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101304 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G08',`mg_name`='商业电源成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101305 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G09',`mg_name`='充电背包成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101306 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G10',`mg_name`='碱性电池成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101307 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G11',`mg_name`='市场物料成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101308 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G12',`mg_name`='笔电成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101309 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G13',`mg_name`='移动电源成品',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101310 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G14',`mg_name`='服务',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101311 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G15',`mg_name`='资产',`parent_id`=0,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 101312 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='hhh',`mg_name`='哈哈哈',`parent_id`=101309,`type`=1,`updatetime`=1533180751  WHERE  `mg_id` = 481033 [ RunTime:0.001001s ]
+---------------------------------------------------------------
+[ 2018-08-02T11:34:21+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.163016s][吞吐率：6.13req/s] [内存消耗：2,105.67kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=0s8jbnf1c21ldhplhqhia55ot3',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'plm_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533180861) [ RunTime:0.026003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_material_grouping` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G01'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G02'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G03'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G04'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G05'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G06'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G07'  AND `type` = 1 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G08'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G09'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G10'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G11'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G12'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G13'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G14'  AND `type` = 1 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'G15'  AND `type` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mg_id` FROM `plm_material_grouping` WHERE  `mg_code` = 'hhh'  AND `type` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G01',`mg_name`='原材料',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101298 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G02',`mg_name`='自制半成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101299 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G03',`mg_name`='线材成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101300 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G04',`mg_name`='音频成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101301 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G05',`mg_name`='壳膜成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101302 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G06',`mg_name`='车充成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101303 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G07',`mg_name`='适配器成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101304 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G08',`mg_name`='商业电源成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101305 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G09',`mg_name`='充电背包成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101306 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G10',`mg_name`='碱性电池成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101307 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G11',`mg_name`='市场物料成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101308 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G12',`mg_name`='笔电成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101309 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G13',`mg_name`='移动电源成品',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101310 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G14',`mg_name`='服务',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101311 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='G15',`mg_name`='资产',`parent_id`=0,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 101312 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `plm_material_grouping`  SET `mg_code`='hhh',`mg_name`='哈哈哈',`parent_id`=101309,`type`=1,`updatetime`=1533180861  WHERE  `mg_id` = 481033 [ RunTime:0.000000s ]

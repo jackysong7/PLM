@@ -1,0 +1,334 @@
+---------------------------------------------------------------
+[ 2018-12-06T10:10:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudErp/addTest
+[ info ] www.plm_dev123.net/api/v2/KcloudErp/addTest [运行时间：0.205021s][吞吐率：4.88req/s] [内存消耗：1,001.45kb] [文件加载：40]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudErp',
+    2 => 'addTest',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:10:04+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.023002s][吞吐率：43.47req/s] [内存消耗：888.95kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'PHPSESSID=h22q2qq783900mu098n88ngt44',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/KcloudErp/addTest',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:10:13+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetail?access_token=c65ae0c1-a1fb-4be6-8c4a-2ada58b0b1e3&data={%22node_id%22:573}
+[ info ] www.plm_dev123.net/api/v2/node/getDetail?access_token=c65ae0c1-a1fb-4be6-8c4a-2ada58b0b1e3&data={%22node_id%22:573} [运行时间：0.083008s][吞吐率：12.05req/s] [内存消耗：1,153.00kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'PHPSESSID=h22q2qq783900mu098n88ngt44',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'c65ae0c1-a1fb-4be6-8c4a-2ada58b0b1e3',
+  'data' => '{"node_id":573}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:14:24+08:00 ] ::1 ::1 GET /plm_dev/public/index.php/api/v2/node/getDetail?access_token=c65ae0c1-a1fb-4be6-8c4a-2ada58b0b1e3&data={%22node_id%22:573}
+[ info ] localhost/plm_dev/public/index.php/api/v2/node/getDetail?access_token=c65ae0c1-a1fb-4be6-8c4a-2ada58b0b1e3&data={%22node_id%22:573} [运行时间：0.046005s][吞吐率：21.74req/s] [内存消耗：1,153.98kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'pgv_pvi=1838865408; ECS[visit_times]=1; NTKF_T2D_CLIENTID=guest68F2F7F3-DBA3-B3BC-ED94-CDB703FD4057; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1537338075; PHPSESSID=kc4gufabj9mh3k9j7kf7uhsau2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'c65ae0c1-a1fb-4be6-8c4a-2ada58b0b1e3',
+  'data' => '{"node_id":573}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:14:42+08:00 ] ::1 ::1 GET /plm_dev/public/index.php
+[ info ] localhost/plm_dev/public/index.php [运行时间：0.021003s][吞吐率：47.61req/s] [内存消耗：889.52kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'pgv_pvi=1838865408; ECS[visit_times]=1; NTKF_T2D_CLIENTID=guest68F2F7F3-DBA3-B3BC-ED94-CDB703FD4057; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1537338075; PHPSESSID=kc4gufabj9mh3k9j7kf7uhsau2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:15:03+08:00 ] ::1 ::1 GET /plm_dev/public/index.php
+[ info ] localhost/plm_dev/public/index.php [运行时间：0.035004s][吞吐率：28.57req/s] [内存消耗：889.55kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1838865408; ECS[visit_times]=1; NTKF_T2D_CLIENTID=guest68F2F7F3-DBA3-B3BC-ED94-CDB703FD4057; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1537338075; PHPSESSID=kc4gufabj9mh3k9j7kf7uhsau2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:15:41+08:00 ] ::1 ::1 GET /plm_dev/public/index.php
+[ info ] localhost/plm_dev/public/index.php [运行时间：0.022002s][吞吐率：45.45req/s] [内存消耗：890.23kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1838865408; ECS[visit_times]=1; NTKF_T2D_CLIENTID=guest68F2F7F3-DBA3-B3BC-ED94-CDB703FD4057; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1537338075; PHPSESSID=kc4gufabj9mh3k9j7kf7uhsau2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:15:45+08:00 ] ::1 ::1 GET /plm_dev/public/index.php
+[ info ] localhost/plm_dev/public/index.php [运行时间：0.042004s][吞吐率：23.81req/s] [内存消耗：890.23kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1838865408; ECS[visit_times]=1; NTKF_T2D_CLIENTID=guest68F2F7F3-DBA3-B3BC-ED94-CDB703FD4057; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1537338075; PHPSESSID=kc4gufabj9mh3k9j7kf7uhsau2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:15:55+08:00 ] ::1 ::1 GET /plm_dev/public/index.php/api/v2
+[ info ] localhost/plm_dev/public/index.php/api/v2 [运行时间：0.051005s][吞吐率：19.61req/s] [内存消耗：954.05kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1838865408; ECS[visit_times]=1; NTKF_T2D_CLIENTID=guest68F2F7F3-DBA3-B3BC-ED94-CDB703FD4057; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1537338075; PHPSESSID=kc4gufabj9mh3k9j7kf7uhsau2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:16:00+08:00 ] ::1 ::1 GET /plm_dev/public/index.php/api/v2/doc/
+[ info ] localhost/plm_dev/public/index.php/api/v2/doc/ [运行时间：0.078007s][吞吐率：12.82req/s] [内存消耗：1,215.27kb] [文件加载：44]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=1838865408; ECS[visit_times]=1; NTKF_T2D_CLIENTID=guest68F2F7F3-DBA3-B3BC-ED94-CDB703FD4057; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1537338075; PHPSESSID=kc4gufabj9mh3k9j7kf7uhsau2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:20:58+08:00 ] ::1 ::1 GET /plm_dev/public/index.php/api/v2/doc/
+[ info ] localhost/plm_dev/public/index.php/api/v2/doc/ [运行时间：0.060006s][吞吐率：16.66req/s] [内存消耗：1,215.45kb] [文件加载：44]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.doc',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; pgv_pvi=1838865408; ECS[visit_times]=1; NTKF_T2D_CLIENTID=guest68F2F7F3-DBA3-B3BC-ED94-CDB703FD4057; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1537338075; PHPSESSID=kc4gufabj9mh3k9j7kf7uhsau2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-06T10:21:02+08:00 ] ::1 ::1 GET /plm_dev/public/index.php
+[ info ] localhost/plm_dev/public/index.php [运行时间：0.040004s][吞吐率：25.00req/s] [内存消耗：889.80kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=4&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=1838865408; ECS[visit_times]=1; NTKF_T2D_CLIENTID=guest68F2F7F3-DBA3-B3BC-ED94-CDB703FD4057; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1537338075; PHPSESSID=kc4gufabj9mh3k9j7kf7uhsau2',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

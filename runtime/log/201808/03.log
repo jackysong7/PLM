@@ -1,0 +1,2165 @@
+---------------------------------------------------------------
+[ 2018-08-03T14:26:13+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.339034s][吞吐率：2.95req/s] [内存消耗：2,011.24kb] [文件加载：60]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533277573) [ RunTime:0.025002s ]
+[ error ] [0]致命错误: Class 'app\api\controller\v2\SoapClient' not found[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:26:13+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.031003s][吞吐率：32.25req/s] [内存消耗：883.41kb] [文件加载：40]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-03T14:27:55+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.088008s][吞吐率：11.36req/s] [内存消耗：2,011.77kb] [文件加载：60]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533277674) [ RunTime:0.025002s ]
+[ error ] [0]致命错误: Class 'app\api\controller\v2\SoapClient' not found[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:28:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.076008s][吞吐率：13.16req/s] [内存消耗：2,011.61kb] [文件加载：60]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.014002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533277729) [ RunTime:0.011001s ]
+[ error ] [0]致命错误: Class 'app\api\controller\v2\SoapClient' not found[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:31:38+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.073007s][吞吐率：13.70req/s] [内存消耗：2,011.77kb] [文件加载：60]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533277898) [ RunTime:0.018002s ]
+[ error ] [0]致命错误: Class 'app\api\controller\v2\SoapClient' not found[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:31:39+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.050005s][吞吐率：20.00req/s] [内存消耗：2,011.77kb] [文件加载：60]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533277899) [ RunTime:0.004001s ]
+[ error ] [0]致命错误: Class 'app\api\controller\v2\SoapClient' not found[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:32:15+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：2.392239s][吞吐率：0.42req/s] [内存消耗：2,024.46kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533277932) [ RunTime:0.024002s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.6227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.6227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.6227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.6227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:33:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.092009s][吞吐率：10.87req/s] [内存消耗：2,022.74kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533277981) [ RunTime:0.025003s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:33:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.099010s][吞吐率：10.10req/s] [内存消耗：2,022.74kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533278029) [ RunTime:0.023002s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:33:53+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.058006s][吞吐率：17.24req/s] [内存消耗：2,022.74kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533278032) [ RunTime:0.003000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:35:29+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.091009s][吞吐率：10.99req/s] [内存消耗：2,022.79kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533278129) [ RunTime:0.027002s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:36:50+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.754075s][吞吐率：1.33req/s] [内存消耗：2,024.88kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533278209) [ RunTime:0.033003s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:37:47+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.314031s][吞吐率：3.18req/s] [内存消耗：2,024.88kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533278267) [ RunTime:0.029003s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:40:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.449045s][吞吐率：2.23req/s] [内存消耗：1,939.00kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533278399) [ RunTime:0.047005s ]
+---------------------------------------------------------------
+[ 2018-08-03T14:42:13+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.369926s][吞吐率：2.70req/s] [内存消耗：2,024.34kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013997s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.012997s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533278532) [ RunTime:0.035993s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx?op=GetBaseItemData' : Extra content at the end of the document
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx?op=GetBaseItemData' : Extra content at the end of the document
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:43:46+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.072985s][吞吐率：13.70req/s] [内存消耗：1,901.93kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001999s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533278626) [ RunTime:0.024995s ]
+---------------------------------------------------------------
+[ 2018-08-03T14:45:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.314937s][吞吐率：3.18req/s] [内存消耗：2,024.88kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009998s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002999s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533278715) [ RunTime:0.026995s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:52:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.298000s][吞吐率：3.36req/s] [内存消耗：2,024.88kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533279146) [ RunTime:0.026000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:52:42+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.095000s][吞吐率：10.53req/s] [内存消耗：2,022.79kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533279162) [ RunTime:0.029000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:52:54+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.078000s][吞吐率：12.82req/s] [内存消耗：2,022.74kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533279174) [ RunTime:0.025000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T14:52:55+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.082000s][吞吐率：12.20req/s] [内存消耗：2,022.74kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533279175) [ RunTime:0.005000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T15:01:01+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.095000s][吞吐率：10.53req/s] [内存消耗：2,024.55kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533279661) [ RunTime:0.029000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://127.0.0.1/soap2/action.wsdl' : failed to load external entity "http://127.0.0.1/soap2/action.wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://127.0.0.1/soap2/action.wsdl' : failed to load external entity "http://127.0.0.1/soap2/action.wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T15:17:06+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：21.107000s][吞吐率：0.05req/s] [内存消耗：2,024.82kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533280605) [ RunTime:0.028000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.17.129/soap/Service.php?wsdl' : failed to load external entity "http://192.168.17.129/soap/Service.php?wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.17.129/soap/Service.php?wsdl' : failed to load external entity "http://192.168.17.129/soap/Service.php?wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T15:17:41+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：21.064000s][吞吐率：0.05req/s] [内存消耗：2,024.82kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533280640) [ RunTime:0.019000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.17.129/soap/Service.php?wsdl' : failed to load external entity "http://192.168.17.129/soap/Service.php?wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.17.129/soap/Service.php?wsdl' : failed to load external entity "http://192.168.17.129/soap/Service.php?wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T15:21:18+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.756000s][吞吐率：1.32req/s] [内存消耗：2,024.95kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533280877) [ RunTime:0.015000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?wsdl' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?wsdl' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T15:21:39+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.600000s][吞吐率：1.67req/s] [内存消耗：2,024.90kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533280898) [ RunTime:0.024000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't find <definitions> in 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?nFItemClassID=1&nUseOrgID=0&nCreateOrgID=0'[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't find <definitions> in 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?nFItemClassID=1&nUseOrgID=0&nCreateOrgID=0'[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T15:21:56+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.282000s][吞吐率：3.55req/s] [内存消耗：2,024.95kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533280915) [ RunTime:0.003000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?wsdl' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?wsdl' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?wsdl"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:71]
+---------------------------------------------------------------
+[ 2018-08-03T15:26:08+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.323000s][吞吐率：3.10req/s] [内存消耗：2,025.44kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533281168) [ RunTime:0.043000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:74]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:74]
+---------------------------------------------------------------
+[ 2018-08-03T15:36:38+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.334000s][吞吐率：2.99req/s] [内存消耗：2,025.44kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533281798) [ RunTime:0.026000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:74]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:74]
+---------------------------------------------------------------
+[ 2018-08-03T15:40:03+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.145000s][吞吐率：6.90req/s] [内存消耗：2,025.17kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533282003) [ RunTime:0.055000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "https://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:74]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'https://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "https://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:74]
+---------------------------------------------------------------
+[ 2018-08-03T15:43:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.358000s][吞吐率：2.79req/s] [内存消耗：2,025.52kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533282191) [ RunTime:0.033000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+---------------------------------------------------------------
+[ 2018-08-03T15:46:59+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15}
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6&data={%22node_id%22:15} [运行时间：0.342000s][吞吐率：2.92req/s] [内存消耗：2,025.52kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'data' => '{"node_id":15}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\",\"data\":\"{\\\"node_id\\\":15}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533282418) [ RunTime:0.034000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+---------------------------------------------------------------
+[ 2018-08-03T15:47:13+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.330000s][吞吐率：3.03req/s] [内存消耗：2,025.36kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533282433) [ RunTime:0.030000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+---------------------------------------------------------------
+[ 2018-08-03T15:47:30+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.344000s][吞吐率：2.91req/s] [内存消耗：2,025.42kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.021000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533282450) [ RunTime:0.032000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+---------------------------------------------------------------
+[ 2018-08-03T15:48:27+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.335000s][吞吐率：2.99req/s] [内存消耗：2,025.42kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533282507) [ RunTime:0.039000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:75]
+---------------------------------------------------------------
+[ 2018-08-03T15:54:09+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.319000s][吞吐率：3.13req/s] [内存消耗：2,015.45kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533282849) [ RunTime:0.051000s ]
+[ error ] [2]file_get_contents(http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData): failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:73]
+---------------------------------------------------------------
+[ 2018-08-03T15:54:46+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.415000s][吞吐率：2.41req/s] [内存消耗：1,831.23kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533282886) [ RunTime:0.032000s ]
+---------------------------------------------------------------
+[ 2018-08-03T15:56:33+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.324000s][吞吐率：3.09req/s] [内存消耗：2,013.61kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533282992) [ RunTime:0.030000s ]
+[ error ] [2]file_get_contents(http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData?nFItemClassID=1): failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T15:56:42+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.411000s][吞吐率：2.43req/s] [内存消耗：1,829.30kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533283002) [ RunTime:0.020000s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:14:10+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.103000s][吞吐率：9.71req/s] [内存消耗：2,022.29kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284050) [ RunTime:0.013000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T16:14:29+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.116000s][吞吐率：8.62req/s] [内存消耗：2,022.24kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.022000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284069) [ RunTime:0.029000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T16:14:31+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.068000s][吞吐率：14.71req/s] [内存消耗：2,022.24kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284071) [ RunTime:0.003000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T16:14:50+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.320000s][吞吐率：3.13req/s] [内存消耗：2,024.34kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.017000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284090) [ RunTime:0.016000s ]
+[ error ] [0]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+[ error ] [1]SOAP-ERROR: Parsing WSDL: Couldn't load from 'http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData' : failed to load external entity "http://192.168.60.227:8018/WebService1.asmx/GetBaseItemData"
+[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T16:15:00+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.083000s][吞吐率：12.05req/s] [内存消耗：2,022.24kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284100) [ RunTime:0.016000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T16:17:03+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.112000s][吞吐率：8.93req/s] [内存消耗：2,022.27kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284223) [ RunTime:0.020000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T16:19:07+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.111000s][吞吐率：9.01req/s] [内存消耗：2,022.87kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284347) [ RunTime:0.029000s ]
+[ error ] [0]SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+[ error ] [1]SoapClient::SoapClient(): 'uri' option is required in nonWSDL mode[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T16:19:55+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.062000s][吞吐率：16.13req/s] [内存消耗：1,828.42kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284395) [ RunTime:0.018000s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:21:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.101000s][吞吐率：9.90req/s] [内存消耗：2,023.63kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284516) [ RunTime:0.012000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T16:22:17+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.126000s][吞吐率：7.94req/s] [内存消耗：2,023.67kb] [文件加载：61]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284537) [ RunTime:0.055000s ]
+[ error ] [0]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+[ error ] [1]SoapClient::SoapClient(): Invalid parameters[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:72]
+---------------------------------------------------------------
+[ 2018-08-03T16:22:45+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.077000s][吞吐率：12.99req/s] [内存消耗：1,828.42kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284565) [ RunTime:0.031000s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:24:42+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.131000s][吞吐率：7.63req/s] [内存消耗：2,016.31kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.018000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284682) [ RunTime:0.003000s ]
+[ error ] [0]Internal Server Error[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:76]
+---------------------------------------------------------------
+[ 2018-08-03T16:24:59+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.095000s][吞吐率：10.53req/s] [内存消耗：1,828.42kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284699) [ RunTime:0.030000s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:26:25+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.125000s][吞吐率：8.00req/s] [内存消耗：2,016.37kb] [文件加载：59]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284785) [ RunTime:0.050000s ]
+[ error ] [0]Internal Server Error[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php:76]
+---------------------------------------------------------------
+[ 2018-08-03T16:29:33+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.080000s][吞吐率：12.50req/s] [内存消耗：1,828.40kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533284973) [ RunTime:0.024000s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:55:04+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.058000s][吞吐率：17.24req/s] [内存消耗：1,828.40kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533286504) [ RunTime:0.004000s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:55:04+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.033000s][吞吐率：30.30req/s] [内存消耗：883.13kb] [文件加载：40]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-08-03T16:55:14+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.072000s][吞吐率：13.89req/s] [内存消耗：1,828.40kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533286514) [ RunTime:0.020000s ]
+---------------------------------------------------------------
+[ 2018-08-03T16:55:58+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6
+[ info ] www.plm_dev123.net/api/v2/KcloudTest/getMaterialGroup?access_token=67b7bcf9-852c-417b-b27b-643e2a4584b6 [运行时间：0.064000s][吞吐率：15.63req/s] [内存消耗：1,828.41kb] [文件加载：53]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.KcloudTest',
+    2 => 'getMaterialGroup',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=6&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1ciohukf403olgpdi8m6a21vc1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => '67b7bcf9-852c-417b-b27b-643e2a4584b6',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\KcloudTest->getMaterialGroup[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\KcloudTest.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'kcloudtest/getmaterialgroup' , '67b7bcf9-852c-417b-b27b-643e2a4584b6' , '{\"access_token\":\"67b7bcf9-852c-417b-b27b-643e2a4584b6\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1533286558) [ RunTime:0.022000s ]

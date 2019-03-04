@@ -1,0 +1,39 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2018/7/10 13:51
+// +----------------------------------------------------------------------
+// | TITLE: 标准资源库名称Model层数据操作
+// +----------------------------------------------------------------------
+
+namespace app\api\model;
+use think\Db;
+use think\Model;
+
+class ResourceNameModel extends Model
+{
+    /*
+     * 通过process_id获取资源库的数据
+     */
+    public static function getResourceById($processId)
+    {
+        $where['year'] = date('Y');
+        $where['process_id'] = $processId;
+        $where['type'] = 1;
+        $where['status'] = 1;
+        $list = Db::name('resource_name')
+            ->field('id,year,file_name plm_dir_name')
+            ->where($where)
+            ->find();
+        if(empty($list))//前端要求，没有数据给空值
+        {
+            $list = [
+                'id' =>'',
+                'year'=>'',
+                'plm_idr_name'=>''
+            ];
+        }
+        return $list;
+    }
+}

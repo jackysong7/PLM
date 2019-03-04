@@ -1,0 +1,76 @@
+<?php
+
+namespace app\api\model;
+
+use think\Model;
+use think\Db;
+
+class BomMaterial extends Model
+{
+	 /*
+     * 新增BOM表与物料的关系表
+     */
+    public static function add($params)
+    {
+        if(!empty($params['bom_id'])){
+            $data['bom_id'] = $params['bom_id'];
+        }
+        if(!empty($params['material_name'])){
+            $data['material_name'] = $params['material_name'];
+        }
+        if(!empty($params['material_sn'])){
+            $data['material_sn'] = $params['material_sn'];
+        }
+        if(!empty($params['specification'])){
+            $data['specification'] = $params['specification'];
+        }
+        if(!empty($params['numerator_amount'])){
+            $data['numerator_amount'] = $params['numerator_amount'];
+        }
+        if(!empty($params['denominator_amount'])){
+            $data['denominator_amount'] = $params['denominator_amount'];
+        }
+        if(!empty($params['unit'])){
+            $data['unit'] = $params['unit'];
+        }
+        if(!empty($params['remark'])){
+            $data['remark'] = $params['remark'];
+        }
+        if(isset($params['relative']))
+        {
+            $data['relative'] = 1;
+        }
+
+        $result = Db::name('bom_material')->insert($data);
+        return $result;
+    }
+
+
+    /*
+     * 通过bom_id查询对应的父项物料数据
+     */
+    public static function getMaterialInfo($bomId)
+    {
+        $list = Db::name('bom_material')
+            ->field('material_sn,material_name,specification,unit')
+            ->where('bom_id',$bomId)
+            ->where('relative',1)
+            ->find();
+
+        return $list;
+    }
+
+    /*
+     * 通过bom_id查询对应的子项物料数据
+     */
+    public static function getSonMaterialInfo($bomId)
+    {
+        $list = Db::name('bom_material')
+            ->field('material_sn,material_name,specification,numerator_amount,denominator_amount,unit,remark')
+            ->where('bom_id',$bomId)
+            ->where('relative',0)
+            ->select();
+
+        return $list;
+    }
+}

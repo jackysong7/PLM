@@ -1,0 +1,214 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: liujun
+ * Date: 2018/4/4
+ * Time: 13:51
+ */
+namespace app\api\model;
+
+use think\Db;
+use think\Model;
+use think\Config;
+
+class Document extends Model
+{
+    public static function initConnect(){
+        return Db::connect(Config::get('database.center'));
+    }
+
+    public static function checkList($data){
+        return self::get($data);
+    }
+
+    public static function getDirDocList($params)
+    {
+        //查找PLM的名称，上市时间
+        $plm_array = Db::name('basedata')->where('plm_no',$params['plm_no'])->find();
+        if($plm_array){
+            $plm_array =array("plm_no"=>$plm_array['plm_no'],"plm_ttm"=>$plm_array['plm_ttm']);
+        }
+
+        //根据admin_id获取岗位id
+        $job_id = Db::name('admin_info')->field('job_id')->where('admin_id', $params['admin_id'])->value('job_id');
+
+        //查找PLM项目文档目录属性列表
+
+        $plm_dir = Db::table('plm_dir')->field('plm_dir_id,plm_dir_name,job_list')->where('status',1)->order('sort')->select();
+
+        if($plm_dir){
+            $plm_document = [];
+            foreach ($plm_dir as $key=>$v)
+            {
+                if(in_array($job_id,explode(",",$v['job_list'])) || $params["username"] == "admin") { //这里的job_id 标示的是用admin_id 获取到的岗位的id,超级管理员能查看全部目录结构
+                    $where['plm_dir_id'] = $v['plm_dir_id'];
+                    $where['status'] = 1;
+                    $where['plm_no'] = $params['plm_no'];
+
+                    $res = Db::table('plm_document')->field('pd_id,file_name,file_path,upload_time,admin_id')->where($where)->order('upload_time DESC')->find();
+
+                    if (empty($res)) {
+                        $plm_document[$key]['file_name'] = $plm_document[$key]['file_path'] = $plm_document[$key]['upload_time'] = '';
+                    } else {
+                        $plm_document[$key] = $res;
+                    }
+
+                    $plm_document[$key]['plm_dir_id'] = $v['plm_dir_id'];
+                    $plm_document[$key]['plm_dir_name'] = $v['plm_dir_name'];
+
+                    $plm_document[$key]['admin_name'] = self::initConnect()->name('admin')->where('admin_id',$res['admin_id'])->value("nickname");  //获取用户昵称
+                }
+            }
+        }
+
+        $plm_document = array_values($plm_document);
+        return array("baseData"=>$plm_array,"docList"=>$plm_document);
+    }
+
+    public static function getDocList($params)
+    {
+        $where['plm_no'] = $params['plm_no'];
+        $where['plm_dir_id'] = $params['plm_dir_id'];
+        $where['status'] = 1;
+
+        $count = Db::name('document')
+            ->where($where)
+            ->count();//总记录数
+
+
+        $list = Db::name('document')
+            ->field('pd_id,file_name,admin_id,file_path,upload_time')
+            ->where($where)->order('upload_time DESC')
+            ->page($params['page_no'],$params['page_size'])
+            ->select();
+        foreach ($list as $key=>$v)
+        {
+            $list[$key]['admin_name'] = self::initConnect()->name('admin')->where('admin_id',$v['admin_id'])->value("nickname");//获取用户昵称
+        }
+
+        return array("totalNumber"=>$count,"list"=>$list);
+    }
+
+    public static function deleteDoc($params)
+    {
+        $where['pd_id'] = $params['pd_id'];
+        //$where['admin_id'] = $admin_id;
+
+        $data = array("status"=>3,"admin_id"=>$params['admin_id']);
+        $result = Db::name('document')->where($where)->update($data);
+        if($result){
+
+            $search['plm_dir_id'] = $params['plm_dir_id'];
+            $search['plm_no'] = $params['plm_no'];
+            $search['status'] = 1;
+            $result1 = Db::table('plm_document')->field('pd_id,file_name,file_path,upload_time')->where($search)->order('upload_time DESC')->find();
+            if($result1){
+                $result1['admin_name'] = $params['admin_name'];
+                return $result1;
+            }else{
+                return [];
+            }
+        }else{
+            return -1;
+        }
+    }
+
+    /**
+     * 获取某条数据
+     */
+    public static function getDocumentDataInfo($condition)
+    {
+        return self::get($condition);
+    }
+
+    public static function uploadDoc($params)
+    {
+        $data = array(
+            "plm_no"=>$params['plm_no'],
+            "plm_dir_id"=>$params['plm_dir_id'],
+            "file_name"=>$params['file_name'],
+            "file_path"=>$params['upload_file'],
+            "admin_id"=>$params['admin_id'],
+            "status"=>1,
+            "upload_time"=>time(),
+            "createtime"=>time(),
+            "updatetime"=>time()
+        );
+        Db::name('document')->insert($data);
+        $pd_id = Db::name('document')->getLastInsID();
+
+        return Db::table('plm_document')->field('pd_id,file_name,file_path,upload_time')->where('pd_id',$pd_id)->order('upload_time DESC')->find();
+    }
+
+    /**
+     * 提交自定义文档审核
+     * @param $params
+     * @return bool|int|string
+     */
+    public static function edit($params)
+    {
+        $editResult = self::get(['pd_id'=>$params['doc_id']]);
+        if($editResult)
+        {
+            $where = [
+                'pd_id'=>$params['doc_id'],
+            ];
+            $data = [
+                'submit_status' => 1,
+                'submit_time'=>time()
+            ];
+            $result = Db::name('document')->where($where)->update($data);
+            return $result;
+        }
+        return false;
+    }
+
+    /*
+    * 审核文档
+    */
+    public static function audit($params)
+    {
+        $auditResult = self::get(['pd_id'=>$params['doc_id']]);
+        if($auditResult)
+        {
+            $where = [
+                'pd_id'=>$params['doc_id'],
+            ];
+            $data = [
+                'audit_status' => $params['audit_status'],
+                'audit_note' => !empty($params['audit_note'])?($params['audit_note']):'',
+                'audit_time' => time()
+            ];
+            $result = Db::name('document')->where($where)->update($data);
+            return $result;
+        }
+        return false;
+    }
+
+    /**
+     * 通过doc_id（文档 ID）获取对应信息
+     */
+    public static function docData($docId)
+    {
+        $field = 'd.pd_id doc_id,d.file_name,d.file_path,d.tpl_id,t.tpl_name,d.project_id,p.project_name,d.node_id,d.version,d.createtime add_time';
+        $data = Db::name('document')
+            ->alias('d')
+            ->field($field)
+            ->join('project p','d.project_id=p.project_id','LEFT')
+            ->join('doc_template t','d.tpl_id=t.tpl_id','LEFT')
+            ->where('d.pd_id',$docId)
+            ->where('d.tpl_id','>',0)
+            ->find();
+        if(!empty($data))
+        {
+            $creatorInfo = Relation::getNameByNodeId($data['doc_id'],3);//查找自定义文档创建人员
+            $data['creator'] = isset($creatorInfo[0])?['admin_id'=>$creatorInfo[0]['admin_id'],'nickname'=>$creatorInfo[0]['nickname']] : [];
+            $where['target_id'] = $data['doc_id'];
+            $where['target_type'] = 3;
+            $where['role_type'] = 5;
+            $data['auditor'] = Relation::auditInfo($where);
+        }
+
+        return $data;
+    }
+}

@@ -1,0 +1,421 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2019/1/7 16:08
+// +----------------------------------------------------------------------
+// | TITLE: 物料的基本操作
+// +----------------------------------------------------------------------
+
+namespace app\api\model;
+
+use app\common\library\KCloudApi;
+use app\common\library\KCloudException;
+use think\Model;
+use think\Db;
+use app\common\library\Auth;
+
+class MaterialSlave extends Model
+{
+    const NOT_SUBMIT = 0;
+    const SUBMITTED = 1;
+    const AUDIT_REJECTED = -1; //审核驳回
+    const AUDIT_PASS= 1;
+    const USE_ORG = '深圳罗马仕科技有限公司';
+    const MATERIAL_TYPE = 7; //物料表类型
+    const AUDIT_ROLE = 5; //审核人员类型
+
+    /**
+     * 新增/编辑物料
+     * @param $params
+     * @throws KCloudException
+     */
+    public static function editMaterial($params)
+    {
+        //检查物料编码是否存在，不存在则新增，存在则判断是否可编辑
+        $material_data = Db::name('material_slave')->where("`material_code`='{$params['material_code']}' and `is_new` IN (SELECT MAX(is_new) FROM `plm_material_slave` WHERE `material_code` ='{$params['material_code']}')")->find();
+
+        if (is_array($material_data)) {
+            //未提交、已提交但审核驳回、已提交审核通过可编辑（即数据新增，is_new累加）
+            if ( ($material_data['submit_status'] == self::SUBMITTED) || ($material_data['submit_status'] == self::SUBMITTED && $material_data['audit_status'] == self::AUDIT_REJECTED) || ($material_data['submit_status'] == self::SUBMITTED && $material_data['audit_status'] == self::AUDIT_PASS) ) {
+                $params['update_time'] = time();
+                $material_data['is_new']++ ;
+                $params['is_new'] = $material_data['is_new'];
+            }
+        }
+        return self::saveMaterial($params);
+    }
+
+    /**
+     * 保存物料
+     * @param $data
+     * @throws KCloudException
+     */
+    public static function saveMaterial($data)
+    {
+        $target_id = false;
+        $admin_id = Auth::instance()->getUser()['admin_id'];
+        if (is_array($data)) {
+            $mg_id = Db::name('material_grouping')->where(['mg_code'=>$data['mg_code']])->value('mg_id');
+            $material_data = [
+                'mg_id' => $mg_id, //物料分组id
+                'mg_code' => $data['mg_code'],  //物料分组编码
+                'material_code' => !empty($data['material_code']) ? $data['material_code'] : '', //物料编码
+                'material_code_old' => !empty($data['material_code_old']) ? $data['material_code_old'] : '', //旧物料编码
+                'material_category' => !empty($data['material_category']) ? $data['material_category'] : '', //物料分类
+                'material_name' => $data['material_name'], //物料名称*
+                'specifications' => !empty($data['specifications']) ? $data['specifications'] : '', //规格型号
+                'specifications_code' => !empty($data['specifications_code']) ? $data['specifications_code'] : '', //型号编码
+                'description' => !empty($data['description']) ? $data['description'] : '', //描述
+                'material_attribute' => $data['material_attribute'], //物料属性*
+                'basic_unit' => $data['basic_unit'], //基本单位*
+                'start_batch' => !empty($data['start_batch']) ? $data['start_batch'] : '', //启用批次管理
+//                'img_path' => !empty($data['img_path']) ? $data['img_path'] : '', //图片路径
+                'create_time' => time(), //创建时间
+                'submit_time' => time(), //提交时间
+                'submit_status' => 1, //创提交状态
+                'update_time' => isset($data['update_time']) ? $data['update_time'] : 0, //修改时间
+                'is_new' => isset($data['is_new']) ? $data['is_new'] : 0, //修改时间
+                'creator_id' => $admin_id, //创建者
+                'is_component' => !empty($data['is_component']) ? $data['is_component'] : '', //是否组件
+                'create_org' => $data['create_org'], //创建组织
+                'use_org' => $data['use_org'], //使用组织
+                'is_suite' => $data['is_suite'], //是否套件*
+                'control' => !empty($data['control']) && is_array($data['control']) ? implode('|',$data['control']) : '', //控制
+                'rate' => !empty($data['default_tax_rate']) ? $data['default_tax_rate'] : '', //汇率
+                'inventory_type' => $data['inventory_type'], //存货类别*
+                'tax_type' => !empty($data['tax_type']) ? $data['tax_type'] : '', //税分类
+                'inventory_unit' => $data['inventory_unit'], //库存单位 *
+                'assistant_unit' => !empty($data['assistant_unit']) ? $data['assistant_unit'] : '', //辅助单位
+                'unit_convert' => $data['convert_unit'], //换算方向*
+                'reverse_time' => !empty($data['reverse_time']) ? $data['reverse_time'] : '', //倒冲时机
+                'is_expiration' => !empty($data['enable_expiration']) ? $data['enable_expiration'] : 0, //是否启用保质期管理
+                'batch_num_rule' => !empty($data['batch_num_rule']) ? $data['batch_num_rule'] : 0, //批号编码规则
+                'batch_num_extra' => !empty($data['batch_num_extra']) ? $data['batch_num_extra'] : 0, //批号附属信息
+                'expiration_unit' => !empty($data['expiration_unit']) ? $data['expiration_unit'] : 0, //保质期单位
+                'expiration_date' => !empty($data['expiration_date']) ? $data['expiration_date'] : 0, //保质期
+                'expiration_date_online' => !empty($data['expiration_date_online']) ? $data['expiration_date_online'] : 0, //在架寿命期
+                'allow_return' => !empty($data['allow_return']) ? 1 : 0, //是否允许退货
+                'sale_unit' => $data['sale_unit'], //销售单位*
+                'sale_pricing_unit' => $data['sale_pricing_unit'], //销售计价单位*
+                'purchase_unit' => $data['purchase_unit'], //采购单位*
+                'purchase_price_unit' => $data['purchase_pricing_unit'], //采购计价单位*
+                'is_quota' => !empty($data['enable_quota']) ? 1 : 0, //是否启用配额
+                'quota_way' => !empty($data['quota_way']) ? $data['quota_way'] : 1, //配额方式
+                'min_split_amount' => !empty($data['min_split_amount']) ? $data['min_split_amount'] : 0, //最小拆分量
+                'is_return_material' => !empty($data['allow_return_material']) ? 1 : 0, //是否允许退料
+                'outsource_unit' => !empty($data['outsource_unit']) ? $data['outsource_unit'] : '', //委外单位
+                'outsource_price_unit' => !empty($data['outsource_pricing_unit']) ? $data['outsource_pricing_unit'] : '', //委外计价单位
+                'fixed_lead_time' => !empty($data['fixed_lead_time']) ? $data['fixed_lead_time'] : '', //固定提前期
+                'product_unit' => !empty($data['product_unit']) ? $data['product_unit'] : '', //生产单位
+                'product_type' => !empty($data['product_type']) ? $data['product_type'] : '', //生产类型
+                'standard_labor_hour' => !empty($data['standard_labor_hour']) ? $data['standard_labor_hour'] : '', //标准工时
+                'standard_labor_unit' => !empty($data['standard_labor_unit']) ? $data['standard_labor_unit'] : '', //标准工时单位
+                'issue_qty' => $data['give_material_way'], //发料方式*
+                'over_give_control' => $data['over_give_control'], //超发控制方式*
+                'min_issue_qty' => $data['min_give_material'], //最小发料批量*
+                'min_give_unit' => $data['min_give_unit'], //最小发料单位*
+                'plan_strategy' => $data['plan_strategy'], //计划策略*
+                'manufacture_strategy' => !empty($data['manufacture_strategy']) ? $data['manufacture_strategy'] : '', //制造策略
+                'order_strategy' => $data['order_strategy'], //订货策略*
+                'order_interval_time' => !empty($data['order_interval_time']) ? $data['order_interval_time'] : 0, //订货间隔期
+                'order_interval_unit' => !empty($data['order_interval_unit']) ? $data['order_interval_unit'] : 0, //订货间隔期单位
+                'plan_area' => !empty($data['plan_area']) ? $data['plan_area'] : '', //最小发料批量
+                'mrp_combine' => !empty($data['MPR_combine']) ? $data['MPR_combine'] : '', //最小发料批量
+                'product_level' => !empty($data['product_level']) ? $data['product_level'] : '', //产品变动级别
+                'vary_lead_time_unit' => !empty($data['vary_lead_time_unit']) ? $data['vary_lead_time_unit'] : '', //变动提前单位
+                'vary_lead_time' => $data['vary_lead_time'], //变动提前期*
+                'fixed_lead_time_unit' => $data['fixed_lead_time_unit'], //固定提前期*
+                'check_lead_time' => $data['check_lead_time'], //检查提前期*
+                'check_lead_time_unit' => $data['check_lead_time_unit'], //检查提前期单位*
+                'offset_time' => !empty($data['offset_time']) ? $data['offset_time'] : '', //偏置时间
+                'offset_time_unit' => $data['offset_time_unit'], //计划偏置时间单位*
+                'supply_from' => !empty($data['supply_from']) ? $data['supply_from'] : '', //供应来源
+                'inventory_attr' => !empty($data['inventory_attr']) ? json_encode($data['inventory_attr']) : '', //库存属性控制
+            ];
+
+            KCloudApi::saveMaterial($material_data);
+            $target_id = DB::name('material_slave')->insertGetId($material_data);
+
+            //保存审核人员信息
+            if ($target_id) {
+                $relation_data = [
+                    [
+                        'target_id' => $target_id,
+                        'target_type' => self::MATERIAL_TYPE,
+                        'admin_id' => $data['auditor1'],
+                        'role_type' => self::AUDIT_ROLE,
+                        'audit_order' => 1 //上级审核人
+                    ],
+                    [
+                        'target_id' => $target_id,
+                        'target_type' => self::MATERIAL_TYPE,
+                        'admin_id' => $data['auditor2'],
+                        'role_type' => self::AUDIT_ROLE,
+                        'audit_order' => 2 //最终审核人
+                    ]
+                ];
+                (new Relation)->saveAll($relation_data);
+
+            }
+        }
+        return $target_id;
+    }
+
+    /**
+     * 获取物料详情
+     * @param $material_code 物料编码
+     * @return array|false|null|\PDOStatement|string|Model
+     */
+    public static function materialDetail($material_code)
+    {
+        $data = Db::name('material')
+            ->field('material_id,material_name,material_code,material_code_old,specifications,specifications_code,description,material_attribute,basic_unit,start_batch,unit_convert as convert_unit,is_suite,control,rate as default_tax_rate,inventory_type,tax_type,inventory_unit,assistant_unit,is_expiration as enable_expiration,expiration_date,expiration_date_online,expiration_unit,batch_num_rule,batch_num_extra,sale_unit,sale_pricing_unit,allow_return,purchase_unit,purchase_price_unit as purchase_pricing_unit,is_quota as enable_quota,quota_way,min_split_amount,is_return_material as allow_return_material,outsource_unit,fixed_lead_time,outsource_price_unit as outsource_pricing_unit,product_unit,product_type,standard_labor_unit,standard_labor_hour,issue_qty as give_material_way,reverse_time,over_give_control,min_issue_qty as min_give_material,min_give_unit,plan_strategy,manufacture_strategy,order_strategy,plan_area,mrp_combine as MPR_combine,product_level,vary_lead_time_unit,fixed_lead_time_unit,vary_lead_time,check_lead_time,check_lead_time_unit,offset_time,offset_time_unit,order_interval_time,order_interval_unit,material_category,mg_code')
+            ->where('material_code',$material_code)
+            ->find();
+        if (empty($data)) {
+
+            //查询物料最新版本
+            $version = Db::name('material_slave')->where('material_code', $material_code)->max('is_new');
+            $data = Db::name('material_slave')
+                ->field('material_id,is_component,material_name,material_code,material_code_old,specifications,specifications_code,description,material_attribute,basic_unit,start_batch,create_org,use_org,unit_convert as convert_unit,is_suite,control,rate as default_tax_rate,inventory_type,tax_type,inventory_unit,assistant_unit,is_expiration as enable_expiration,expiration_date,expiration_date_online,expiration_unit,batch_num_rule,batch_num_extra,sale_unit,sale_pricing_unit,allow_return,purchase_unit,purchase_price_unit as purchase_pricing_unit,is_quota as enable_quota,quota_way,min_split_amount,is_return_material as allow_return_material,outsource_unit,fixed_lead_time,outsource_price_unit as outsource_pricing_unit,product_unit,product_type,standard_labor_unit,standard_labor_hour,issue_qty as give_material_way,reverse_time,over_give_control,min_issue_qty as min_give_material,min_give_unit,plan_strategy,manufacture_strategy,order_strategy,plan_area,mrp_combine as MPR_combine,product_level,vary_lead_time_unit,fixed_lead_time_unit,vary_lead_time,check_lead_time,check_lead_time_unit,offset_time,offset_time_unit,inventory_attr,submit_time,audit_time,audit_status,order_interval_time,order_interval_unit,material_category,mg_code,creator_id')
+                ->where(['material_code' => $material_code, 'is_new' => $version])->find();
+        }
+        //查询审核人员信息
+        if ($data) {
+            $data['start_batch'] = !empty($data['start_batch']) ? true : false;
+            $data['enable_expiration'] = !empty($data['enable_expiration']) ? true : false;
+            $data['batch_num_extra'] = !empty($data['batch_num_extra']) ? true : false;
+            $data['allow_return'] = !empty($data['allow_return']) ? true : false;
+            $data['enable_quota'] = !empty($data['enable_quota']) ? true : false;
+            $data['allow_return_material'] = !empty($data['allow_return_material']) ? true : false;
+            $data['MPR_combine'] = !empty($data['MPR_combine']) ? true : false;
+            $data['batch_num_rule'] = !empty($data['batch_num_rule']) ? $data['batch_num_rule'] : '';
+            $data['expiration_unit'] = !empty($data['expiration_unit']) ? $data['expiration_unit'] : '';
+            $data['expiration_date'] = !empty($data['expiration_date']) ? $data['expiration_date'] : '';
+            $data['expiration_date_online'] = !empty($data['expiration_date_online']) ? $data['expiration_date_online'] : 0;
+            $data['mg_name'] = Db::name('material_grouping')->where(['mg_code' => $data['mg_code']])->value('mg_name');
+            if (isset($data['creator_id'])) {
+                $create_nickname = Relation::initConnect()
+                    ->name('admin')
+                    ->where('admin_id', $data['creator_id'])
+                    ->value('nickname');
+                $data['creator'] = ['admin_id' => $data['creator_id'],'nickname' => $create_nickname];
+                $auditInfo = Db::name('relation')
+                    ->where(['target_id' => $data['material_id'], 'target_type'=>self::MATERIAL_TYPE, 'role_type' => self::AUDIT_ROLE])
+                    ->select();
+                if ($auditInfo != false) {
+                    foreach ($auditInfo as $item) {
+                        //查询昵称
+                        $result = Relation::initConnect()
+                            ->name('admin')
+                            ->field('nickname')
+                            ->where('admin_id', $item['admin_id'])
+                            ->find();
+                        if ($item['audit_order'] == 1) {
+                            $data['auditor1'] = [
+                                'admin_id' => $item['admin_id'],
+                                'nickname' => $result['nickname'],
+                                'audit_status' => $item['audit_status'],
+                                'audit_note' => $item['audit_note']
+                            ];
+                        } elseif ($item['audit_order'] == 2) {
+                            $data['auditor2'] = [
+                                'admin_id' => $item['admin_id'],
+                                'nickname' => $result['nickname'],
+                                'audit_status' => $item['audit_status'],
+                                'audit_note' => $item['audit_note']
+                            ];
+                        }
+                    }
+                }
+                unset($data['material_id']);
+            }
+            unset($data['creator_id']);
+        }
+        return $data;
+    }
+
+    /**
+     * 审核物料
+     * @param $data
+     * @throws KCloudException
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public static function audit($data)
+    {
+        $data += [
+            'material_code' => '',
+            'audit_status' => '',
+            'audit_note' => '',
+            'sync_resource' => '',
+        ];
+        $relation_model = new Relation();
+        $material_slave = (new MaterialSlave)->where(['material_code' =>$data['material_code'], 'audit_status' => 0])->find();
+        if (!$material_slave) {
+            throw new \Exception('审核失败');
+        }
+
+        $where = [
+            'target_id' => $material_slave['material_id'],
+            'target_type' => self::MATERIAL_TYPE,
+            'role_type' => self::AUDIT_ROLE,
+            'audit_order' => 1
+        ];
+        $auditor1 = $relation_model->where($where)->find();
+
+        $where['audit_order'] = 2;
+        $auditor2 = $relation_model->where($where)->find();
+
+        $admin_id = Auth::instance()->getUser()['admin_id'];
+
+        if ($auditor1['audit_status'] == 0 && $auditor1['admin_id'] == $admin_id) {
+            //1级审核
+            $auditor1['audit_status'] = $data['audit_status'];
+            $auditor1['audit_note'] = $data['audit_note'];
+            $auditor1->save();
+
+            //1级审核驳回
+            if ($data['audit_status'] == -1) {
+                $material_slave['audit_status'] = $data['audit_status'];
+            }
+
+            $material_slave['audit_time'] = time();
+            $material_slave->save();
+        } elseif ($auditor1['audit_status'] == 1 && $auditor2['audit_status'] == 0 && $auditor2['admin_id'] == $admin_id) {
+            //2级审核
+            if ($data['audit_status'] == 1) {
+                //2级审核通过
+                KCloudApi::auditMaterial($data['material_code']);
+
+                $material = new Material();
+                $material['mg_id'] = $material_slave['mg_id'];
+                $material['mg_code'] = $material_slave['mg_code'];
+                $material['material_code'] = $material_slave['material_code'];
+                $material['material_name'] = $material_slave['material_name'];
+                $material['specifications'] = $material_slave['specifications'];
+                $material['specifications_code'] = $material_slave['specifications_code'];
+                $material['description'] = $material_slave['description'];
+                $material['material_attribute'] = $material_slave['material_attribute'];
+                $material['basic_unit'] = $material_slave['basic_unit'];
+                $material['start_batch'] = $material_slave['start_batch'];
+                $material['img_path'] = $material_slave['img_path'];
+                $material['status'] = 1;
+                $material['createtime'] = time();
+                $material->save();
+
+                if ($data['sync_resource']) {
+                    $count = Db::table('plm_resource')->where(['year' => date('Y'), 'resource_type' => 1, 'material_code' => $material['material_code']])->count();
+                    if (!$count) {
+                        $resource = [];
+                        $resource['year'] = date('Y');
+                        $resource['resource_id'] = $material['material_id'];
+                        $resource['resource_type'] = 1;
+                        $resource['material_code'] = $material['material_code'];
+                        $resource['add_time'] = time();
+                        Db::table('plm_resource')->insert($resource);
+                    }
+                }
+            }
+
+            $material_slave['audit_status'] = $data['audit_status'];
+            $material_slave['audit_time'] = time();
+            $material_slave->save();
+
+            $auditor2['audit_status'] = $data['audit_status'];
+            $auditor2['audit_note'] = $data['audit_note'];
+            $auditor2->save();
+        }
+    }
+
+    /**
+     * 获取物料申请列表
+     * @param $data
+     * @return array
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public static function getApplyList($data)
+    {
+        $data += [
+            'get_mine' => 1,
+            'page_no' => 1,
+            'page_size' => 10,
+        ];
+
+        $where = [];
+        $where_or = [];
+        if ($data['get_mine']) {
+            $admin_id = Auth::instance()->getUser()['admin_id'];
+            $where['ms.creator_id'] = $admin_id;
+            $where_or['r.admin_id'] = $admin_id;
+        }
+
+        $material_slave = new MaterialSlave;
+        $relation = new Relation();
+
+        $total = $material_slave
+            ->alias('ms')
+            ->join('plm_relation r', 'ms.material_id = r.target_id AND r.target_type = ' . MaterialSlave::MATERIAL_TYPE)
+            ->where($where)
+            ->whereOr($where_or)
+            ->group('ms.material_code')
+            ->count();
+
+        $sub_query = $material_slave->order('material_id desc, is_new desc')->buildSql();
+
+        $result_list = $material_slave
+            ->table($sub_query)
+            ->field('ms.material_id,ms.material_name,ms.material_code,ms.create_org,ms.use_org,ms.mg_code,ms.mg_id,ms.material_attribute,ms.specifications,ms.specifications_code,ms.description,ms.submit_time,ms.audit_time,ms.audit_status,ms.creator_id,ms.material_code_old')
+            ->alias('ms')
+            ->join('plm_relation r', 'ms.material_id = r.target_id AND r.target_type = ' . MaterialSlave::MATERIAL_TYPE)
+            ->where($where)
+            ->whereOr($where_or)
+            ->group('ms.material_code')
+            ->order('ms.material_id desc')
+            ->page($data['page_no'], $data['page_size'])
+            ->select();
+
+        $list = [];
+        /** @var MaterialSlave $item */
+        foreach ($result_list as &$item) {
+            $data = $item->toArray();
+            $where = [
+                'target_id' => $item['material_id'],
+                'target_type' => self::MATERIAL_TYPE,
+                'role_type' => self::AUDIT_ROLE,
+                'audit_order' => 1
+            ];
+
+            $auditor1 = $relation->where($where)->find();
+            $data['auditor1']['admin_id'] = $auditor1['admin_id'];
+            $data['auditor1']['nickname'] = userData($auditor1['admin_id'])['nickname'];
+            $data['auditor1']['audit_status'] = $auditor1['audit_status'];
+            $data['auditor1']['audit_note'] = $auditor1['audit_note'];
+
+            $where['audit_order'] = 2;
+            $auditor2 = $relation->where($where)->find();
+            $data['auditor2']['admin_id'] = $auditor2['admin_id'];
+            $data['auditor2']['nickname'] = userData($auditor2['admin_id'])['nickname'];
+            $data['auditor2']['audit_status'] = $auditor2['audit_status'];
+            $data['auditor2']['audit_note'] = $auditor2['audit_note'];
+
+            $data['mg_name'] = Db::name('material_grouping')->where(['mg_id' => $data['mg_id']])->value('mg_name');
+            $data['audit_note'] = $auditor1['audit_note'] ? $auditor1['audit_note'] : $auditor2['audit_note'];
+
+            $data['creator']['nickname'] = userData($data['creator_id'])['nickname'];
+            $data['creator']['admin_id'] = $data['creator_id'];
+            unset($data['creator_id'], $data['mg_id']);
+
+            $list[] = $data;
+        }
+
+        return [
+            'total' => $total,
+            'list' => $list,
+        ];
+    }
+}

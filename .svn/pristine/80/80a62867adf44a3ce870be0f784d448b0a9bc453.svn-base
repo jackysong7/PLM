@@ -1,0 +1,590 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2018/7/5 16:36
+// +----------------------------------------------------------------------
+// | TITLE: 项目节点api
+// +----------------------------------------------------------------------
+
+namespace app\api\controller\v2;
+
+use app\api\controller\Api;
+use app\api\model\Document;
+use app\api\model\ProjectBom;
+use app\api\model\ProjectLine;
+use app\api\model\ProjectNode;
+use app\api\model\Relation;
+use app\api\model\Project;
+use app\api\model\ResourceNameModel;
+use app\api\model\UitableviewDefault;
+use think\Validate;
+use think\Db;
+
+class Node extends Api
+{
+    /*
+     * 查找节点文档目录属性列表<项目节点简要列表>
+     */
+    public function getSimpleList()
+    {
+        $jsonData = $this->request->param();
+        $params = json_decode($jsonData['data'],true);
+
+        $rule = [
+            'project_id' => 'require|integer|>:0',
+        ];
+        $msg = [
+            'project_id.require' => '项目ID不能为空！',
+
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($params);
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+
+        $list = ProjectNode::getNodeList($params['project_id']);
+        if($list)
+        {
+            return $this->returnmsg(200,'success！',$list);
+        }
+        return $this->returnmsg(402,' 数据库无此数据!','');
+
+    }
+
+
+    /*
+     * 查找项目节点页面中节点文档目录的详情<项目节点详细列表>
+     */
+    public function getDetailList()
+    {
+        $jsonData = $this->request->param();
+        $params = json_decode($jsonData['data'],true);
+
+        $rule = [
+            'project_id' => 'require|integer|>:0',
+        ];
+        $msg = [
+            'project_id.require' => '项目ID不能为空！',
+
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($params);
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+
+        $list = ProjectNode::getNodeDetail($params['project_id']);//通过project_id查找项目节点详情
+        if($list)
+        {
+            foreach($list as $k=>$v)
+            {
+                if($v['node_type'] == 'start')
+                {
+                    $data[$k]['process_name'] = '开始';
+                }elseif($v['node_type'] == 'end'){
+                    $data[$k]['process_name'] = '结束';
+                }else{
+                    $data[$k]['process_name'] = $v['process_name'];
+                }
+                $data[$k]['node_id'] = $v['node_id'];
+                $data[$k]['start_time'] = $v['start_time'];
+                $data[$k]['end_time'] = $v['end_time'];
+                $data[$k]['actual_start_time'] = $v['actual_start_time'];
+                $data[$k]['actual_end_time'] = $v['actual_end_time'];
+                //获取审核信息
+                //$where['admin_id'] = $v['creator_id'];
+                $where['target_id'] = $v['node_id'];
+                $where['target_type'] = 2;
+                $auditorInfo = Relation::getAuditInfo($where);
+                //通过admin_id获取上传人员
+                $adminId = Document::tplInfo(['pd_id'=>$v['pd_id']],'admin_id');
+                $uploader = Relation::getNickName($adminId['admin_id']);
+                $data[$k]['doc_list'][] = [
+                    'doc_name' => isset($v['doc_name'])?$v['doc_name']:'',
+                    'status' => $v['status'],
+                    'uploader' =>isset($uploader)?['admin_id'=>$adminId['admin_id'],'nickname'=>$uploader]: '',
+                    'auditor' => isset($auditorInfo['auditor'])?$auditorInfo['auditor'] : ''
+                ];
+            }
+            return $this->returnmsg(200,'Operation succeeded!',$data);
+        }
+
+        return $this->returnmsg(402,'Data illegal！');
+    }
+
+
+
+    /*
+     * 项目节点属性中的项目详情
+     *【node_id】【project_id,node_key】二选一
+     * @param int node_id 项目节点id
+     * @param int project_id 项目id
+     * @param string node_key 项目id
+     *
+     * @return json
+     */
+    public function getDetail()
+    {
+        $jsonData = $this->request->param();//获取传输过来的参数(json)
+        $params = json_decode($jsonData['data'], true);
+        //数据验证
+        $result = $this->validate($params, [
+            'node_id' => 'integer|>:0',
+            'project_id' => 'integer|>:0',
+            'node_key' => 'integer'
+        ]);
+
+        if ($result !== true)
+        {
+            return $this->returnmsg(401,$result);
+        }
+
+        $nodeId = isset($params['node_id']) ? $params['node_id'] : '';
+        $projectId = isset($params['project_id']) ? $params['project_id'] : '';
+        $nodeKey = isset($params['node_key']) ? $params['node_key'] : '';
+
+        //如果projectId、node_key存在，则找对应的主键值node_id
+        if ($projectId && $nodeKey)
+        {
+            $nodeIdArr = ProjectNode::getNodeId($projectId, $nodeKey);
+            $nodeId = $nodeIdArr['node_id'];
+        }
+
+        if($nodeId)
+        {
+            //通过node_id获取节点属性信息
+            $nodeAttrInfo = ProjectNode::NodeDetailByNodeId($nodeId);
+
+            //计算完成进度
+            if($nodeAttrInfo['actual_end_time'] <= $nodeAttrInfo['end_time'])
+            {
+                $nodeAttrInfo['progress'] = '100%';
+            }
+            else
+            {
+                $day = intval(($nodeAttrInfo['actual_end_time'] - $nodeAttrInfo['end_time'])/(3600*24));
+                $nodeAttrInfo['progress'] = '超时'.$day.'天';
+            }
+
+            //通过node_id查询对应的node_key、project_id
+            $map['node_id'] = $nodeId;
+            $field='node_key,project_id';
+            $nodeKeyArr = ProjectNode::getProjectNodeInfo($map,$field);
+
+            $where['target_id'] = $nodeKeyArr['project_id'];
+            $where['target_type'] = 1;
+            $nameList = Relation::getRoleName($where);//查找节点项目负责人信息
+            $processId = ProjectNode::getProcessId($nodeId);//通过node_id获取流程id
+            $nodeAttrInfo['resource_lib'] = ResourceNameModel::getResourceById($processId);//资源库
+            $nodeAttrInfo['manager']['product_manager'] = isset($nameList['product_manager'])?$nameList['product_manager']:[];
+            $nodeAttrInfo['manager']['project_manager'] = isset($nameList['project_manager'])?$nameList['project_manager']:[];
+            //文档上传人员
+            $uploads = Relation::getAuditInfo(['target_id'=>$nodeId,'target_type'=>2]);
+            $nodeAttrInfo['uploader'] = isset($uploads['uploads'])?$uploads['uploads'] : [];
+            //echo '<pre>';print_r($nodeAttrInfo);die;
+            $tplInfo = ProjectNode::getTplInfo($nodeId);//文档模板 doc_template
+            $tobeSubmitInfo = ProjectBom::getBomInfoById($nodeId);//待提交文档
+            $submitInfo = ProjectBom::getBomInfoById($nodeId,$submitStatus=1);//已提交文档
+
+            $fromArr = ProjectLine::getNodeFrom($nodeKeyArr['project_id'],$nodeKeyArr['node_key']);//上一个节点的node_key
+            $toArr = ProjectLine::getNodeTo($nodeKeyArr['project_id'],$nodeKeyArr['node_key']);//下一个节点的node_key
+
+            //上一层节点属性
+            $upNodeInfo = [];
+            if(!empty($fromArr))
+            {
+                foreach($fromArr as $item)
+                {
+                    $fromIds = ProjectNode::getNodeId($nodeKeyArr['project_id'],$item['from']);//获取上一个节点的node_id
+                    $upNodeInfo[] = ProjectNode::getUpDownNode($fromIds['node_id'],$nodeKeyArr['project_id']);
+                }
+            }
+
+            //下一层节点属性
+            $nextNodeInfo = [];
+            if(!empty($toArr))
+            {
+                foreach($toArr as $vv)
+                {
+                    $nextIds = ProjectNode::getNodeId($nodeKeyArr['project_id'],$vv['to']);//获取下一个节点的node_id
+                    $nextNodeInfo[] = ProjectNode::getUpDownNode($nextIds['node_id'],$nodeKeyArr['project_id']);
+                }
+            }
+
+            //所有信息合并成新数组
+            $arr=[];
+            $arr['node_attr'] = $nodeAttrInfo;
+            $arr['doc_template'] = $tplInfo;
+            $arr['doc_waiting_submit'] = $tobeSubmitInfo;
+            $arr['doc_already_submit'] = $submitInfo;
+            $arr['prev_node'] = $upNodeInfo;
+            $arr['next_node'] = $nextNodeInfo;
+
+            return $this->returnmsg(200,'success！',$arr);
+        }
+        else
+        {
+            return $this->returnmsg(401,'参数错误');
+        }
+
+    }
+
+    /*
+     * 转到下一个流程
+     */
+    public function gotoNext()
+    {
+        $jsonData = $this->request->param();//获取传输过来的参数(json)
+        $params = json_decode($jsonData['data'], true);
+        $rule = [
+            'goto_next' => 'require|integer|>=:0',
+        ];
+        $msg = [
+            'goto_next.require' => 'goto_next参数不能为空！',
+
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($params);
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+
+        $nodeId = isset($params['node_id']) && !empty($params['node_id']) ? intval($params['node_id']) : '';
+        $projectId = isset($params['project_id']) && !empty($params['project_id']) ? intval($params['project_id']) : '';
+        $nodeKey = isset($params['node_key']) && !empty($params['node_key']) ? intval($params['node_key']) : '';
+
+        if (!isset($nodeId) || (!isset($projectId) && !isset($nodeKey))) {
+            return $this->returnmsg(401, '参数错误');
+        }
+
+        //项目已暂停,无法操作
+        if ($error = Project::checkProjectPause($projectId)) {
+            $this->returnmsg(401, $error);
+        }
+
+        //如果projectId、node_key存在，则找对应的主键值node_id
+        if ($projectId && $nodeKey)
+        {
+            $nodeIdArr = ProjectNode::getNodeId($projectId, $nodeKey);
+            $nodeId = $nodeIdArr['node_id'];
+        }
+        //通过node_id查找当前流程的所有文档是否及审核状态
+        if($nodeId)
+        {
+            $res = true;
+            $docInfo = Document::tplInfo(['node_id'=>$nodeId],'audit_status,submit_status');
+            if($docInfo['submit_status'])
+            {
+                if($docInfo['audit_status'] == 1 || $docInfo['audit_status'] == -1)
+                {
+                    $res = true;
+                }else{
+                    $res = false;
+                }
+            }
+            if(!empty($res))
+            {
+                $udInfo = UitableviewDefault::docIdData(['node_id' => $nodeId], 'audit_status,submit_status');
+                if ($udInfo['submit_status']) {
+                    if ($udInfo['audit_status'] == 1 || $udInfo['audit_status'] == -1) {
+                        $res = true;
+                    } else {
+                        $res = false;
+                    }
+                }
+                if(!empty($res))
+                {
+                    $bomInfo = ProjectBom::tplInfo(['node_id' => $nodeId], 'audit_status,submit_status');
+                    if ($bomInfo['submit_status']) {
+                        if ($bomInfo['audit_status'] == 1 || $bomInfo['audit_status'] == -1) {
+                            $res = true;
+                        } else {
+                            $res = false;
+                        }
+                    }
+                }
+            }
+            //所有文档是否已提交并已审核，转至下一流程，否则反之
+            if(!empty($res))
+            {
+                $typeField = 'node_type,node_key,project_id';
+                //查询当前节点的流程类型、节点key、项目id
+                $ProjectNodeInfo = ProjectNode::getProjectNodeInfo(['node_id'=>$nodeId],$typeField);
+                //如果当前流程类型为（judgment或process）且goto_next为1则转入下一个流程
+                if(($ProjectNodeInfo['node_type'] == 'judgment' && $params['goto_next'] == 1) || ($ProjectNodeInfo['node_type'] == 'process' && $params['goto_next'] ==1) )
+                {
+                    $setData['actual_end_time'] = time();
+                    $setData['status'] = 2;
+                    $setData['audit_status'] = 1;//节点审核状态
+                    $setData['audit_time'] = time();//节点审核时间
+                    //设置当前节点的实际结束时间、节点状态为已结束
+                    ProjectNode::setData(['node_id'=>$nodeId],$setData);
+                    //查找下一个节点
+                    $ToNodeArr = ProjectLine::getNodeTo($ProjectNodeInfo['project_id'],$ProjectNodeInfo['node_key']);
+                    var_dump($ToNodeArr);die;
+                    $next = 1;
+                    foreach($ToNodeArr as $value)
+                    {
+                        //查询当前节点的并行节点
+                        $fromNodeArr = ProjectLine::getNodeFrom($ProjectNodeInfo['project_id'],$value['to']);
+                        //总数大于1则有多个并行节点，判断节点状态是否为已结束，反之则没有并行节点，则直接转入下一个流程
+                        if(count($fromNodeArr)>1) {
+                            foreach ($fromNodeArr as $vv) {
+                                $nodeStatus = ProjectNode::getProjectNodeInfo(['project_id' => $ProjectNodeInfo['project_id'], 'node_key' => $vv['from']], 'node_type,status');
+                                if ($nodeStatus['status'] != 2 && $nodeStatus['node_type'] =='process') {
+                                    $next = 0;
+                                    break;
+                                }
+                            }
+                        }
+                       
+                        //如果有并行节点，那么全部状态为已结束才能转入下一个流程
+                        if($next) {
+                            //如果下一节点类型为结束类型，那么下一个流程直接改为已结束状态
+                            $nextType = ProjectNode::getProjectNodeInfo(['project_id' => $ProjectNodeInfo['project_id'], 'node_key' => $value['to']], 'node_type');
+                            if($nextType['node_type'] == 'end'){
+                                $setToData['actual_start_time'] = time();
+                                $setToData['end_time'] = time();
+                                $projectData['status'] = $setToData['status'] = 2;
+                                $projectData['end_time'] = time();
+                                //如果node_type为end,修改项目状态为已上市
+                                Project::updateInfo(['project_id'=>$ProjectNodeInfo['project_id']],$projectData);
+                            }else{
+                                $setToData['actual_start_time'] = time();
+                                $setToData['status'] = 1;
+                            }
+                            $toWhere['node_key'] = $value['to'];
+                            $toWhere['project_id'] = $ProjectNodeInfo['project_id'];
+                            //设置下一个节点的状态及修改实际开始时间
+                            ProjectNode::setData($toWhere, $setToData);
+                        }
+                    }
+                }
+                //如果当前流程类型为judgment且goto_next为0,则返回上一个流程
+                elseif($ProjectNodeInfo['node_type'] == 'judgment' && $params['goto_next'] == 0)
+                {
+                    $setData['actual_end_time'] = 0;
+                    $setData['status'] = 3;//流程返回进行中
+                    //设置当前节点的实际结束时间、节点状态为已结束
+                    $where['node_id'] = $nodeId;
+                    ProjectNode::setData($where,$setData);
+                    //查找上一个节点
+                    $FromNodeArr = ProjectLine::getNodeFrom($ProjectNodeInfo['project_id'],$ProjectNodeInfo['node_key']);
+                    //设置上一个节点的状态及修改实际开始时间
+                    foreach($FromNodeArr as $vv)
+                    {
+                        $setToData['actual_end_time'] = 0;
+                        $setToData['status'] = 1;//进行中
+                        $fromWhere['node_key'] = $vv['from'];
+                        $fromWhere['project_id'] = $ProjectNodeInfo['project_id'];
+                        ProjectNode::setData($fromWhere,$setToData);
+                    }
+                }
+                elseif($ProjectNodeInfo['node_type'] == 'end')
+                {
+                    $setData['actual_end_time'] = time();
+                    $setData['status'] = 2;//已结束
+                    $where['node_id'] = $nodeId;
+                    //设置当前节点的实际结束时间、节点状态为已结束
+                    ProjectNode::setData($where,$setData);
+                    //设置项目的实际结束时间
+                    Project::updateInfo(['project_id'=>$ProjectNodeInfo['project_id']],['actual_end_time'=>time()]);
+                }
+                else
+                {
+                    return $this->returnmsg(401,'请检查参数是否符合要求','');
+                }
+                return $this->returnmsg(200,'success！','');
+            }
+            else
+            {
+                return $this->returnmsg(401,'所有提交的文档状态为已审核才能转入一个流程','');
+            }
+        }
+        return $this->returnmsg(401,'参数错误');
+    }
+
+    /*
+     * 编辑节点
+     * 【node_id】和【project_id,node_key】两组参数二选一
+     */
+    public function edit()
+    {
+        $jsonData = $this->request->param();//获取传输过来的参数(json)
+        $params = json_decode($jsonData['data'], true);
+        //数据验证
+        $result = $this->validate($params, [
+            'node_id' => 'integer|>:0',
+            'project_id' => 'integer|>:0',
+            'node_key' => 'integer'
+        ]);
+
+        if ($result !== true)
+        {
+            return $this->returnmsg(401,$result);
+        }
+
+        $nodeId = isset($params['node_id']) ? $params['node_id'] : '';
+        $projectId = isset($params['project_id']) ? $params['project_id'] : '';
+        $nodeKey = isset($params['node_key']) ? $params['node_key'] : '';
+
+        //如果projectId、node_key存在，则找对应的主键值node_id
+        if ($projectId && $nodeKey)
+        {
+            $nodeIdArr = ProjectNode::getNodeId($projectId, $nodeKey);
+            $nodeId = $nodeIdArr['node_id'];
+        }
+
+        if($nodeId)
+        {
+            //查询所有未开始的节点
+            $where['node_id'] = $nodeId;
+            $field = 'status,project_id,node_key';
+            $nodeArr = ProjectNode::getProjectNodeInfo($where,$field);
+            if(!empty($nodeArr))
+            {
+                Db::startTrans();
+                $map = true;
+                //状态为未开始才能编辑，否则反之
+                if(!$nodeArr['status'])
+                {
+                    $processId = isset($params['node_name_id']) ? $params['node_name_id'] : '';//节点名称ID
+                    $days = isset($params['days']) ? $params['days'] : '';//节点工作日
+                    $outputDoc = isset($params['output_doc']) && is_array($params['output_doc']) ? implode(',',$params['output_doc']) : '';//输出文档（文档模板ID）
+                    $finishTime = isset($params['finish_date']) ? $params['finish_date'] : '';
+                    //修改节点内容
+                    $processData = [];$daysData = [];$docData = [];$finishData = [];
+                    if($processId){
+                        $processData = ['process_id'=>$processId];
+                    }
+                    if($days){
+                        $daysData = ['days'=>$days];
+                    }
+                    if($outputDoc)
+                    {
+                        $docData = ['doc_tpl_ids'=>$outputDoc];
+                    }
+                    if($finishTime)
+                    {
+                        if($nodeArr['node_key'] == -1)
+                        {
+                            $finishData = ['start_time'=>$finishTime];
+                        }else{
+                            $finishData = ['end_time'=>$finishTime];
+                        }
+                    }
+                    $setData = array_merge($processData,$daysData,$docData,$finishData);
+                    if(!empty($setData))
+                    {
+                        $result = ProjectNode::setData($where,$setData);
+                        if(!$result)
+                        {
+                            $map = false;
+                        }
+                    }
+                    //获取项目流程图前端数据
+                    $frontData = Project::getInfoByProjectId($nodeArr['project_id'],'front_end_data');
+                    $frontData = json_decode($frontData['front_end_data'],true);
+                    foreach($frontData['flow_chart_data']['nodeInfoArray'] as $key=>$item)
+                    {
+                        if($nodeArr['node_key'] == $key)
+                        {
+                            if(!empty($processId))
+                            {
+                                $frontData['flow_chart_data']['nodeInfoArray'][$key]['node_name_id'] = $processId;
+                            }
+                            if(isset($params['uploader']) && is_array($params['uploader']))
+                            {
+                                $frontData['flow_chart_data']['nodeInfoArray'][$key]['uploader'] = $params['uploader'];
+                            }
+                            if(isset($params['auditor']) && is_array($params['auditor']))
+                            {
+                                $frontData['flow_chart_data']['nodeInfoArray'][$key]['auditor'] = $params['auditor'];
+                            }
+                            if(!empty($days))
+                            {
+                                $frontData['flow_chart_data']['nodeInfoArray'][$key]['days'] = $days;
+                            }
+                            if(isset($params['output_doc']) && is_array($params['output_doc']))
+                            {
+                                $frontData['flow_chart_data']['nodeInfoArray'][$key]['output_doc'] = $params['output_doc'];
+                            }
+                            if(isset($params['finish_date']))
+                            {
+                                $frontData['flow_chart_data']['nodeInfoArray'][$key]['finish_date'] = $params['finish_date'];
+                            }
+                        }else{
+                            continue;
+                        }
+                    }
+                    $res = Project::saveFrontEndData($frontData,$nodeArr['project_id']);
+                    if(!$res)
+                    {
+                        $map  = false;
+                    }
+                    Project::recomputeFinishDate($nodeArr['project_id']);
+                    //上传人员、审核人员的编辑<删除原有的数据再新增>
+                    $list = [];$auditorArr = [];
+                    if(isset($params['uploader']) && is_array($params['uploader']))
+                    {
+                        foreach($params['uploader'] as $v)
+                        {
+                            $list[] = [
+                                'admin_id'=>$v,
+                                'target_id'=>$nodeId,
+                                'target_type'=>2,
+                                'role_type'=>4
+                            ];
+                        }
+                        $uploaderRes = Relation::editPerson($nodeId,$list,4);
+                        if(!$uploaderRes)
+                        {
+                            $map = false;
+                        }
+                    }
+                    if(isset($params['auditor']) && is_array($params['auditor']))
+                    {
+                        foreach($params['auditor'] as $vv)
+                        {
+                            $auditorArr[] = [
+                                'admin_id'=>$vv,
+                                'target_id'=>$nodeId,
+                                'target_type'=>2,
+                                'role_type'=>5
+                            ];
+                        }
+                        $editorRes = Relation::editPerson($nodeId,$auditorArr,5);
+                        if(!$editorRes)
+                        {
+                            $map = false;
+                        }
+                    }
+
+                    if($map)
+                    {
+                        Db::commit();
+                        return $this->returnmsg(200, 'success！' );
+                    }
+                    Db::rollback();
+                    return $this->returnmsg(402,'编辑失败','');
+                }
+                else
+                {
+                    return $this->returnmsg(402,'节点状态为未开始才能开始编辑');
+                }
+            }
+            else
+            {
+                return $this->returnmsg('402','数据库无此记录');
+            }
+        }else{
+            return $this->returnmsg(401, '参数错误');
+        }
+    }
+
+}

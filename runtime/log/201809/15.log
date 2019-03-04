@@ -1,0 +1,1856 @@
+---------------------------------------------------------------
+[ 2018-09-15T10:25:43+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=b72898b6-f7e7-48e1-af0e-61e0dfb1f757&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=b72898b6-f7e7-48e1-af0e-61e0dfb1f757&data={%22project_id%22:31} [运行时间：0.291000s][吞吐率：3.44req/s] [内存消耗：1,155.63kb] [文件加载：43]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'b72898b6-f7e7-48e1-af0e-61e0dfb1f757',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-15T10:25:43+08:00 ] 127.0.0.1 127.0.0.1 GET /favicon.ico
+[ info ] www.plm_dev123.net/favicon.ico [运行时间：0.104000s][吞吐率：9.62req/s] [内存消耗：888.90kb] [文件加载：39]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.plm_dev123.net/api/v2/node/getDetailList?access_token=b72898b6-f7e7-48e1-af0e-61e0dfb1f757&data={%22project_id%22:31}',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-15T10:26:24+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.534000s][吞吐率：1.87req/s] [内存消耗：2,169.69kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.136000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.135000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536978384) [ RunTime:0.048000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.019000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,`p`.`creator_id`,t.file_name doc_name,d.plm_dir_name process_name,`t`.`pd_id` FROM `plm_project_node` `n` LEFT JOIN `plm_document` `t` ON `n`.`process_id`=t.plm_dir_id AND n.project_id=t.project_id LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` LEFT JOIN `plm_project` `p` ON `n`.`project_id`=`p`.`project_id` WHERE  `n`.`project_id` = 31 GROUP BY n.node_id [ RunTime:0.060000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:37:37+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.349035s][吞吐率：2.87req/s] [内存消耗：2,443.36kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536982656) [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.003001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.003000s ]
+[ error ] [8]未定义数组索引: node_type[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php:87]
+---------------------------------------------------------------
+[ 2018-09-15T11:38:31+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.164017s][吞吐率：6.10req/s] [内存消耗：2,173.61kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536982711) [ RunTime:0.028003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.039004s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:39:20+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.277027s][吞吐率：3.61req/s] [内存消耗：2,443.40kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536982760) [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ error ] [8]未定义数组索引: node_type[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php:87]
+---------------------------------------------------------------
+[ 2018-09-15T11:39:40+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.120012s][吞吐率：8.33req/s] [内存消耗：2,173.57kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536982780) [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:40:03+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.584059s][吞吐率：1.71req/s] [内存消耗：2,443.40kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536982802) [ RunTime:0.046005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.037004s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.025003s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.008001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025002s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.019002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.023003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.013002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.003000s ]
+[ error ] [8]未定义数组索引: node_type[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php:87]
+---------------------------------------------------------------
+[ 2018-09-15T11:40:49+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.127013s][吞吐率：7.87req/s] [内存消耗：2,173.61kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536982849) [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.019002s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:47:22+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.115012s][吞吐率：8.69req/s] [内存消耗：2,166.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983242) [ RunTime:0.035003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:47:44+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.113012s][吞吐率：8.85req/s] [内存消耗：2,165.05kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983264) [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:47:55+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.114011s][吞吐率：8.77req/s] [内存消耗：2,166.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983275) [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.003001s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:48:36+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.144014s][吞吐率：6.94req/s] [内存消耗：2,166.82kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983316) [ RunTime:0.036003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id desc [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:48:46+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.124013s][吞吐率：8.06req/s] [内存消耗：2,166.79kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983326) [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.022003s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:48:59+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.121012s][吞吐率：8.26req/s] [内存消耗：2,166.66kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983339) [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:49:11+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.196020s][吞吐率：5.10req/s] [内存消耗：2,166.79kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983351) [ RunTime:0.087009s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.003001s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:51:57+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.253025s][吞吐率：3.95req/s] [内存消耗：2,443.45kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983517) [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ error ] [8]未定义数组索引: node_type[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php:87]
+---------------------------------------------------------------
+[ 2018-09-15T11:52:14+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.231023s][吞吐率：4.33req/s] [内存消耗：2,443.45kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983534) [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ error ] [8]未定义数组索引: node_type[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php:87]
+---------------------------------------------------------------
+[ 2018-09-15T11:52:16+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.185018s][吞吐率：5.40req/s] [内存消耗：2,443.45kb] [文件加载：63]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983535) [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: node_type[E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php:87]
+---------------------------------------------------------------
+[ 2018-09-15T11:52:43+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.130013s][吞吐率：7.69req/s] [内存消耗：2,166.79kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983563) [ RunTime:0.031003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:53:24+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.118012s][吞吐率：8.47req/s] [内存消耗：2,161.72kb] [文件加载：54]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983603) [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:54:15+08:00 ] 127.0.0.1 127.0.0.1 GET /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.186019s][吞吐率：5.38req/s] [内存消耗：2,331.60kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'socketlog' => 'SocketLog(tabid=3&client_id=)',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=a9b5nhfkc9h7lpa6s7elihdn50',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983655) [ RunTime:0.029003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:54:30+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.170017s][吞吐率：5.88req/s] [内存消耗：2,331.93kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryaZZ6nARyrzdGHfgg',
+  'postman-token' => 'a2e04e17-f971-a377-92f7-3d389ef4d646',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983670) [ RunTime:0.021002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.003001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:56:48+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.208021s][吞吐率：4.81req/s] [内存消耗：2,337.46kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=mdkbim094fqinjv6kddrkvtgn1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary4DISfkcMhiMp3ek2',
+  'postman-token' => '32cb9442-08a7-86df-502e-84957db8d2de',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011002s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983807) [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:57:06+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.172017s][吞吐率：5.81req/s] [内存消耗：2,334.76kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=mdkbim094fqinjv6kddrkvtgn1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary87189iBZHB47tEKT',
+  'postman-token' => 'a0d372f4-ac66-e55b-3975-ab7d3636dbcc',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983826) [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.004001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.022002s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:57:27+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.178018s][吞吐率：5.62req/s] [内存消耗：2,336.13kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=mdkbim094fqinjv6kddrkvtgn1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryngLL3NmdSomc4gAH',
+  'postman-token' => '61186247-073a-cabb-855f-f327cb17d6f1',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983847) [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.012002s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2018-09-15T11:58:26+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.212021s][吞吐率：4.72req/s] [内存消耗：2,336.13kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=mdkbim094fqinjv6kddrkvtgn1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary3KHBfO4KMrxLmBkt',
+  'postman-token' => '6f9ae694-659d-3812-468e-3177495ec9a4',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536983906) [ RunTime:0.029003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-15T12:00:52+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.227022s][吞吐率：4.40req/s] [内存消耗：2,339.52kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=mdkbim094fqinjv6kddrkvtgn1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryyJb4WaOrwEt8ni7G',
+  'postman-token' => 'd5c34c63-52fd-ff8e-4078-81e5b14c6898',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.019002s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536984052) [ RunTime:0.033003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2018-09-15T12:01:46+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.206021s][吞吐率：4.85req/s] [内存消耗：2,343.38kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=mdkbim094fqinjv6kddrkvtgn1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryxHBjsqDJI2AmrtU4',
+  'postman-token' => '35026eba-609c-5437-4c70-a21f96faaf02',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536984106) [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.017002s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+---------------------------------------------------------------
+[ 2018-09-15T12:02:24+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.204020s][吞吐率：4.90req/s] [内存消耗：2,336.13kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=mdkbim094fqinjv6kddrkvtgn1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryAH15OUUz3GCj9KMn',
+  'postman-token' => 'e57472c0-9c13-9c55-2fce-7944ac69fd23',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536984144) [ RunTime:0.030003s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2018-09-15T12:03:25+08:00 ] 127.0.0.1 127.0.0.1 POST /api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31}
+[ info ] www.plm_dev123.net/api/v2/node/getDetailList?access_token=adf82f17-07cc-4f16-8e63-26023889ed6d&data={%22project_id%22:31} [运行时间：0.208958s][吞吐率：4.79req/s] [内存消耗：2,336.41kb] [文件加载：55]
+[ info ] [ LANG ] E:\phpStudy\WWW\plm_dev\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'v2.node',
+    2 => 'getDetailList',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=mdkbim094fqinjv6kddrkvtgn1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryFB13uyKmBFdFJUA4',
+  'postman-token' => '974c609d-2466-ea3f-854a-52b22b83b156',
+  'origin' => 'chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop',
+  'cache-control' => 'no-cache',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36',
+  'content-length' => '470',
+  'connection' => 'close',
+  'host' => 'www.plm_dev123.net',
+)
+[ info ] [ PARAM ] array (
+  'access_token' => 'adf82f17-07cc-4f16-8e63-26023889ed6d',
+  'data' => '{"project_id":31}',
+  'app_key' => 'ewwew3313343=',
+  'mobilephone' => '13813700048',
+  'nonce' => 'abdcerw21122',
+  'timestamp' => '1520000007',
+)
+[ info ] [ CACHE ] INIT redis
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\v2\Node->getDetailList[ E:\phpStudy\WWW\plm_dev\application\api\controller\v2\Node.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010998s ] mysql:dbname=7000mall_plm;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_admin_log` [ RunTime:0.004999s ]
+[ sql ] [ SQL ] INSERT INTO `plm_admin_log` (`admin_id` , `username` , `route_url` , `title` , `content` , `useragent` , `ip` , `createtime`) VALUES (55 , 'song' , 'node/getdetaillist' , 'adf82f17-07cc-4f16-8e63-26023889ed6d' , '{\"access_token\":\"adf82f17-07cc-4f16-8e63-26023889ed6d\",\"data\":\"{\\\"project_id\\\":31}\",\"app_key\":\"ewwew3313343=\",\"mobilephone\":\"13813700048\",\"nonce\":\"abdcerw21122\",\"timestamp\":\"1520000007\"}' , 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36' , '127.0.0.1' , 1536984204) [ RunTime:0.024995s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_node` [ RunTime:0.005999s ]
+[ sql ] [ SQL ] SELECT `n`.`node_id`,`n`.`start_time`,`n`.`end_time`,`n`.`actual_start_time`,`n`.`actual_end_time`,n.audit_status status,`n`.`node_type`,d.plm_dir_name process_name FROM `plm_project_node` `n` LEFT JOIN `plm_dir` `d` ON `n`.`process_id`=`d`.`plm_dir_id` WHERE  `n`.`project_id` = 31 ORDER BY n.node_id asc [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_relation` [ RunTime:0.016997s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 209  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_project_bom` [ RunTime:0.004999s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_uitableview_default` [ RunTime:0.005999s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `plm_document` [ RunTime:0.005999s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 209  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 210  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010997s ] mysql:dbname=7000mall_center;host=192.168.80.240;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `c_admin` [ RunTime:0.005999s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 210  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 211  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.000999s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 211  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 212  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 212  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 213  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `nickname` FROM `c_admin` WHERE  `admin_id` = 57 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 213  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `admin_id`,`role_type` FROM `plm_relation` WHERE  `target_id` = 214  AND `target_type` = 2 ORDER BY relation_id desc [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_project_bom` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY bom_id desc LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `creator_id`,`audit_status` FROM `plm_uitableview_default` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY ud_id desc LIMIT 1 [ RunTime:0.001999s ]
+[ sql ] [ SQL ] SELECT file_name doc_name,`admin_id`,`audit_status` FROM `plm_document` WHERE  `node_id` = 214  AND `project_id` = 31 ORDER BY pd_id desc LIMIT 1 [ RunTime:0.002000s ]

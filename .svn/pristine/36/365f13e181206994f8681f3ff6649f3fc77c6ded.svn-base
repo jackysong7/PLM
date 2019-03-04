@@ -1,0 +1,166 @@
+<?php
+/**
+ * 标准资源库
+ * Created by PhpStorm.
+ * User: liujun
+ * Date: 2018/7/9
+ * Time: 11:00
+ */
+namespace app\api\controller\v2;
+
+use app\api\controller\Api;
+use app\common\library\GearmanAsync;
+use think\Validate;
+
+class Resource extends Api
+{
+    public function _initialize()
+    {
+        parent::_initialize();
+        $this->userInfo = $this->auth->getUser();
+    }
+    
+    //新增资源库节点
+    public function addNode()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'year'  => 'require',
+        ];
+        $msg = [
+            'year.require' => '年度名称不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        
+        $row = \app\api\model\Resource::addNode($data);
+
+        return $this->returnmsg(200,'success！',$row);
+    }
+    
+    //新增资源库文档
+    public function addDoc()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'process_id'  => 'require|integer',
+        ];
+        $msg = [
+            'process_id.require' => '资源库节点ID不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+
+        $row = \app\api\model\Resource::addDoc($data);
+
+        return $this->returnmsg(200,'success！',$row);
+    }
+    
+    //删除资源库节点/文档
+    public function delete()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        
+        //查询资源节点
+        $where['id'] = $data['id'];
+        $result = \app\api\model\Resource::getResource($where);
+        if($result == 2){
+            return $this->returnmsg(200,'删除失败，记录不存在');
+        }elseif($result == 4){
+            return $this->returnmsg(200,'其类别下有数据，不可删除！');
+        }else if($result == 3){
+            $row = \app\api\model\Resource::deleteResource($where);
+            if($row){
+                return $this->returnmsg(200,'success！');
+            }else{
+                return $this->returnmsg(200,'删除失败，记录不存在');
+            }
+        }
+    }
+       
+    //获取标准资源库
+    public function getInfo()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'year'  => 'require|integer',
+        ];
+        $msg = [
+            'year.require' => '年度不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        $row = \app\api\model\Resource::getInfo($data);
+
+        return $this->returnmsg(200,'获取成功！',$row);
+    }
+
+    //获取标准资源库(设置)
+    public function getSettingInfo()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'year'  => 'require|integer',
+        ];
+        $msg = [
+            'year.require' => '年度不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            return $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        $row = \app\api\model\Resource::getSettingInfo($data);
+
+        return $this->returnmsg(200,'获取成功！',$row);
+    }
+
+    //上传标准资源库信息
+    public function upload()
+    {
+        $jsonData = $this->request->param();
+        $data = json_decode($jsonData['data'],true);
+        $rule = [
+            'year'  => 'require|integer',
+        ];
+        $msg = [
+            'year.require' => '年度不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($data);
+
+        if (!$result)
+        {
+            $this->returnmsg(401,$this->validate->getError(),"");
+        }
+        
+        $config = \think\Config::get('config');
+        $data['upload_file'] = $config['url'].$data['upload_file'];
+
+        (new GearmanAsync)->resourceUpload($data);
+
+        $this->returnmsg(200, 'success!');
+    }
+}

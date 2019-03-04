@@ -1,0 +1,1060 @@
+<?php
+// +----------------------------------------------------------------------
+// | When work is a pleasure, life is a joy!
+// +----------------------------------------------------------------------
+// | User: Song   | Time:2019/1/8 10:43
+// +----------------------------------------------------------------------
+// | TITLE: 新增/编辑物料
+// +----------------------------------------------------------------------
+
+namespace app\api\controller\v2;
+
+use app\api\controller\Api;
+use think\Validate;
+use app\common\library\KCloudData;
+use think\exception\DbException;
+
+class Material extends Api
+{
+    //新增/编辑物料（包括变更）
+    public function edit()
+    {
+        $jsonData = $this->request->param();
+        $params = json_decode($jsonData['data'],true);
+        //数据验证
+        $rule = [
+            'material_name' => 'require',
+            'auditor1' => 'require',
+            'auditor2' => 'require',
+            'is_component' => 'require|in:0,1',
+            'create_org' => 'integer|>:0',
+            'use_org' => 'integer|>:0',
+            'material_attribute' => 'integer|>:0',
+            'is_suite' => 'integer|between:0,1',
+            'basic_unit' => 'require',
+            'inventory_type' => 'require',
+            'inventory_unit' => 'require',
+            'convert_unit' => 'integer|between:1,2',
+            'sale_unit' => 'require',
+            'sale_pricing_unit' => 'require',
+            'purchase_unit' => 'require',
+            'purchase_pricing_unit' => 'require',
+            'give_material_way' => 'require',
+            'over_give_control' => 'require',
+            'min_give_material' => 'require',
+            'min_give_unit' => 'require',
+            'plan_strategy' => 'require',
+            'fixed_lead_time_unit' => 'require',
+            'vary_lead_time' => 'require',
+            'check_lead_time' => 'require',
+            'check_lead_time_unit' => 'require',
+            'offset_time_unit' => 'require',
+        ];
+        $msg = [
+            'material_name.require' => '物料名称不能为空！',
+            'auditor1.require' => '上级审核人不能为空！',
+            'auditor2.require' => '最终审核人不能为空！',
+            'is_component.require' => '是否成品不能为空！',
+            'create_org.require' => '创建组织不能为空！',
+            'use_org.require' => '使用组织不能为空！',
+            'material_attribute.require' => '物料属性不能为空！',
+            'is_suite.require' => '是否套件不能为空！',
+            'basic_unit.require' => '基本单位不能为空！',
+            'inventory_type.require' => '存货类别不能为空！',
+            'inventory_unit.require' => '库存单位不能为空！',
+            'convert_unit.require' => '换算方向不能为空！',
+            'sale_unit.require' => '销售单位不能为空！',
+            'sale_pricing_unit.require' => '销售计价单位不能为空！',
+            'purchase_unit.require' => '采购单位不能为空！',
+            'purchase_pricing_unit.require' => '采购计价单位不能为空！',
+            'give_material_way.require' => '发料方式不能为空！',
+            'over_give_control.require' => '超发控制方式不能为空！',
+            'min_give_material.require' => '最小发料批量不能为空！',
+            'min_give_unit.require' => '最小发料单位不能为空！',
+            'plan_strategy.require' => '计划策略不能为空！',
+            'fixed_lead_time_unit.require' => '固定提前期单位不能为空！',
+            'vary_lead_time.require' => '变动提前期不能为空！',
+            'check_lead_time.require' => '检查提前期不能为空！',
+            'check_lead_time_unit.require' => '检查提前期单位不能为空！',
+            'offset_time_unit.require' => '计划偏置时间单位不能为空！',
+        ];
+        $this->validate = new Validate($rule, $msg);
+        $result = $this->validate->check($params);
+        if (!$result)
+        {
+            return $this->returnmsg(402,$this->validate->getError(),"");
+        }
+        $material_res = \app\api\model\MaterialSlave::editMaterial($params);
+        if ($material_res) {
+
+            $this->returnmsg(200, 'success!');
+        }
+        $this->returnmsg(400, 'error!');
+    }
+
+
+    //获取物料详情
+    public function getDetail()
+    {
+        $jsonData = $this->request->param();
+        $param = json_decode($jsonData['data'],true);
+
+        //数据验证
+        $result = $this->validate($param, [
+            'material_code' => 'require',
+        ]);
+
+        if ($result !== true) {
+            $this->returnmsg(402, $result);
+        }
+        $detailData = \app\api\model\MaterialSlave::materialDetail($param['material_code']);
+
+        if (!empty($DetailData)) {
+            $this->returnmsg(200, 'success!', $detailData);
+        }
+        $this->returnmsg(400,'获取数据失败');
+    }
+
+
+    //获取ERP物料的选择框信息
+    public function getInfo()
+    {
+        $data = [
+            'basic' => [
+                //物料属性
+                'material_property' => [
+                    [
+                        'value' => 1,
+                        'label' => '外购'
+                    ],
+                    [
+                        'value' => 2,
+                        'label' => '自制'
+                    ],
+                    [
+                        'value' => 3,
+                        'label' => '委外'
+                    ],
+                    [
+                        'value' => 9,
+                        'label' => '配置'
+                    ],
+                    [
+                        'value' => 10,
+                        'label' => '资产'
+                    ],
+                    [
+                        'value' => 4,
+                        'label' => '特征'
+                    ],
+                    [
+                        'value' => 11,
+                        'label' => '费用'
+                    ],
+                    [
+                        'value' => 5,
+                        'label' => '虚拟'
+                    ],
+                    [
+                        'value' => 6,
+                        'label' => '服务'
+                    ],
+                    [
+                        'value' => 7,
+                        'label' => '一次性'
+                    ],
+                    [
+                        'value' => 12,
+                        'label' => '模型'
+                    ],
+                ],
+                //基本单位
+                'basic_unit' => [
+                    [
+                        'value' => 'dong',
+                        'label' => '栋'
+                    ],
+                    [
+                        'value' => 'g',
+                        'label' => '克',
+                    ],
+                    [
+                        'value' => 'kg',
+                        'label' => '千克',
+                    ],
+                    [
+                        'value' => 'L',
+                        'label' => '升',
+                    ],
+                    [
+                        'value' => 'm',
+                        'label' => '米',
+                    ],
+                    [
+                        'value' => 'ml',
+                        'label' => '毫升',
+                    ],
+                    [
+                        'value' => 'mm',
+                        'label' => '毫米',
+                    ],
+                    [
+                        'value' => 'Pcs',
+                        'label' => 'Pcs',
+                    ],
+                    [
+                        'value' => 'tai',
+                        'label' => '台',
+                    ],
+                    [
+                        'value' => 'tao',
+                        'label' => '套',
+                    ],
+                    [
+                        'value' => 'tong',
+                        'label' => '桶',
+                    ],
+                    [
+                        'value' => 'zhi',
+                        'label' => '支',
+                    ]
+                ],
+                //存货类别
+                'inventory_type' => [
+                    [
+                        'value' => 'CHLB01_SYS',
+                        'label' => '原材料'
+                    ],
+                    [
+                        'value' => 'CHLB03_SYS',
+                        'label' => '自制半成品'
+                    ],
+                    [
+                        'value' => 'CHLB05_01',
+                        'label' => '线材成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-02',
+                        'label' => '音频成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-03',
+                        'label' => '壳膜成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-04',
+                        'label' => '车充成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-05',
+                        'label' => '适配器成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-06',
+                        'label' => '商业电源成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-07',
+                        'label' => '充电背包成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-08',
+                        'label' => '碱性电池成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-09',
+                        'label' => '市场物料成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-10',
+                        'label' => '笔电成品'
+                    ],
+                    [
+                        'value' => 'CHLB05-SYS',
+                        'label' => '移动电源成品'
+                    ],
+                    [
+                        'value' => 'CHLB06-SYS',
+                        'label' => '服务'
+                    ],
+                    [
+                        'value' => 'CHLB07-SYS',
+                        'label' => '资产'
+                    ]
+                ],
+                //汇率
+                'rate' => [
+                    [
+                        'value' => 'SL01_SYS',
+                        'label' => '17%增值税'
+                    ],
+                    [
+                        'value' => 'SL02_SYS',
+                        'label' => '13%增值税'
+                    ],
+                    [
+                        'value' => 'SL03_SYS',
+                        'label' => '7%增值税'
+                    ],
+                    [
+                        'value' => 'SL04_SYS',
+                        'label' => '零税率的增值税'
+                    ],
+                    [
+                        'value' => 'SL05_SYS',
+                        'label' => '11%增值税'
+                    ],
+                    [
+                        'value' => 'SL06_SYS',
+                        'label' => '6%增值税'
+                    ],
+                    [
+                        'value' => 'SL07_SYS',
+                        'label' => '3%增值税'
+                    ]
+                ],
+                //汇率分类
+                'rate_type' => [
+                    [
+                        'value' => 'WLDSFL01_SYS',
+                        'label' => '标准税率'
+                    ],
+                    [
+                        'value' => 'WLDSFL02_SYS',
+                        'label' => '减免税率'
+                    ],
+                    [
+                        'value' => 'WLDSFL03_SYS',
+                        'label' => '零税率'
+                    ],
+                    [
+                        'value' => 'WLDSFL04_SYS',
+                        'label' => '免税'
+                    ]
+                ]
+            ],
+            //库存
+            'stock' => [
+                'basic_unit' => [
+                    [
+                        'value' => 'dong',
+                        'label' => '栋'
+                    ],
+                    [
+                        'value' => 'g',
+                        'label' => '克',
+                    ],
+                    [
+                        'value' => 'kg',
+                        'label' => '千克',
+                    ],
+                    [
+                        'value' => 'L',
+                        'label' => '升',
+                    ],
+                    [
+                        'value' => 'm',
+                        'label' => '米',
+                    ],
+                    [
+                        'value' => 'ml',
+                        'label' => '毫升',
+                    ],
+                    [
+                        'value' => 'mm',
+                        'label' => '毫米',
+                    ],
+                    [
+                        'value' => 'Pcs',
+                        'label' => 'Pcs',
+                    ],
+                    [
+                        'value' => 'tai',
+                        'label' => '台',
+                    ],
+                    [
+                        'value' => 'tao',
+                        'label' => '套',
+                    ],
+                    [
+                        'value' => 'tong',
+                        'label' => '桶',
+                    ],
+                    [
+                        'value' => 'zhi',
+                        'label' => '支',
+                    ]
+                ],
+                //换算方向
+                'unit_convert' => [
+                    [
+                        'value' => 1,
+                        'label' => '库存单位-->辅助单位'
+                    ],
+                    [
+                        'value' => 2,
+                        'label' => '辅助单位-->库存单位'
+                    ]
+                ],
+                //批号编码规则
+                'batch_num_rule' => [
+                    [
+                        'value' => 'PHBM001',
+                        'label' => '采购入库&其他入库'
+                    ]
+                ],
+                //保质期单位
+                'expiration_unit' => [
+                    [
+                        'value'=> 'D',
+                        'label' => '日'
+                    ],
+                    [
+                        'value'=> 'M',
+                        'label' => '月'
+                    ],
+                    [
+                        'value'=> 'M',
+                        'label' => '年'
+                    ],
+                ]
+            ],
+            //销售
+            'sale' => [
+                'sale_unit' => [
+                    [
+                        'value' => 'dong',
+                        'label' => '栋'
+                    ],
+                    [
+                        'value' => 'g',
+                        'label' => '克',
+                    ],
+                    [
+                        'value' => 'kg',
+                        'label' => '千克',
+                    ],
+                    [
+                        'value' => 'L',
+                        'label' => '升',
+                    ],
+                    [
+                        'value' => 'm',
+                        'label' => '米',
+                    ],
+                    [
+                        'value' => 'ml',
+                        'label' => '毫升',
+                    ],
+                    [
+                        'value' => 'mm',
+                        'label' => '毫米',
+                    ],
+                    [
+                        'value' => 'Pcs',
+                        'label' => 'Pcs',
+                    ],
+                    [
+                        'value' => 'tai',
+                        'label' => '台',
+                    ],
+                    [
+                        'value' => 'tao',
+                        'label' => '套',
+                    ],
+                    [
+                        'value' => 'tong',
+                        'label' => '桶',
+                    ],
+                    [
+                        'value' => 'zhi',
+                        'label' => '支',
+                    ]
+                ],
+                'sale_price_unit' => [
+                    [
+                        'value' => 'dong',
+                        'label' => '栋'
+                    ],
+                    [
+                        'value' => 'g',
+                        'label' => '克',
+                    ],
+                    [
+                        'value' => 'kg',
+                        'label' => '千克',
+                    ],
+                    [
+                        'value' => 'L',
+                        'label' => '升',
+                    ],
+                    [
+                        'value' => 'm',
+                        'label' => '米',
+                    ],
+                    [
+                        'value' => 'ml',
+                        'label' => '毫升',
+                    ],
+                    [
+                        'value' => 'mm',
+                        'label' => '毫米',
+                    ],
+                    [
+                        'value' => 'Pcs',
+                        'label' => 'Pcs',
+                    ],
+                    [
+                        'value' => 'tai',
+                        'label' => '台',
+                    ],
+                    [
+                        'value' => 'tao',
+                        'label' => '套',
+                    ],
+                    [
+                        'value' => 'tong',
+                        'label' => '桶',
+                    ],
+                    [
+                        'value' => 'zhi',
+                        'label' => '支',
+                    ]
+                ]
+            ],
+            //采购
+            'purchase' => [
+                'purchase_unit' => [
+                    [
+                        'value' => 'dong',
+                        'label' => '栋'
+                    ],
+                    [
+                        'value' => 'g',
+                        'label' => '克',
+                    ],
+                    [
+                        'value' => 'kg',
+                        'label' => '千克',
+                    ],
+                    [
+                        'value' => 'L',
+                        'label' => '升',
+                    ],
+                    [
+                        'value' => 'm',
+                        'label' => '米',
+                    ],
+                    [
+                        'value' => 'ml',
+                        'label' => '毫升',
+                    ],
+                    [
+                        'value' => 'mm',
+                        'label' => '毫米',
+                    ],
+                    [
+                        'value' => 'Pcs',
+                        'label' => 'Pcs',
+                    ],
+                    [
+                        'value' => 'tai',
+                        'label' => '台',
+                    ],
+                    [
+                        'value' => 'tao',
+                        'label' => '套',
+                    ],
+                    [
+                        'value' => 'tong',
+                        'label' => '桶',
+                    ],
+                    [
+                        'value' => 'zhi',
+                        'label' => '支',
+                    ]
+                ],
+                //采购计价单位
+                'purchase_price_unit' => [
+                    [
+                        'value' => 'dong',
+                        'label' => '栋'
+                    ],
+                    [
+                        'value' => 'g',
+                        'label' => '克',
+                    ],
+                    [
+                        'value' => 'kg',
+                        'label' => '千克',
+                    ],
+                    [
+                        'value' => 'L',
+                        'label' => '升',
+                    ],
+                    [
+                        'value' => 'm',
+                        'label' => '米',
+                    ],
+                    [
+                        'value' => 'ml',
+                        'label' => '毫升',
+                    ],
+                    [
+                        'value' => 'mm',
+                        'label' => '毫米',
+                    ],
+                    [
+                        'value' => 'Pcs',
+                        'label' => 'Pcs',
+                    ],
+                    [
+                        'value' => 'tai',
+                        'label' => '台',
+                    ],
+                    [
+                        'value' => 'tao',
+                        'label' => '套',
+                    ],
+                    [
+                        'value' => 'tong',
+                        'label' => '桶',
+                    ],
+                    [
+                        'value' => 'zhi',
+                        'label' => '支',
+                    ]
+                ],
+                //配额方式
+                'quota_way' => [
+                    [
+                        'value' => 1,
+                        'label' => '顺序优先'
+                    ],
+                    [
+                        'value' => 2,
+                        'label' => '固定供应商'
+                    ],
+                    [
+                        'value' => 3,
+                        'label' => '固定比例'
+                    ],
+                    [
+                        'value' => 4,
+                        'label' => '价格优先'
+                    ],
+                ]
+            ],
+            //生产
+            'product' => [
+                //生成类型
+                'product_type' => [
+                    [
+                        'value' => 'SCDD01_SYS',
+                        'label' => '汇报入库-普通生产'
+                    ],
+                    [
+                        'value' => 'SCDD03_SYS',
+                        'label' => '直接入库-普通生产'
+                    ],
+                    [
+                        'value' => 'SCDD05_SYS',
+                        'label' => '工序汇报入库-普通生产'
+                    ],
+                    [
+                        'value' => 'SCDD08_SYS',
+                        'label' => '柔性工序汇报入库-普通生产'
+                    ]
+                ],
+                //标准工时单位
+                'standard_labor_unit' => [
+                    [
+                        'value' => 1,
+                        'label' => '时'
+                    ],
+                    [
+                        'value' => 60,
+                        'label' => '分'
+                    ],
+                    [
+                        'value' => 3600,
+                        'label' => '秒'
+                    ]
+                ],
+                //发料方式
+                'issue_qty' => [
+                    [
+                        'value' => 1,
+                        'label' => '直接领料'
+                    ],
+                    [
+                        'value' => 2,
+                        'label' => '直接倒冲'
+                    ],
+                    [
+                        'value' => 3,
+                        'label' => '调拨领料'
+                    ],
+                    [
+                        'value' => 4,
+                        'label' => '调拨倒冲'
+                    ],
+                    [
+                        'value' => 7,
+                        'label' => '不发料'
+                    ]
+                ],
+
+                //超发控制方式
+                'over_give_control' =>[
+                    [
+                        'value' => 1,
+                        'label' => '最小发料批量'
+                    ],
+                    [
+                        'value' => 2,
+                        'label' => '允许超发'
+                    ],
+                    [
+                        'value' => 3,
+                        'label' => '不允许超发'
+                    ],
+                    [
+                        'value' => 4,
+                        'label' => '按损耗率超发'
+                    ]
+                ]
+            ],
+            //计划
+            'plan' => [
+                //计划策略
+                'plan_strategy' => [
+                    [
+                        'value' => 0,
+                        'label' => 'MRP'
+                    ],
+                    [
+                        'value' => 1,
+                        'label' => 'MPS'
+                    ],
+                    [
+                        'value' => 2,
+                        'label' => '无'
+                    ]
+                ],
+                //制造策略
+                'manufacture_strategy' => [
+                    [
+                        'value' => 'ZZCL001_SYS',
+                        'label' => 'MTS10(考虑库存)'
+                    ],
+                    [
+                        'value' => 'ZZCL002_SYS',
+                        'label' => 'MTS20(不考虑库存)'
+                    ],
+                    [
+                        'value' => 'ZZCL003_SYS',
+                        'label' => 'MTO'
+                    ],
+                    [
+                        'value' => 'ZZCL004_SYS',
+                        'label' => 'IHT(继承BOM父件)'
+                    ]
+                ],
+                //订货策略
+                'order_strategy' => [
+                    [
+                        'value' => 0,
+                        'label' => 'LFL(批对批)'
+                    ],
+                    [
+                        'value' => 1,
+                        'label' => 'POQ(期间订货)'
+                    ],
+                    [
+                        'value' => 2,
+                        'label' => 'FOQ(固定批量)'
+                    ],
+                    [
+                        'value' => 3,
+                        'label' => 'ROP(再订货点)'
+                    ]
+                ],
+                //计划区
+                'plan_area' => [
+                    [
+                        'value' => 'JHQ001_SYS',
+                        'label' => '采购计划区'
+                    ],
+                    [
+                        'value' => 'JHQ002_SYS',
+                        'label' => '销售计划区'
+                    ]
+                ],
+                //检查提前期单位
+                'check_lead_time_unit' => [
+                    [
+                        'value' => 1,
+                        'label' => '天'
+                    ],
+                    [
+                        'value' => 2,
+                        'label' => '周'
+                    ],
+                    [
+                        'value' => 3,
+                        'label' => '月'
+                    ]
+                ]
+            ],
+            //计划控制
+            'plan_control' => [
+                //偏置时间单位
+                'offset_time_unit' => [
+                    [
+                        'value' => 1,
+                        'label' => '天'
+                    ],
+                    [
+                        'value' => 24,
+                        'label' => '时'
+                    ],
+                    [
+                        'value' => 1440,
+                        'label' => '分'
+                    ],
+                    [
+                        'value' => 86400,
+                        'label' => '秒'
+                    ]
+                ]
+            ]
+        ];
+        $this->returnmsg(200, 'success!', $data);
+
+    }
+
+
+    //获取物料分组
+    public function getMaterialGroup()
+    {
+        //物料分组
+        $model = new KCloudData();
+        $dataArr["FormId"] = "SAL_MATERIALGROUP"; //业务对象表单Id（必录）
+        //编码、名称、所属部门
+        $dataArr["FieldKeys"] = "FNumber,FName"; //字段keys，字符串类型用逗号分隔，比如"key1,key2..."（必录）
+
+        $data = $model->commonQuery($dataArr,$page=1,$keyword='',$FilterString = '',$pageSize='2000',$status = false);
+        $material_group_data = json_decode($data['data'],true);
+        if (!empty($material_group_data)) {
+            $this->returnmsg(200, 'success!', $material_group_data);
+        }
+        $this->returnmsg(400, 'error!', 'ERP没请求到数据');
+    }
+
+
+    //获取倒冲时机
+    public function reverseTime()
+    {
+        $jsonData = $this->request->param();
+        $params = json_decode($jsonData['data'],true);
+
+        //倒冲时机
+        $data =[
+            [
+                'value' => 2,
+                'label' => '汇报倒冲'
+            ],
+            [
+                'value' => 3,
+                'label' => '入库倒冲'
+            ]
+        ];
+
+        //数值2、4才能请求到数据,其余返回空
+        if (intval($params['id']) === 2 || intval($params['id']) === 4) {
+            $this->returnmsg(200, 'success!', $data);
+        }
+
+        $this->returnmsg(200, 'success!', []);
+    }
+
+
+    //通过计划属性选择期间订货来选择订货间隔期单位
+    public function orderIntervalTimeType()
+    {
+        $jsonData = $this->request->param();
+        $params = json_decode($jsonData['data'],true);
+        //间隔期单位
+        $data =[
+            [
+                'value' => 3,
+                'label' => '月'
+            ],
+            [
+                'value' => 2,
+                'label' => '周'
+            ],
+            [
+                'value' => 1,
+                'label' => '天'
+            ]
+        ];
+
+        if (intval($params['id']) === 1) {
+            $this->returnmsg(200, 'success!', $data);
+        }
+
+        $this->returnmsg(200, 'success!', []);
+    }
+
+
+    //获取物料分类
+    public function materialCategory()
+    {
+        $data = [
+            [
+                'value' => 'G01',
+                'label' => '线材'
+            ],
+            [
+                'value' => 'G02',
+                'label' => '辅材'
+            ],
+            [
+                'value' => 'G03',
+                'label' => '电芯'
+            ],
+            [
+                'value' => 'G04',
+                'label' => '电源转换器'
+            ],
+            [
+                'value' => 'G05',
+                'label' => '苹果周边'
+            ],
+            [
+                'value' => 'G06',
+                'label' => '盛宴耳机'
+            ],
+            [
+                'value' => 'G07',
+                'label' => '音频/智能穿戴设备'
+            ],
+            [
+                'value' => 'G08',
+                'label' => '耳机成品'
+            ],
+            [
+                'value' => 'G09',
+                'label' => 'Type-C系列成品'
+            ],
+            [
+                'value' => 'G10',
+                'label' => '车载成品'
+            ],
+            [
+                'value' => 'G11',
+                'label' => '灯类成品'
+            ],
+            [
+                'value' => 'G12',
+                'label' => '移动电源半成品'
+            ],
+            [
+                'value' => 'G13',
+                'label' => 'DELUXE'
+            ],
+            [
+                'value' => 'G14',
+                'label' => '保护类'
+            ],
+            [
+                'value' => 'G15',
+                'label' => '礼品系列'
+            ],
+            [
+                'value' => 'G16',
+                'label' => 'PH系列'
+            ],
+            [
+                'value' => 'G17',
+                'label' => 'PB系列'
+            ],
+            [
+                'value' => 'G18',
+                'label' => 'AC/AU系列'
+            ],
+            [
+                'value' => 'G19',
+                'label' => '商务电源系列'
+            ],
+            [
+                'value' => 'G20',
+                'label' => '商用电源系列'
+            ],
+            [
+                'value' => 'G21',
+                'label' => '无线系列'
+            ],
+            [
+                'value' => 'G22',
+                'label' => '多米诺系列'
+            ],
+            [
+                'value' => 'G23',
+                'label' => '女性/IP系列'
+            ],
+            [
+                'value' => 'G24',
+                'label' => '裸机已镭雕'
+            ],
+            [
+                'value' => 'G25',
+                'label' => '包装组件'
+            ],
+            [
+                'value' => 'G26',
+                'label' => '配件组件'
+            ],
+            [
+                'value' => 'G27',
+                'label' => '白板机'
+            ],
+            [
+                'value' => 'G28',
+                'label' => '结构组件包'
+            ],
+            [
+                'value' => 'G29',
+                'label' => '方案组件包'
+            ],
+            [
+                'value' => 'G30',
+                'label' => '电子组件包'
+            ],
+            [
+                'value' => 'G31',
+                'label' => '电芯组件包'
+            ],
+            [
+                'value' => 'G32',
+                'label' => '辅料组件包'
+            ],
+            [
+                'value' => 'G33',
+                'label' => '原材料'
+            ],
+            [
+                'value' => 'G34',
+                'label' => '其他'
+            ],
+            [
+                'value' => 'G35',
+                'label' => '笔电'
+            ],
+        ];
+        $this->returnmsg(200, 'success!', $data);
+    }
+
+}

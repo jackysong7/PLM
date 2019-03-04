@@ -1,0 +1,484 @@
+<?php
+
+namespace app\api\model;
+
+use think\Model;
+use think\Db;
+use think\Config;
+
+class Relation extends Model
+{
+    //目标类型 - 项目
+    const TARGET_TYPE_PROJECT = 1;
+    //目标类型 - 项目节点
+    const TARGET_TYPE_PROJECT_NODE = 2;
+    //目标类型 - 文档
+    const TARGET_TYPE_DOCUMENT = 3;
+    //目标类型 - BOM表
+    const TARGET_TYPE_BOM = 4;
+    //目标类型 - 工程变更
+    const TARGET_TYPE_ECN = 5;
+
+    //角色类型 - 产品经理
+    const ROLE_TYPE_PRODUCT_MANAGER = 1;
+    //角色类型 - 项目经理
+    const ROLE_TYPE_PROJECT_MANAGER = 2;
+    //角色类型 - 产品委员会成员
+    const ROLE_TYPE_PRODUCT_COMMITTEE = 3;
+    //角色类型 - 上传人员
+    const ROLE_TYPE_UPLOADER = 4;
+    //角色类型 - 审核人员
+    const ROLE_TYPE_AUDITOR = 5;
+
+    
+    public static function initConnect()
+    {
+        return Db::connect(Config::get('database.center'));
+    }
+
+    /*
+     * 获取项目人员的名称
+     * @param int pid 项目id
+     * @param int node_id 节点自增长Id
+     */
+    public static function getRoleName($where)
+    {
+        if(is_array($where) && !empty($where))
+        {
+            $info = Db::name('relation')->field('admin_id,role_type')->where($where)->select();
+        }
+        else
+        {
+            return false;
+        }
+
+        $arr = [];
+        foreach($info as $k=>$v)
+        {
+            $result = self::initConnect()
+                ->name('admin')
+                ->field('nickname')
+                ->where('admin_id',$v['admin_id'])
+                ->find();
+
+            if($v['role_type'] == 1)//产品经理
+            {
+                /*-----下面注释的部分转换成json格式后为 {"1":{"name":"zhang","age":22},"2":{"name":"li","age":25}}-----*/
+                //$arr['product_manager'][$k]['admin_id'] = $v['admin_id'];
+                //$arr['product_manager'][$k]['product_manager'] = $result['nickname'];
+                $arr['product_manager'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'nickname' =>$result['nickname']
+                    ];
+            }
+            elseif($v['role_type'] == 2)//项目经理
+            {
+                $arr['project_manager'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'nickname' =>$result['nickname']
+                    ];
+            }
+            elseif($v['role_type'] == 3)//产品委员会
+            {
+                $arr['product_committee'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'nickname' =>$result['nickname']
+                    ];
+            }
+            elseif($v['role_type'] == 4)//上传人员
+            {
+                $arr['uploads'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'nickname' =>$result['nickname']
+                    ];
+            }
+            elseif($v['role_type'] == 5)//审核人员
+            {
+                $arr['auditor'][] =
+                    [
+                        'admin_id' => $v['admin_id'],
+                        'nickname' =>$result['nickname']
+                    ];
+            }
+
+        }
+       /* echo'<pre>';
+        print_r($arr);die;*/
+        return $arr;
+    }
+
+
+    /*
+     * 根据项目id获取审核状态信息
+     * @param int project_id 项目id
+     */
+    public static function getAuditStatus($project_id)
+    {
+        $info = Db::name('relation')->field('audit_status')->where('target_id',$project_id)->find();
+
+        return $info;
+    }
+
+
+    /*
+     * 通过admin_id获取审核人员信息
+     *
+     * @param array where 搜索条件
+     * @return array
+     */
+    public static function getAuditInfo($where)
+    {
+        if(is_array($where) && !empty($where))
+        {
+            $info = Db::name('relation')->field('admin_id,role_type')->where($where)->order('relation_id desc')->select();
+
+            $arr = [];
+            if ($info)
+            {
+                foreach ($info as $k => $v)
+                {
+                    $result = self::initConnect()
+                        ->name('admin')
+                        ->field('nickname')
+                        ->where('admin_id', $v['admin_id'])
+                        ->find();
+
+                    if($v['role_type'] == 1)//产品经理
+                    {
+                        $arr['product_manager'][] =
+                            [
+                                'admin_id' => $v['admin_id'],
+                                'nickname' =>$result['nickname']
+                            ];
+                    }
+                    elseif($v['role_type'] == 2)//项目经理
+                    {
+                        $arr['project_manager'][] =
+                            [
+                                'admin_id' => $v['admin_id'],
+                                'nickname' =>$result['nickname']
+                            ];
+                    }
+                    elseif($v['role_type'] == 3)//产品委员会
+                    {
+                        $arr['product_committee'][] =
+                            [
+                                'admin_id' => $v['admin_id'],
+                                'nickname' =>$result['nickname']
+                            ];
+                    }
+                    elseif($v['role_type'] == 4)//上传人员
+                    {
+                        $arr['uploads'][] =
+                            [
+                                'admin_id' => $v['admin_id'],
+                                'nickname' =>$result['nickname']
+                            ];
+                    }
+                    elseif($v['role_type'] == 5)//审核人员
+                    {
+                        $arr['auditor'][] =
+                            [
+                                'admin_id' => $v['admin_id'],
+                                'nickname' =>$result['nickname']
+                            ];
+                    }
+                }
+            }
+            return $arr;
+        }
+        return false;
+    }
+
+
+    /*
+     * 通过target_id,target_type获取上传、审核人员、审核时间信息
+     *
+     * @param array where 搜索条件
+     * @return array
+     */
+    public static function getAuditorMes($where,$field='*')
+    {
+        if(is_array($where) && !empty($where))
+        {
+            $info = Db::name('relation')->field($field)->where($where)->order('relation_id desc')->select();
+            $arr = [];$max = 0;
+            if ($info)
+            {
+                foreach ($info as $k => $v)
+                {
+                    $result = self::initConnect()
+                        ->name('admin')
+                        ->field('nickname')
+                        ->where('admin_id', $v['admin_id'])
+                        ->find();
+
+                    if($v['role_type'] == 5)//审核人员
+                    {
+                        $arr['auditor'][] =
+                            [
+                                'admin_id' => $v['admin_id'],
+                                'nickname' =>$result['nickname']
+                            ];
+                    }
+                    $max = max($max , $v['audit_time']);
+                }
+            }
+            $arr['audit_time'] = $max;
+            return $arr;
+        }
+        return false;
+    }
+
+
+    /*
+     * 获取各角色类型的信息
+     */
+    public static function getNameByNodeId($nodeId,$targetType='')
+    {
+        if($nodeId && $targetType)
+        {
+            $info = Db::name('relation')
+                ->field('admin_id')
+                ->where('target_id',$nodeId)
+                ->where('target_type',$targetType)
+                ->select();
+            foreach($info as $k=>$v)
+            {
+                $result = self::initConnect()
+                    ->name('admin')
+                    ->field('nickname')
+                    ->where('admin_id',$v['admin_id'])
+                    ->find();
+                $info[$k]['nickname'] = $result['nickname'];
+            }
+
+            return $info;
+        }
+
+    }
+
+    //通过admin_id获取对应的昵称
+    public static function getNickName($adminId)
+    {
+        $result = self::initConnect()
+            ->name('admin')
+            ->where('admin_id', $adminId)
+            ->value('nickname');
+
+        return $result;
+    }
+
+    //通过admin_id获取创建者信息
+    public static function getCreatorInfo($adminId,$field='*')
+    {
+        $result = self::initConnect()
+            ->name('admin')
+            ->field($field)
+            ->where('admin_id', $adminId)
+            ->find();
+        return $result;
+    }
+
+
+    /**
+     * 编辑上传人员、审核人员<编辑节点>
+     * @param $nodeId
+     * @param $list
+     * @param $auditorArr
+     * @return bool
+     */
+    public static function editPerson($nodeId,$list,$type)
+    {
+        //编辑上传人员、审核人员<删除原有的数据再新增>
+        $model = new Relation();
+        $model->where(['target_id'=>$nodeId,'target_type'=>2])->where('role_type',$type)->delete();
+        $Res = $model->saveAll($list);
+        if(count($list) > $Res)
+        {
+            return false;
+        }
+       return true;
+    }
+
+    /**
+     * 审核
+     * @param $params array
+     */
+    public static function editInfo($params)
+    {
+        $tplType = '';
+        if($params['tpl_type'] == 1){
+            $tplType = 4;//bom
+        }elseif($params['tpl_type'] == 2){
+            $tplType = 6;//开发立项
+        }elseif($params['tpl_type'] == 3){
+            $tplType = 3;//自定义文档
+        }
+        $auditResult = self::get(['target_id'=>$params['doc_id'],'target_type'=>$tplType,'admin_id'=>$params['admin_id'],'role_type'=>5]);
+        if($auditResult)
+        {
+            $where = [
+                'target_id'=>$params['doc_id'],
+                'target_type'=>$params['tpl_type'],
+                'admin_id'=>$params['admin_id'],
+                'role_type'=>5,//审核人员
+            ];
+            $data = [
+                'audit_status' => $params['audit_status'],
+                'audit_note' => !empty($params['audit_note'])?($params['audit_note']):'',
+                'audit_time' => time()
+            ];
+            Db::name('relation')->where($where)->update($data);
+        }else{
+            $data = [
+                'target_id'=>$params['doc_id'],
+                'admin_id'=>$params['admin_id'],
+                'target_type'=>$tplType,
+                'role_type'=>5,//审核人员
+                'audit_status' => $params['audit_status'],
+                'audit_note' => !empty($params['audit_note'])?($params['audit_note']):'',
+                'audit_time' => time()
+            ];
+            $result = Db::name('relation')->insert($data);
+            if(!$result)
+            {
+                return false;
+            }
+        }
+        //查询该类型文档的所有审核状态，auditStatus为1表示所有审核状态为已审核，2表示部分未审核或已驳回
+        //1、BOM文档
+        if($params['tpl_type'] == 1)
+        {
+            $bomNodeId = Db::name('project_bom')->where('bom_id',$params['doc_id'])->value('node_id');
+            if($bomNodeId)
+            {
+                $auditBom = Db::name('relation')->where(['target_id'=>$bomNodeId,'target_type'=>2,'role_type'=>5])->field('audit_status')->select();//BOM文档所在的项目审核人员
+                $info = Db::name('relation')->where(['target_id'=>$params['doc_id'],'target_type'=>4,'role_type'=>5])->field('audit_status')->select();//BOM文档审核人员
+
+                $auditStatus = 0;
+                if(!empty($auditBom) && !empty($info))
+                {
+                    if(count($auditBom) == count($info))
+                    {
+                        foreach($info as $v)
+                        {
+                            if($v['audit_status'] == 1)
+                            {
+                                $auditStatus = 1;
+                            }elseif($v['audit_status'] == -1){
+                                $auditStatus = 3;
+                                break;
+                            }else{
+                                $auditStatus = 2;
+                                break;
+                            }
+                        }
+                    }else{
+                        $auditStatus = 2;
+                    }
+                }
+                return $auditStatus;
+            }
+        }
+        //开发立项表
+        elseif($params['tpl_type'] == 2)
+        {
+            $udNodeId = Db::name('uitableview_default')->where('ud_id',$params['doc_id'])->value('node_id');
+            if($udNodeId) {
+                $auditUd = Db::name('relation')->where(['target_id' => $udNodeId, 'target_type' => 2,'role_type'=>5])->field('audit_status')->select();//节点审核人员
+                $udInfo = Db::name('relation')->where(['target_id' => $params['doc_id'], 'target_type' => 6,'role_type'=>5])->field('audit_status')->select();//文档审核人员
+                $auditStatus = 0;
+                if (!empty($auditUd) && !empty($udInfo)) {
+                    if (count($auditUd) == count($udInfo)) {
+                        foreach ($udInfo as $v) {
+                            if ($v['audit_status'] == 1) {
+                                $auditStatus = 1;
+                            }elseif($v['audit_status'] == -1){
+                                $auditStatus = 3;
+                                break;
+                            } else {
+                                $auditStatus = 2;
+                                break;
+                            }
+                        }
+
+                    } else {
+                        $auditStatus = 2;
+                    }
+                }
+                return $auditStatus;
+            }
+        }
+        //自定义文档
+        elseif($params['tpl_type'] == 3)
+        {
+            $docNodeId = Db::name('document')->where('pd_id',$params['doc_id'])->value('node_id');
+            if($docNodeId) {
+                $auditDoc = Db::name('relation')->where(['target_id' => $docNodeId, 'target_type' => 2,'role_type'=>5])->field('audit_status')->select();//节点审核人员
+                $docInfo = Db::name('relation')->where(['target_id' => $params['doc_id'], 'target_type' => 3,'role_type'=>5])->field('audit_status')->select();//文档审核人员
+                $auditStatus = 0;
+                if (!empty($auditDoc) && !empty($docInfo)) {
+                    if (count($auditDoc) == count($docInfo)) {
+                        foreach ($docInfo as $v) {
+                            if ($v['audit_status'] == 1) {
+                                $auditStatus = 1;
+                            }elseif($v['audit_status'] == -1){
+                                $auditStatus = 3;
+                                break;
+                            } else {
+                                $auditStatus = 2;
+                                break;
+                            }
+                        }
+                    } else {
+                        $auditStatus = 2;
+                    }
+                }
+                return $auditStatus;
+            }
+        }
+    }
+
+    /*
+     * 获取BOM表详情api http://192.168.80.240:4999/web/#/5?page_id=170 <获取审核人员信息>
+     */
+    public static function auditInfo($where,$field='admin_id,role_type,audit_status,audit_time,audit_note')
+    {
+        if(is_array($where) && !empty($where))
+        {
+            $info = Db::name('relation')->field($field)->where($where)->order('relation_id desc')->select();
+
+            $arr = [];
+            if ($info)
+            {
+                foreach ($info as $k => $v)
+                {
+                    $result = self::initConnect()
+                        ->name('admin')
+                        ->field('nickname')
+                        ->where('admin_id', $v['admin_id'])
+                        ->find();
+
+                    if($v['role_type'] == 5)//审核人员
+                    {
+                        $arr['auditor'][] =
+                            [
+                                'admin_id' => $v['admin_id'],
+                                'nickname' =>$result['nickname'],
+                                'audit_status'=>$v['audit_status'],
+                                'audit_time'=>$v['audit_time'],
+                                'audit_note'=>$v['audit_note']
+                            ];
+                    }
+                }
+            }
+            return $arr;
+        }
+        return false;
+    }
+}
